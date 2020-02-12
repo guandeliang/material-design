@@ -1,0 +1,100 @@
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="newApi">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:width="48dp"
+            android:height="48dp"
+            android:viewportHeight="192"
+            android:viewportWidth="192">
+            <path
+                android:name="one"
+                android:fillColor="?attr/colorPrimary"
+                android:fillAlpha="1"
+                android:pathData="M8,32 l16,0 l0,128 l-16,0 l0,-128 Z"/>
+            <path
+                android:name="two"
+                android:fillColor="?attr/colorPrimary"
+                android:fillAlpha="1"
+                android:pathData="M48,80 l16,0 l0,80 l-16,0 l0,-80 Z"/>
+            <path
+                android:name="three"
+                android:fillColor="?attr/colorPrimary"
+                android:fillAlpha="1"
+                android:pathData="M88,110 l16,0 l0,50 l-16,0 l0,-50 Z"/>
+            <path
+                android:name="four"
+                android:fillColor="?attr/colorPrimary"
+                android:fillAlpha="1"
+                android:pathData="M128,80 l16,0 l0,80 l-16,0 l0,-80 Z"/>
+            <path
+                android:name="five"
+                android:fillColor="?attr/colorPrimary"
+                android:fillAlpha="1"
+                android:pathData="M168,32 l16,0 l0,128 l-16,0 l0,-128 Z"/>
+        </vector>
+    </aapt:attr>
+    <target android:name="one">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="fillAlpha"
+                android:valueType="floatType"
+                android:valueFrom="0.1"
+                android:valueTo="1"
+                android:duration="1000"
+                android:repeatCount="4"
+                android:repeatMode="reverse"/>
+        </aapt:attr>
+    </target>
+    <target android:name="two">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="fillAlpha"
+                android:valueType="floatType"
+                android:valueFrom="0.1"
+                android:valueTo="1"
+                android:duration="1000"
+                android:repeatCount="4"
+                android:repeatMode="reverse"/>
+        </aapt:attr>
+    </target>
+    <target android:name="three">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="fillAlpha"
+                android:valueType="floatType"
+                android:valueFrom="0.1"
+                android:valueTo="1"
+                android:duration="1000"
+                android:repeatCount="4"
+                android:repeatMode="reverse"/>
+        </aapt:attr>
+    </target>
+    <target android:name="four">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="fillAlpha"
+                android:valueType="floatType"
+                android:valueFrom="0.1"
+                android:valueTo="1"
+                android:duration="1000"
+                android:repeatCount="4"
+                android:repeatMode="reverse"/>
+        </aapt:attr>
+    </target>
+    <target android:name="five">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="fillAlpha"
+                android:valueType="floatType"
+                android:valueFrom="0.1"
+                android:valueTo="1"
+                android:duration="1000"
+                android:repeatCount="4"
+                android:repeatMode="reverse"/>
+        </aapt:attr>
+    </target>
+
+</animated-vector>

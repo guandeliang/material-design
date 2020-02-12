@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--白灰黑三种万能配色-->
+    <color name="white">#FFFFFF</color>
+    <color name="gray_50">#FAFAFA</color>
+    <color name="gray_100">#F5F5F5</color>
+    <color name="gray_200">#EEEEEE</color>
+    <color name="gray_300">#E0E0E0</color>
+    <color name="gray_400">#BDBDBD</color>
+    <color name="gray_500">#9E9E9E</color>
+    <color name="gray_600">#757575</color>
+    <color name="gray_700">#616161</color>
+    <color name="gray_800">#424242</color>
+    <color name="gray_900">#212121</color>
+    <color name="gray_1000">#121212</color>
+    <color name="black">#000000</color>
+
+    <!--白色透明，适合于暗色背景下的卡片等颜色，命名：百分比+海拔高度-->
+    <color name="transparent_white_00_00">#00FFFFFF</color>
+    <color name="transparent_white_05_01">#0DFFFFFF</color>
+    <color name="transparent_white_06_02">#12FFFFFF</color>
+    <color name="transparent_white_07_03">#14FFFFFF</color>
+    <color name="transparent_white_09_04">#17FFFFFF</color>
+    <color name="transparent_white_11_06">#1CFFFFFF</color>
+    <color name="transparent_white_12_08">#1FFFFFFF</color>
+    <color name="transparent_white_14_12">#24FFFFFF</color>
+    <color name="transparent_white_15_16">#26FFFFFF</color>
+    <color name="transparent_white_16_24">#29FFFFFF</color>
+
+    <!--MateriL颜色，用于需要主题以外颜色的地方-->
+    <color name="material_color_red">#F44336</color>
+    <color name="material_color_pink">#E91E63</color>
+    <color name="material_color_purple">#9C27B0</color>
+    <color name="material_color_deep_purple">#673AB7</color>
+    <color name="material_color_indigo">#3F51B5</color>
+    <color name="material_color_blue">#2196F3</color>
+    <color name="material_color_light_blue">#03A9F4</color>
+    <color name="material_color_cyan">#00BCD4</color>
+    <color name="material_color_teal">#009688</color>
+    <color name="material_color_green">#4CAF50</color>
+    <color name="material_color_light_green">#8BC34A</color>
+    <color name="material_color_lime">#CDDC39</color>
+    <color name="material_color_yellow">#FFEB3B</color>
+    <color name="material_color_amber">#FFC107</color>
+    <color name="material_color_orange">#FF9800</color>
+    <color name="material_color_deep_orange">#FF5722</color>
+    <color name="material_color_brown">#795548</color>
+    <color name="material_color_gray">#9E9E9E</color>
+    <color name="material_color_blue_gray">#607D8B</color>
+
+
+    <!--彩色主题-->
+    <color name="colored_color_primary">#344955</color>
+    <color name="colored_color_primary_dark">#232F34</color>
+    <color name="colored_color_primary_variant">#4A6572</color>
+    <color name="colored_color_secondary">#F9AA33</color>
+    <color name="colored_color_secondary_variant">#F48226</color>
+    <color name="colored_color_background">#EEEEEE</color>
+    <color name="colored_color_surface">#FFFFFF</color>
+    <color name="colored_color_error">#B00020</color>
+    <color name="colored_color_on_primary">#FFFFFF</color>
+    <color name="colored_color_on_secondary">#000000</color>
+    <color name="colored_color_on_background">#000000</color>
+    <color name="colored_color_on_surface">#000000</color>
+    <color name="colored_color_on_error">#FFFFFF</color>
+
+    <!--浅色主题-->
+    <color name="light_color_primary">#E91E63</color>
+    <color name="light_color_primary_dark">#880D4E</color>
+    <color name="light_color_primary_variant">#C2185A</color>
+    <color name="light_color_secondary">#00D97C</color>
+    <color name="light_color_secondary_variant">#00B461</color>
+    <color name="light_color_background">#EEEEEE</color>
+    <color name="light_color_surface">#FFFFFF</color>
+    <color name="light_color_error">#B00020</color>
+    <color name="light_color_on_primary">#FFFFFF</color>
+    <color name="light_color_on_secondary">#FFFFFF</color>
+    <color name="light_color_on_background">#000000</color>
+    <color name="light_color_on_surface">#000000</color>
+    <color name="light_color_on_error">#FFFFFF</color>
+
+    <!--深色主题-->
+    <!--因为会使用到很多颜色，所以先提供一组按照名字命名的颜色-->
+    <color name="dark_color_primary_green_300">#58C597</color>
+    <color name="dark_color_primary_green_500">#00AC6A</color>
+    <color name="dark_color_primary_green_700">#008B52</color>
+    <color name="dark_color_primary_green_900">#005B30</color>
+    <color name="dark_color_secondary_orange_300">#F3827C</color>
+    <color name="dark_color_secondary_orange_500">#FF5A3E</color>
+    <color name="dark_color_secondary_orange_700">#E44838</color>
+    <color name="dark_color_secondary_orange_900">#C83825</color>
+    <color name="dark_color_assist_yellow_300">#FFCF44</color>
+    <color name="dark_color_assist_yellow_500">#FFBB00</color>
+    <color name="dark_color_assist_yellow_700">#FF9900</color>
+    <color name="dark_color_assist_yellow_900">#FF6600</color>
+    <color name="dark_color_assist_purple_300">#C463D4</color>
+    <color name="dark_color_assist_purple_500">#AA06C0</color>
+    <color name="dark_color_assist_purple_700">#8602B4</color>
+    <color name="dark_color_assist_purple_900">#4F00A3</color>
+    <color name="dark_color_assist_blue_300">#1ED0FF</color>
+    <color name="dark_color_assist_blue_500">#00BAFF</color>
+    <color name="dark_color_assist_blue_700">#0098E1</color>
+    <color name="dark_color_assist_blue_900">#0066AD</color>
+
+    <color name="dark_color_primary">@color/dark_color_primary_green_300</color>
+    <color name="dark_color_primary_dark">@color/dark_color_primary_green_900</color>
+    <color name="dark_color_primary_variant">@color/dark_color_primary_green_700</color>
+    <color name="dark_color_secondary">@color/dark_color_secondary_orange_500</color>
+    <color name="dark_color_secondary_variant">@color/dark_color_secondary_orange_900</color>
+    <color name="dark_color_background">#121212</color>
+    <color name="dark_color_surface">#212121</color>
+    <color name="dark_color_error">#B00020</color>
+    <color name="dark_color_on_primary">#000000</color>
+    <color name="dark_color_on_secondary">#000000</color>
+    <color name="dark_color_on_background">#FFFFFF</color>
+    <color name="dark_color_on_surface">#FFFFFF</color>
+    <color name="dark_color_on_error">#FFFFFF</color>
+
+
+
+    <!--白底黑字主题-->
+    <color name="mono_color_primary">#000000</color>
+    <color name="mono_color_primary_dark">#000000</color>
+    <color name="mono_color_primary_variant">#000000</color>
+    <color name="mono_color_secondary">#000000</color>
+    <color name="mono_color_secondary_variant">#000000</color>
+    <color name="mono_color_background">#EEEEEE</color>
+    <color name="mono_color_surface">#FFFFFF</color>
+    <color name="mono_color_error">#CF6679</color>
+    <color name="mono_color_on_primary">#FFFFFF</color>
+    <color name="mono_color_on_secondary">#FFFFFF</color>
+    <color name="mono_color_on_background">#000000</color>
+    <color name="mono_color_on_surface">#000000</color>
+    <color name="mono_color_on_error">#FFFFFF</color>
+
+
+
+    <!--根据功能命名的颜色-->
+    <!--
+    <color name="primary_color">@color/green_800_normal</color>
+    <color name="primary_light_color">@color/green_800_ligth</color>
+    <color name="primary_dark_color">@color/green_800_drak</color>
+    <color name="secondary_color">@color/amber_800_normal</color>
+    <color name="secondary_light_color">@color/amber_800_ligth</color>
+    <color name="secondary_dark_color">@color/amber_800_drak</color>
+
+
+    <color name="green_800_ligth">#60AD5E</color>
+    <color name="green_800_normal">#2E7D32</color>
+    <color name="green_800_drak">#005005</color>
+    <color name="amber_800_ligth">#FFC046</color>
+    <color name="amber_800_normal">#FF8F00</color>
+    <color name="amber_800_drak">#C56000</color>
+
+    <color name="p1">#004955</color>
+    <color name="p2">#0C7E98</color>
+    <color name="p3">#19A0C4</color>
+    <color name="p4">#4ABAD9</color>
+
+    <color name="s1">#D82F38</color>
+    <color name="s2">#F74046</color>
+    <color name="s3">#FF5A60</color>
+    <color name="s4">#F8A0A4</color>
+
+    <color name="E1">#FFA75A</color>
+    <color name="E2">#FFC079</color>
+-->
+</resources>

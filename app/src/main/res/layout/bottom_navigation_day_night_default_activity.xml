@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.jacob.book.material.widgets.ThemeSwitchAppBarLayout
+            style="@style/Widget.MaterialComponents.AppBarLayout.PrimarySurface"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title_text="默认DayNight主题"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="24dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:text="Style：旧风格"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="16dp"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:text="Icon Size：24dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="16dp"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:text="Label Visibility Mode：unlabeled"/>
+
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    style="@style/Widget.Design.BottomNavigationView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:menu="@menu/bottom_navigation_menu"
+                    app:itemIconSize="24dp"
+                    app:labelVisibilityMode="unlabeled"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:text="Style：新风格（默认）"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="16dp"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:text="Icon Size：18dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="16dp"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:text="Label Visibility Mode：auto"/>
+
+
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    style="@style/Widget.MaterialComponents.BottomNavigationView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:menu="@menu/bottom_navigation_menu"
+                    app:itemIconSize="18dp"
+                    app:labelVisibilityMode="auto"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:text="Style：以主色为背景的新风格"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="16dp"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:text="Icon Size：18dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="16dp"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:text="Label Visibility Mode：selected"/>
+
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:menu="@menu/bottom_navigation_menu"
+                    app:itemIconSize="18dp"
+                    app:labelVisibilityMode="selected"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:text="Style：PrimarySurface风格"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="16dp"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:text="Icon Size：18dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="16dp"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:text="Label Visibility Mode：labeled"/>
+
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    style="@style/Widget.MaterialComponents.BottomNavigationView.PrimarySurface"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    app:menu="@menu/bottom_navigation_menu"
+                    app:itemIconSize="18dp"
+                    app:labelVisibilityMode="labeled"/>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+
+
+    </LinearLayout>
+</layout>

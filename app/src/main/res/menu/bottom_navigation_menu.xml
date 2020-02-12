@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <item
+            android:id="@+id/action_favorite"
+            android:orderInCategory="101"
+            android:title="喜好"
+            android:icon="@drawable/icon_favorite"/>
+        <item
+            android:id="@+id/action_music"
+            android:orderInCategory="102"
+            android:title="音乐"
+            android:icon="@drawable/icon_library_music"/>
+        <item
+            android:id="@+id/action_book"
+            android:orderInCategory="103"
+            android:title="读书"
+            android:icon="@drawable/icon_chrome_reader_mode"/>
+        <item
+            android:id="@+id/action_news"
+            android:orderInCategory="104"
+            android:icon="@drawable/icon_event_note"
+            android:title="新闻"/>
+</menu>

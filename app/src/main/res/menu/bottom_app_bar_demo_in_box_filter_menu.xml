@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <item android:id="@+id/action_not_read"   android:title="仅未读"/>
+        <item android:id="@+id/action_red_flag"   android:title="仅红旗"/>
+        <item android:id="@+id/action_has_append" android:title="含附件"/>
+        <item android:id="@+id/action_at_me"      android:title="\@我"/>
+</menu>

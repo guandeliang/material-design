@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <item
+            android:id="@+id/action_luanch"
+            android:orderInCategory="101"
+            android:title="确定"
+            android:icon="@drawable/icon_launch"
+            app:showAsAction="always"/>
+        <item
+            android:id="@+id/action_delete"
+            android:orderInCategory="102"
+            android:title="删除"
+            android:icon="@drawable/icon_delete"
+            app:showAsAction="always"/>
+        <item
+            android:id="@+id/action_camera"
+            android:orderInCategory="201"
+            android:title="相机图片"
+            android:icon="@drawable/icon_camera"
+            app:showAsAction="never"/>
+        <item
+            android:id="@+id/action_folder"
+            android:orderInCategory="202"
+            android:icon="@drawable/icon_folder"
+            android:title="文件相册"
+            app:showAsAction="never"/>
+        <item
+            android:id="@+id/action_web"
+            android:orderInCategory="202"
+            android:icon="@drawable/icon_web"
+            android:title="网络图片"
+            app:showAsAction="never"/>
+</menu>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.jacob.book.material.widgets.ThemeSwitchAppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title_text="自定义DayNight主题"/>
+
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:menu="@menu/bottom_navigation_menu"
+            app:itemIconSize="18dp"
+            app:labelVisibilityMode="labeled"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</layout>

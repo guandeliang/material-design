@@ -1,0 +1,81 @@
+package com.jacob.book.material.main.activity;
+
+import android.app.ActivityOptions;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.databinding.DataBindingUtil;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.chad.library.adapter.base.entity.node.BaseNode;
+import com.jacob.book.JsonUtils;
+import com.jacob.book.StringUtils;
+import com.jacob.book.material.R;
+import com.jacob.book.material.databinding.MainExampleListFragmentBinding;
+import com.jacob.book.material.main.adapter.MainExampleNodeAdapter;
+import com.jacob.book.material.main.model.ExampleGroup;
+import com.jacob.book.material.main.model.ExampleItem;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MainExampleListFragment extends Fragment{
+    private MainExampleListFragmentBinding binding;
+
+    public MainExampleListFragment(){
+
+    }
+
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        binding = DataBindingUtil.inflate(inflater, R.layout.main_example_list_fragment, container, false);
+
+        MainExampleNodeAdapter adapter = new MainExampleNodeAdapter(new OnExampleItemClickListener());
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 1, RecyclerView.VERTICAL, false);
+        binding.recyclerView.setLayoutManager(gridLayoutManager);
+        binding.recyclerView.setAdapter(adapter);
+
+        View header = View.inflate(this.getContext(), R.layout.main_example_list_header, null);
+        adapter.setHeaderView(header);
+
+        List<ExampleGroup> exampleGroupList = JsonUtils.loadExampleGroup(getResources());
+        List<BaseNode> exampleNodeList = new ArrayList<>();
+        exampleNodeList.addAll(exampleGroupList);
+        adapter.setNewData(exampleNodeList);
+
+
+        return binding.getRoot();
+    }
+
+    @Override
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    private class OnExampleItemClickListener implements MainExampleNodeAdapter.OnItemClickListener{
+        @Override
+        public void onItemClick(ExampleItem item) {
+            if(StringUtils.isBlankString(item.getPath())){
+                return;
+            }
+            try {
+                Intent intent = new Intent(MainExampleListFragment.this.getActivity(),  Class.forName(item.getPath()));
+                Bundle bundle = ActivityOptions.makeScaleUpAnimation(binding.appBarLayout, 0, 0, 100, 100).toBundle();
+                startActivity(intent, bundle);
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+}

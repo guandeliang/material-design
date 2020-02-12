@@ -1,0 +1,93 @@
+package com.jacob.book.material.widgets;
+
+import android.content.Context;
+import android.content.res.Configuration;
+import android.content.res.TypedArray;
+import android.util.AttributeSet;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatDelegate;
+
+import com.google.android.material.appbar.AppBarLayout;
+import com.jacob.book.material.R;
+
+public class ThemeSwitchAppBarLayout extends AppBarLayout {
+    private String titleText;
+    private ImageView backImageView;
+    private TextView titleTextView;
+    private ImageView themeImageView;
+
+    public ThemeSwitchAppBarLayout(@NonNull Context context) {
+        this(context, null);
+    }
+
+    public ThemeSwitchAppBarLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
+        this(context, attrs, R.attr.appBarLayoutStyle);
+    }
+
+    public ThemeSwitchAppBarLayout(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        inflate(context, R.layout.widget_theme_switch_app_bar_layout, this);
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.theme_switch_app_bar_layout, 0, 0);
+        titleText = typedArray.getString(R.styleable.theme_switch_app_bar_layout_title_text);
+        typedArray.recycle();
+
+        backImageView = findViewById(R.id.back_image_view);
+        titleTextView = findViewById(R.id.title_text_view);
+        themeImageView = findViewById(R.id.theme_image_view);
+        titleTextView.setText(titleText);
+        themeImageView.setOnClickListener(new OnThemeImageViewCliclLintener());
+
+        initView();
+    }
+
+    private void initView(){
+        Configuration configuration = getResources().getConfiguration();
+        if (configuration == null){
+            themeImageView.setVisibility(View.GONE);
+            return;
+        }
+
+        int uiMode = configuration.uiMode & Configuration.UI_MODE_NIGHT_MASK;
+        if(uiMode == Configuration.UI_MODE_NIGHT_YES){//夜间模式
+            themeImageView.setImageResource(R.drawable.icon_brightness_1);
+        }else if(uiMode == Configuration.UI_MODE_NIGHT_NO){//日间模式
+            themeImageView.setImageResource(R.drawable.icon_brightness_2);
+        }else if(uiMode == Configuration.UI_MODE_NIGHT_UNDEFINED){//不知道什么模式
+            themeImageView.setVisibility(View.GONE);
+        }
+    }
+
+    public void setTitle(String title){
+        this.titleText = title;
+        this.titleTextView.setText(titleText);
+    }
+
+    private class OnThemeImageViewCliclLintener implements View.OnClickListener{
+        @Override
+        public void onClick(View view) {
+            Configuration configuration = getResources().getConfiguration();
+            if (configuration == null){
+                themeImageView.setVisibility(View.GONE);
+                return;
+            }
+
+            int uiMode = configuration.uiMode & Configuration.UI_MODE_NIGHT_MASK;
+
+            if(uiMode == Configuration.UI_MODE_NIGHT_YES){//如何是夜间模式，则切换到日间模式
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+            }else if(uiMode == Configuration.UI_MODE_NIGHT_NO){//如果是日间模式，则切换的夜间模式
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            }else if(uiMode == Configuration.UI_MODE_NIGHT_UNDEFINED){//不知道什么模式
+                themeImageView.setVisibility(View.GONE);
+            }
+        }
+    }
+
+
+
+}

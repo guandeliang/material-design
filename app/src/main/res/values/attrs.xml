@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="theme_switch_app_bar_layout">
+        <attr name="title_text" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="fab_bottom_navigation_view">
+        <attr name="fab_cradle_margin" format="dimension"/>
+        <attr name="fab_cradle_rounded_corner_radius" format="dimension"/>
+        <attr name="fab_cradle_vertical_offset" format="dimension"/>
+        <attr name="fab_size" format="dimension"/>
+    </declare-styleable>
+</resources>

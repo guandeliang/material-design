@@ -1,0 +1,53 @@
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="newApi">
+        <aapt:attr name="android:drawable">
+                <vector
+                    android:width="24dp"
+                    android:height="24dp"
+                    android:viewportHeight="72"
+                    android:viewportWidth="72">
+                        <group
+                            android:name="group"
+                            android:pivotX="36"
+                            android:pivotY="36"
+                            android:rotation="0" >
+                                <path
+                                    android:name="d_color"
+                                    android:strokeWidth="6"
+                                    android:strokeLineCap="round"
+                                    android:strokeColor="@color/dark_color_primary_green_500"
+                                    android:pathData="M36,68 a32,32 0, 1 1 32, -32"/>
+
+                                <path
+                                    android:name="l_color"
+                                    android:strokeWidth="6"
+                                    android:strokeLineCap="round"
+                                    android:strokeColor="@color/dark_color_secondary_orange_500"
+                                    android:trimPathEnd="0.85"
+                                    android:pathData="M36,58 a22,22 0, 1 1 22, -22"/>
+
+                                <path
+                                    android:name="p_color"
+                                    android:strokeWidth="6"
+                                    android:strokeLineCap="round"
+                                    android:strokeColor="@color/dark_color_assist_yellow_500"
+                                    android:pathData="M36,48 a12,12 0, 1 1 0, -24"/>
+                        </group>
+                </vector>
+
+        </aapt:attr>
+
+        <target android:name="group">
+                <aapt:attr name="android:animation">
+                        <objectAnimator
+                            android:duration="3000"
+                            android:interpolator="@android:anim/linear_interpolator"
+                            android:propertyName="rotation"
+                            android:valueFrom="0"
+                            android:valueTo="720"/>
+                </aapt:attr>
+        </target>
+</animated-vector>

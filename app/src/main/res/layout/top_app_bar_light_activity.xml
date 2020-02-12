@@ -1,0 +1,1011 @@
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/back_image_view"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="4dp"
+                    android:padding="12dp"
+                    android:tint="?attr/colorOnSurface"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:srcCompat="@drawable/icon_chevron_left"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/title_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:textAlignment="center"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:text="订单助手"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp">
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/no_order_card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/v_guide_line_left"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.3"/>
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/v_guide_line_right"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.7"/>
+
+                        <ImageView
+                            android:id="@+id/no_order_image_view"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/weipinhui_no_order"
+                            android:layout_marginTop="80dp"
+                            app:layout_constraintLeft_toLeftOf="@id/v_guide_line_left"
+                            app:layout_constraintRight_toRightOf="@id/v_guide_line_right"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/no_order_title_text_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textAppearance="?attr/textAppearanceBody1"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/no_order_image_view"
+                            android:text="还没有相关订单信息"/>
+
+                        <TextView
+                            android:id="@+id/no_order_sub_title_text_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="120dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/no_order_title_text_view"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:text="看看我们为你推荐的商品吧"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/suggest_one_card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/no_order_card_view"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="16dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp">
+
+                        <TextView
+                            android:id="@+id/suggest_one_title_text_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:text="斯凯奇SKECHERS品牌专场"/>
+
+                        <TextView
+                            android:id="@+id/suggest_one_sub_title_text_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            android:layout_marginTop="4dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/suggest_one_title_text_view"
+                            android:text="2.2折起，全场最高5折"/>
+
+
+                        <ImageView
+                            android:id="@+id/suggest_one_one_image_view"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/weipinhui_light_001"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@id/suggest_one_two_image_view"
+                            app:layout_constraintTop_toBottomOf="@id/suggest_one_sub_title_text_view"/>
+
+                        <ImageView
+                            android:id="@+id/suggest_one_two_image_view"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/weipinhui_light_002"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            app:layout_constraintLeft_toRightOf="@id/suggest_one_one_image_view"
+                            app:layout_constraintRight_toLeftOf="@id/suggest_one_three_image_view"
+                            app:layout_constraintTop_toTopOf="@id/suggest_one_one_image_view"
+                            app:layout_constraintBottom_toBottomOf="@id/suggest_one_one_image_view"/>
+
+                        <ImageView
+                            android:id="@+id/suggest_one_three_image_view"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/weipinhui_light_003"
+                            app:layout_constraintLeft_toRightOf="@id/suggest_one_two_image_view"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/suggest_one_one_image_view"
+                            app:layout_constraintBottom_toBottomOf="@id/suggest_one_one_image_view"/>
+
+
+                        <TextView
+                            android:id="@+id/suggest_one_one_price_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:layout_marginTop="4dp"
+                            android:textColor="?attr/colorPrimary"
+                            android:textStyle="bold"
+                            app:layout_constraintLeft_toLeftOf="@id/suggest_one_one_image_view"
+                            app:layout_constraintTop_toBottomOf="@id/suggest_one_one_image_view"
+                            android:text="￥99"/>
+
+                        <TextView
+                            android:id="@+id/suggest_one_one_old_price_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:textColor="@color/gray_500"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="8dp"
+                            app:layout_constraintLeft_toRightOf="@id/suggest_one_one_price_text_view"
+                            app:layout_constraintTop_toTopOf="@id/suggest_one_one_price_text_view"
+                            app:layout_constraintBottom_toBottomOf="@id/suggest_one_one_price_text_view"
+                            android:text="￥199"/>
+
+                        <TextView
+                            android:id="@+id/suggest_one_two_price_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:layout_marginTop="4dp"
+                            android:textColor="?attr/colorPrimary"
+                            android:textStyle="bold"
+                            app:layout_constraintLeft_toLeftOf="@id/suggest_one_two_image_view"
+                            app:layout_constraintTop_toBottomOf="@id/suggest_one_two_image_view"
+                            android:text="￥77"/>
+
+                        <TextView
+                            android:id="@+id/suggest_one_two_old_price_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:textColor="@color/gray_500"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="8dp"
+                            app:layout_constraintLeft_toRightOf="@id/suggest_one_two_price_text_view"
+                            app:layout_constraintTop_toTopOf="@id/suggest_one_two_price_text_view"
+                            app:layout_constraintBottom_toBottomOf="@id/suggest_one_two_price_text_view"
+                            android:text="￥269"/>
+
+                        <TextView
+                            android:id="@+id/suggest_one_three_price_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:layout_marginTop="4dp"
+                            android:textColor="?attr/colorPrimary"
+                            android:textStyle="bold"
+                            app:layout_constraintLeft_toLeftOf="@id/suggest_one_three_image_view"
+                            app:layout_constraintTop_toBottomOf="@id/suggest_one_three_image_view"
+                            android:text="￥88"/>
+
+
+                        <TextView
+                            android:id="@+id/suggest_one_three_old_price_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:textColor="@color/gray_500"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="8dp"
+                            app:layout_constraintLeft_toRightOf="@id/suggest_one_three_price_text_view"
+                            app:layout_constraintTop_toTopOf="@id/suggest_one_three_price_text_view"
+                            app:layout_constraintBottom_toBottomOf="@id/suggest_one_three_price_text_view"
+                            android:text="￥220"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/suggest_two_card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/suggest_one_card_view"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="16dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp">
+
+                        <TextView
+                            android:id="@+id/suggest_two_title_text_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:text="今日特卖，10点上架"/>
+
+                        <TextView
+                            android:id="@+id/suggest_two_sub_title_text_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            android:layout_marginTop="4dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/suggest_two_title_text_view"
+                            android:text="随时上架底价爆品"/>
+
+
+                        <ImageView
+                            android:id="@+id/suggest_two_one_image_view"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/weipinhui_light_101"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@id/suggest_two_two_image_view"
+                            app:layout_constraintTop_toBottomOf="@id/suggest_two_sub_title_text_view"/>
+
+                        <ImageView
+                            android:id="@+id/suggest_two_two_image_view"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/weipinhui_light_102"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            app:layout_constraintLeft_toRightOf="@id/suggest_two_one_image_view"
+                            app:layout_constraintRight_toLeftOf="@id/suggest_two_three_image_view"
+                            app:layout_constraintTop_toTopOf="@id/suggest_two_one_image_view"
+                            app:layout_constraintBottom_toBottomOf="@id/suggest_two_one_image_view"/>
+
+                        <ImageView
+                            android:id="@+id/suggest_two_three_image_view"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/weipinhui_light_103"
+                            app:layout_constraintLeft_toRightOf="@id/suggest_two_two_image_view"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/suggest_two_one_image_view"
+                            app:layout_constraintBottom_toBottomOf="@id/suggest_two_one_image_view"/>
+
+
+                        <TextView
+                            android:id="@+id/suggest_two_one_price_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:layout_marginTop="4dp"
+                            android:textColor="?attr/colorPrimary"
+                            android:textStyle="bold"
+                            app:layout_constraintLeft_toLeftOf="@id/suggest_two_one_image_view"
+                            app:layout_constraintTop_toBottomOf="@id/suggest_two_one_image_view"
+                            android:text="￥99"/>
+
+                        <TextView
+                            android:id="@+id/suggest_two_one_old_price_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:textColor="@color/gray_500"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="8dp"
+                            app:layout_constraintLeft_toRightOf="@id/suggest_two_one_price_text_view"
+                            app:layout_constraintTop_toTopOf="@id/suggest_two_one_price_text_view"
+                            app:layout_constraintBottom_toBottomOf="@id/suggest_two_one_price_text_view"
+                            android:text="￥199"/>
+
+                        <TextView
+                            android:id="@+id/suggest_two_two_price_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:layout_marginTop="4dp"
+                            android:textColor="?attr/colorPrimary"
+                            android:textStyle="bold"
+                            app:layout_constraintLeft_toLeftOf="@id/suggest_two_two_image_view"
+                            app:layout_constraintTop_toBottomOf="@id/suggest_two_two_image_view"
+                            android:text="￥77"/>
+
+                        <TextView
+                            android:id="@+id/suggest_two_two_old_price_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:textColor="@color/gray_500"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="8dp"
+                            app:layout_constraintLeft_toRightOf="@id/suggest_two_two_price_text_view"
+                            app:layout_constraintTop_toTopOf="@id/suggest_two_two_price_text_view"
+                            app:layout_constraintBottom_toBottomOf="@id/suggest_two_two_price_text_view"
+                            android:text="￥269"/>
+
+                        <TextView
+                            android:id="@+id/suggest_two_three_price_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:layout_marginTop="4dp"
+                            android:textColor="?attr/colorPrimary"
+                            android:textStyle="bold"
+                            app:layout_constraintLeft_toLeftOf="@id/suggest_two_three_image_view"
+                            app:layout_constraintTop_toBottomOf="@id/suggest_two_three_image_view"
+                            android:text="￥88"/>
+
+
+                        <TextView
+                            android:id="@+id/suggest_two_three_old_price_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:textColor="@color/gray_500"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="8dp"
+                            app:layout_constraintLeft_toRightOf="@id/suggest_two_three_price_text_view"
+                            app:layout_constraintTop_toTopOf="@id/suggest_two_three_price_text_view"
+                            app:layout_constraintBottom_toBottomOf="@id/suggest_two_three_price_text_view"
+                            android:text="￥220"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/suggest_three_card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/suggest_two_card_view"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="16dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp">
+
+                        <TextView
+                            android:id="@+id/suggest_three_title_text_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:text="性价比之王，最后疯抢"/>
+
+                        <TextView
+                            android:id="@+id/suggest_three_sub_title_text_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            android:layout_marginTop="4dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/suggest_three_title_text_view"
+                            android:text="大吐血大甩卖"/>
+
+
+                        <ImageView
+                            android:id="@+id/suggest_three_one_image_view"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/weipinhui_light_301"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@id/suggest_three_two_image_view"
+                            app:layout_constraintTop_toBottomOf="@id/suggest_three_sub_title_text_view"/>
+
+                        <ImageView
+                            android:id="@+id/suggest_three_two_image_view"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/weipinhui_light_302"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            app:layout_constraintLeft_toRightOf="@id/suggest_three_one_image_view"
+                            app:layout_constraintRight_toLeftOf="@id/suggest_three_three_image_view"
+                            app:layout_constraintTop_toTopOf="@id/suggest_three_one_image_view"
+                            app:layout_constraintBottom_toBottomOf="@id/suggest_three_one_image_view"/>
+
+                        <ImageView
+                            android:id="@+id/suggest_three_three_image_view"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/weipinhui_light_303"
+                            app:layout_constraintLeft_toRightOf="@id/suggest_three_two_image_view"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/suggest_three_one_image_view"
+                            app:layout_constraintBottom_toBottomOf="@id/suggest_three_one_image_view"/>
+
+
+                        <TextView
+                            android:id="@+id/suggest_three_one_price_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:layout_marginTop="4dp"
+                            android:textColor="?attr/colorPrimary"
+                            android:textStyle="bold"
+                            app:layout_constraintLeft_toLeftOf="@id/suggest_three_one_image_view"
+                            app:layout_constraintTop_toBottomOf="@id/suggest_three_one_image_view"
+                            android:text="￥99"/>
+
+                        <TextView
+                            android:id="@+id/suggest_three_one_old_price_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:textColor="@color/gray_500"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="8dp"
+                            app:layout_constraintLeft_toRightOf="@id/suggest_three_one_price_text_view"
+                            app:layout_constraintTop_toTopOf="@id/suggest_three_one_price_text_view"
+                            app:layout_constraintBottom_toBottomOf="@id/suggest_three_one_price_text_view"
+                            android:text="￥199"/>
+
+                        <TextView
+                            android:id="@+id/suggest_three_two_price_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:layout_marginTop="4dp"
+                            android:textColor="?attr/colorPrimary"
+                            android:textStyle="bold"
+                            app:layout_constraintLeft_toLeftOf="@id/suggest_three_two_image_view"
+                            app:layout_constraintTop_toBottomOf="@id/suggest_three_two_image_view"
+                            android:text="￥77"/>
+
+                        <TextView
+                            android:id="@+id/suggest_three_two_old_price_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:textColor="@color/gray_500"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="8dp"
+                            app:layout_constraintLeft_toRightOf="@id/suggest_three_two_price_text_view"
+                            app:layout_constraintTop_toTopOf="@id/suggest_three_two_price_text_view"
+                            app:layout_constraintBottom_toBottomOf="@id/suggest_three_two_price_text_view"
+                            android:text="￥269"/>
+
+                        <TextView
+                            android:id="@+id/suggest_three_three_price_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:layout_marginTop="4dp"
+                            android:textColor="?attr/colorPrimary"
+                            android:textStyle="bold"
+                            app:layout_constraintLeft_toLeftOf="@id/suggest_three_three_image_view"
+                            app:layout_constraintTop_toBottomOf="@id/suggest_three_three_image_view"
+                            android:text="￥88"/>
+
+
+                        <TextView
+                            android:id="@+id/suggest_three_three_old_price_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:textColor="@color/gray_500"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="8dp"
+                            app:layout_constraintLeft_toRightOf="@id/suggest_three_three_price_text_view"
+                            app:layout_constraintTop_toTopOf="@id/suggest_three_three_price_text_view"
+                            app:layout_constraintBottom_toBottomOf="@id/suggest_three_three_price_text_view"
+                            android:text="￥220"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/suggest_four_card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/suggest_three_card_view"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="16dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp">
+
+                        <TextView
+                            android:id="@+id/suggest_four_title_text_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:text="最后三天，再不买没有了"/>
+
+                        <TextView
+                            android:id="@+id/suggest_four_sub_title_text_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            android:layout_marginTop="4dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/suggest_four_title_text_view"
+                            android:text="天天都是最后一天"/>
+
+
+                        <ImageView
+                            android:id="@+id/suggest_four_one_image_view"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/weipinhui_light_401"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@id/suggest_four_two_image_view"
+                            app:layout_constraintTop_toBottomOf="@id/suggest_four_sub_title_text_view"/>
+
+                        <ImageView
+                            android:id="@+id/suggest_four_two_image_view"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/weipinhui_light_402"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            app:layout_constraintLeft_toRightOf="@id/suggest_four_one_image_view"
+                            app:layout_constraintRight_toLeftOf="@id/suggest_four_three_image_view"
+                            app:layout_constraintTop_toTopOf="@id/suggest_four_one_image_view"
+                            app:layout_constraintBottom_toBottomOf="@id/suggest_four_one_image_view"/>
+
+                        <ImageView
+                            android:id="@+id/suggest_four_three_image_view"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/weipinhui_light_403"
+                            app:layout_constraintLeft_toRightOf="@id/suggest_four_two_image_view"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/suggest_four_one_image_view"
+                            app:layout_constraintBottom_toBottomOf="@id/suggest_four_one_image_view"/>
+
+
+                        <TextView
+                            android:id="@+id/suggest_four_one_price_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:layout_marginTop="4dp"
+                            android:textColor="?attr/colorPrimary"
+                            android:textStyle="bold"
+                            app:layout_constraintLeft_toLeftOf="@id/suggest_four_one_image_view"
+                            app:layout_constraintTop_toBottomOf="@id/suggest_four_one_image_view"
+                            android:text="￥99"/>
+
+                        <TextView
+                            android:id="@+id/suggest_four_one_old_price_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:textColor="@color/gray_500"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="8dp"
+                            app:layout_constraintLeft_toRightOf="@id/suggest_four_one_price_text_view"
+                            app:layout_constraintTop_toTopOf="@id/suggest_four_one_price_text_view"
+                            app:layout_constraintBottom_toBottomOf="@id/suggest_four_one_price_text_view"
+                            android:text="￥199"/>
+
+                        <TextView
+                            android:id="@+id/suggest_four_two_price_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:layout_marginTop="4dp"
+                            android:textColor="?attr/colorPrimary"
+                            android:textStyle="bold"
+                            app:layout_constraintLeft_toLeftOf="@id/suggest_four_two_image_view"
+                            app:layout_constraintTop_toBottomOf="@id/suggest_four_two_image_view"
+                            android:text="￥77"/>
+
+                        <TextView
+                            android:id="@+id/suggest_four_two_old_price_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:textColor="@color/gray_500"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="8dp"
+                            app:layout_constraintLeft_toRightOf="@id/suggest_four_two_price_text_view"
+                            app:layout_constraintTop_toTopOf="@id/suggest_four_two_price_text_view"
+                            app:layout_constraintBottom_toBottomOf="@id/suggest_four_two_price_text_view"
+                            android:text="￥269"/>
+
+                        <TextView
+                            android:id="@+id/suggest_four_three_price_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:layout_marginTop="4dp"
+                            android:textColor="?attr/colorPrimary"
+                            android:textStyle="bold"
+                            app:layout_constraintLeft_toLeftOf="@id/suggest_four_three_image_view"
+                            app:layout_constraintTop_toBottomOf="@id/suggest_four_three_image_view"
+                            android:text="￥88"/>
+
+
+                        <TextView
+                            android:id="@+id/suggest_four_three_old_price_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:textColor="@color/gray_500"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="8dp"
+                            app:layout_constraintLeft_toRightOf="@id/suggest_four_three_price_text_view"
+                            app:layout_constraintTop_toTopOf="@id/suggest_four_three_price_text_view"
+                            app:layout_constraintBottom_toBottomOf="@id/suggest_four_three_price_text_view"
+                            android:text="￥220"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/suggest_five_card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/suggest_four_card_view"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="16dp">
+                        <ImageView
+                            android:id="@+id/suggest_five_zero_image_view"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/weipinhui_light_500"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:background="#4DFF1744"
+                            app:layout_constraintTop_toTopOf="@id/suggest_five_zero_image_view"
+                            app:layout_constraintLeft_toLeftOf="@id/suggest_five_zero_image_view"
+                            app:layout_constraintRight_toRightOf="@id/suggest_five_zero_image_view"
+                            app:layout_constraintBottom_toBottomOf="@id/suggest_five_zero_image_view"/>
+
+                        <TextView
+                            android:id="@+id/suggest_five_label_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            android:background="?attr/colorPrimary"
+                            android:textColor="@color/white"
+                            android:text="新人福利"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:padding="2dp"
+                            app:layout_constraintTop_toTopOf="@id/suggest_five_zero_image_view"
+                            app:layout_constraintLeft_toLeftOf="@id/suggest_five_zero_image_view"/>
+
+
+                        <TextView
+                            android:id="@+id/suggest_five_title_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceBody1"
+                            android:textColor="@color/white"
+                            android:text="首饰达人推荐TOP"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintTop_toTopOf="@id/suggest_five_zero_image_view"
+                            app:layout_constraintLeft_toLeftOf="@id/suggest_five_zero_image_view"
+                            app:layout_constraintRight_toRightOf="@id/suggest_five_zero_image_view"/>
+
+
+
+                        <TextView
+                            android:id="@+id/suggest_five_sub_title_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            android:background="@drawable/border_white_round_corner"
+                            android:textColor="@color/white"
+                            android:text="到手价3折封顶"
+                            android:layout_marginTop="16dp"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="2dp"
+                            app:layout_constraintTop_toBottomOf="@id/suggest_five_title_text_view"
+                            app:layout_constraintLeft_toLeftOf="@id/suggest_five_zero_image_view"
+                            app:layout_constraintRight_toRightOf="@id/suggest_five_zero_image_view"/>
+
+
+                        <ImageView
+                            android:id="@+id/suggest_five_one_image_view"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/weipinhui_light_501"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginLeft="8dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@id/suggest_five_two_image_view"
+                            app:layout_constraintTop_toBottomOf="@id/suggest_five_zero_image_view"/>
+
+                        <ImageView
+                            android:id="@+id/suggest_five_two_image_view"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/weipinhui_light_502"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            app:layout_constraintLeft_toRightOf="@id/suggest_five_one_image_view"
+                            app:layout_constraintRight_toLeftOf="@id/suggest_five_three_image_view"
+                            app:layout_constraintTop_toTopOf="@id/suggest_five_one_image_view"
+                            app:layout_constraintBottom_toBottomOf="@id/suggest_five_one_image_view"/>
+
+                        <ImageView
+                            android:id="@+id/suggest_five_three_image_view"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/weipinhui_light_503"
+                            android:layout_marginRight="8dp"
+                            app:layout_constraintLeft_toRightOf="@id/suggest_five_two_image_view"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/suggest_five_one_image_view"
+                            app:layout_constraintBottom_toBottomOf="@id/suggest_five_one_image_view"/>
+
+
+                        <TextView
+                            android:id="@+id/suggest_five_one_cast_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:background="@drawable/border_primary_background_white"
+                            android:textColor="?attr/colorPrimary"
+                            android:text="2折"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            app:layout_constraintLeft_toLeftOf="@id/suggest_five_one_image_view"
+                            app:layout_constraintBottom_toBottomOf="@id/suggest_five_one_image_view"/>
+
+                        <TextView
+                            android:id="@+id/suggest_five_two_cast_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:background="@drawable/border_primary_background_white"
+                            android:textColor="?attr/colorPrimary"
+                            android:text="2折"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            app:layout_constraintLeft_toLeftOf="@id/suggest_five_two_image_view"
+                            app:layout_constraintBottom_toBottomOf="@id/suggest_five_two_image_view"/>
+
+                        <TextView
+                            android:id="@+id/suggest_five_three_cast_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:background="@drawable/border_primary_background_white"
+                            android:textColor="?attr/colorPrimary"
+                            android:text="2折"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            app:layout_constraintLeft_toLeftOf="@id/suggest_five_three_image_view"
+                            app:layout_constraintBottom_toBottomOf="@id/suggest_five_three_image_view"/>
+
+
+                        <TextView
+                            android:id="@+id/suggest_five_one_price_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:layout_marginTop="4dp"
+                            android:textColor="?attr/colorPrimary"
+                            android:textStyle="bold"
+                            app:layout_constraintLeft_toLeftOf="@id/suggest_five_one_image_view"
+                            app:layout_constraintTop_toBottomOf="@id/suggest_five_one_image_view"
+                            android:text="￥99"/>
+
+                        <TextView
+                            android:id="@+id/suggest_five_one_old_price_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:textColor="@color/gray_500"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="8dp"
+                            app:layout_constraintLeft_toRightOf="@id/suggest_five_one_price_text_view"
+                            app:layout_constraintTop_toTopOf="@id/suggest_five_one_price_text_view"
+                            app:layout_constraintBottom_toBottomOf="@id/suggest_five_one_price_text_view"
+                            android:text="￥199"/>
+
+                        <TextView
+                            android:id="@+id/suggest_five_two_price_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:layout_marginTop="4dp"
+                            android:textColor="?attr/colorPrimary"
+                            android:textStyle="bold"
+                            app:layout_constraintLeft_toLeftOf="@id/suggest_five_two_image_view"
+                            app:layout_constraintTop_toBottomOf="@id/suggest_five_two_image_view"
+                            android:text="￥77"/>
+
+                        <TextView
+                            android:id="@+id/suggest_five_two_old_price_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:textColor="@color/gray_500"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="8dp"
+                            app:layout_constraintLeft_toRightOf="@id/suggest_five_two_price_text_view"
+                            app:layout_constraintTop_toTopOf="@id/suggest_five_two_price_text_view"
+                            app:layout_constraintBottom_toBottomOf="@id/suggest_five_two_price_text_view"
+                            android:text="￥269"/>
+
+                        <TextView
+                            android:id="@+id/suggest_five_three_price_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:layout_marginTop="4dp"
+                            android:textColor="?attr/colorPrimary"
+                            android:textStyle="bold"
+                            app:layout_constraintLeft_toLeftOf="@id/suggest_five_three_image_view"
+                            app:layout_constraintTop_toBottomOf="@id/suggest_five_three_image_view"
+                            android:text="￥88"/>
+
+
+                        <TextView
+                            android:id="@+id/suggest_five_three_old_price_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceOverline"
+                            android:textColor="@color/gray_500"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="8dp"
+                            app:layout_constraintLeft_toRightOf="@id/suggest_five_three_price_text_view"
+                            app:layout_constraintTop_toTopOf="@id/suggest_five_three_price_text_view"
+                            app:layout_constraintBottom_toBottomOf="@id/suggest_five_three_price_text_view"
+                            android:text="￥220"/>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+
+</layout>

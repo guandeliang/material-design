@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自定义DayNight主题颜色-->
+    <color name="dn_custom_color_primary">#0C7E98</color>
+    <color name="dn_custom_color_primary_dark">#004955</color>
+    <color name="dn_custom_color_primary_variant">#004955</color>
+    <color name="dn_custom_color_secondary">#F74046</color>
+    <color name="dn_custom_color_secondary_variant">#D82F38</color>
+    <color name="dn_custom_color_background">#EEEEEE</color>
+    <color name="dn_custom_color_surface">#FFFFFF</color>
+    <color name="dn_custom_color_error">#FFA75A</color>
+    <color name="dn_custom_color_on_primary">#FFFFFF</color>
+    <color name="dn_custom_color_on_secondary">#000000</color>
+    <color name="dn_custom_color_on_background">#000000</color>
+    <color name="dn_custom_color_on_surface">#000000</color>
+    <color name="dn_custom_color_on_error">#FFFFFF</color>
+
+    <!--默认DayNight主题颜色-->
+    <color name="dn_default_color_primary">#980F5E</color>
+    <color name="dn_default_color_primary_dark">#4E0D32</color>
+    <color name="dn_default_color_primary_variant">#4E0D32</color>
+    <color name="dn_default_color_secondary">#E30425</color>
+    <color name="dn_default_color_secondary_variant">#C8000E</color>
+    <color name="dn_default_color_background">#EEEEEE</color>
+    <color name="dn_default_color_surface">#FFFFFF</color>
+    <color name="dn_default_color_error">#EE6002</color>
+    <color name="dn_default_color_on_primary">#FFFFFF</color>
+    <color name="dn_default_color_on_secondary">#000000</color>
+    <color name="dn_default_color_on_background">#000000</color>
+    <color name="dn_default_color_on_surface">#000000</color>
+    <color name="dn_default_color_on_error">#FFFFFF</color>
+</resources>

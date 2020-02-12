@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.jacob.book.material.widgets.ThemeSwitchAppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title_text="带FAB按钮的底部导航栏"/>
+
+
+        <com.jacob.book.material.widgets.FabBottomNavigationView
+            android:id="@+id/bottom_navigation_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="bottom"
+            app:menu="@menu/bottom_navigation_fab_menu"
+            app:itemIconSize="18dp"
+            app:labelVisibilityMode="labeled"
+            app:fab_size="56dp"
+            app:fab_cradle_rounded_corner_radius="5dp"
+            app:fab_cradle_margin="5dp"
+            app:fab_cradle_vertical_offset="0dp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_anchorGravity="fill_vertical|center_horizontal"
+            app:fabCustomSize="56dp"
+            app:layout_anchor="@id/bottom_navigation_view"
+            android:src="@drawable/icon_favorite_border"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</layout>

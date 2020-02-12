@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="24dp">
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/v_guide_line"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.6"/>
+
+
+            <ImageView
+                android:id="@+id/ring_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:src="@drawable/three_ring_ani"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/v_guide_line"
+                app:layout_constraintTop_toTopOf="@id/score_one_title_text_view"
+                app:layout_constraintBottom_toBottomOf="@id/score_three_value_text_view"/>
+
+
+            <ImageView
+                android:id="@+id/point_one_image_view"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_brightness_1"
+                android:tint="@color/dark_color_primary_green_500"
+                android:layout_marginTop="32dp"
+                app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/score_one_title_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="访问量(PV)"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/white"
+                android:textAppearance="?attr/textAppearanceSubtitle2"
+                app:layout_constraintLeft_toRightOf="@id/point_one_image_view"
+                app:layout_constraintTop_toTopOf="@id/point_one_image_view"
+                app:layout_constraintBottom_toBottomOf="@id/point_one_image_view"/>
+
+            <TextView
+                android:id="@+id/score_one_value_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1,132,150"
+                android:textColor="@color/gray_500"
+                android:layout_marginTop="4dp"
+                android:textAppearance="?attr/textAppearanceCaption"
+                app:layout_constraintLeft_toLeftOf="@id/score_one_title_text_view"
+                app:layout_constraintTop_toBottomOf="@id/score_one_title_text_view"/>
+
+
+            <ImageView
+                android:id="@+id/point_two_image_view"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_brightness_1"
+                android:tint="@color/dark_color_secondary_orange_500"
+                android:layout_marginTop="24dp"
+                app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+                app:layout_constraintTop_toBottomOf="@id/score_one_value_text_view"/>
+
+
+            <TextView
+                android:id="@+id/score_two_title_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="评论数量"
+                android:textColor="@color/white"
+                android:layout_marginLeft="8dp"
+                android:textAppearance="?attr/textAppearanceSubtitle2"
+                app:layout_constraintLeft_toRightOf="@id/point_two_image_view"
+                app:layout_constraintTop_toTopOf="@id/point_two_image_view"
+                app:layout_constraintBottom_toBottomOf="@id/point_two_image_view"/>
+
+            <TextView
+                android:id="@+id/score_two_value_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="155,643"
+                android:textColor="@color/gray_500"
+                android:layout_marginTop="4dp"
+                android:textAppearance="?attr/textAppearanceCaption"
+                app:layout_constraintLeft_toLeftOf="@id/score_two_title_text_view"
+                app:layout_constraintTop_toBottomOf="@id/score_two_title_text_view"/>
+
+
+            <ImageView
+                android:id="@+id/point_three_image_view"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_brightness_1"
+                android:tint="@color/dark_color_assist_yellow_500"
+                android:layout_marginTop="24dp"
+                app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+                app:layout_constraintTop_toBottomOf="@id/score_two_value_text_view"/>
+
+            <TextView
+                android:id="@+id/score_three_title_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户数量"
+                android:textColor="@color/white"
+                android:layout_marginLeft="8dp"
+                android:textAppearance="?attr/textAppearanceSubtitle2"
+                app:layout_constraintLeft_toRightOf="@id/point_three_image_view"
+                app:layout_constraintTop_toTopOf="@id/point_three_image_view"
+                app:layout_constraintBottom_toBottomOf="@id/point_three_image_view"/>
+
+            <TextView
+                android:id="@+id/score_three_value_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_500"
+                android:text="165,050"
+                android:layout_marginTop="4dp"
+                android:textAppearance="?attr/textAppearanceCaption"
+                app:layout_constraintLeft_toLeftOf="@id/score_three_title_text_view"
+                app:layout_constraintTop_toBottomOf="@id/score_three_title_text_view"/>
+
+            <View
+                android:id="@+id/line_one_view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_900"
+                android:layout_marginTop="32dp"
+                app:layout_constraintRight_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ring_image_view"/>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/line_chart"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line_one_view"
+                app:layout_constraintBottom_toTopOf="@id/line_two_view"/>
+
+            <View
+                android:id="@+id/line_two_view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_900"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintRight_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/viewer_header_title_text_view"/>
+
+            <TextView
+                android:id="@+id/viewer_header_title_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="最近访客"
+                android:layout_marginBottom="24dp"
+                android:layout_marginLeft="16dp"
+                android:textAppearance="?attr/textAppearanceSubtitle2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/viewer_header_one_image_view"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/viewer_header_one_image_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="16dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/viewer_header_two_image_view"
+                app:srcCompat="@drawable/header_001"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/viewer_header_two_image_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="8dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/viewer_header_one_image_view"
+                app:layout_constraintRight_toLeftOf="@id/viewer_header_three_image_view"
+                app:srcCompat="@drawable/header_002"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/viewer_header_three_image_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="8dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/viewer_header_two_image_view"
+                app:layout_constraintRight_toLeftOf="@id/viewer_header_four_image_view"
+                app:srcCompat="@drawable/header_003"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/viewer_header_four_image_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="8dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/viewer_header_three_image_view"
+                app:layout_constraintRight_toLeftOf="@id/viewer_header_five_image_view"
+                app:srcCompat="@drawable/header_004"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/viewer_header_five_image_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="8dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/viewer_header_four_image_view"
+                app:layout_constraintRight_toLeftOf="@id/viewer_header_six_card_view"
+                app:srcCompat="@drawable/header_005"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/viewer_header_six_card_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="16dp"
+                app:cardCornerRadius="100dp"
+                android:backgroundTint="#FF0000"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/viewer_header_five_image_view"
+                app:layout_constraintRight_toRightOf="parent">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/header_006"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#BB000000"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray_500"
+                    android:text="+99"
+                    android:layout_gravity="center"/>
+
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

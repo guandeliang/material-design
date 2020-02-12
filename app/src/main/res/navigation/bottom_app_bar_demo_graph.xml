@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_app_bar_base_graph"
+    app:startDestination="@id/bottomAppBarDemoInBoxFragment">
+
+    <fragment
+        android:id="@+id/bottomAppBarDemoInBoxFragment"
+        android:name="com.jacob.book.material.example.bottomappbar.BottomAppBarDemoInBoxFragment"
+        android:label="bottomAppBarBaseInBoxFragment"
+        tools:layout="@layout/bottom_app_bar_demo_in_box_fragment">
+        <action
+            android:id="@+id/action_show_mail_content"
+            app:destination="@id/bottomAppBarDemoMailContentFragment"
+            app:enterAnim="@anim/nav_alpha_scale_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/nav_alpha_scale_enter"
+            app:popExitAnim="@anim/fragment_open_exit" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bottomAppBarDemoMailContentFragment"
+        android:name="com.jacob.book.material.example.bottomappbar.BottomAppBarDemoMailContentFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/bottom_app_bar_demo_mail_content_fragment">
+    </fragment>
+
+
+</navigation>

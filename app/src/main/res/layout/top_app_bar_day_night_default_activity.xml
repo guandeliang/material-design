@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.jacob.book.material.widgets.ThemeSwitchAppBarLayout
+            style="@style/Widget.MaterialComponents.AppBarLayout.PrimarySurface"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title_text="默认DayNight主题"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="24dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginLeft="16dp"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:text="1、不使用AppBarLayout"/>
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    style="@style/Widget.MaterialComponents.Toolbar.Primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:elevation="8dp"
+                    app:title="Toolbar"
+                    app:subtitle="Primary"
+                    app:navigationIcon="@drawable/icon_menu"
+                    app:menu="@menu/regular_menu"/>
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    style="@style/Widget.MaterialComponents.Toolbar.Surface"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:elevation="8dp"
+                    app:title="Toolbar"
+                    app:subtitle="Surface"
+                    app:navigationIcon="@drawable/icon_menu"
+                    app:menu="@menu/regular_menu"/>
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    style="@style/Widget.MaterialComponents.Toolbar.PrimarySurface"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:elevation="8dp"
+                    app:title="Toolbar"
+                    app:subtitle="PrimarySurface"
+                    app:navigationIcon="@drawable/icon_menu"
+                    app:menu="@menu/regular_menu"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginLeft="16dp"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:text="2、使用AppBarLayout"/>
+
+                <com.google.android.material.appbar.AppBarLayout
+                    style="@style/Widget.MaterialComponents.AppBarLayout.Primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+                    <com.google.android.material.appbar.MaterialToolbar
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:title="AppBarLayout"
+                        app:subtitle="Primary"
+                        app:navigationIcon="@drawable/icon_menu"
+                        app:menu="@menu/regular_menu"/>
+                </com.google.android.material.appbar.AppBarLayout>
+
+
+                <com.google.android.material.appbar.AppBarLayout
+                    style="@style/Widget.MaterialComponents.AppBarLayout.Surface"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+                    <com.google.android.material.appbar.MaterialToolbar
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:title="AppBarLayout"
+                        app:subtitle="Surface"
+                        app:navigationIcon="@drawable/icon_menu"
+                        app:menu="@menu/regular_menu"/>
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <com.google.android.material.appbar.AppBarLayout
+                    style="@style/Widget.MaterialComponents.AppBarLayout.PrimarySurface"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+                    <com.google.android.material.appbar.MaterialToolbar
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:title="AppBarLayout"
+                        app:subtitle="PrimarySurface"
+                        app:navigationIcon="@drawable/icon_menu"
+                        app:menu="@menu/regular_menu"/>
+                </com.google.android.material.appbar.AppBarLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+
+
+    </LinearLayout>
+</layout>

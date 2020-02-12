@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraint_layout"
+    android:clickable="true"
+    android:background="?attr/selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v_guide_line"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="68dp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/header_card_view"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:cardCornerRadius="21dp">
+        <ImageView
+            android:id="@+id/header_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/header_001"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/title_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?attr/textAppearanceSubtitle1"
+        android:layout_marginRight="16dp"
+        app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+        app:layout_constraintTop_toTopOf="@id/header_card_view"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="邀请您一起参加阿拉善英雄会"/>
+
+    <TextView
+        android:id="@+id/names_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?attr/textAppearanceSubtitle2"
+        android:layout_marginRight="16dp"
+        app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+        app:layout_constraintBottom_toBottomOf="@id/header_card_view"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="想吃可爱熊的竹子"/>
+
+    <TextView
+        android:id="@+id/summary_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?attr/textAppearanceCaption"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:maxLines="2"
+        app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+        app:layout_constraintTop_toBottomOf="@id/names_text_view"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="10月5日，第14届阿拉善英雄会在内蒙古自治区阿拉善盟圆满收官。本届英雄会共吸引了来自全国各地的近40万辆车，120万人次齐聚阿拉善。"/>
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_300"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+        app:layout_constraintTop_toBottomOf="@id/summary_text_view"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

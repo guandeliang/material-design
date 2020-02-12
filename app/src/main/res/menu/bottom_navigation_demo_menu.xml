@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <item
+            android:id="@+id/index"
+            android:orderInCategory="101"
+            android:title="首页"
+            android:icon="@drawable/icon_home"/>
+        <item
+            android:id="@+id/library"
+            android:orderInCategory="102"
+            android:title="曲库"
+            android:icon="@drawable/icon_library_music"/>
+        <item
+            android:id="@+id/play_list"
+            android:orderInCategory="103"
+            android:title="播放列表"
+            android:icon="@drawable/icon_queue_music"/>
+</menu>
