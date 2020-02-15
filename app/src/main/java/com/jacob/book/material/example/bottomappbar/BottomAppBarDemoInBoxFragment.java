@@ -43,7 +43,6 @@ public class BottomAppBarDemoInBoxFragment extends Fragment implements Lifecycle
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.bottom_app_bar_demo_in_box_fragment, container, false);
         viewModel = new ViewModelProvider(getActivity()).get(BottomAppBarDemoViewModel.class);
-        //设置状态栏颜色
 
         //设置过滤菜单
         filterMenu = new PopupMenu(getActivity(), binding.filterImageView);
@@ -118,11 +117,8 @@ public class BottomAppBarDemoInBoxFragment extends Fragment implements Lifecycle
             Bundle bundle = new Bundle();
             MailInBoxAdapter mailInBoxAdapter = (MailInBoxAdapter)adapter;
             Mail mail = mailInBoxAdapter.getData().get(position);
-            FragmentNavigator.Extras extras = new FragmentNavigator.Extras.Builder()
-                    .addSharedElement(view.findViewById(R.id.header_image_view), "transition_" + mail.getId())
-                    .build();
             bundle.putSerializable(BottomAppBarDemoMailContentFragment.PARAM_MAIL_ITEM, mail);
-            Navigation.findNavController(view).navigate(R.id.action_show_mail_content, bundle, null, extras);
+            Navigation.findNavController(getActivity(),  R.id.nav_host_fragment).navigate(R.id.show_mail_content, bundle);
         }
     }
 

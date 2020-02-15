@@ -17,7 +17,6 @@ public class MailInBoxAdapter extends BaseQuickAdapter<Mail, BaseViewHolder> {
     @Override
     protected void convert(BaseViewHolder holder, Mail mail) {
         int headerResId = getContext().getResources().getIdentifier(mail.getHeaderFile(), "drawable", getContext().getPackageName());
-        holder.getView(R.id.header_image_view).setTransitionName("transition_" + mail.getId());
         holder.setImageResource(R.id.header_image_view, headerResId);
         holder.setText(R.id.title_text_view, mail.getTitle());
         holder.setText(R.id.names_text_view, mail.getNames());

@@ -5,19 +5,14 @@
     android:id="@+id/bottom_app_bar_base_graph"
     app:startDestination="@id/index">
 
+    <action android:id="@+id/show_search" app:destination="@id/search"/>
+
     <fragment
         android:id="@+id/index"
         android:name="com.jacob.book.material.example.bottomnavigation.BottomNavigationDemoIndexFragment"
         android:label="index"
         tools:layout="@layout/bottom_navigation_demo_index_fragment">
 
-        <action
-            android:id="@+id/index_to_library"
-            app:destination="@id/library"
-            app:enterAnim="@anim/fragment_fade_enter"
-            app:exitAnim="@anim/fragment_fade_exit"
-            app:popEnterAnim="@anim/fragment_fade_enter"
-            app:popExitAnim="@anim/fragment_fade_exit" />
     </fragment>
 
     <fragment
@@ -34,31 +29,11 @@
         tools:layout="@layout/bottom_navigation_demo_play_list_fragment">
     </fragment>
 
-    <!--
 
-    <action
-        android:id="@+id/action_show_index"
-        app:destination="@id/bottomNavigationDemoIndexFragment"
-        app:enterAnim="@anim/nav_alpha_scale_enter"
-        app:exitAnim="@anim/fragment_open_exit"
-        app:popEnterAnim="@anim/nav_alpha_scale_enter"
-        app:popExitAnim="@anim/fragment_open_exit" />
-
-    <action
-        android:id="@+id/action_show_library"
-        app:destination="@id/bottomNavigationDemoLibraryFragment"
-        app:enterAnim="@anim/nav_alpha_scale_enter"
-        app:exitAnim="@anim/fragment_open_exit"
-        app:popEnterAnim="@anim/nav_alpha_scale_enter"
-        app:popExitAnim="@anim/fragment_open_exit" />
-
-    <action
-        android:id="@+id/action_show_play_list"
-        app:destination="@id/bottomNavigationDemoPlayListFragment"
-        app:enterAnim="@anim/nav_alpha_scale_enter"
-        app:exitAnim="@anim/fragment_open_exit"
-        app:popEnterAnim="@anim/nav_alpha_scale_enter"
-        app:popExitAnim="@anim/fragment_open_exit" />
-
-   -->
+    <fragment
+        android:id="@+id/search"
+        android:name="com.jacob.book.material.example.bottomnavigation.BottomNavigationDemoSearchFragment"
+        android:label="search"
+        tools:layout="@layout/bottom_navigation_demo_search_fragment">
+    </fragment>
 </navigation>

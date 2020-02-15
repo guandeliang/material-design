@@ -6,18 +6,14 @@ import android.view.View;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class VertialLinearLayoutItemDecoration extends RecyclerView.ItemDecoration {
-    private int lSpace;
+public class LinearLayoutVertialItemDecoration extends RecyclerView.ItemDecoration {
     private int tSpace;
-    private int rSpace;
     private int bSpace;
     private int vSpace;
 
 
-    public VertialLinearLayoutItemDecoration(int lSpace, int tSpace, int rSpace, int bSpace, int vSpace) {
-        this.lSpace = lSpace;
+    public LinearLayoutVertialItemDecoration(int tSpace, int bSpace, int vSpace) {
         this.tSpace = tSpace;
-        this.rSpace = rSpace;
         this.bSpace = bSpace;
         this.vSpace = vSpace;
     }
@@ -42,29 +38,24 @@ public class VertialLinearLayoutItemDecoration extends RecyclerView.ItemDecorati
             return;
         }
 
+        outRect.left = 0;
+        outRect.right = 0;
+
         if(viewCount == 1){
-            outRect.left = lSpace;
             outRect.top = tSpace;
-            outRect.right = rSpace;
             outRect.bottom = bSpace;
             return;
         }
 
 
         if(viewPosition == 0){
-            outRect.left = lSpace;
             outRect.top = tSpace;
-            outRect.right = rSpace;
             outRect.bottom = vSpace/2;
         }else if(viewPosition == viewCount - 1){
-            outRect.left = lSpace;
             outRect.top = vSpace/2;
-            outRect.right = rSpace;
             outRect.bottom = bSpace;
         }else {
-            outRect.left = lSpace;
             outRect.top = vSpace/2;
-            outRect.right = rSpace;
             outRect.bottom = vSpace/2;
         }
     }

@@ -1,4 +1,4 @@
-package com.jacob.book.material.main.activity;
+package com.jacob.book.material.test;
 
 import android.widget.LinearLayout;
 
@@ -7,20 +7,19 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.viewholder.BaseViewHolder;
-import com.jacob.book.WidgetsUtils;
 import com.jacob.book.material.R;
 import com.jacob.book.material.example.model.ExampleImage;
 
 import java.util.List;
 
-public class SnapTestAdapter extends BaseQuickAdapter<ExampleImage, BaseViewHolder> {
+public class TestSnapAdapter extends BaseQuickAdapter<ExampleImage, BaseViewHolder> {
     private RecyclerView recyclerView;
     private float itemCountPerContainer;
     private float itemSpace;
 
 
-    public SnapTestAdapter(List<ExampleImage> data, float itemCountPerContainer, float itemSpace) {
-        super(R.layout.snap_test_holder, data);
+    public TestSnapAdapter(List<ExampleImage> data, float itemCountPerContainer, float itemSpace) {
+        super(R.layout.test_snap_holder, data);
         this.itemCountPerContainer = itemCountPerContainer;
         this.itemSpace = itemSpace;
     }

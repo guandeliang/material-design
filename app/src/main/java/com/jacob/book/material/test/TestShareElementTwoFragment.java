@@ -1,0 +1,43 @@
+package com.jacob.book.material.test;
+
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import androidx.databinding.DataBindingUtil;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.LifecycleObserver;
+import androidx.transition.TransitionInflater;
+
+import com.jacob.book.material.R;
+import com.jacob.book.material.base.TabBaseFragment;
+import com.jacob.book.material.databinding.TestShareElementOneFragmentBinding;
+import com.jacob.book.material.databinding.TestShareElementTwoFragmentBinding;
+
+import java.util.List;
+
+public class TestShareElementTwoFragment extends Fragment implements LifecycleObserver {
+    private TestShareElementTwoFragmentBinding binding;
+
+    public TestShareElementTwoFragment(){
+        this.getLifecycle().addObserver(this);
+    }
+
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        binding = DataBindingUtil.inflate(inflater, R.layout.test_share_element_two_fragment, container, false);
+
+        this.setSharedElementEnterTransition(TransitionInflater.from(getContext()).inflateTransition(android.R.transition.move).setDuration(200));
+
+
+
+
+
+        return binding.getRoot();
+    }
+
+
+
+}

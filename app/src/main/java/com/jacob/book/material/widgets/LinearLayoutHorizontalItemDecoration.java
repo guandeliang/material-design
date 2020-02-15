@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
-public class HorizontalLinearLayoutItemDecoration extends RecyclerView.ItemDecoration {
+public class LinearLayoutHorizontalItemDecoration extends RecyclerView.ItemDecoration {
     private int lSpace;
     private int tSpace;
     private int rSpace;
@@ -15,7 +15,7 @@ public class HorizontalLinearLayoutItemDecoration extends RecyclerView.ItemDecor
     private int hSpace;
 
 
-    public HorizontalLinearLayoutItemDecoration(int lSpace, int tSpace, int rSpace, int bSpace, int hSpace) {
+    public LinearLayoutHorizontalItemDecoration(int lSpace, int tSpace, int rSpace, int bSpace, int hSpace) {
         this.lSpace = lSpace;
         this.tSpace = tSpace;
         this.rSpace = rSpace;

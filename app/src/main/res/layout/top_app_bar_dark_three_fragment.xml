@@ -45,7 +45,6 @@
                         android:text="托尼老师（男）"
                         android:layout_marginTop="16dp"
                         android:layout_marginLeft="16dp"
-                        android:textColor="@color/white"
                         android:textAppearance="?attr/textAppearanceSubtitle2"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintLeft_toRightOf="@id/zero_header_image_view"
@@ -57,8 +56,7 @@
                         android:layout_height="wrap_content"
                         android:text="国际5A级剃头匠（89票赞成）"
                         android:layout_marginTop="12dp"
-                        android:textColor="@color/gray_500"
-                        android:textAppearance="?attr/textAppearanceOverline"
+                        android:textAppearance="?attr/textAppearanceCaption"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintLeft_toLeftOf="@id/zero_name_text_view"
                         app:layout_constraintTop_toBottomOf="@id/zero_name_text_view"/>
@@ -69,8 +67,7 @@
                         android:layout_height="wrap_content"
                         android:text="日本皇家理发学会高级理事长，艺术总监"
                         android:layout_marginTop="8dp"
-                        android:textColor="@color/gray_500"
-                        android:textAppearance="?attr/textAppearanceOverline"
+                        android:textAppearance="?attr/textAppearanceCaption"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintLeft_toLeftOf="@id/zero_name_text_view"
                         app:layout_constraintTop_toBottomOf="@id/zero_title_text_view"/>
@@ -116,7 +113,6 @@
                         android:layout_height="wrap_content"
                         android:text="汤姆老师（男）"
                         android:layout_marginLeft="16dp"
-                        android:textColor="@color/white"
                         android:textAppearance="?attr/textAppearanceSubtitle2"
                         app:layout_constraintLeft_toRightOf="@id/one_header_image_view"
                         app:layout_constraintTop_toTopOf="@id/one_header_image_view"/>
@@ -127,8 +123,7 @@
                         android:layout_height="wrap_content"
                         android:text="京东美容美发技校优秀毕业生"
                         android:layout_marginLeft="16dp"
-                        android:textColor="@color/gray_500"
-                        android:textAppearance="?attr/textAppearanceOverline"
+                        android:textAppearance="?attr/textAppearanceCaption"
                         app:layout_constraintLeft_toRightOf="@id/one_header_image_view"
                         app:layout_constraintBottom_toBottomOf="@id/one_header_image_view"/>
 
@@ -136,7 +131,7 @@
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@drawable/icon_more_vert"
-                        android:tint="@color/gray_500"
+                        android:tint="?android:attr/textColorSecondary"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintRight_toRightOf="parent"/>
@@ -178,7 +173,6 @@
                         android:layout_height="wrap_content"
                         android:text="史蒂夫老师（女）"
                         android:layout_marginLeft="16dp"
-                        android:textColor="@color/white"
                         android:textAppearance="?attr/textAppearanceSubtitle2"
                         app:layout_constraintLeft_toRightOf="@id/two_header_image_view"
                         app:layout_constraintTop_toTopOf="@id/two_header_image_view"/>
@@ -189,15 +183,14 @@
                         android:layout_height="wrap_content"
                         android:text="蓝翔技校优秀毕业生"
                         android:layout_marginLeft="16dp"
-                        android:textColor="@color/gray_500"
-                        android:textAppearance="?attr/textAppearanceOverline"
+                        android:textAppearance="?attr/textAppearanceCaption"
                         app:layout_constraintLeft_toRightOf="@id/two_header_image_view"
                         app:layout_constraintBottom_toBottomOf="@id/two_header_image_view"/>
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@drawable/icon_more_vert"
-                        android:tint="@color/gray_500"
+                        android:tint="?android:attr/textColorSecondary"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintRight_toRightOf="parent"/>
@@ -235,7 +228,6 @@
                         android:layout_height="wrap_content"
                         android:text="吉米老师（女）"
                         android:layout_marginLeft="16dp"
-                        android:textColor="@color/white"
                         android:textAppearance="?attr/textAppearanceSubtitle2"
                         app:layout_constraintLeft_toRightOf="@id/three_header_image_view"
                         app:layout_constraintTop_toTopOf="@id/three_header_image_view"/>
@@ -246,15 +238,14 @@
                         android:layout_height="wrap_content"
                         android:text="前蓝凤凰艺术总监"
                         android:layout_marginLeft="16dp"
-                        android:textColor="@color/gray_500"
-                        android:textAppearance="?attr/textAppearanceOverline"
+                        android:textAppearance="?attr/textAppearanceCaption"
                         app:layout_constraintLeft_toRightOf="@id/three_header_image_view"
                         app:layout_constraintBottom_toBottomOf="@id/three_header_image_view"/>
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@drawable/icon_more_vert"
-                        android:tint="@color/gray_500"
+                        android:tint="?android:attr/textColorSecondary"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintRight_toRightOf="parent"/>
@@ -293,7 +284,6 @@
                         android:layout_height="wrap_content"
                         android:text="康师傅（女）"
                         android:layout_marginLeft="16dp"
-                        android:textColor="@color/white"
                         android:textAppearance="?attr/textAppearanceSubtitle2"
                         app:layout_constraintLeft_toRightOf="@id/four_header_image_view"
                         app:layout_constraintTop_toTopOf="@id/four_header_image_view"/>
@@ -304,15 +294,14 @@
                         android:layout_height="wrap_content"
                         android:text="王府井国营理发店主任"
                         android:layout_marginLeft="16dp"
-                        android:textColor="@color/gray_500"
-                        android:textAppearance="?attr/textAppearanceOverline"
+                        android:textAppearance="?attr/textAppearanceCaption"
                         app:layout_constraintLeft_toRightOf="@id/four_header_image_view"
                         app:layout_constraintBottom_toBottomOf="@id/four_header_image_view"/>
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@drawable/icon_more_vert"
-                        android:tint="@color/gray_500"
+                        android:tint="?android:attr/textColorSecondary"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintRight_toRightOf="parent"/>
@@ -351,7 +340,6 @@
                         android:layout_height="wrap_content"
                         android:text="小唐老师（女）"
                         android:layout_marginLeft="16dp"
-                        android:textColor="@color/white"
                         android:textAppearance="?attr/textAppearanceSubtitle2"
                         app:layout_constraintLeft_toRightOf="@id/five_header_image_view"
                         app:layout_constraintTop_toTopOf="@id/five_header_image_view"/>
@@ -362,15 +350,14 @@
                         android:layout_height="wrap_content"
                         android:text="优秀发型护理师，店长秘书"
                         android:layout_marginLeft="16dp"
-                        android:textColor="@color/gray_500"
-                        android:textAppearance="?attr/textAppearanceOverline"
+                        android:textAppearance="?attr/textAppearanceCaption"
                         app:layout_constraintLeft_toRightOf="@id/five_header_image_view"
                         app:layout_constraintBottom_toBottomOf="@id/five_header_image_view"/>
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@drawable/icon_more_vert"
-                        android:tint="@color/gray_500"
+                        android:tint="?android:attr/textColorSecondary"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintRight_toRightOf="parent"/>
@@ -408,7 +395,6 @@
                         android:layout_height="wrap_content"
                         android:text="戴安娜老师（男）"
                         android:layout_marginLeft="16dp"
-                        android:textColor="@color/white"
                         android:textAppearance="?attr/textAppearanceSubtitle2"
                         app:layout_constraintLeft_toRightOf="@id/six_header_image_view"
                         app:layout_constraintTop_toTopOf="@id/six_header_image_view"/>
@@ -419,15 +405,14 @@
                         android:layout_height="wrap_content"
                         android:text="优秀发型护理师，艺术总监助理"
                         android:layout_marginLeft="16dp"
-                        android:textColor="@color/gray_500"
-                        android:textAppearance="?attr/textAppearanceOverline"
+                        android:textAppearance="?attr/textAppearanceCaption"
                         app:layout_constraintLeft_toRightOf="@id/six_header_image_view"
                         app:layout_constraintBottom_toBottomOf="@id/six_header_image_view"/>
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@drawable/icon_more_vert"
-                        android:tint="@color/gray_500"
+                        android:tint="?android:attr/textColorSecondary"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintRight_toRightOf="parent"/>
@@ -465,7 +450,6 @@
                         android:layout_height="wrap_content"
                         android:text="玛丽老师（女）"
                         android:layout_marginLeft="16dp"
-                        android:textColor="@color/white"
                         android:textAppearance="?attr/textAppearanceSubtitle2"
                         app:layout_constraintLeft_toRightOf="@id/seven_header_image_view"
                         app:layout_constraintTop_toTopOf="@id/seven_header_image_view"/>
@@ -476,15 +460,14 @@
                         android:layout_height="wrap_content"
                         android:text="郝建前任领导马晶晶同志"
                         android:layout_marginLeft="16dp"
-                        android:textColor="@color/gray_500"
-                        android:textAppearance="?attr/textAppearanceOverline"
+                        android:textAppearance="?attr/textAppearanceCaption"
                         app:layout_constraintLeft_toRightOf="@id/seven_header_image_view"
                         app:layout_constraintBottom_toBottomOf="@id/seven_header_image_view"/>
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@drawable/icon_more_vert"
-                        android:tint="@color/gray_500"
+                        android:tint="?android:attr/textColorSecondary"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintRight_toRightOf="parent"/>
@@ -522,7 +505,6 @@
                         android:layout_height="wrap_content"
                         android:text="剪刀手爱德华（男）"
                         android:layout_marginLeft="16dp"
-                        android:textColor="@color/white"
                         android:textAppearance="?attr/textAppearanceSubtitle2"
                         app:layout_constraintLeft_toRightOf="@id/eight_header_image_view"
                         app:layout_constraintTop_toTopOf="@id/eight_header_image_view"/>
@@ -533,15 +515,14 @@
                         android:layout_height="wrap_content"
                         android:text="本店御用发型师，不对外营业"
                         android:layout_marginLeft="16dp"
-                        android:textColor="@color/gray_500"
-                        android:textAppearance="?attr/textAppearanceOverline"
+                        android:textAppearance="?attr/textAppearanceCaption"
                         app:layout_constraintLeft_toRightOf="@id/eight_header_image_view"
                         app:layout_constraintBottom_toBottomOf="@id/eight_header_image_view"/>
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@drawable/icon_more_vert"
-                        android:tint="@color/gray_500"
+                        android:tint="?android:attr/textColorSecondary"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintRight_toRightOf="parent"/>

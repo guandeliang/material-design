@@ -16,7 +16,7 @@ import androidx.core.content.ContextCompat;
 import androidx.core.graphics.drawable.DrawableCompat;
 
 public class WidgetsUtils {
-    public static int dpToPx(Context context, int dps){
+    public static int dpToPx(Context context, float dps){
         return Math.round(context.getResources().getDisplayMetrics().density * dps);
     }
 
@@ -67,8 +67,20 @@ public class WidgetsUtils {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             View view = act.findViewById(android.R.id.content);
             int flags = view.getSystemUiVisibility();
-            flags |= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+            //flags |= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+
+            flags = flags|View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
             view.setSystemUiVisibility(flags);
         }
     }
+
+    public static void setSystemBarDark(Activity act) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            View view = act.findViewById(android.R.id.content);
+            int flags = view.getSystemUiVisibility();
+            flags = flags & ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+            view.setSystemUiVisibility(flags);
+        }
+    }
+
 }

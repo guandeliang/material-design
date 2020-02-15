@@ -15,7 +15,7 @@ import com.jacob.book.material.base.TabBaseFragment;
 import com.jacob.book.material.databinding.BottomNavigationDemoLibraryArtistFragmentBinding;
 import com.jacob.book.material.example.adapter.GrammyLibraryArtistAdapter;
 import com.jacob.book.material.example.model.GrammySinger;
-import com.jacob.book.material.widgets.VertialLinearLayoutItemDecoration;
+import com.jacob.book.material.widgets.LinearLayoutVertialItemDecoration;
 
 import java.util.List;
 
@@ -43,11 +43,14 @@ public class BottomNavigationDemoLibraryArtistFragment extends TabBaseFragment {
         int px_08 = WidgetsUtils.dpToPx(getContext(), 8);
         int px_16 = WidgetsUtils.dpToPx(getContext(), 16);
 
-        VertialLinearLayoutItemDecoration decoration = new VertialLinearLayoutItemDecoration(px_16, px_16, px_16, px_16, px_08);
+        LinearLayoutVertialItemDecoration decoration = new LinearLayoutVertialItemDecoration(px_16, px_16, px_08);
         binding.recyclerView.addItemDecoration(decoration);
 
 
         GrammyLibraryArtistAdapter adapter = new GrammyLibraryArtistAdapter(list);
+        View header = View.inflate(this.getContext(), R.layout.grammy_library_header, null);
+        adapter.setHeaderView(header);
+
         binding.recyclerView.setAdapter(adapter);
     }
 

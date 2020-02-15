@@ -38,7 +38,6 @@ public class BottomAppBarDemoMailContentFragment extends Fragment implements Lif
         mail = (Mail)getArguments().getSerializable(PARAM_MAIL_ITEM);
         viewModel = new ViewModelProvider(getActivity()).get(BottomAppBarDemoViewModel.class);
 
-        binding.headerImageView.setTransitionName("transition_" + mail.getId());
         int headerResId = getContext().getResources().getIdentifier(mail.getHeaderFile(), "drawable", getContext().getPackageName());
         binding.headerImageView.setImageResource(headerResId);
 

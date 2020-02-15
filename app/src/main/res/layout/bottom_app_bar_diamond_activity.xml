@@ -492,7 +492,7 @@
             android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:shapeAppearance="@style/ShapeAppearance.MaterialBook.Diamond"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Diamond"
             app:layout_anchor="@id/bottom_app_bar"
             android:src="@drawable/icon_add"/>
 

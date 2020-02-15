@@ -3,16 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/bottom_app_bar_base_graph"
-    app:startDestination="@id/bottomAppBarDemoInBoxFragment">
+    app:startDestination="@id/in_box">
 
     <fragment
-        android:id="@+id/bottomAppBarDemoInBoxFragment"
+        android:id="@+id/in_box"
         android:name="com.jacob.book.material.example.bottomappbar.BottomAppBarDemoInBoxFragment"
-        android:label="bottomAppBarBaseInBoxFragment"
+        android:label="in_box"
         tools:layout="@layout/bottom_app_bar_demo_in_box_fragment">
         <action
-            android:id="@+id/action_show_mail_content"
-            app:destination="@id/bottomAppBarDemoMailContentFragment"
+            android:id="@+id/show_mail_content"
+            app:destination="@id/mail_content"
             app:enterAnim="@anim/nav_alpha_scale_enter"
             app:exitAnim="@anim/fragment_open_exit"
             app:popEnterAnim="@anim/nav_alpha_scale_enter"
@@ -20,9 +20,9 @@
     </fragment>
 
     <fragment
-        android:id="@+id/bottomAppBarDemoMailContentFragment"
+        android:id="@+id/mail_content"
         android:name="com.jacob.book.material.example.bottomappbar.BottomAppBarDemoMailContentFragment"
-        android:label="main_fragment"
+        android:label="mail_content"
         tools:layout="@layout/bottom_app_bar_demo_mail_content_fragment">
     </fragment>
 

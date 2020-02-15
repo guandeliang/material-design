@@ -10,6 +10,7 @@ import com.jacob.book.material.example.model.Grammy;
 import com.jacob.book.material.example.model.GrammySinger;
 import com.jacob.book.material.example.model.Mail;
 import com.jacob.book.material.example.model.MarvelNews;
+import com.jacob.book.material.example.model.Thrones;
 import com.jacob.book.material.main.model.ExampleGroup;
 
 import java.io.BufferedReader;
@@ -64,6 +65,13 @@ public class JsonUtils {
         String jsonString = readJson(resources, R.raw.grammy_singer_list);
         Gson gson = new Gson();
         Type listType = new TypeToken<ArrayList<GrammySinger>>(){}.getType();
+        return gson.fromJson(jsonString, listType);
+    }
+
+    public static List<Thrones> loadThrones(Resources resources) {
+        String jsonString = readJson(resources, R.raw.thrones_list);
+        Gson gson = new Gson();
+        Type listType = new TypeToken<ArrayList<Thrones>>(){}.getType();
         return gson.fromJson(jsonString, listType);
     }
 

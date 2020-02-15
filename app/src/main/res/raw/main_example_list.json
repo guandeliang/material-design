@@ -121,11 +121,6 @@
         "id":10301040,
         "title":"底部导航栏功能演示",
         "path":"com.jacob.book.material.example.bottomnavigation.BottomNavigationDemoActivity"
-      },
-      {
-        "id":10301050,
-        "title":"测试",
-        "path":"com.jacob.book.material.main.activity.SnapTestActivity"
       }
     ]
   },
@@ -134,7 +129,26 @@
     "id":10400000,
     "iconName":"icon_example_appbar_top",
     "title":"Banners",
-    "itemList":[]
+    "itemList":[
+      {
+        "id":10401010,
+        "title":"Snap测试",
+        "path":"com.jacob.book.material.test.TestSnapActivity"
+      },
+      {
+        "id":10401020,
+        "title":"Motion测试",
+        "path":"com.jacob.book.material.test.TestMotionActivity"
+      },
+      {
+        "id":10401030,
+        "title":"共享元素测试",
+        "path":"com.jacob.book.material.test.TestShareElementActivity"
+      }
+
+
+
+    ]
   },
 
   {

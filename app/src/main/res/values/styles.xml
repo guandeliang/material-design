@@ -6,42 +6,55 @@
     -->
     <style name="TextAppearance.MaterialBook.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
         <item name="android:textSize">96dp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
     </style>
     <style name="TextAppearance.MaterialBook.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
         <item name="android:textSize">60dp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
     </style>
     <style name="TextAppearance.MaterialBook.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
         <item name="android:textSize">48dp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
     </style>
     <style name="TextAppearance.MaterialBook.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
         <item name="android:textSize">34dp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
     </style>
     <style name="TextAppearance.MaterialBook.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
         <item name="android:textSize">24dp</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
     </style>
     <style name="TextAppearance.MaterialBook.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
         <item name="android:textSize">18dp</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
     </style>
     <style name="TextAppearance.MaterialBook.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
         <item name="android:textSize">16dp</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
     </style>
     <style name="TextAppearance.MaterialBook.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
         <item name="android:textSize">14dp</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
     </style>
     <style name="TextAppearance.MaterialBook.Body1" parent="TextAppearance.MaterialComponents.Body1">
         <item name="android:textSize">16dp</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
     </style>
     <style name="TextAppearance.MaterialBook.Body2" parent="TextAppearance.MaterialComponents.Body2">
         <item name="android:textSize">14dp</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
     </style>
     <style name="TextAppearance.MaterialBook.Button" parent="TextAppearance.MaterialComponents.Button">
         <item name="android:textSize">14dp</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
     </style>
     <style name="TextAppearance.MaterialBook.Caption" parent="TextAppearance.MaterialComponents.Caption">
         <item name="android:textSize">12dp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
     </style>
     <style name="TextAppearance.MaterialBook.Overline" parent="TextAppearance.MaterialComponents.Overline">
         <item name="android:textSize">10dp</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
     </style>
 
     <!--很多地方都会用到的圆形-->
@@ -61,21 +74,10 @@
     </style>
 
     <!--很多地方都会用到的菱形-->
-    <style name="ShapeAppearance.MaterialBook.Diamond" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+    <style name="ShapeAppearanceOverlay.MaterialBook.Diamond" parent="">
         <item name="cornerFamily">cut</item>
         <item name="cornerSize">50%</item>
     </style>
-
-    <!--END:所有主题公用部分-->
-
-
-
-
-
-
-
-
-
 
 
     <!--BEGIN: 基础风格-->
@@ -261,7 +263,6 @@
         <item name="scrimBackground">@color/mtrl_scrim_color</item>
         <item name="appBarLayoutStyle">@style/Widget.MaterialBook.SingleColor.Colored.AppBarLayout</item>
         <item name="toolbarStyle">@style/Widget.MaterialBook.SingleColor.Colored.Toolbar</item>
-        <item name="bottomNavigationStyle">@style/Widget.MaterialBook.SingleColor.Colored.PrimarySurface</item>
     </style>
     <!--单色主题AppBarLayout风格-->
     <style name="Widget.MaterialBook.SingleColor.Colored.AppBarLayout" parent="Widget.MaterialComponents.AppBarLayout.Primary">
@@ -283,8 +284,6 @@
         <item name="colorControlNormal">?attr/colorOnPrimary</item>
     </style>
 
-    <style name="Widget.MaterialBook.SingleColor.Colored.PrimarySurface" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
-    </style>
 
     <!--沉浸式状态栏单色主题风格，解决占用状态栏问题-->
     <style name="Theme.MaterialBook.SingleColor.Colored.TranslucentStatus" parent="Theme.MaterialBook.SingleColor.Colored">
@@ -300,6 +299,7 @@
 
     <!--BEGIN：浅色主题-->
     <style name="Theme.MaterialBook.SingleColor.Light" parent="Theme.MaterialBook.SingleColor.Base">
+        <item name="android:navigationBarColor">@color/light_color_primary_variant</item>
         <item name="colorPrimary">@color/light_color_primary</item>
         <item name="colorPrimaryVariant">@color/light_color_primary_variant</item>
         <item name="colorPrimaryDark">@color/light_color_primary_dark</item>
@@ -314,20 +314,37 @@
         <item name="colorOnSurface">@color/light_color_on_surface</item>
         <item name="colorOnError">@color/light_color_on_error</item>
         <item name="scrimBackground">@color/mtrl_scrim_color</item>
+
+        <!--元件风格-->
         <item name="appBarLayoutStyle">@style/Widget.MaterialBook.SingleColor.Light.AppBarLayout</item>
+        <item name="tabStyle">@style/Widget.MaterialBook.SingleColor.Light.TabLayout</item>
         <item name="bottomAppBarStyle">@style/Widget.MaterialBook.SingleColor.Light.BottomAppBar</item>
         <item name="floatingActionButtonStyle">@style/Widget.MaterialBook.SingleColor.Light.FloatingActionButton</item>
+        <item name="bottomNavigationStyle">@style/Widget.MaterialBook.SingleColor.Light.BottomNavigationView</item>
 
     </style>
     <style name="Widget.MaterialBook.SingleColor.Light.AppBarLayout" parent="Widget.MaterialComponents.AppBarLayout.Surface">
     </style>
+    <style name="Widget.MaterialBook.SingleColor.Light.TabLayout" parent="Widget.MaterialComponents.TabLayout.Colored">
+        <item name="android:background">?attr/colorSurface</item>
+        <item name="tabIndicatorColor">?attr/colorPrimary</item>
+        <item name="tabTextColor">@color/dark_tabs_icon_color_selector</item>
+        <item name="tabRippleColor">@color/dark_tabs_ripple_color</item>
+    </style>
+
     <style name="Widget.MaterialBook.SingleColor.Light.BottomAppBar" parent="Widget.MaterialComponents.BottomAppBar">
     </style>
     <style name="Widget.MaterialBook.SingleColor.Light.FloatingActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
         <item name="backgroundTint">@color/mtrl_fab_bg_color_selector</item>
         <item name="tint">@color/mtrl_fab_icon_text_color_selector</item>
     </style>
+
+    <style name="Widget.MaterialBook.SingleColor.Light.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+    </style>
+
+
     <!--END：浅色主题-->
+
 
 
 
@@ -353,6 +370,11 @@
         <item name="colorOnError">@color/dark_color_on_error</item>
         <item name="scrimBackground">@color/mtrl_scrim_color</item>
 
+        <!--文字颜色-->
+        <item name="android:textColorPrimary">?attr/colorOnBackground</item><!--H5、H6、S1、S2、B1、B2、BUTTON、OVERLINE文字颜色-->
+        <item name="android:textColorSecondary">@color/gray_500</item><!--H1、H2、H3、H4、CAPTION文字颜色-->
+
+        <!--元件风格-->
         <item name="appBarLayoutStyle">@style/Widget.MaterialBook.SingleColor.Dark.ToolbarLayout</item>
         <item name="toolbarStyle">@style/Widget.MaterialBook.SingleColor.Dark.Toolbar</item>
         <item name="tabStyle">@style/Widget.MaterialBook.SingleColor.Dark.TabLayout</item>
@@ -393,7 +415,6 @@
     </style>
     <style name="Widget.MaterialBook.SingleColor.Mono.BottomAppBar" parent="Widget.MaterialComponents.BottomAppBar">
     </style>
-接下来要做的事情是给Bottom Navigation View加一个浮动按钮
     <!--BEGIN：黑白主题-->
 
 <!--

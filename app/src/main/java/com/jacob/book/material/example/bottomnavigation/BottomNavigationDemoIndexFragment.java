@@ -1,15 +1,18 @@
 package com.jacob.book.material.example.bottomnavigation;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.core.widget.NestedScrollView;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.OnLifecycleEvent;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.jacob.book.JsonUtils;
@@ -22,7 +25,8 @@ import com.jacob.book.material.example.adapter.GrammyIndexTwoAdapter;
 import com.jacob.book.material.example.model.Grammy;
 import com.jacob.book.material.example.model.GrammyMultiItemEntity;
 import com.jacob.book.material.widgets.HorizontalEdgeSnapHelper;
-import com.jacob.book.material.widgets.HorizontalLinearLayoutItemDecoration;
+import com.jacob.book.material.widgets.LinearLayoutHorizontalItemDecoration;
+import com.jacob.book.temp.TempConstant;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,6 +42,13 @@ public class BottomNavigationDemoIndexFragment extends Fragment implements Lifec
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.bottom_navigation_demo_index_fragment, container, false);
+
+        WidgetsUtils.setSystemBarColor(this.getActivity(), R.color.gray_50);
+        WidgetsUtils.setSystemBarLight(this.getActivity());
+
+        binding.nestedScrollView.setOnScrollChangeListener(new OnContentScrollChangeListener());
+        binding.searchCardView.setOnClickListener(new OnSearchClickListener());
+
         initBanner();
         initOfficalList();
         initExpertList();
@@ -51,6 +62,43 @@ public class BottomNavigationDemoIndexFragment extends Fragment implements Lifec
         return binding.getRoot();
     }
 
+    private class OnContentScrollChangeListener implements NestedScrollView.OnScrollChangeListener{
+        @Override
+        public void onScrollChange(NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
+            if(scrollY > oldScrollY){
+                appBarSlideUp();
+            }else{
+                appBarSlideDown();
+            }
+        }
+    }
+
+    boolean isAppBarHide = false;
+
+    private void appBarSlideUp(){
+        if(isAppBarHide){
+            return;
+        }
+        isAppBarHide = true;
+        int moveY = 0 - binding.searchCardView.getHeight() * 2;
+        binding.searchCardView.animate().translationY(moveY).setStartDelay(100).setDuration(300).start();
+    }
+
+    private void appBarSlideDown(){
+        if(!isAppBarHide){
+            return;
+        }
+        isAppBarHide = false;
+        binding.searchCardView.animate().translationY(0).setStartDelay(100).setDuration(300).start();
+    }
+
+
+    private class OnSearchClickListener implements View.OnClickListener{
+        @Override
+        public void onClick(View v) {
+            Navigation.findNavController(getActivity(),  R.id.nav_host_fragment).navigate(R.id.show_search);
+        }
+    }
 
     private void initBanner(){
         binding.cardViewSlider.setImageResIds(
@@ -72,7 +120,7 @@ public class BottomNavigationDemoIndexFragment extends Fragment implements Lifec
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         binding.officalRecyclerView.setLayoutManager(layoutManager);
-        HorizontalLinearLayoutItemDecoration decoration = new HorizontalLinearLayoutItemDecoration(0, 0, 0, 0, WidgetsUtils.dpToPx(getContext(), 8));
+        LinearLayoutHorizontalItemDecoration decoration = new LinearLayoutHorizontalItemDecoration(0, 0, 0, 0, WidgetsUtils.dpToPx(getContext(), 8));
         binding.officalRecyclerView.addItemDecoration(decoration);
 
         HorizontalEdgeSnapHelper snapHelper = new HorizontalEdgeSnapHelper();
@@ -93,7 +141,7 @@ public class BottomNavigationDemoIndexFragment extends Fragment implements Lifec
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         binding.expertRecyclerView.setLayoutManager(layoutManager);
-        HorizontalLinearLayoutItemDecoration decoration = new HorizontalLinearLayoutItemDecoration(0, 0, 0, 0, WidgetsUtils.dpToPx(getContext(), 8));
+        LinearLayoutHorizontalItemDecoration decoration = new LinearLayoutHorizontalItemDecoration(0, 0, 0, 0, WidgetsUtils.dpToPx(getContext(), 8));
         binding.expertRecyclerView.addItemDecoration(decoration);
 
         HorizontalEdgeSnapHelper snapHelper = new HorizontalEdgeSnapHelper();
@@ -114,7 +162,7 @@ public class BottomNavigationDemoIndexFragment extends Fragment implements Lifec
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         binding.categoryRecyclerView.setLayoutManager(layoutManager);
-        HorizontalLinearLayoutItemDecoration decoration = new HorizontalLinearLayoutItemDecoration(0, 0, 0, 0, WidgetsUtils.dpToPx(getContext(), 8));
+        LinearLayoutHorizontalItemDecoration decoration = new LinearLayoutHorizontalItemDecoration(0, 0, 0, 0, WidgetsUtils.dpToPx(getContext(), 8));
         binding.categoryRecyclerView.addItemDecoration(decoration);
 
         HorizontalEdgeSnapHelper snapHelper = new HorizontalEdgeSnapHelper();
@@ -135,7 +183,7 @@ public class BottomNavigationDemoIndexFragment extends Fragment implements Lifec
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         binding.recentRecyclerView.setLayoutManager(layoutManager);
-        HorizontalLinearLayoutItemDecoration decoration = new HorizontalLinearLayoutItemDecoration(0, 0, 0, 0, WidgetsUtils.dpToPx(getContext(), 8));
+        LinearLayoutHorizontalItemDecoration decoration = new LinearLayoutHorizontalItemDecoration(0, 0, 0, 0, WidgetsUtils.dpToPx(getContext(), 8));
         binding.recentRecyclerView.addItemDecoration(decoration);
 
         HorizontalEdgeSnapHelper snapHelper = new HorizontalEdgeSnapHelper();
@@ -156,7 +204,7 @@ public class BottomNavigationDemoIndexFragment extends Fragment implements Lifec
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         binding.togetherRecyclerView.setLayoutManager(layoutManager);
-        HorizontalLinearLayoutItemDecoration decoration = new HorizontalLinearLayoutItemDecoration(0, 0, 0, 0, WidgetsUtils.dpToPx(getContext(), 8));
+        LinearLayoutHorizontalItemDecoration decoration = new LinearLayoutHorizontalItemDecoration(0, 0, 0, 0, WidgetsUtils.dpToPx(getContext(), 8));
         binding.togetherRecyclerView.addItemDecoration(decoration);
 
         HorizontalEdgeSnapHelper snapHelper = new HorizontalEdgeSnapHelper();
@@ -178,7 +226,7 @@ public class BottomNavigationDemoIndexFragment extends Fragment implements Lifec
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         binding.vipRecyclerView.setLayoutManager(layoutManager);
-        HorizontalLinearLayoutItemDecoration decoration = new HorizontalLinearLayoutItemDecoration(0, 0, 0, 0, WidgetsUtils.dpToPx(getContext(), 8));
+        LinearLayoutHorizontalItemDecoration decoration = new LinearLayoutHorizontalItemDecoration(0, 0, 0, 0, WidgetsUtils.dpToPx(getContext(), 8));
         binding.vipRecyclerView.addItemDecoration(decoration);
 
         HorizontalEdgeSnapHelper snapHelper = new HorizontalEdgeSnapHelper();
@@ -200,7 +248,7 @@ public class BottomNavigationDemoIndexFragment extends Fragment implements Lifec
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         binding.videoRecyclerView.setLayoutManager(layoutManager);
-        HorizontalLinearLayoutItemDecoration decoration = new HorizontalLinearLayoutItemDecoration(0, 0, 0, 0, WidgetsUtils.dpToPx(getContext(), 8));
+        LinearLayoutHorizontalItemDecoration decoration = new LinearLayoutHorizontalItemDecoration(0, 0, 0, 0, WidgetsUtils.dpToPx(getContext(), 8));
         binding.videoRecyclerView.addItemDecoration(decoration);
 
         HorizontalEdgeSnapHelper snapHelper = new HorizontalEdgeSnapHelper();
@@ -221,7 +269,7 @@ public class BottomNavigationDemoIndexFragment extends Fragment implements Lifec
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         binding.onlyRecyclerView.setLayoutManager(layoutManager);
-        HorizontalLinearLayoutItemDecoration decoration = new HorizontalLinearLayoutItemDecoration(0, 0, 0, 0, WidgetsUtils.dpToPx(getContext(), 8));
+        LinearLayoutHorizontalItemDecoration decoration = new LinearLayoutHorizontalItemDecoration(0, 0, 0, 0, WidgetsUtils.dpToPx(getContext(), 8));
         binding.onlyRecyclerView.addItemDecoration(decoration);
 
         HorizontalEdgeSnapHelper snapHelper = new HorizontalEdgeSnapHelper();

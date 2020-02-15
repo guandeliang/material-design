@@ -53,19 +53,17 @@
                         android:layout_height="16dp"
                         android:scaleType="fitXY"
                         android:adjustViewBounds="true"
-                        android:tint="@color/white"
+                        android:tint="?attr/colorOnSurface"
                         android:src="@drawable/icon_show_chart"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
                         android:textAppearance="?attr/textAppearanceButton"
                         android:layout_marginTop="4dp"
                         android:text="132,150"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
                         android:textAppearance="?attr/textAppearanceButton"
                         android:layout_marginTop="4dp"
                         android:text="访问量（PV）"/>
@@ -95,19 +93,17 @@
                         android:layout_height="16dp"
                         android:scaleType="fitXY"
                         android:adjustViewBounds="true"
-                        android:tint="@color/white"
+                        android:tint="?attr/colorOnSurface"
                         android:src="@drawable/icon_show_chart"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
                         android:textAppearance="?attr/textAppearanceButton"
                         android:layout_marginTop="4dp"
                         android:text="15,643"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
                         android:textAppearance="?attr/textAppearanceButton"
                         android:layout_marginTop="4dp"
                         android:text="评论数量"/>
@@ -137,19 +133,17 @@
                         android:layout_height="16dp"
                         android:scaleType="fitXY"
                         android:adjustViewBounds="true"
-                        android:tint="@color/white"
+                        android:tint="?attr/colorOnSurface"
                         android:src="@drawable/icon_show_chart"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
                         android:textAppearance="?attr/textAppearanceButton"
                         android:layout_marginTop="4dp"
                         android:text="65,050"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
                         android:textAppearance="?attr/textAppearanceButton"
                         android:layout_marginTop="4dp"
                         android:text="用户数量"/>
@@ -176,7 +170,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
                     android:layout_gravity="top|left"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="16dp"

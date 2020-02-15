@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -15,7 +16,7 @@ import com.jacob.book.material.base.TabBaseFragment;
 import com.jacob.book.material.databinding.BottomNavigationDemoLibraryAlbumFragmentBinding;
 import com.jacob.book.material.example.adapter.GrammyLibraryAlbumAdapter;
 import com.jacob.book.material.example.model.Grammy;
-import com.jacob.book.material.widgets.VertialLinearLayoutItemDecoration;
+import com.jacob.book.material.widgets.LinearLayoutVertialItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,10 +51,16 @@ public class BottomNavigationDemoLibraryAlbumFragment extends TabBaseFragment {
         int px_08 = WidgetsUtils.dpToPx(getContext(), 8);
         int px_16 = WidgetsUtils.dpToPx(getContext(), 16);
 
-        VertialLinearLayoutItemDecoration decoration = new VertialLinearLayoutItemDecoration(px_16, px_16, px_16, px_16, px_08);
+        LinearLayoutVertialItemDecoration decoration = new LinearLayoutVertialItemDecoration(px_16, px_16, px_08);
         binding.recyclerView.addItemDecoration(decoration);
 
         GrammyLibraryAlbumAdapter adapter = new GrammyLibraryAlbumAdapter(librarylList);
+
+        View header = View.inflate(this.getContext(), R.layout.grammy_library_header, null);
+        adapter.setHeaderView(header);
+
+
+
         binding.recyclerView.setAdapter(adapter);
     }
 

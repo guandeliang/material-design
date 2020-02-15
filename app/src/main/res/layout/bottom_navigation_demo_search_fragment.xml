@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/search_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+            <LinearLayout
+                android:id="@+id/linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:padding="4dp"
+                android:layout_marginTop="0dp"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:id="@+id/back_image_view"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/icon_arrow_back"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/search_edit_text"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="查找"
+                    android:singleLine="true"
+                    android:imeOptions="actionSearch"/>
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/icon_mic_none"/>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/history_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/search_card_view"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide_line_000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="0dp"/>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide_line_001"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="56dp"/>
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide_line_002"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="112dp"/>
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide_line_003"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="168dp"/>
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide_line_004"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="224dp"/>
+
+
+                <ImageView
+                    android:id="@+id/time_image_view_000"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/icon_access_time"
+                    android:layout_marginLeft="16dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/guide_line_000"
+                    app:layout_constraintBottom_toTopOf="@id/guide_line_001"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:text="周姐论"
+                    app:layout_constraintLeft_toRightOf="@id/time_image_view_000"
+                    app:layout_constraintTop_toTopOf="@+id/time_image_view_000"
+                    app:layout_constraintBottom_toBottomOf="@id/time_image_view_000"/>
+
+                <ImageView
+                    android:id="@+id/time_image_view_001"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/icon_access_time"
+                    android:layout_marginLeft="16dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/guide_line_001"
+                    app:layout_constraintBottom_toTopOf="@id/guide_line_002"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:text="剩下的果实被谁拿走了"
+                    app:layout_constraintLeft_toRightOf="@id/time_image_view_001"
+                    app:layout_constraintTop_toTopOf="@+id/time_image_view_001"
+                    app:layout_constraintBottom_toBottomOf="@id/time_image_view_001"/>
+
+                <ImageView
+                    android:id="@+id/time_image_view_002"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/icon_access_time"
+                    android:layout_marginLeft="16dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/guide_line_002"
+                    app:layout_constraintBottom_toTopOf="@id/guide_line_003"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:text="是你抬举了我"
+                    app:layout_constraintLeft_toRightOf="@id/time_image_view_002"
+                    app:layout_constraintTop_toTopOf="@+id/time_image_view_002"
+                    app:layout_constraintBottom_toBottomOf="@id/time_image_view_002"/>
+
+                <ImageView
+                    android:id="@+id/time_image_view_003"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/icon_access_time"
+                    android:layout_marginLeft="16dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/guide_line_003"
+                    app:layout_constraintBottom_toTopOf="@id/guide_line_004"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:text="格莱美音乐大奖"
+                    app:layout_constraintLeft_toRightOf="@id/time_image_view_003"
+                    app:layout_constraintTop_toTopOf="@+id/time_image_view_003"
+                    app:layout_constraintBottom_toBottomOf="@id/time_image_view_003"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

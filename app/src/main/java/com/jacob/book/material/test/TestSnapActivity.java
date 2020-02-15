@@ -1,4 +1,4 @@
-package com.jacob.book.material.main.activity;
+package com.jacob.book.material.test;
 
 import android.os.Bundle;
 
@@ -9,28 +9,28 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.jacob.book.JsonUtils;
 import com.jacob.book.WidgetsUtils;
 import com.jacob.book.material.R;
-import com.jacob.book.material.databinding.SnapTestActivityBinding;
+import com.jacob.book.material.databinding.TestSnapActivityBinding;
 import com.jacob.book.material.example.model.ExampleImage;
 import com.jacob.book.material.widgets.HorizontalEdgeSnapHelper;
-import com.jacob.book.material.widgets.HorizontalLinearLayoutItemDecoration;
+import com.jacob.book.material.widgets.LinearLayoutHorizontalItemDecoration;
 
 import java.util.List;
 
-public class SnapTestActivity extends AppCompatActivity {
+public class TestSnapActivity extends AppCompatActivity {
 
-    private SnapTestActivityBinding binding;
+    private TestSnapActivityBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.snap_test_activity);
+        binding = DataBindingUtil.setContentView(this, R.layout.test_snap_activity);
 
 
 
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         binding.recyclerView.setLayoutManager(layoutManager);
-        HorizontalLinearLayoutItemDecoration decoration = new HorizontalLinearLayoutItemDecoration(0, 0, 0, 0, WidgetsUtils.dpToPx(this, 16));
+        LinearLayoutHorizontalItemDecoration decoration = new LinearLayoutHorizontalItemDecoration(0, 0, 0, 0, WidgetsUtils.dpToPx(this, 16));
         binding.recyclerView.addItemDecoration(decoration);
 
         HorizontalEdgeSnapHelper snapHelper = new HorizontalEdgeSnapHelper();
@@ -38,7 +38,7 @@ public class SnapTestActivity extends AppCompatActivity {
 
         List<ExampleImage> imageList = JsonUtils.loadExampleImage(getResources());
 
-        SnapTestAdapter adapter = new SnapTestAdapter(imageList, 3, WidgetsUtils.dpToPx(this, 16));
+        TestSnapAdapter adapter = new TestSnapAdapter(imageList, 3, WidgetsUtils.dpToPx(this, 16));
 
 
         binding.recyclerView.setAdapter(adapter);
