@@ -1,6 +1,8 @@
 package com.jacob.book.material.example.model;
 
-public class Thrones {
+import java.io.Serializable;
+
+public class Thrones implements Serializable {
     private int id;
     private String fileName;
     private String title;

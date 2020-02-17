@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 
 import androidx.core.widget.NestedScrollView;
 import androidx.databinding.DataBindingUtil;
@@ -39,6 +40,8 @@ public class BottomNavigationDemoIndexFragment extends Fragment implements Lifec
     }
 
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.bottom_navigation_demo_index_fragment, container, false);
@@ -48,7 +51,6 @@ public class BottomNavigationDemoIndexFragment extends Fragment implements Lifec
 
         binding.nestedScrollView.setOnScrollChangeListener(new OnContentScrollChangeListener());
         binding.searchCardView.setOnClickListener(new OnSearchClickListener());
-
         initBanner();
         initOfficalList();
         initExpertList();
@@ -58,7 +60,6 @@ public class BottomNavigationDemoIndexFragment extends Fragment implements Lifec
         initVipList();
         initVideoList();;
         initOnlyList();
-
         return binding.getRoot();
     }
 

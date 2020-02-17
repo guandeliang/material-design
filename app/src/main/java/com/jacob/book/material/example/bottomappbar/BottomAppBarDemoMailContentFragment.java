@@ -41,10 +41,6 @@ public class BottomAppBarDemoMailContentFragment extends Fragment implements Lif
         int headerResId = getContext().getResources().getIdentifier(mail.getHeaderFile(), "drawable", getContext().getPackageName());
         binding.headerImageView.setImageResource(headerResId);
 
-
-        Log.d(TempConstant.LOG_TAG, mail.getTitle());
-
-
         binding.backImageView.setOnClickListener(new OnBackImageClickListener());
 
         return binding.getRoot();

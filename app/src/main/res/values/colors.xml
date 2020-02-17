@@ -26,6 +26,53 @@
     <color name="transparent_white_14_12">#24FFFFFF</color>
     <color name="transparent_white_15_16">#26FFFFFF</color>
     <color name="transparent_white_16_24">#29FFFFFF</color>
+    <color name="transparent_white_20">#33FFFFFF</color>
+    <color name="transparent_white_25">#40FFFFFF</color>
+    <color name="transparent_white_30">#4DFFFFFF</color>
+    <color name="transparent_white_35">#59FFFFFF</color>
+    <color name="transparent_white_40">#66FFFFFF</color>
+    <color name="transparent_white_45">#73FFFFFF</color>
+    <color name="transparent_white_50">#80FFFFFF</color>
+    <color name="transparent_white_55">#8CFFFFFF</color>
+    <color name="transparent_white_60">#99FFFFFF</color>
+    <color name="transparent_white_65">#A6FFFFFF</color>
+    <color name="transparent_white_70">#B3FFFFFF</color>
+    <color name="transparent_white_75">#BFFFFFFF</color>
+    <color name="transparent_white_80">#CCFFFFFF</color>
+    <color name="transparent_white_85">#D9FFFFFF</color>
+    <color name="transparent_white_90">#E6FFFFFF</color>
+    <color name="transparent_white_95">#F2FFFFFF</color>
+    <color name="transparent_white_100">#FFFFFFFF</color>
+
+
+    <!--黑色透明-->
+    <color name="transparent_black_00_00">#00000000</color>
+    <color name="transparent_black_05_01">#0D000000</color>
+    <color name="transparent_black_06_02">#12000000</color>
+    <color name="transparent_black_07_03">#14000000</color>
+    <color name="transparent_black_09_04">#17000000</color>
+    <color name="transparent_black_11_06">#1C000000</color>
+    <color name="transparent_black_12_08">#1F000000</color>
+    <color name="transparent_black_14_12">#24000000</color>
+    <color name="transparent_black_15_16">#26000000</color>
+    <color name="transparent_black_16_24">#29000000</color>
+    <color name="transparent_black_20">#33000000</color>
+    <color name="transparent_black_25">#40000000</color>
+    <color name="transparent_black_30">#4D000000</color>
+    <color name="transparent_black_35">#59000000</color>
+    <color name="transparent_black_40">#66000000</color>
+    <color name="transparent_black_45">#73000000</color>
+    <color name="transparent_black_50">#80000000</color>
+    <color name="transparent_black_55">#8C000000</color>
+    <color name="transparent_black_60">#99000000</color>
+    <color name="transparent_black_65">#A6000000</color>
+    <color name="transparent_black_70">#B3000000</color>
+    <color name="transparent_black_75">#BF000000</color>
+    <color name="transparent_black_80">#CC000000</color>
+    <color name="transparent_black_85">#D9000000</color>
+    <color name="transparent_black_90">#E6000000</color>
+    <color name="transparent_black_95">#F2000000</color>
+    <color name="transparent_black_100">#FF000000</color>
 
     <!--MateriL颜色，用于需要主题以外颜色的地方-->
     <color name="material_color_red">#F44336</color>

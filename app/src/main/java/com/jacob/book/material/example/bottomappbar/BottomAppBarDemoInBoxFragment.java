@@ -61,7 +61,7 @@ public class BottomAppBarDemoInBoxFragment extends Fragment implements Lifecycle
         headerTextView.setText("今天");
         adapter.setHeaderView(header);
 
-        adapter.setOnItemClickListener(new OnMailItemItemClickListener());
+        adapter.setOnItemClickListener(new OnMailItemClickListener());
 
         binding.recyclerView.setAdapter(adapter);
 
@@ -111,7 +111,7 @@ public class BottomAppBarDemoInBoxFragment extends Fragment implements Lifecycle
         }
     }
 
-    private class OnMailItemItemClickListener implements OnItemClickListener {
+    private class OnMailItemClickListener implements OnItemClickListener {
         @Override
         public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
             Bundle bundle = new Bundle();

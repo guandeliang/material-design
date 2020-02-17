@@ -32,9 +32,6 @@ public class TestShareElementTwoFragment extends Fragment implements LifecycleOb
         this.setSharedElementEnterTransition(TransitionInflater.from(getContext()).inflateTransition(android.R.transition.move).setDuration(200));
 
 
-
-
-
         return binding.getRoot();
     }
 

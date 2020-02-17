@@ -5,14 +5,15 @@
     android:id="@+id/bottom_app_bar_base_graph"
     app:startDestination="@id/one">
 
+    <action
+        android:id="@+id/show_two"
+        app:destination="@id/two"/>
+
     <fragment
         android:id="@+id/one"
         android:name="com.jacob.book.material.test.TestShareElementOneFragment"
         android:label="one"
         tools:layout="@layout/test_share_element_one_fragment">
-        <action
-            android:id="@+id/show_two"
-            app:destination="@id/two"/>
     </fragment>
 
     <fragment

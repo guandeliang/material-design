@@ -1,6 +1,7 @@
 package com.jacob.book.material.example.bottomnavigation;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,7 @@ import com.jacob.book.material.databinding.BottomNavigationDemoLibraryAlbumFragm
 import com.jacob.book.material.example.adapter.GrammyLibraryAlbumAdapter;
 import com.jacob.book.material.example.model.Grammy;
 import com.jacob.book.material.widgets.LinearLayoutVertialItemDecoration;
+import com.jacob.book.temp.TempConstant;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,18 +27,19 @@ public class BottomNavigationDemoLibraryAlbumFragment extends TabBaseFragment {
     private BottomNavigationDemoLibraryAlbumFragmentBinding binding;
 
     public BottomNavigationDemoLibraryAlbumFragment(){
-        super("唱片");
+        super("经典唱片");
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.bottom_navigation_demo_library_album_fragment, container, false);
-        initLibraryList();
+
+        initAlbumList();
         return binding.getRoot();
     }
 
-    private void initLibraryList(){
+    private void initAlbumList(){
         List<Grammy> allList = JsonUtils.loadGrammy(getResources());
         List<Grammy> librarylList = new ArrayList<>();
         for(Grammy grammy:allList){
