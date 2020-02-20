@@ -25,7 +25,10 @@
         <activity
             android:name=".main.activity.MainNavigationActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.DayNight.Custom" /> <!-- Top App Bar -->
+            android:theme="@style/Theme.MaterialBook.DayNight.Custom" />
+
+
+        <!-- Top App Bar -->
         <activity
             android:name=".example.topappbar.TopAppBarDayNightDefaultActivity"
             android:screenOrientation="portrait"
@@ -66,10 +69,9 @@
             android:name=".example.topappbar.TopAppBarDarkActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MaterialBook.SingleColor.Dark" />
-        <activity
-            android:name=".example.topappbar.TopAppBarTouTiaoActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.SingleColor.Colored" /> <!-- Bottom App Bar -->
+
+
+        <!-- Bottom App Bar -->
         <activity
             android:name=".example.bottomappbar.BottomAppBarBaseActivity"
             android:screenOrientation="portrait"
@@ -89,7 +91,10 @@
         <activity
             android:name=".example.bottomappbar.BottomAppBarDemoActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.SingleColor.Light" /> <!-- Bottom Navigation -->
+            android:theme="@style/Theme.MaterialBook.SingleColor.Light" />
+
+
+        <!-- Bottom Navigation -->
         <activity
             android:name=".example.bottomnavigation.BottomNavigationDayNightDefaultActivity"
             android:screenOrientation="portrait"
@@ -102,6 +107,31 @@
             android:name=".example.bottomnavigation.BottomNavigationFabActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MaterialBook.DayNight.Custom" />
+
+        <activity
+            android:name=".example.bottomnavigation.BottomNavigationBaseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored" />
+
+        <activity
+            android:name=".example.bottomnavigation.BottomNavigationBaseShiftActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored" />
+
+        <activity
+            android:name=".example.bottomnavigation.BottomNavigationBaseIconActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Light" />
+        <activity
+            android:name=".example.bottomnavigation.BottomNavigationBasePrimaryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Light" />
+
+        <activity
+            android:name=".example.bottomnavigation.BottomNavigationDarkActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Dark" />
+
         <activity
             android:name=".example.bottomnavigation.BottomNavigationDemoActivity"
             android:screenOrientation="portrait"
@@ -122,6 +152,24 @@
             android:name=".test.TestShareElementActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MaterialBook.SingleColor.Colored" />
+
+        <activity
+            android:name=".test.TestShapeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored" />
+
+
+        <!-- 模仿案例 -->
+        <activity
+            android:name=".imitate.toutiao.TouTiaoMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored" />
+        <activity
+            android:name=".imitate.zhihu.ZhihuMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored" />
+
+
     </application>
 
 </manifest>

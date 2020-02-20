@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-17 下午10:31
+  ~
+  -->
+
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <item
+            android:id="@+id/action_index"
+            android:orderInCategory="101"
+            android:title="首页"
+            android:icon="@drawable/icon_home"/>
+        <item
+            android:id="@+id/action_search"
+            android:orderInCategory="102"
+            android:title="查找"
+            android:icon="@drawable/icon_search"/>
+        <item
+            android:id="@+id/action_add"
+            android:orderInCategory="103"
+            android:title="读书"
+            android:icon="@drawable/icon_add_box"/>
+        <item
+            android:id="@+id/action_favorite"
+            android:orderInCategory="104"
+            android:icon="@drawable/icon_favorite_border"
+            android:title="喜欢"/>
+        <item
+            android:id="@+id/action_user"
+            android:orderInCategory="104"
+            android:icon="@drawable/icon_person"
+            android:title="用户"/>
+
+</menu>

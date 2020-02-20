@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-18 下午8:01
+  ~
+  -->
+
 <resources>
     <!--白灰黑三种万能配色-->
     <color name="white">#FFFFFF</color>
@@ -74,7 +81,10 @@
     <color name="transparent_black_95">#F2000000</color>
     <color name="transparent_black_100">#FF000000</color>
 
-    <!--MateriL颜色，用于需要主题以外颜色的地方-->
+    <color name="transparent">#00FFFFFF</color>
+
+
+    <!--Material颜色，用于需要主题以外颜色的地方-->
     <color name="material_color_red">#F44336</color>
     <color name="material_color_pink">#E91E63</color>
     <color name="material_color_purple">#9C27B0</color>
@@ -154,8 +164,8 @@
     <color name="dark_color_primary_variant">@color/dark_color_primary_green_700</color>
     <color name="dark_color_secondary">@color/dark_color_secondary_orange_500</color>
     <color name="dark_color_secondary_variant">@color/dark_color_secondary_orange_900</color>
-    <color name="dark_color_background">#121212</color>
-    <color name="dark_color_surface">#212121</color>
+    <color name="dark_color_background">#151F2B</color>
+    <color name="dark_color_surface">#1D2939</color>
     <color name="dark_color_error">#B00020</color>
     <color name="dark_color_on_primary">#000000</color>
     <color name="dark_color_on_secondary">#000000</color>

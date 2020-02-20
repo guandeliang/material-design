@@ -1,3 +1,10 @@
+/*
+ * Create by Jacob G(GuanDeLiang) on 2020.
+ * Copyright (c) 2020 . All rights reserved.
+ * Last modified 20-1-28 下午10:44
+ *
+ */
+
 package com.jacob.book.material.widgets;
 
 import android.annotation.SuppressLint;

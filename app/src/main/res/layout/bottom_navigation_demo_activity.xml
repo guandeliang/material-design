@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-17 下午10:19
+  ~
+  -->
+
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -30,8 +37,10 @@
 
 
 
+        <!--因为采用的是浅色主题，但是又不希望底部导航为浅色，所以单独指定风格-->
         <com.google.android.material.bottomnavigation.BottomNavigationView
             app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+            style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
             android:id="@+id/bottom_navigation_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

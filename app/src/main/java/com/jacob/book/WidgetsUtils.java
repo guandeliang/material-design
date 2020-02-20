@@ -1,3 +1,10 @@
+/*
+ * Create by Jacob G(GuanDeLiang) on 2020.
+ * Copyright (c) 2020 . All rights reserved.
+ * Last modified 20-2-17 下午10:24
+ *
+ */
+
 package com.jacob.book;
 
 import android.app.Activity;
@@ -63,6 +70,15 @@ public class WidgetsUtils {
         }
     }
 
+    public static void setNavigationBarColor(Activity act, @ColorRes int color) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = act.getWindow();
+//            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+//            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            window.setNavigationBarColor(act.getResources().getColor(color));
+        }
+    }
+
     public static void setSystemBarLight(Activity act) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             View view = act.findViewById(android.R.id.content);
@@ -82,5 +98,7 @@ public class WidgetsUtils {
             view.setSystemUiVisibility(flags);
         }
     }
+
+
 
 }

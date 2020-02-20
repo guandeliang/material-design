@@ -1,3 +1,10 @@
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-18 下午4:34
+  ~
+  -->
+
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!--BEGIN:所有主题公用部分-->
     <!--
@@ -261,8 +268,11 @@
         <item name="colorOnSurface">@color/colored_color_on_surface</item>
         <item name="colorOnError">@color/colored_color_on_error</item>
         <item name="scrimBackground">@color/mtrl_scrim_color</item>
+
+        <!--元件风格-->
         <item name="appBarLayoutStyle">@style/Widget.MaterialBook.SingleColor.Colored.AppBarLayout</item>
         <item name="toolbarStyle">@style/Widget.MaterialBook.SingleColor.Colored.Toolbar</item>
+        <item name="bottomNavigationStyle">@style/Widget.MaterialBook.SingleColor.Colored.BottomNavigationView</item>
     </style>
     <!--单色主题AppBarLayout风格-->
     <style name="Widget.MaterialBook.SingleColor.Colored.AppBarLayout" parent="Widget.MaterialComponents.AppBarLayout.Primary">
@@ -282,6 +292,8 @@
     </style>
     <style name="ThemeOverlay.MaterialBook.SingleColor.Colored.Toolbar" parent="">
         <item name="colorControlNormal">?attr/colorOnPrimary</item>
+    </style>
+    <style name="Widget.MaterialBook.SingleColor.Colored.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
     </style>
 
 
@@ -339,7 +351,7 @@
         <item name="tint">@color/mtrl_fab_icon_text_color_selector</item>
     </style>
 
-    <style name="Widget.MaterialBook.SingleColor.Light.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+    <style name="Widget.MaterialBook.SingleColor.Light.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
     </style>
 
 
@@ -390,6 +402,12 @@
         <item name="tabTextColor">@color/dark_tabs_icon_color_selector</item>
         <item name="tabRippleColor">@color/dark_tabs_ripple_color</item>
     </style>
+
+    <!--沉浸式状态栏社深色单色主题风格，解决占用状态栏问题-->
+    <style name="Theme.MaterialBook.SingleColor.Dark.TranslucentStatus" parent="Theme.MaterialBook.SingleColor.Dark">
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
     <!--BEGIN：深色主题-->
 
 

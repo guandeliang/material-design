@@ -1,0 +1,870 @@
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-19 上午8:26
+  ~
+  -->
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp">
+
+
+                <ImageView
+                    android:id="@+id/header_image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/nba_001"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <View
+                    android:id="@+id/head_corver_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@drawable/nba_title_shape"
+                    app:layout_constraintTop_toTopOf="@id/header_image_view"
+                    app:layout_constraintLeft_toLeftOf="@id/header_image_view"
+                    app:layout_constraintRight_toRightOf="@id/header_image_view"
+                    app:layout_constraintBottom_toBottomOf="@id/header_image_view"/>
+
+
+                <ImageView
+                    android:id="@+id/logo_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/nba_logo"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/seting_image_view"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/icon_settings"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="14dp"
+                    android:tint="@color/transparent_white_60"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/by_image_view"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/icon_monetization_on"
+                    android:layout_marginRight="14dp"
+                    android:tint="@color/transparent_white_60"
+                    app:layout_constraintTop_toTopOf="@id/seting_image_view"
+                    app:layout_constraintBottom_toBottomOf="@id/seting_image_view"
+                    app:layout_constraintRight_toLeftOf="@id/seting_image_view"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_view_001"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/logo_image_view"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="16dp">
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guide_line_001"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.5"/>
+                        <TextView
+                            android:id="@+id/state_text_view_001"
+                            android:layout_width="96dp"
+                            android:layout_height="24dp"
+                            android:text="已经结束"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:background="@color/material_color_deep_orange"
+                            android:gravity="center"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/summary_text_view_001"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="比赛过程精彩不断，每一分钟都是经典"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            app:layout_constraintTop_toBottomOf="@id/state_text_view_001"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+
+                        <TextView
+                            android:id="@+id/vs_text_view_001"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="vs"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            android:layout_marginTop="28dp"
+                            app:layout_constraintTop_toBottomOf="@id/summary_text_view_001"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                        <ImageView
+                            android:id="@+id/logo_image_view_001_001"
+                            android:layout_width="36dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/nba_logo_001"
+                            android:layout_marginRight="16dp"
+                            app:layout_constraintTop_toTopOf="@id/vs_text_view_001"
+                            app:layout_constraintBottom_toBottomOf="@id/vs_text_view_001"
+                            app:layout_constraintRight_toLeftOf="@id/guide_line_001"/>
+
+                        <ImageView
+                            android:id="@+id/logo_image_view_001_002"
+                            android:layout_width="36dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/nba_logo_006"
+                            android:layout_marginLeft="16dp"
+                            app:layout_constraintTop_toTopOf="@id/vs_text_view_001"
+                            app:layout_constraintBottom_toBottomOf="@id/vs_text_view_001"
+                            app:layout_constraintLeft_toRightOf="@id/guide_line_001"/>
+
+
+                        <TextView
+                            android:id="@+id/title_text_view_001_001"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="尼克斯"
+                            android:textAppearance="?attr/textAppearanceBody1"
+                            android:layout_marginRight="64dp"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintTop_toBottomOf="@id/summary_text_view_001"
+                            app:layout_constraintRight_toLeftOf="@id/guide_line_001"/>
+
+                        <TextView
+                            android:id="@+id/title_text_view_001_002"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="活塞"
+                            android:textAppearance="?attr/textAppearanceBody1"
+                            android:layout_marginLeft="64dp"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintTop_toBottomOf="@id/summary_text_view_001"
+                            app:layout_constraintLeft_toRightOf="@id/guide_line_001"/>
+
+                        <TextView
+                            android:id="@+id/sub_title_text_view_001_001"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="百年老球队"
+                            android:layout_marginTop="4dp"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            app:layout_constraintTop_toBottomOf="@id/title_text_view_001_001"
+                            app:layout_constraintRight_toRightOf="@id/title_text_view_001_001"/>
+
+                        <TextView
+                            android:id="@+id/sub_title_text_view_001_002"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="父子同场竞技"
+                            android:layout_marginTop="4dp"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            app:layout_constraintTop_toBottomOf="@id/title_text_view_001_002"
+                            app:layout_constraintLeft_toLeftOf="@id/title_text_view_001_002"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_view_002"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/card_view_001"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="16dp">
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guide_line_002"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.5"/>
+                        <TextView
+                            android:id="@+id/state_text_view_002"
+                            android:layout_width="96dp"
+                            android:layout_height="24dp"
+                            android:text="正在直播"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:background="@color/material_color_green"
+                            android:gravity="center"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/summary_text_view_002"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="年度大戏，双雄对决，不知鹿死谁手"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            app:layout_constraintTop_toBottomOf="@id/state_text_view_002"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+
+                        <TextView
+                            android:id="@+id/vs_text_view_002"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="vs"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            android:layout_marginTop="28dp"
+                            app:layout_constraintTop_toBottomOf="@id/summary_text_view_002"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                        <ImageView
+                            android:id="@+id/logo_image_view_002_001"
+                            android:layout_width="36dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/nba_logo_008"
+                            android:layout_marginRight="16dp"
+                            app:layout_constraintTop_toTopOf="@id/vs_text_view_002"
+                            app:layout_constraintBottom_toBottomOf="@id/vs_text_view_002"
+                            app:layout_constraintRight_toLeftOf="@id/guide_line_002"/>
+
+                        <ImageView
+                            android:id="@+id/logo_image_view_002_002"
+                            android:layout_width="36dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/nba_logo_011"
+                            android:layout_marginLeft="16dp"
+                            app:layout_constraintTop_toTopOf="@id/vs_text_view_002"
+                            app:layout_constraintBottom_toBottomOf="@id/vs_text_view_002"
+                            app:layout_constraintLeft_toRightOf="@id/guide_line_002"/>
+
+
+                        <TextView
+                            android:id="@+id/title_text_view_002_001"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="掘金"
+                            android:textAppearance="?attr/textAppearanceBody1"
+                            android:layout_marginRight="64dp"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintTop_toBottomOf="@id/summary_text_view_002"
+                            app:layout_constraintRight_toLeftOf="@id/guide_line_002"/>
+
+                        <TextView
+                            android:id="@+id/title_text_view_002_002"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="76人"
+                            android:textAppearance="?attr/textAppearanceBody1"
+                            android:layout_marginLeft="64dp"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintTop_toBottomOf="@id/summary_text_view_002"
+                            app:layout_constraintLeft_toRightOf="@id/guide_line_002"/>
+
+                        <TextView
+                            android:id="@+id/sub_title_text_view_002_001"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="从来没赢过"
+                            android:layout_marginTop="4dp"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            app:layout_constraintTop_toBottomOf="@id/title_text_view_002_001"
+                            app:layout_constraintRight_toRightOf="@id/title_text_view_002_001"/>
+
+                        <TextView
+                            android:id="@+id/sub_title_text_view_002_002"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="比较爱睡懒觉"
+                            android:layout_marginTop="4dp"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            app:layout_constraintTop_toBottomOf="@id/title_text_view_002_002"
+                            app:layout_constraintLeft_toLeftOf="@id/title_text_view_002_002"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_view_003"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/card_view_002"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="16dp">
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guide_line_003"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.5"/>
+                        <TextView
+                            android:id="@+id/state_text_view_003"
+                            android:layout_width="96dp"
+                            android:layout_height="24dp"
+                            android:text="即将开始"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:background="@color/material_color_cyan"
+                            android:gravity="center"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/summary_text_view_003"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="老当益壮，即使趴着也要把球打完"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            app:layout_constraintTop_toBottomOf="@id/state_text_view_003"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+
+                        <TextView
+                            android:id="@+id/vs_text_view_003"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="vs"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            android:layout_marginTop="28dp"
+                            app:layout_constraintTop_toBottomOf="@id/summary_text_view_003"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                        <ImageView
+                            android:id="@+id/logo_image_view_003_001"
+                            android:layout_width="36dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/nba_logo_002"
+                            android:layout_marginRight="16dp"
+                            app:layout_constraintTop_toTopOf="@id/vs_text_view_003"
+                            app:layout_constraintBottom_toBottomOf="@id/vs_text_view_003"
+                            app:layout_constraintRight_toLeftOf="@id/guide_line_003"/>
+
+                        <ImageView
+                            android:id="@+id/logo_image_view_003_002"
+                            android:layout_width="36dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/nba_logo_003"
+                            android:layout_marginLeft="16dp"
+                            app:layout_constraintTop_toTopOf="@id/vs_text_view_003"
+                            app:layout_constraintBottom_toBottomOf="@id/vs_text_view_003"
+                            app:layout_constraintLeft_toRightOf="@id/guide_line_003"/>
+
+
+                        <TextView
+                            android:id="@+id/title_text_view_003_001"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="黄蜂"
+                            android:textAppearance="?attr/textAppearanceBody1"
+                            android:layout_marginRight="64dp"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintTop_toBottomOf="@id/summary_text_view_003"
+                            app:layout_constraintRight_toLeftOf="@id/guide_line_003"/>
+
+                        <TextView
+                            android:id="@+id/title_text_view_003_002"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="魔术"
+                            android:textAppearance="?attr/textAppearanceBody1"
+                            android:layout_marginLeft="64dp"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintTop_toBottomOf="@id/summary_text_view_003"
+                            app:layout_constraintLeft_toRightOf="@id/guide_line_003"/>
+
+                        <TextView
+                            android:id="@+id/sub_title_text_view_003_001"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="变相金刚聚会"
+                            android:layout_marginTop="4dp"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            app:layout_constraintTop_toBottomOf="@id/title_text_view_003_001"
+                            app:layout_constraintRight_toRightOf="@id/title_text_view_003_001"/>
+
+                        <TextView
+                            android:id="@+id/sub_title_text_view_003_002"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="最会训练金鱼"
+                            android:layout_marginTop="4dp"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            app:layout_constraintTop_toBottomOf="@id/title_text_view_003_002"
+                            app:layout_constraintLeft_toLeftOf="@id/title_text_view_003_002"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/content_title_text_view_001"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:text="近期比赛"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginLeft="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/card_view_003"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_view_004"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/content_title_text_view_001"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="16dp">
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guide_line_004"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.5"/>
+                        <TextView
+                            android:id="@+id/state_text_view_004"
+                            android:layout_width="96dp"
+                            android:layout_height="24dp"
+                            android:text="03月12日"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:background="@color/transparent_white_09_04"
+                            android:gravity="center"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/summary_text_view_004"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="最适合篮球业余爱好者观看的比赛"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            app:layout_constraintTop_toBottomOf="@id/state_text_view_004"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+
+                        <TextView
+                            android:id="@+id/vs_text_view_004"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="vs"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            android:layout_marginTop="28dp"
+                            app:layout_constraintTop_toBottomOf="@id/summary_text_view_004"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                        <ImageView
+                            android:id="@+id/logo_image_view_004_001"
+                            android:layout_width="36dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/nba_logo_007"
+                            android:layout_marginRight="16dp"
+                            app:layout_constraintTop_toTopOf="@id/vs_text_view_004"
+                            app:layout_constraintBottom_toBottomOf="@id/vs_text_view_004"
+                            app:layout_constraintRight_toLeftOf="@id/guide_line_004"/>
+
+                        <ImageView
+                            android:id="@+id/logo_image_view_004_002"
+                            android:layout_width="36dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/nba_logo_009"
+                            android:layout_marginLeft="16dp"
+                            app:layout_constraintTop_toTopOf="@id/vs_text_view_004"
+                            app:layout_constraintBottom_toBottomOf="@id/vs_text_view_004"
+                            app:layout_constraintLeft_toRightOf="@id/guide_line_004"/>
+
+
+                        <TextView
+                            android:id="@+id/title_text_view_004_001"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="步行者"
+                            android:textAppearance="?attr/textAppearanceBody1"
+                            android:layout_marginRight="64dp"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintTop_toBottomOf="@id/summary_text_view_004"
+                            app:layout_constraintRight_toLeftOf="@id/guide_line_004"/>
+
+                        <TextView
+                            android:id="@+id/title_text_view_004_002"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="森林狼"
+                            android:textAppearance="?attr/textAppearanceBody1"
+                            android:layout_marginLeft="64dp"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintTop_toBottomOf="@id/summary_text_view_004"
+                            app:layout_constraintLeft_toRightOf="@id/guide_line_004"/>
+
+                        <TextView
+                            android:id="@+id/sub_title_text_view_004_001"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="没有统一服装"
+                            android:layout_marginTop="4dp"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            app:layout_constraintTop_toBottomOf="@id/title_text_view_004_001"
+                            app:layout_constraintRight_toRightOf="@id/title_text_view_004_001"/>
+
+                        <TextView
+                            android:id="@+id/sub_title_text_view_004_002"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="西北帮林立"
+                            android:layout_marginTop="4dp"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            app:layout_constraintTop_toBottomOf="@id/title_text_view_004_002"
+                            app:layout_constraintLeft_toLeftOf="@id/title_text_view_004_002"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_view_005"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/card_view_004"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="16dp">
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guide_line_005"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.5"/>
+                        <TextView
+                            android:id="@+id/state_text_view_005"
+                            android:layout_width="96dp"
+                            android:layout_height="24dp"
+                            android:text="03月15日"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:background="@color/transparent_white_09_04"
+                            android:gravity="center"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/summary_text_view_005"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="新队员最多的一场比赛"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            app:layout_constraintTop_toBottomOf="@id/state_text_view_005"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+
+                        <TextView
+                            android:id="@+id/vs_text_view_005"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="vs"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            android:layout_marginTop="28dp"
+                            app:layout_constraintTop_toBottomOf="@id/summary_text_view_005"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                        <ImageView
+                            android:id="@+id/logo_image_view_005_001"
+                            android:layout_width="36dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/nba_logo_004"
+                            android:layout_marginRight="16dp"
+                            app:layout_constraintTop_toTopOf="@id/vs_text_view_005"
+                            app:layout_constraintBottom_toBottomOf="@id/vs_text_view_005"
+                            app:layout_constraintRight_toLeftOf="@id/guide_line_005"/>
+
+                        <ImageView
+                            android:id="@+id/logo_image_view_005_002"
+                            android:layout_width="36dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/nba_logo_010"
+                            android:layout_marginLeft="16dp"
+                            app:layout_constraintTop_toTopOf="@id/vs_text_view_005"
+                            app:layout_constraintBottom_toBottomOf="@id/vs_text_view_005"
+                            app:layout_constraintLeft_toRightOf="@id/guide_line_005"/>
+
+
+                        <TextView
+                            android:id="@+id/title_text_view_005_001"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="国王"
+                            android:textAppearance="?attr/textAppearanceBody1"
+                            android:layout_marginRight="64dp"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintTop_toBottomOf="@id/summary_text_view_005"
+                            app:layout_constraintRight_toLeftOf="@id/guide_line_005"/>
+
+                        <TextView
+                            android:id="@+id/title_text_view_005_002"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="猛龙"
+                            android:textAppearance="?attr/textAppearanceBody1"
+                            android:layout_marginLeft="64dp"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintTop_toBottomOf="@id/summary_text_view_005"
+                            app:layout_constraintLeft_toRightOf="@id/guide_line_005"/>
+
+                        <TextView
+                            android:id="@+id/sub_title_text_view_005_001"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="卡拉OK高手"
+                            android:layout_marginTop="4dp"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            app:layout_constraintTop_toBottomOf="@id/title_text_view_005_001"
+                            app:layout_constraintRight_toRightOf="@id/title_text_view_005_001"/>
+
+                        <TextView
+                            android:id="@+id/sub_title_text_view_005_002"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="女装变装秀"
+                            android:layout_marginTop="4dp"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            app:layout_constraintTop_toBottomOf="@id/title_text_view_005_002"
+                            app:layout_constraintLeft_toLeftOf="@id/title_text_view_005_002"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_view_006"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/card_view_005"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="16dp">
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guide_line_006"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.5"/>
+                        <TextView
+                            android:id="@+id/state_text_view_006"
+                            android:layout_width="96dp"
+                            android:layout_height="24dp"
+                            android:text="03月17日"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:background="@color/transparent_white_09_04"
+                            android:gravity="center"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/summary_text_view_006"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="队员还在休假，不是道能不能赶回来"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            app:layout_constraintTop_toBottomOf="@id/state_text_view_006"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+
+                        <TextView
+                            android:id="@+id/vs_text_view_006"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="vs"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            android:layout_marginTop="28dp"
+                            app:layout_constraintTop_toBottomOf="@id/summary_text_view_006"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                        <ImageView
+                            android:id="@+id/logo_image_view_006_001"
+                            android:layout_width="36dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/nba_logo_005"
+                            android:layout_marginRight="16dp"
+                            app:layout_constraintTop_toTopOf="@id/vs_text_view_006"
+                            app:layout_constraintBottom_toBottomOf="@id/vs_text_view_006"
+                            app:layout_constraintRight_toLeftOf="@id/guide_line_006"/>
+
+                        <ImageView
+                            android:id="@+id/logo_image_view_006_002"
+                            android:layout_width="36dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/nba_logo_012"
+                            android:layout_marginLeft="16dp"
+                            app:layout_constraintTop_toTopOf="@id/vs_text_view_006"
+                            app:layout_constraintBottom_toBottomOf="@id/vs_text_view_006"
+                            app:layout_constraintLeft_toRightOf="@id/guide_line_006"/>
+
+
+                        <TextView
+                            android:id="@+id/title_text_view_006_001"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="国王"
+                            android:textAppearance="?attr/textAppearanceBody1"
+                            android:layout_marginRight="64dp"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintTop_toBottomOf="@id/summary_text_view_006"
+                            app:layout_constraintRight_toLeftOf="@id/guide_line_006"/>
+
+                        <TextView
+                            android:id="@+id/title_text_view_006_002"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="猛龙"
+                            android:textAppearance="?attr/textAppearanceBody1"
+                            android:layout_marginLeft="64dp"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintTop_toBottomOf="@id/summary_text_view_006"
+                            app:layout_constraintLeft_toRightOf="@id/guide_line_006"/>
+
+                        <TextView
+                            android:id="@+id/sub_title_text_view_006_001"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="多年没参加了"
+                            android:layout_marginTop="4dp"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            app:layout_constraintTop_toBottomOf="@id/title_text_view_006_001"
+                            app:layout_constraintRight_toRightOf="@id/title_text_view_006_001"/>
+
+                        <TextView
+                            android:id="@+id/sub_title_text_view_006_002"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="游泳转行"
+                            android:layout_marginTop="4dp"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            app:layout_constraintTop_toBottomOf="@id/title_text_view_006_002"
+                            app:layout_constraintLeft_toLeftOf="@id/title_text_view_006_002"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation_view"
+            app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:menu="@menu/bottom_navigation_menu"
+            app:itemIconSize="18dp"
+            app:labelVisibilityMode="labeled"/>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

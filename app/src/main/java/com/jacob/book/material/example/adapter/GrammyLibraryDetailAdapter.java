@@ -1,3 +1,10 @@
+/*
+ * Create by Jacob G(GuanDeLiang) on 2020.
+ * Copyright (c) 2020 . All rights reserved.
+ * Last modified 20-2-16 下午2:05
+ *
+ */
+
 package com.jacob.book.material.example.adapter;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;

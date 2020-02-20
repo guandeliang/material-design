@@ -1,3 +1,10 @@
+/*
+ * Create by Jacob G(GuanDeLiang) on 2020.
+ * Copyright (c) 2020 . All rights reserved.
+ * Last modified 20-2-9 下午8:54
+ *
+ */
+
 package com.jacob.book.material.example.model;
 
 import com.chad.library.adapter.base.entity.MultiItemEntity;

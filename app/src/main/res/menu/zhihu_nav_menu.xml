@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-19 上午9:41
+  ~
+  -->
+
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <item
+            android:id="@+id/action_home"
+            android:orderInCategory="101"
+            android:title="首页"
+            android:icon="@drawable/zhihu_nav_icon_home_selector"/>
+        <item
+            android:id="@+id/action_member"
+            android:orderInCategory="102"
+            android:title="会员"
+            android:icon="@drawable/zhihu_nav_icon_member_selector"/>
+
+        <item
+            android:id="@+id/action_blank"
+            android:orderInCategory="103"
+            android:enabled="false"
+            android:title="@null" />
+
+        <item
+            android:id="@+id/action_notification"
+            android:orderInCategory="104"
+            android:title="自行车"
+            android:icon="@drawable/zhihu_nav_icon_notification_selector"/>
+
+        <item
+            android:id="@+id/action_user"
+            android:orderInCategory="105"
+            android:icon="@drawable/zhihu_nav_icon_user_selector"
+            android:title="我的"/>
+
+</menu>

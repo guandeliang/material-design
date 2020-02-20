@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-1 下午4:55
+  ~
+  -->
+
 <resources>
     <!--自定义DayNight主题颜色-->
     <color name="dn_custom_color_primary">#4ABAD9</color>

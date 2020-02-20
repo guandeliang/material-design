@@ -1,10 +1,16 @@
-package com.jacob.book.material.example.topappbar;
+/*
+ * Create by Jacob G(GuanDeLiang) on 2020.
+ * Copyright (c) 2020 . All rights reserved.
+ * Last modified 20-2-20 上午9:13
+ *
+ */
+
+package com.jacob.book.material.imitate.toutiao;
 
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.WindowInsets;
 import android.view.animation.LinearInterpolator;
@@ -18,16 +24,16 @@ import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.OnLifecycleEvent;
 
 import com.jacob.book.material.R;
-import com.jacob.book.material.databinding.TopAppBarTouTiaoActivityBinding;
+import com.jacob.book.material.databinding.TouTiaoMainActivityBinding;
 
-public class TopAppBarTouTiaoActivity extends AppCompatActivity implements LifecycleObserver {
-    private TopAppBarTouTiaoActivityBinding binding;
+public class TouTiaoMainActivity extends AppCompatActivity implements LifecycleObserver {
+    private TouTiaoMainActivityBinding binding;
     private int currSearchTextViewIdx = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.top_app_bar_tou_tiao_activity);
+        binding = DataBindingUtil.setContentView(this, R.layout.tou_tiao_main_activity);
         binding.appBarLayout.setOnApplyWindowInsetsListener(new ApplyWindowInsetsListener());
 
         this.getLifecycle().addObserver(this);
@@ -133,7 +139,6 @@ public class TopAppBarTouTiaoActivity extends AppCompatActivity implements Lifec
 
             @Override
             public void onAnimationCancel(Animator animation) {
-                Log.d("ToolbarTouTiaoIndex", "onAnimationCancel");
             }
 
             @Override

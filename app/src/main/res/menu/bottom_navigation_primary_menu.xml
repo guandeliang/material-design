@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-18 上午9:54
+  ~
+  -->
+
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <item
+            android:id="@+id/action_train"
+            android:orderInCategory="101"
+            android:title="火车"
+            android:icon="@drawable/icon_train"/>
+        <item
+            android:id="@+id/action_car"
+            android:orderInCategory="102"
+            android:title="汽车"
+            android:icon="@drawable/icon_airport_shuttle"/>
+
+
+        <item
+            android:id="@+id/action_bike"
+            android:orderInCategory="103"
+            android:title="自行车"
+            android:icon="@drawable/icon_directions_bike"/>
+        <item
+            android:id="@+id/action_blank"
+            android:orderInCategory="104"
+            android:enabled="false"
+            android:title="@null" />
+
+        <item
+            android:id="@+id/action_user"
+            android:orderInCategory="105"
+            android:icon="@drawable/icon_person_outline"
+            android:title="我的"/>
+
+</menu>

@@ -1,3 +1,10 @@
+/*
+ * Create by Jacob G(GuanDeLiang) on 2020.
+ * Copyright (c) 2020 . All rights reserved.
+ * Last modified 20-1-31 下午8:08
+ *
+ */
+
 package com.jacob.book.material.example.topappbar;
 
 import androidx.lifecycle.MutableLiveData;

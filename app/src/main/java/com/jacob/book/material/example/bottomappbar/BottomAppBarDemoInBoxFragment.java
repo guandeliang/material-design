@@ -1,3 +1,10 @@
+/*
+ * Create by Jacob G(GuanDeLiang) on 2020.
+ * Copyright (c) 2020 . All rights reserved.
+ * Last modified 20-2-16 上午10:04
+ *
+ */
+
 package com.jacob.book.material.example.bottomappbar;
 
 import android.os.Bundle;

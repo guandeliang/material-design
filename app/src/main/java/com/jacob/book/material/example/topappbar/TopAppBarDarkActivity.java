@@ -1,3 +1,10 @@
+/*
+ * Create by Jacob G(GuanDeLiang) on 2020.
+ * Copyright (c) 2020 . All rights reserved.
+ * Last modified 20-2-18 下午2:32
+ *
+ */
+
 package com.jacob.book.material.example.topappbar;
 
 import android.os.Bundle;
@@ -33,7 +40,7 @@ public class TopAppBarDarkActivity extends AppCompatActivity {
         ab.setHomeAsUpIndicator(R.drawable.icon_menu);
         ab.setDisplayHomeAsUpEnabled(true);
         binding.toolbar.getNavigationIcon().setTint(WidgetsUtils.getColorValue(this, android.R.attr.textColorPrimaryInverse));
-        WidgetsUtils.setSystemBarColor(this, R.color.gray_1000);
+        WidgetsUtils.setSystemBarColor(this, R.color.dark_color_background);
 
         fragmentList = new ArrayList<>();
         fragmentList.add(new TopAppBarDarkOneFragment());

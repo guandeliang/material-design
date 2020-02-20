@@ -1,3 +1,10 @@
+/*
+ * Create by Jacob G(GuanDeLiang) on 2020.
+ * Copyright (c) 2020 . All rights reserved.
+ * Last modified 20-2-18 下午2:36
+ *
+ */
+
 package com.jacob.book.material.example.topappbar;
 
 
@@ -80,6 +87,7 @@ public class TopAppBarDarkTwoFragment extends TabBaseFragment {
         XAxis x = binding.lineChart.getXAxis();
         x.setDrawGridLines(false);
         x.setDrawAxisLine(false);
+        x.setDrawLabels(false);
 
         YAxis y = binding.lineChart.getAxisLeft();
         y.setDrawGridLines(false);

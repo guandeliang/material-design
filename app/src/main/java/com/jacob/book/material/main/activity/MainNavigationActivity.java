@@ -1,3 +1,10 @@
+/*
+ * Create by Jacob G(GuanDeLiang) on 2020.
+ * Copyright (c) 2020 . All rights reserved.
+ * Last modified 20-1-2 下午3:03
+ *
+ */
+
 package com.jacob.book.material.main.activity;
 
 import android.content.res.Configuration;

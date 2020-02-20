@@ -1,3 +1,10 @@
+/*
+ * Create by Jacob G(GuanDeLiang) on 2020.
+ * Copyright (c) 2020 . All rights reserved.
+ * Last modified 20-2-10 下午7:06
+ *
+ */
+
 package com.jacob.book.material.example.model;
 
 public class GrammySinger {

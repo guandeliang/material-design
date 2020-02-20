@@ -114,11 +114,36 @@
       },
       {
         "id":10301030,
+        "title":"基本功能演示 ：Labeled",
+        "path":"com.jacob.book.material.example.bottomnavigation.BottomNavigationBaseActivity"
+      },
+      {
+        "id":10301040,
+        "title":"基本功能演示 ：Labeled Auto",
+        "path":"com.jacob.book.material.example.bottomnavigation.BottomNavigationBaseShiftActivity"
+      },
+      {
+        "id":10301050,
+        "title":"基本功能演示 ：Un Labeled",
+        "path":"com.jacob.book.material.example.bottomnavigation.BottomNavigationBaseIconActivity"
+      },
+      {
+        "id":10301060,
+        "title":"基本功能演示 ：增加其他元件",
+        "path":"com.jacob.book.material.example.bottomnavigation.BottomNavigationBasePrimaryActivity"
+      },
+      {
+        "id":10301070,
         "title":"为部导航栏添加FAB按钮",
         "path":"com.jacob.book.material.example.bottomnavigation.BottomNavigationFabActivity"
       },
       {
-        "id":10301040,
+        "id":10301080,
+        "title":"Dark样式",
+        "path":"com.jacob.book.material.example.bottomnavigation.BottomNavigationDarkActivity"
+      },
+      {
+        "id":10301090,
         "title":"底部导航栏功能演示",
         "path":"com.jacob.book.material.example.bottomnavigation.BottomNavigationDemoActivity"
       }
@@ -144,6 +169,11 @@
         "id":10401030,
         "title":"共享元素测试",
         "path":"com.jacob.book.material.test.TestShareElementActivity"
+      },
+      {
+        "id":10401040,
+        "title":"Shape测试",
+        "path":"com.jacob.book.material.test.TestShapeActivity"
       }
 
 
@@ -153,9 +183,20 @@
 
   {
     "id":10500000,
-    "iconName":"icon_example_appbar_top",
-    "title":"Backdrop",
-    "itemList":[]
+    "iconName":"icon_apps",
+    "title":"经典再现",
+    "itemList":[
+      {
+        "id":10501010,
+        "title":"头条",
+        "path":"com.jacob.book.material.imitate.toutiao.TouTiaoMainActivity"
+      },
+      {
+        "id":10501010,
+        "title":"知乎",
+        "path":"com.jacob.book.material.imitate.zhihu.ZhihuMainActivity"
+      }
+    ]
   },
 
 

@@ -1,3 +1,10 @@
+/*
+ * Create by Jacob G(GuanDeLiang) on 2020.
+ * Copyright (c) 2020 . All rights reserved.
+ * Last modified 20-2-14 下午1:45
+ *
+ */
+
 package com.jacob.book.material.widgets;
 
 import android.graphics.Rect;

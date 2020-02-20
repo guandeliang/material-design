@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-2 下午1:52
+  ~
+  -->
+
 <resources>
     <declare-styleable name="theme_switch_app_bar_layout">
         <attr name="title_text" format="string"/>
