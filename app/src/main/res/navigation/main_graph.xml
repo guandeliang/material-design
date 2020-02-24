@@ -10,12 +10,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_example_graph"
-    app:startDestination="@id/mainExampleListFragment">
+    app:startDestination="@id/list">
 
     <fragment
-        android:id="@+id/mainExampleListFragment"
+        android:id="@+id/list"
         android:name="com.jacob.book.material.main.activity.MainExampleListFragment"
-        android:label="mainExampleListFragment"
+        android:label="list"
         tools:layout="@layout/main_example_list_fragment" >
     </fragment>
 </navigation>

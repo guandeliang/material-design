@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-23 下午12:57
+  ~
+  -->
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp">
+
+            <com.jacob.book.material.widgets.sliderbanner.CardViewSlider
+                android:id="@+id/card_view_slider"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="H,39:20"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+
+            <LinearLayout
+                android:id="@+id/category_001_linear_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                app:layout_constraintTop_toBottomOf="@id/card_view_slider"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/category_002_linear_layout">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:tint="?attr/colorPrimary"
+                    android:src="@drawable/icon_nature_people"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textAppearance="?attr/textAppearanceSubtitle2"
+                    android:text="人文社会"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/category_002_linear_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                app:layout_constraintTop_toTopOf="@id/category_001_linear_layout"
+                app:layout_constraintBottom_toBottomOf="@id/category_001_linear_layout"
+                app:layout_constraintLeft_toRightOf="@id/category_001_linear_layout"
+                app:layout_constraintRight_toLeftOf="@id/category_003_linear_layout">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:tint="?attr/colorPrimary"
+                    android:src="@drawable/icon_color_lens"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textAppearance="?attr/textAppearanceSubtitle2"
+                    android:text="文学艺术"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/category_003_linear_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                app:layout_constraintTop_toTopOf="@id/category_001_linear_layout"
+                app:layout_constraintBottom_toBottomOf="@id/category_001_linear_layout"
+                app:layout_constraintLeft_toRightOf="@id/category_002_linear_layout"
+                app:layout_constraintRight_toLeftOf="@+id/category_004_linear_layout">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:tint="?attr/colorPrimary"
+                    android:src="@drawable/icon_developer_board"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textAppearance="?attr/textAppearanceSubtitle2"
+                    android:text="科技电子"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/category_004_linear_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginRight="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                app:layout_constraintTop_toTopOf="@id/category_001_linear_layout"
+                app:layout_constraintBottom_toBottomOf="@id/category_001_linear_layout"
+                app:layout_constraintLeft_toRightOf="@id/category_003_linear_layout"
+                app:layout_constraintRight_toRightOf="parent">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:tint="?attr/colorPrimary"
+                    android:src="@drawable/toutiao_poll"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textAppearance="?attr/textAppearanceSubtitle2"
+                    android:text="金融管理"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/search_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:src="@drawable/book_001_search"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintTop_toBottomOf="@id/category_001_linear_layout"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+
+            <TextView
+                android:id="@+id/list_title_001_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:text="新书推荐"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/search_image_view"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+            <Button
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="更多"
+                android:textAlignment="viewEnd"
+                app:layout_constraintBaseline_toBaselineOf="@id/list_title_001_text_view"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_view_001"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="8dp"
+                app:layout_constraintTop_toBottomOf="@id/list_title_001_text_view"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/card_view_002"
+                app:layout_constraintHorizontal_chainStyle="spread_inside">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/book_002_001"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:textAppearance="?attr/textAppearanceCaption"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:text="红楼梦"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:textAppearance="?attr/textAppearanceOverline"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:text="[清]曹雪芹"/>
+                </LinearLayout>
+
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_view_002"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintTop_toTopOf="@id/card_view_001"
+                app:layout_constraintBottom_toBottomOf="@id/card_view_001"
+                app:layout_constraintLeft_toRightOf="@id/card_view_001"
+                app:layout_constraintRight_toLeftOf="@id/card_view_003">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/book_002_002"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:textAppearance="?attr/textAppearanceCaption"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:text="活着"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:textAppearance="?attr/textAppearanceOverline"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:text="余华"/>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_view_003"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                app:layout_constraintTop_toTopOf="@id/card_view_001"
+                app:layout_constraintBottom_toBottomOf="@id/card_view_001"
+                app:layout_constraintLeft_toRightOf="@id/card_view_002"
+                app:layout_constraintRight_toRightOf="parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/book_002_003"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:textAppearance="?attr/textAppearanceCaption"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:text="百年孤独"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:textAppearance="?attr/textAppearanceOverline"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:text="[哥伦比亚]加西亚•马尔克斯"/>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/list_title_002_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:text="实力作家"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/card_view_001"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <Button
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="更多"
+                android:textAlignment="viewEnd"
+                app:layout_constraintBaseline_toBaselineOf="@id/list_title_002_text_view"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/author_001_image_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="12dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintTop_toBottomOf="@id/list_title_002_text_view"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/author_002_image_view"
+                app:srcCompat="@drawable/header_001"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/author_002_image_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="8dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintTop_toTopOf="@id/author_001_image_view"
+                app:layout_constraintBottom_toBottomOf="@id/author_001_image_view"
+                app:layout_constraintLeft_toRightOf="@id/author_001_image_view"
+                app:layout_constraintRight_toLeftOf="@id/author_003_image_view"
+                app:srcCompat="@drawable/header_002"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/author_003_image_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="8dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintTop_toTopOf="@id/author_001_image_view"
+                app:layout_constraintBottom_toBottomOf="@id/author_001_image_view"
+                app:layout_constraintLeft_toRightOf="@id/author_002_image_view"
+                app:layout_constraintRight_toLeftOf="@id/author_004_image_view"
+                app:srcCompat="@drawable/header_003"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/author_004_image_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="8dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintTop_toTopOf="@id/author_001_image_view"
+                app:layout_constraintBottom_toBottomOf="@id/author_001_image_view"
+                app:layout_constraintLeft_toRightOf="@id/author_003_image_view"
+                app:layout_constraintRight_toLeftOf="@id/author_005_image_view"
+                app:srcCompat="@drawable/header_004"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/author_005_image_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintTop_toTopOf="@id/author_001_image_view"
+                app:layout_constraintBottom_toBottomOf="@id/author_001_image_view"
+                app:layout_constraintLeft_toRightOf="@id/author_004_image_view"
+                app:layout_constraintRight_toRightOf="parent"
+                app:srcCompat="@drawable/header_005"/>
+
+            <TextView
+                android:id="@+id/author_001_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textAppearance="?attr/textAppearanceOverline"
+                app:layout_constraintTop_toBottomOf="@id/author_001_image_view"
+                app:layout_constraintLeft_toLeftOf="@id/author_001_image_view"
+                app:layout_constraintRight_toRightOf="@id/author_001_image_view"
+                android:text="饥渴•马"/>
+
+            <TextView
+                android:id="@+id/author_002_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textAppearance="?attr/textAppearanceOverline"
+                app:layout_constraintTop_toBottomOf="@id/author_002_image_view"
+                app:layout_constraintLeft_toLeftOf="@id/author_002_image_view"
+                app:layout_constraintRight_toRightOf="@id/author_002_image_view"
+                android:text="泡你•马"/>
+
+            <TextView
+                android:id="@+id/author_003_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textAppearance="?attr/textAppearanceOverline"
+                app:layout_constraintTop_toBottomOf="@id/author_003_image_view"
+                app:layout_constraintLeft_toLeftOf="@id/author_003_image_view"
+                app:layout_constraintRight_toRightOf="@id/author_003_image_view"
+                android:text="有病•李"/>
+
+            <TextView
+                android:id="@+id/author_004_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textAppearance="?attr/textAppearanceOverline"
+                app:layout_constraintTop_toBottomOf="@id/author_004_image_view"
+                app:layout_constraintLeft_toLeftOf="@id/author_004_image_view"
+                app:layout_constraintRight_toRightOf="@id/author_004_image_view"
+                android:text="三分东"/>
+
+            <TextView
+                android:id="@+id/author_005_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textAppearance="?attr/textAppearanceOverline"
+                app:layout_constraintTop_toBottomOf="@id/author_005_image_view"
+                app:layout_constraintLeft_toLeftOf="@id/author_005_image_view"
+                app:layout_constraintRight_toRightOf="@id/author_005_image_view"
+                android:text="赵宽衣"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>

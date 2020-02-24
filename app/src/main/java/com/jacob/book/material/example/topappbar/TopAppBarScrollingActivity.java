@@ -46,9 +46,7 @@ public class TopAppBarScrollingActivity extends AppCompatActivity {
         ab.setTitle("新闻");
         binding.toolbar.getNavigationIcon().setTint(WidgetsUtils.getColorValue(this, android.R.attr.textColorPrimaryInverse));
 
-
     }
-
     private class ApplyWindowInsetsListener implements View.OnApplyWindowInsetsListener {
         @Override
         public WindowInsets onApplyWindowInsets(View view, WindowInsets windowInsets) {
@@ -60,7 +58,6 @@ public class TopAppBarScrollingActivity extends AppCompatActivity {
             return windowInsets;
         }
     }
-
     private class AppBarLayoutOnOffsetChangedListener implements AppBarLayout.OnOffsetChangedListener {
         @Override
         public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {

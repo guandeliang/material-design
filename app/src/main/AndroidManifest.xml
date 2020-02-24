@@ -103,10 +103,6 @@
             android:name=".example.bottomnavigation.BottomNavigationDayNightCustomActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MaterialBook.DayNight.Custom" />
-        <activity
-            android:name=".example.bottomnavigation.BottomNavigationFabActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.DayNight.Custom" />
 
         <activity
             android:name=".example.bottomnavigation.BottomNavigationBaseActivity"
@@ -128,6 +124,16 @@
             android:theme="@style/Theme.MaterialBook.SingleColor.Light" />
 
         <activity
+            android:name=".example.bottomnavigation.BottomNavigationCustomActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Dark" />
+
+        <activity
+            android:name=".example.bottomnavigation.BottomNavigationFabActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MaterialBook.DayNight.Custom" />
+
+        <activity
             android:name=".example.bottomnavigation.BottomNavigationDarkActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MaterialBook.SingleColor.Dark" />
@@ -137,6 +143,27 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MaterialBook.SingleColor.Light"
             android:windowSoftInputMode="adjustPan" />
+
+        <!-- Tab -->
+
+        <activity
+            android:name=".example.tab.TabDayNightDefaultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MaterialBook.DayNight.Default"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".example.tab.TabDayNightCustomActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MaterialBook.DayNight.Custom"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".example.tab.TabBaseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
+            android:windowSoftInputMode="adjustPan" />
+
 
         <activity
             android:name=".test.TestSnapActivity"

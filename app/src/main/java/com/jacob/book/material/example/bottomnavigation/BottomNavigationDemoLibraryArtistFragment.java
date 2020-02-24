@@ -30,7 +30,7 @@ public class BottomNavigationDemoLibraryArtistFragment extends TabBaseFragment {
     private BottomNavigationDemoLibraryArtistFragmentBinding binding;
 
     public BottomNavigationDemoLibraryArtistFragment(){
-        super("实力歌手");
+        super("实力歌手", -1);
     }
 
 

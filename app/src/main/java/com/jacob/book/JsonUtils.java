@@ -12,6 +12,7 @@ import android.content.res.Resources;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.jacob.book.material.R;
+import com.jacob.book.material.example.model.Book;
 import com.jacob.book.material.example.model.ExampleImage;
 import com.jacob.book.material.example.model.Grammy;
 import com.jacob.book.material.example.model.GrammySinger;
@@ -79,6 +80,13 @@ public class JsonUtils {
         String jsonString = readJson(resources, R.raw.thrones_list);
         Gson gson = new Gson();
         Type listType = new TypeToken<ArrayList<Thrones>>(){}.getType();
+        return gson.fromJson(jsonString, listType);
+    }
+
+    public static List<Book> loadBooks(Resources resources) {
+        String jsonString = readJson(resources, R.raw.book_list);
+        Gson gson = new Gson();
+        Type listType = new TypeToken<ArrayList<Book>>(){}.getType();
         return gson.fromJson(jsonString, listType);
     }
 

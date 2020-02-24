@@ -87,6 +87,13 @@
     </style>
 
 
+    <style name="Widget.MaterialBook.FloatingActionButton.PrimaryColor" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="backgroundTint">?attr/colorPrimary</item>
+        <item name="tint">?attr/colorOnPrimary</item>
+    </style>
+
+
+
     <!--BEGIN: 基础风格-->
     <!--DayNight主题基础风格-->
     <style name="Theme.MaterialBook.DayNight.Base" parent="Theme.MaterialComponents.DayNight.NoActionBar">
@@ -273,6 +280,7 @@
         <item name="appBarLayoutStyle">@style/Widget.MaterialBook.SingleColor.Colored.AppBarLayout</item>
         <item name="toolbarStyle">@style/Widget.MaterialBook.SingleColor.Colored.Toolbar</item>
         <item name="bottomNavigationStyle">@style/Widget.MaterialBook.SingleColor.Colored.BottomNavigationView</item>
+        <item name="tabStyle">@style/Widget.MaterialBook.SingleColor.Colored.TabLayout</item>
     </style>
     <!--单色主题AppBarLayout风格-->
     <style name="Widget.MaterialBook.SingleColor.Colored.AppBarLayout" parent="Widget.MaterialComponents.AppBarLayout.Primary">
@@ -295,6 +303,10 @@
     </style>
     <style name="Widget.MaterialBook.SingleColor.Colored.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
     </style>
+    <style name="Widget.MaterialBook.SingleColor.Colored.TabLayout" parent="Widget.MaterialComponents.TabLayout.Colored">
+        <item name="tabIndicatorColor">?attr/colorSecondary</item>
+    </style>
+
 
 
     <!--沉浸式状态栏单色主题风格，解决占用状态栏问题-->
@@ -347,8 +359,8 @@
     <style name="Widget.MaterialBook.SingleColor.Light.BottomAppBar" parent="Widget.MaterialComponents.BottomAppBar">
     </style>
     <style name="Widget.MaterialBook.SingleColor.Light.FloatingActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
-        <item name="backgroundTint">@color/mtrl_fab_bg_color_selector</item>
-        <item name="tint">@color/mtrl_fab_icon_text_color_selector</item>
+        <item name="backgroundTint">@color/fab_bg_color_selector</item>
+        <item name="tint">@color/fab_icon_text_color_selector</item>
     </style>
 
     <style name="Widget.MaterialBook.SingleColor.Light.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
@@ -390,6 +402,7 @@
         <item name="appBarLayoutStyle">@style/Widget.MaterialBook.SingleColor.Dark.ToolbarLayout</item>
         <item name="toolbarStyle">@style/Widget.MaterialBook.SingleColor.Dark.Toolbar</item>
         <item name="tabStyle">@style/Widget.MaterialBook.SingleColor.Dark.TabLayout</item>
+        <item name="floatingActionButtonStyle">@style/Widget.MaterialBook.SingleColor.Dark.FloatingActionButton</item>
     </style>
 
     <style name="Widget.MaterialBook.SingleColor.Dark.ToolbarLayout" parent="Widget.MaterialComponents.AppBarLayout.Surface">
@@ -401,6 +414,10 @@
         <item name="tabIndicatorColor">?attr/colorPrimary</item>
         <item name="tabTextColor">@color/dark_tabs_icon_color_selector</item>
         <item name="tabRippleColor">@color/dark_tabs_ripple_color</item>
+    </style>
+    <style name="Widget.MaterialBook.SingleColor.Dark.FloatingActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="backgroundTint">@color/fab_bg_color_selector</item>
+        <item name="tint">@color/fab_icon_text_color_selector</item>
     </style>
 
     <!--沉浸式状态栏社深色单色主题风格，解决占用状态栏问题-->

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-23 下午12:57
+  ~
+  -->
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/recommend_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:text="推荐书目"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+            <Button
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                android:text="更多"
+                app:layout_constraintBaseline_toBaselineOf="@id/recommend_text_view"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <com.jacob.book.material.widgets.NestedScrollableHost
+                android:id="@+id/recycler_view_host"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@id/recommend_text_view"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/recommend_text_view"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+            </com.jacob.book.material.widgets.NestedScrollableHost>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/recycler_view_host"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/icon_guide_line"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_begin="16dp"/>
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/text_guide_line"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_begin="64dp"/>
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/arrow_guide_line"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_end="16dp"/>
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/h_guide_line_000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_begin="0dp"/>
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/h_guide_line_001"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_begin="56dp"/>
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/h_guide_line_002"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_begin="112dp"/>
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/h_guide_line_003"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_begin="168dp"/>
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/h_guide_line_004"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_begin="224dp"/>
+
+                    <ImageView
+                        android:id="@+id/icon_001_image_view"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icon_turned_in_not"
+                        app:layout_constraintTop_toBottomOf="@id/h_guide_line_000"
+                        app:layout_constraintBottom_toTopOf="@id/h_guide_line_001"
+                        app:layout_constraintLeft_toRightOf="@id/icon_guide_line"/>
+
+                    <ImageView
+                        android:id="@+id/arrow_001_image_view"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icon_keyboard_arrow_right"
+                        app:layout_constraintTop_toBottomOf="@id/h_guide_line_000"
+                        app:layout_constraintBottom_toTopOf="@id/h_guide_line_001"
+                        app:layout_constraintRight_toLeftOf="@id/arrow_guide_line"/>
+
+                    <TextView
+                        android:id="@+id/title_001_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?attr/textAppearanceSubtitle2"
+                        android:text="正在阅读"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/h_guide_line_000"
+                        app:layout_constraintLeft_toRightOf="@id/text_guide_line"/>
+
+                    <TextView
+                        android:id="@+id/sub_title_001_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?attr/textAppearanceCaption"
+                        android:text="总共12本书"
+                        android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toTopOf="@id/h_guide_line_001"
+                        app:layout_constraintLeft_toRightOf="@id/text_guide_line"/>
+
+
+
+                    <ImageView
+                        android:id="@+id/icon_002_image_view"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icon_access_time"
+                        app:layout_constraintTop_toBottomOf="@id/h_guide_line_001"
+                        app:layout_constraintBottom_toTopOf="@id/h_guide_line_002"
+                        app:layout_constraintLeft_toRightOf="@id/icon_guide_line"/>
+
+                    <ImageView
+                        android:id="@+id/arrow_002_image_view"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icon_keyboard_arrow_right"
+                        app:layout_constraintTop_toBottomOf="@id/h_guide_line_001"
+                        app:layout_constraintBottom_toTopOf="@id/h_guide_line_002"
+                        app:layout_constraintRight_toLeftOf="@id/arrow_guide_line"/>
+
+                    <TextView
+                        android:id="@+id/title_002_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?attr/textAppearanceSubtitle2"
+                        android:text="以后准备阅读"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/h_guide_line_001"
+                        app:layout_constraintLeft_toRightOf="@id/text_guide_line"/>
+
+                    <TextView
+                        android:id="@+id/sub_title_002_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?attr/textAppearanceCaption"
+                        android:text="13本杂志，22本图书"
+                        android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toTopOf="@id/h_guide_line_002"
+                        app:layout_constraintLeft_toRightOf="@id/text_guide_line"/>
+
+
+
+                    <ImageView
+                        android:id="@+id/icon_003_image_view"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icon_star_border"
+                        app:layout_constraintTop_toBottomOf="@id/h_guide_line_002"
+                        app:layout_constraintBottom_toTopOf="@id/h_guide_line_003"
+                        app:layout_constraintLeft_toRightOf="@id/icon_guide_line"/>
+
+                    <ImageView
+                        android:id="@+id/arrow_003_image_view"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icon_keyboard_arrow_right"
+                        app:layout_constraintTop_toBottomOf="@id/h_guide_line_002"
+                        app:layout_constraintBottom_toTopOf="@id/h_guide_line_003"
+                        app:layout_constraintRight_toLeftOf="@id/arrow_guide_line"/>
+
+                    <TextView
+                        android:id="@+id/title_003_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?attr/textAppearanceSubtitle2"
+                        android:text="已经读完的书"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/h_guide_line_002"
+                        app:layout_constraintLeft_toRightOf="@id/text_guide_line"/>
+
+                    <TextView
+                        android:id="@+id/sub_title_003_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?attr/textAppearanceCaption"
+                        android:text="33本杂志，122本图书"
+                        android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toTopOf="@id/h_guide_line_003"
+                        app:layout_constraintLeft_toRightOf="@id/text_guide_line"/>
+
+
+
+                    <ImageView
+                        android:id="@+id/icon_004_image_view"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icon_folder_open"
+                        app:layout_constraintTop_toBottomOf="@id/h_guide_line_003"
+                        app:layout_constraintBottom_toTopOf="@id/h_guide_line_004"
+                        app:layout_constraintLeft_toRightOf="@id/icon_guide_line"/>
+
+                    <ImageView
+                        android:id="@+id/arrow_004image_view"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icon_keyboard_arrow_right"
+                        app:layout_constraintTop_toBottomOf="@id/h_guide_line_003"
+                        app:layout_constraintBottom_toTopOf="@id/h_guide_line_004"
+                        app:layout_constraintRight_toLeftOf="@id/arrow_guide_line"/>
+
+                    <TextView
+                        android:id="@+id/title_004_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?attr/textAppearanceSubtitle2"
+                        android:text="我的全部图书"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/h_guide_line_003"
+                        app:layout_constraintLeft_toRightOf="@id/text_guide_line"/>
+
+                    <TextView
+                        android:id="@+id/sub_title_004_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?attr/textAppearanceCaption"
+                        android:text="99本杂志，152本图书"
+                        android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toTopOf="@id/h_guide_line_004"
+                        app:layout_constraintLeft_toRightOf="@id/text_guide_line"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

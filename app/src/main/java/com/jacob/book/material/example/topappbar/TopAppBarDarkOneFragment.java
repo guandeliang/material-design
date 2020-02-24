@@ -44,7 +44,7 @@ public class TopAppBarDarkOneFragment extends TabBaseFragment {
 
 
     public TopAppBarDarkOneFragment() {
-        super("今日活跃度");
+        super("今日活跃度", -1);
     }
 
 

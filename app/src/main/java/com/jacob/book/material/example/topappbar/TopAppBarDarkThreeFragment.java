@@ -30,7 +30,7 @@ public class TopAppBarDarkThreeFragment extends TabBaseFragment {
 
 
     public TopAppBarDarkThreeFragment() {
-        super("最新用户");
+        super("最新用户", -1);
     }
 
 

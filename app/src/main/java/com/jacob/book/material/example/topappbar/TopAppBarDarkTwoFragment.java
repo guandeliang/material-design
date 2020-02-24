@@ -52,7 +52,7 @@ public class TopAppBarDarkTwoFragment extends TabBaseFragment {
 
 
     public TopAppBarDarkTwoFragment() {
-        super("本周活跃度");
+        super("本周活跃度", -1);
     }
 
 

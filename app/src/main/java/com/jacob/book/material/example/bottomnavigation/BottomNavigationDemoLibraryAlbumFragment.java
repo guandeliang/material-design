@@ -34,7 +34,7 @@ public class BottomNavigationDemoLibraryAlbumFragment extends TabBaseFragment {
     private BottomNavigationDemoLibraryAlbumFragmentBinding binding;
 
     public BottomNavigationDemoLibraryAlbumFragment(){
-        super("经典唱片");
+        super("经典唱片", -1);
     }
 
 

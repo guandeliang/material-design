@@ -40,8 +40,8 @@ public class WidgetsUtils {
         return drawable;
     }
 
-    public static void setDrawableColor(Activity activity, Drawable drawable, int colorResourceId){
-        int color = getColorValue(activity, colorResourceId);
+    public static void setDrawableColor(Context context, Drawable drawable, int colorResourceId){
+        int color = getColorValue(context, colorResourceId);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             DrawableCompat.setTint(drawable, color);
         } else {
@@ -49,14 +49,14 @@ public class WidgetsUtils {
         }
     }
 
-    public static int getColorValue(Activity activity, int colorResourceId){
+    public static int getColorValue(Context context, int colorResourceId){
         int color = -1;
         TypedValue typedValue = new TypedValue();
-        activity.getTheme().resolveAttribute(colorResourceId, typedValue, true);
+        context.getTheme().resolveAttribute(colorResourceId, typedValue, true);
         if (typedValue.resourceId != 0) {
-            color = ContextCompat.getColor(activity, typedValue.resourceId);
+            color = ContextCompat.getColor(context, typedValue.resourceId);
         } else {
-            color = ContextCompat.getColor(activity, colorResourceId);
+            color = ContextCompat.getColor(context, colorResourceId);
         }
         return color;
     }

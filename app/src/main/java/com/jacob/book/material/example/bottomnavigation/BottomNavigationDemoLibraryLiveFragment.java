@@ -38,7 +38,7 @@ public class BottomNavigationDemoLibraryLiveFragment extends TabBaseFragment imp
     private BottomNavigationDemoLibraryLiveFragmentBinding binding;
 
     public BottomNavigationDemoLibraryLiveFragment(){
-        super("在线直播");
+        super("在线直播", -1);
         this.getLifecycle().addObserver(this);
     }
 
@@ -67,8 +67,6 @@ public class BottomNavigationDemoLibraryLiveFragment extends TabBaseFragment imp
 
 
     private void initLiveList(){
-
-
 
         List<Thrones> list = JsonUtils.loadThrones(getResources());
 

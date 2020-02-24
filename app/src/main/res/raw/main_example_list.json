@@ -55,11 +55,6 @@
         "id":10101100,
         "title":"Dark样式",
         "path":"com.jacob.book.material.example.topappbar.TopAppBarDarkActivity"
-      },
-      {
-        "id":10101110,
-        "title":"实例模仿今日头条工具栏",
-        "path":"com.jacob.book.material.example.topappbar.TopAppBarTouTiaoActivity"
       }
     ]
   },
@@ -134,18 +129,47 @@
       },
       {
         "id":10301070,
+        "title":"自定义布局",
+        "path":"com.jacob.book.material.example.bottomnavigation.BottomNavigationCustomActivity"
+      },
+      {
+        "id":10301080,
         "title":"为部导航栏添加FAB按钮",
         "path":"com.jacob.book.material.example.bottomnavigation.BottomNavigationFabActivity"
       },
       {
-        "id":10301080,
+        "id":10301090,
         "title":"Dark样式",
         "path":"com.jacob.book.material.example.bottomnavigation.BottomNavigationDarkActivity"
       },
       {
-        "id":10301090,
+        "id":10301100,
         "title":"底部导航栏功能演示",
         "path":"com.jacob.book.material.example.bottomnavigation.BottomNavigationDemoActivity"
+      }
+    ]
+  },
+
+  {
+    "id":10400000,
+    "iconName":"icon_tab",
+    "title":"Tabs",
+    "itemList":[
+      {
+        "id":10401010,
+        "title":"默认DayNight主题Tab",
+        "path":"com.jacob.book.material.example.tab.TabDayNightDefaultActivity"
+      },
+      {
+        "id":10401020,
+        "title":"自定义DayNight主题Tab",
+        "path":"com.jacob.book.material.example.tab.TabDayNightCustomActivity"
+      },
+      {
+        "id":10401030,
+        "title":"Tab基本功能演示",
+        "path":"com.jacob.book.material.example.tab.TabBaseActivity"
+
       }
     ]
   },
@@ -328,12 +352,6 @@
     "itemList":[]
   },
 
-  {
-    "id":230,
-    "iconName":"icon_example_appbar_top",
-    "title":"Tabs",
-    "itemList":[]
-  },
 
   {
     "id":240,

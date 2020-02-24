@@ -7,8 +7,6 @@
 
 package com.jacob.book.material.example.adapter;
 
-import android.widget.LinearLayout;
-
 import androidx.recyclerview.widget.OrientationHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -16,7 +14,6 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.viewholder.BaseViewHolder;
 import com.google.android.material.card.MaterialCardView;
 import com.jacob.book.material.R;
-import com.jacob.book.material.example.model.ExampleImage;
 import com.jacob.book.material.example.model.Grammy;
 
 import java.util.List;

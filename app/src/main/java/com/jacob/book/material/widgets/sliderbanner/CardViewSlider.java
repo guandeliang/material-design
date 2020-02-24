@@ -10,14 +10,20 @@ package com.jacob.book.material.widgets.sliderbanner;
 import android.content.Context;
 import android.os.Parcelable;
 import android.util.AttributeSet;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewConfiguration;
+import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.jacob.book.material.R;
+import com.jacob.book.temp.TempConstant;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,6 +43,12 @@ public class CardViewSlider extends FrameLayout{
     private int realItemCount;
     private int cacheItemCount;
     private Disposable disposable;
+
+    private boolean isParentHorizontalScrallable;
+    private float initialX = 0f;
+    private float initialY = 0f;
+    private int touchSlop = 0;
+
 
     public CardViewSlider(@NonNull Context context) {
         this(context, null);
@@ -61,8 +73,13 @@ public class CardViewSlider extends FrameLayout{
         viewPager2.setAdapter(adapter);
         indicator.setVisibility(View.INVISIBLE);
 
+        isParentHorizontalScrallable = false;
+        touchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
     }
 
+    public void setParentHorizontalScrallable(boolean isParentHorizontalScrallable) {
+        this.isParentHorizontalScrallable = isParentHorizontalScrallable;
+    }
 
     public void setImageResIds(int... ids){
         cardList = new ArrayList<>();
@@ -110,7 +127,51 @@ public class CardViewSlider extends FrameLayout{
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new AutoScrollConsumer());
+
     }
+
+
+    @Override
+    public boolean onInterceptTouchEvent(MotionEvent event) {
+        handleInterceptTouchEvent(event);
+        return super.onInterceptTouchEvent(event);
+    }
+
+    //本方法用于解决元件嵌套在可以横向滑动的其他ViewPager2中时，无法滑动问题。
+    private void handleInterceptTouchEvent(MotionEvent event){
+        if(isParentHorizontalScrallable == false){
+            return;
+        }
+
+        if (event.getAction() == MotionEvent.ACTION_DOWN) {
+            initialX = event.getX();
+            initialY = event.getY();
+            this.getParent().requestDisallowInterceptTouchEvent(true);
+        } else if (event.getAction() == MotionEvent.ACTION_MOVE) {
+            float dx = event.getX() - initialX;
+            float dy = event.getY() - initialY;
+
+            // assuming ViewPager2 touch-slop is 2x touch-slop of child
+            float scaledDx = Math.abs(dx * 0.5f);
+            float scaledDy = Math.abs(dy * 1f);
+
+            if (scaledDx > touchSlop || scaledDy > touchSlop) {
+                if (scaledDy > scaledDx) {
+                    this.getParent().requestDisallowInterceptTouchEvent(false);
+                } else {
+                    this.getParent().requestDisallowInterceptTouchEvent(true);
+                }
+            }
+        }
+
+    }
+
+
+
+
+
+
+
 
     //防止内存溢出，在主界面销毁的时候，必须执行这个方法
     public void dispose(){
@@ -118,6 +179,8 @@ public class CardViewSlider extends FrameLayout{
             disposable.dispose();
         }
     }
+
+
 
     private class PageChangeCallback extends ViewPager2.OnPageChangeCallback{
         @Override
