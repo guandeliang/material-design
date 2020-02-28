@@ -1,0 +1,1074 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-27 下午5:31
+  ~
+  -->
+
+<androidx.core.widget.NestedScrollView
+    android:id="@+id/nested_scroll_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/v_guide_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintGuide_begin="48dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintGuide_begin="0dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_001"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintGuide_begin="56dp"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_002"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintGuide_begin="112dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_003"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintGuide_begin="168dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_004"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintGuide_begin="224dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_005"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintGuide_begin="280dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_006"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintGuide_begin="336dp"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_007"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintGuide_begin="392dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_008"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintGuide_begin="448dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_009"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintGuide_begin="504dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_010"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintGuide_begin="560dp"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_011"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintGuide_begin="616dp"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_012"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintGuide_begin="672dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_013"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintGuide_begin="728dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_014"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintGuide_begin="784dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_015"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintGuide_begin="840dp"/>
+
+
+        <ImageView
+            android:id="@+id/icon_image_view_001"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/icon_textsms"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:tint="@color/material_color_amber"
+            app:layout_constraintTop_toBottomOf="@id/guide_line_000"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/number_text_view_001"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="120"
+            android:layout_marginTop="2dp"
+            android:textAppearance="?attr/textAppearanceOverline"
+            app:layout_constraintTop_toBottomOf="@id/icon_image_view_001"
+            app:layout_constraintLeft_toLeftOf="@id/icon_image_view_001"
+            app:layout_constraintRight_toRightOf="@id/icon_image_view_001"/>
+
+        <TextView
+            android:id="@+id/title_text_view_001"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="但梅根嫁入王室前曾有过成功的演艺生涯。"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceSubtitle2"
+            app:layout_constraintTop_toBottomOf="@id/guide_line_000"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/sub_title_text_view_001"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="想吃可爱熊的竹子"
+            android:layout_marginBottom="4dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceCaption"
+            app:layout_constraintTop_toBottomOf="@id/title_text_view_001"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"/>
+
+        <View
+            android:id="@+id/line_view_001"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/transparent_black_12_08"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/guide_line_001"/>
+
+
+
+
+
+        <ImageView
+            android:id="@+id/icon_image_view_002"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/icon_textsms"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:tint="@color/material_color_blue_gray"
+            app:layout_constraintTop_toBottomOf="@id/guide_line_001"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/number_text_view_002"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="83"
+            android:layout_marginTop="2dp"
+            android:textAppearance="?attr/textAppearanceOverline"
+            app:layout_constraintTop_toBottomOf="@id/icon_image_view_002"
+            app:layout_constraintLeft_toLeftOf="@id/icon_image_view_002"
+            app:layout_constraintRight_toRightOf="@id/icon_image_view_002"/>
+
+        <TextView
+            android:id="@+id/title_text_view_002"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="同时她也是一位女权活动人士和时尚生活的博主。"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceSubtitle2"
+            app:layout_constraintTop_toBottomOf="@id/guide_line_001"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/sub_title_text_view_002"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="牛奶煮萝莉"
+            android:layout_marginBottom="4dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceCaption"
+            app:layout_constraintTop_toBottomOf="@id/title_text_view_002"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"/>
+
+        <View
+            android:id="@+id/line_view_002"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/transparent_black_12_08"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/guide_line_002"/>
+
+
+
+
+        <ImageView
+            android:id="@+id/icon_image_view_003"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/icon_textsms"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:tint="@color/material_color_blue_gray"
+            app:layout_constraintTop_toBottomOf="@id/guide_line_002"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/number_text_view_003"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="199"
+            android:layout_marginTop="2dp"
+            android:textAppearance="?attr/textAppearanceOverline"
+            app:layout_constraintTop_toBottomOf="@id/icon_image_view_003"
+            app:layout_constraintLeft_toLeftOf="@id/icon_image_view_003"
+            app:layout_constraintRight_toRightOf="@id/icon_image_view_003"/>
+
+        <TextView
+            android:id="@+id/title_text_view_003"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="美国总统特朗普任命了副总统彭斯协调该国政府对冠状病毒爆发的应对措施。"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceSubtitle2"
+            app:layout_constraintTop_toBottomOf="@id/guide_line_002"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/sub_title_text_view_003"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="猫腻仙女抱"
+            android:layout_marginBottom="4dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceCaption"
+            app:layout_constraintTop_toBottomOf="@id/title_text_view_003"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"/>
+
+        <View
+            android:id="@+id/line_view_003"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/transparent_black_12_08"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/guide_line_003"/>
+
+
+
+
+
+        <ImageView
+            android:id="@+id/icon_image_view_004"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/icon_textsms"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:tint="@color/material_color_amber"
+            app:layout_constraintTop_toBottomOf="@id/guide_line_003"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/number_text_view_004"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="131"
+            android:layout_marginTop="2dp"
+            android:textAppearance="?attr/textAppearanceOverline"
+            app:layout_constraintTop_toBottomOf="@id/icon_image_view_004"
+            app:layout_constraintLeft_toLeftOf="@id/icon_image_view_004"
+            app:layout_constraintRight_toRightOf="@id/icon_image_view_004"/>
+
+        <TextView
+            android:id="@+id/title_text_view_004"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="不过，两人在白宫新闻发布会上说。"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceSubtitle2"
+            app:layout_constraintTop_toBottomOf="@id/guide_line_003"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/sub_title_text_view_004"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="油炸小可爱"
+            android:layout_marginBottom="4dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceCaption"
+            app:layout_constraintTop_toBottomOf="@id/title_text_view_004"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"/>
+
+        <View
+            android:id="@+id/line_view_004"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/transparent_black_12_08"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/guide_line_004"/>
+
+
+
+
+
+
+        <ImageView
+            android:id="@+id/icon_image_view_005"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/icon_textsms"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:tint="@color/material_color_deep_orange"
+            app:layout_constraintTop_toBottomOf="@id/guide_line_004"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/number_text_view_005"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="34"
+            android:layout_marginTop="2dp"
+            android:textAppearance="?attr/textAppearanceOverline"
+            app:layout_constraintTop_toBottomOf="@id/icon_image_view_005"
+            app:layout_constraintLeft_toLeftOf="@id/icon_image_view_005"
+            app:layout_constraintRight_toRightOf="@id/icon_image_view_005"/>
+
+        <TextView
+            android:id="@+id/title_text_view_005"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="肺炎疫情对美国人民造成的风险仍然很低。"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceSubtitle2"
+            app:layout_constraintTop_toBottomOf="@id/guide_line_004"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/sub_title_text_view_005"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="纵横小可爱"
+            android:layout_marginBottom="4dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceCaption"
+            app:layout_constraintTop_toBottomOf="@id/title_text_view_005"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"/>
+
+        <View
+            android:id="@+id/line_view_005"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/transparent_black_12_08"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/guide_line_005"/>
+
+
+
+
+
+        <ImageView
+            android:id="@+id/icon_image_view_006"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/icon_textsms"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:tint="@color/material_color_deep_orange"
+            app:layout_constraintTop_toBottomOf="@id/guide_line_005"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/number_text_view_006"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="77"
+            android:layout_marginTop="2dp"
+            android:textAppearance="?attr/textAppearanceOverline"
+            app:layout_constraintTop_toBottomOf="@id/icon_image_view_006"
+            app:layout_constraintLeft_toLeftOf="@id/icon_image_view_006"
+            app:layout_constraintRight_toRightOf="@id/icon_image_view_006"/>
+
+        <TextView
+            android:id="@+id/title_text_view_006"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="此外，奥泰尔说，梅根的混血背景使她所受到的种族歧视更是让两者的对比不成立。"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceSubtitle2"
+            app:layout_constraintTop_toBottomOf="@id/guide_line_005"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/sub_title_text_view_006"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="爱猫的软妹"
+            android:layout_marginBottom="4dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceCaption"
+            app:layout_constraintTop_toBottomOf="@id/title_text_view_006"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"/>
+
+        <View
+            android:id="@+id/line_view_006"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/transparent_black_12_08"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/guide_line_006"/>
+
+
+
+
+
+        <ImageView
+            android:id="@+id/icon_image_view_007"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/icon_textsms"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:tint="@color/material_color_deep_orange"
+            app:layout_constraintTop_toBottomOf="@id/guide_line_006"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/number_text_view_007"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="98"
+            android:layout_marginTop="2dp"
+            android:textAppearance="?attr/textAppearanceOverline"
+            app:layout_constraintTop_toBottomOf="@id/icon_image_view_007"
+            app:layout_constraintLeft_toLeftOf="@id/icon_image_view_007"
+            app:layout_constraintRight_toRightOf="@id/icon_image_view_007"/>
+
+        <TextView
+            android:id="@+id/title_text_view_007"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="10月5日，第14届阿拉善英雄会在内蒙古自治区阿拉善盟圆满收官。"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceSubtitle2"
+            app:layout_constraintTop_toBottomOf="@id/guide_line_006"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/sub_title_text_view_007"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="吃着可爱长大"
+            android:layout_marginBottom="4dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceCaption"
+            app:layout_constraintTop_toBottomOf="@id/title_text_view_007"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"/>
+
+        <View
+            android:id="@+id/line_view_007"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/transparent_black_12_08"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/guide_line_007"/>
+
+
+
+
+
+        <ImageView
+            android:id="@+id/icon_image_view_008"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/icon_textsms"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:tint="@color/material_color_orange"
+            app:layout_constraintTop_toBottomOf="@id/guide_line_007"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/number_text_view_008"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="129"
+            android:layout_marginTop="2dp"
+            android:textAppearance="?attr/textAppearanceOverline"
+            app:layout_constraintTop_toBottomOf="@id/icon_image_view_008"
+            app:layout_constraintLeft_toLeftOf="@id/icon_image_view_008"
+            app:layout_constraintRight_toRightOf="@id/icon_image_view_008"/>
+
+        <TextView
+            android:id="@+id/title_text_view_008"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="本届英雄会共吸引了来自全国各地的近40万辆车，120万人次齐聚阿拉善。"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceSubtitle2"
+            app:layout_constraintTop_toBottomOf="@id/guide_line_007"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/sub_title_text_view_008"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="仙女爷爷"
+            android:layout_marginBottom="4dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceCaption"
+            app:layout_constraintTop_toBottomOf="@id/title_text_view_008"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"/>
+
+        <View
+            android:id="@+id/line_view_008"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/transparent_black_12_08"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/guide_line_008"/>
+
+
+
+
+
+        <ImageView
+            android:id="@+id/icon_image_view_009"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/icon_textsms"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:tint="@color/material_color_orange"
+            app:layout_constraintTop_toBottomOf="@id/guide_line_008"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/number_text_view_009"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="190"
+            android:layout_marginTop="2dp"
+            android:textAppearance="?attr/textAppearanceOverline"
+            app:layout_constraintTop_toBottomOf="@id/icon_image_view_009"
+            app:layout_constraintLeft_toLeftOf="@id/icon_image_view_009"
+            app:layout_constraintRight_toRightOf="@id/icon_image_view_009"/>
+
+        <TextView
+            android:id="@+id/title_text_view_009"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="当然，辛普森也受到了英国媒体的猛烈攻击。"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceSubtitle2"
+            app:layout_constraintTop_toBottomOf="@id/guide_line_008"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/sub_title_text_view_009"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="酷味野爹"
+            android:layout_marginBottom="4dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceCaption"
+            app:layout_constraintTop_toBottomOf="@id/title_text_view_009"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"/>
+
+        <View
+            android:id="@+id/line_view_009"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/transparent_black_12_08"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/guide_line_009"/>
+
+
+
+        <ImageView
+            android:id="@+id/icon_image_view_010"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/icon_textsms"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:tint="@color/material_color_blue_gray"
+            app:layout_constraintTop_toBottomOf="@id/guide_line_009"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/number_text_view_010"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="77"
+            android:layout_marginTop="2dp"
+            android:textAppearance="?attr/textAppearanceOverline"
+            app:layout_constraintTop_toBottomOf="@id/icon_image_view_010"
+            app:layout_constraintLeft_toLeftOf="@id/icon_image_view_010"
+            app:layout_constraintRight_toRightOf="@id/icon_image_view_010"/>
+
+        <TextView
+            android:id="@+id/title_text_view_010"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="但奥泰尔认为其程度无法跟梅根所受到的相比。5月1日凌晨。"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceSubtitle2"
+            app:layout_constraintTop_toBottomOf="@id/guide_line_009"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/sub_title_text_view_010"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="你可爱的妈"
+            android:layout_marginBottom="4dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceCaption"
+            app:layout_constraintTop_toBottomOf="@id/title_text_view_010"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"/>
+
+        <View
+            android:id="@+id/line_view_010"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/transparent_black_12_08"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/guide_line_010"/>
+
+
+        <ImageView
+            android:id="@+id/icon_image_view_011"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/icon_textsms"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:tint="@color/material_color_blue_gray"
+            app:layout_constraintTop_toBottomOf="@id/guide_line_010"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/number_text_view_011"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="130"
+            android:layout_marginTop="2dp"
+            android:textAppearance="?attr/textAppearanceOverline"
+            app:layout_constraintTop_toBottomOf="@id/icon_image_view_011"
+            app:layout_constraintLeft_toLeftOf="@id/icon_image_view_011"
+            app:layout_constraintRight_toRightOf="@id/icon_image_view_011"/>
+
+        <TextView
+            android:id="@+id/title_text_view_011"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="德仁即位，正式成为日本第126代天皇。"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceSubtitle2"
+            app:layout_constraintTop_toBottomOf="@id/guide_line_010"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/sub_title_text_view_011"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="给你一点甜头"
+            android:layout_marginBottom="4dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceCaption"
+            app:layout_constraintTop_toBottomOf="@id/title_text_view_011"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"/>
+
+        <View
+            android:id="@+id/line_view_011"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/transparent_black_12_08"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/guide_line_011"/>
+
+
+        <ImageView
+            android:id="@+id/icon_image_view_012"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/icon_textsms"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:tint="@color/material_color_blue_gray"
+            app:layout_constraintTop_toBottomOf="@id/guide_line_011"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/number_text_view_012"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1200"
+            android:layout_marginTop="2dp"
+            android:textAppearance="?attr/textAppearanceOverline"
+            app:layout_constraintTop_toBottomOf="@id/icon_image_view_012"
+            app:layout_constraintLeft_toLeftOf="@id/icon_image_view_012"
+            app:layout_constraintRight_toRightOf="@id/icon_image_view_012"/>
+
+        <TextView
+            android:id="@+id/title_text_view_012"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="德仁的父亲明仁退位成为上皇。"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceSubtitle2"
+            app:layout_constraintTop_toBottomOf="@id/guide_line_011"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/sub_title_text_view_012"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="娇稚"
+            android:layout_marginBottom="4dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceCaption"
+            app:layout_constraintTop_toBottomOf="@id/title_text_view_012"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"/>
+
+        <View
+            android:id="@+id/line_view_012"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/transparent_black_12_08"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/guide_line_012"/>
+
+
+        <ImageView
+            android:id="@+id/icon_image_view_013"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/icon_textsms"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:tint="@color/material_color_deep_orange"
+            app:layout_constraintTop_toBottomOf="@id/guide_line_012"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/number_text_view_013"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="188"
+            android:layout_marginTop="2dp"
+            android:textAppearance="?attr/textAppearanceOverline"
+            app:layout_constraintTop_toBottomOf="@id/icon_image_view_013"
+            app:layout_constraintLeft_toLeftOf="@id/icon_image_view_013"
+            app:layout_constraintRight_toRightOf="@id/icon_image_view_013"/>
+
+        <TextView
+            android:id="@+id/title_text_view_013"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="这是两个世纪以来日本首次在天皇在世时进行皇权交接。"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceSubtitle2"
+            app:layout_constraintTop_toBottomOf="@id/guide_line_012"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/sub_title_text_view_013"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="甜吻"
+            android:layout_marginBottom="4dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceCaption"
+            app:layout_constraintTop_toBottomOf="@id/title_text_view_013"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"/>
+
+        <View
+            android:id="@+id/line_view_013"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/transparent_black_12_08"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/guide_line_013"/>
+
+        <ImageView
+            android:id="@+id/icon_image_view_014"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/icon_textsms"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:tint="@color/material_color_deep_orange"
+            app:layout_constraintTop_toBottomOf="@id/guide_line_013"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/number_text_view_014"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="190"
+            android:layout_marginTop="2dp"
+            android:textAppearance="?attr/textAppearanceOverline"
+            app:layout_constraintTop_toBottomOf="@id/icon_image_view_014"
+            app:layout_constraintLeft_toLeftOf="@id/icon_image_view_014"
+            app:layout_constraintRight_toRightOf="@id/icon_image_view_014"/>
+
+        <TextView
+            android:id="@+id/title_text_view_014"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="美国总统特朗普任命了副总统彭斯。"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceSubtitle2"
+            app:layout_constraintTop_toBottomOf="@id/guide_line_013"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/sub_title_text_view_014"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="别吃我了"
+            android:layout_marginBottom="4dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceCaption"
+            app:layout_constraintTop_toBottomOf="@id/title_text_view_014"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"/>
+
+        <View
+            android:id="@+id/line_view_014"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/transparent_black_12_08"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/guide_line_014"/>
+
+
+        <ImageView
+            android:id="@+id/icon_image_view_015"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/icon_textsms"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:tint="@color/material_color_deep_orange"
+            app:layout_constraintTop_toBottomOf="@id/guide_line_014"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/number_text_view_015"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="99"
+            android:layout_marginTop="2dp"
+            android:textAppearance="?attr/textAppearanceOverline"
+            app:layout_constraintTop_toBottomOf="@id/icon_image_view_015"
+            app:layout_constraintLeft_toLeftOf="@id/icon_image_view_015"
+            app:layout_constraintRight_toRightOf="@id/icon_image_view_015"/>
+
+        <TextView
+            android:id="@+id/title_text_view_015"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="协调该国政府对冠状病毒爆发的应对措施。"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceSubtitle2"
+            app:layout_constraintTop_toBottomOf="@id/guide_line_014"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/sub_title_text_view_015"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="黄瓜瘦"
+            android:layout_marginBottom="4dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceCaption"
+            app:layout_constraintTop_toBottomOf="@id/title_text_view_015"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"/>
+
+        <View
+            android:id="@+id/line_view_015"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/transparent_black_12_08"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/guide_line_015"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
+
+

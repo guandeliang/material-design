@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.jacob.book.material">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -10,12 +11,13 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true">
+        android:supportsRtl="true"
+        tools:ignore="LockedOrientationActivity">
         <activity
             android:name=".main.activity.MainLaunchActivity"
             android:configChanges="uiMode"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.DayNight.LunchScreen">
+            android:theme="@style/Theme.MaterialBook.DayNight.LunchScreen"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,177 +26,177 @@
         </activity>
         <activity
             android:name=".main.activity.MainNavigationActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.DayNight.Custom" />
+            android:theme="@style/Theme.MaterialBook.DayNight.Custom"
+            android:screenOrientation="portrait"/>
 
 
         <!-- Top App Bar -->
         <activity
             android:name=".example.topappbar.TopAppBarDayNightDefaultActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.DayNight.Default" />
+            android:theme="@style/Theme.MaterialBook.DayNight.Default"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".example.topappbar.TopAppBarDayNightCustomActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.DayNight.Custom" />
+            android:theme="@style/Theme.MaterialBook.DayNight.Custom"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".example.topappbar.TopAppBarCustomLayoutActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.SingleColor.Colored" />
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".example.topappbar.TopAppBarBaseFuncActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.SingleColor.Colored" />
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".example.topappbar.TopAppBarContextualActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.SingleColor.Colored.TranslucentStatus" />
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored.TranslucentStatus"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".example.topappbar.TopAppBarBigActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.SingleColor.Colored.TranslucentStatus" />
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored.TranslucentStatus"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".example.topappbar.TopAppBarScrollingActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.SingleColor.Colored.TranslucentStatus" />
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored.TranslucentStatus"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".example.topappbar.TopAppBarCollapseActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.SingleColor.Colored.TranslucentStatus" />
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored.TranslucentStatus"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".example.topappbar.TopAppBarLightActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.SingleColor.Light" />
+            android:theme="@style/Theme.MaterialBook.SingleColor.Light"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".example.topappbar.TopAppBarDarkActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.SingleColor.Dark" />
+            android:theme="@style/Theme.MaterialBook.SingleColor.Dark"
+            android:screenOrientation="portrait"/>
 
 
         <!-- Bottom App Bar -->
         <activity
             android:name=".example.bottomappbar.BottomAppBarBaseActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.SingleColor.Colored" />
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".example.bottomappbar.BottomAppBarDayNightDefaultActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.DayNight.Default" />
+            android:theme="@style/Theme.MaterialBook.DayNight.Default"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".example.bottomappbar.BottomAppBarDayNightCustomActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.DayNight.Custom" />
+            android:theme="@style/Theme.MaterialBook.DayNight.Custom"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".example.bottomappbar.BottomAppBarDiamondActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.SingleColor.Mono" />
+            android:theme="@style/Theme.MaterialBook.SingleColor.Mono"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".example.bottomappbar.BottomAppBarDemoActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.SingleColor.Light" />
+            android:theme="@style/Theme.MaterialBook.SingleColor.Light"
+            android:screenOrientation="portrait"/>
 
 
         <!-- Bottom Navigation -->
         <activity
             android:name=".example.bottomnavigation.BottomNavigationDayNightDefaultActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.DayNight.Default" />
+            android:theme="@style/Theme.MaterialBook.DayNight.Default"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".example.bottomnavigation.BottomNavigationDayNightCustomActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.DayNight.Custom" />
+            android:theme="@style/Theme.MaterialBook.DayNight.Custom"
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".example.bottomnavigation.BottomNavigationBaseActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.SingleColor.Colored" />
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".example.bottomnavigation.BottomNavigationBaseShiftActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.SingleColor.Colored" />
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".example.bottomnavigation.BottomNavigationBaseIconActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.SingleColor.Light" />
+            android:theme="@style/Theme.MaterialBook.SingleColor.Light"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".example.bottomnavigation.BottomNavigationBasePrimaryActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.SingleColor.Light" />
+            android:theme="@style/Theme.MaterialBook.SingleColor.Light"
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".example.bottomnavigation.BottomNavigationCustomActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.SingleColor.Dark" />
+            android:theme="@style/Theme.MaterialBook.SingleColor.Dark"
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".example.bottomnavigation.BottomNavigationFabActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.DayNight.Custom" />
+            android:theme="@style/Theme.MaterialBook.DayNight.Custom"
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".example.bottomnavigation.BottomNavigationDarkActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.SingleColor.Dark" />
+            android:theme="@style/Theme.MaterialBook.SingleColor.Dark"
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".example.bottomnavigation.BottomNavigationDemoActivity"
-            android:screenOrientation="portrait"
             android:theme="@style/Theme.MaterialBook.SingleColor.Light"
-            android:windowSoftInputMode="adjustPan" />
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"/>
 
         <!-- Tab -->
 
         <activity
             android:name=".example.tab.TabDayNightDefaultActivity"
-            android:screenOrientation="portrait"
             android:theme="@style/Theme.MaterialBook.DayNight.Default"
-            android:windowSoftInputMode="adjustPan" />
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".example.tab.TabDayNightCustomActivity"
-            android:screenOrientation="portrait"
             android:theme="@style/Theme.MaterialBook.DayNight.Custom"
-            android:windowSoftInputMode="adjustPan" />
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".example.tab.TabBaseActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
-            android:windowSoftInputMode="adjustPan" />
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored.TranslucentStatus"
+            android:screenOrientation="portrait"/>
+
+
+
 
 
         <activity
             android:name=".test.TestSnapActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.SingleColor.Colored" />
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".test.TestMotionActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.SingleColor.Colored" />
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".test.TestShareElementActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.SingleColor.Colored" />
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".test.TestShapeActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.SingleColor.Colored" />
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
+            android:screenOrientation="portrait"/>
 
 
         <!-- 模仿案例 -->
         <activity
             android:name=".imitate.toutiao.TouTiaoMainActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.SingleColor.Colored" />
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".imitate.zhihu.ZhihuMainActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialBook.SingleColor.Colored" />
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
+            android:screenOrientation="portrait"/>
 
 
     </application>

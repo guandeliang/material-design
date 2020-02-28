@@ -58,6 +58,7 @@ public class TopAppBarScrollingActivity extends AppCompatActivity {
             return windowInsets;
         }
     }
+
     private class AppBarLayoutOnOffsetChangedListener implements AppBarLayout.OnOffsetChangedListener {
         @Override
         public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {

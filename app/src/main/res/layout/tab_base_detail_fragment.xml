@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-14 上午8:25
+  ~
+  -->
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/colorBackground">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:liftOnScroll="true"
+            app:liftOnScrollTargetViewId="@id/nested_scroll_view">
+            <androidx.constraintlayout.motion.widget.MotionLayout
+                android:id="@+id/motion_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_scrollFlags="noScroll">
+
+                <View
+                    android:id="@+id/status_bar_background_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/back_image_view"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="12dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:tint="@color/gray_300"
+                    android:src="@drawable/icon_arrow_back"
+                    app:layout_constraintTop_toBottomOf="@id/status_bar_background_view"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/more_image_view"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="12dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="4dp"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:tint="@color/gray_300"
+                    android:src="@drawable/icon_more_vert"
+                    app:layout_constraintTop_toBottomOf="@id/status_bar_background_view"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <TextView
+                    android:id="@+id/bar_gen_title_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:textColor="@color/gray_300"
+                    android:gravity="center"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:text="图书"
+                    app:layout_constraintTop_toBottomOf="@id/status_bar_background_view"
+                    app:layout_constraintLeft_toRightOf="@id/back_image_view"
+                    app:layout_constraintRight_toLeftOf="@id/more_image_view"/>
+
+
+                <TextView
+                    android:id="@+id/bar_spec_title_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/gray_300"
+                    android:gravity="left|center_vertical"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:text="这个附加的标题"
+                    app:layout_constraintTop_toBottomOf="@id/bar_gen_title_text_view"
+                    app:layout_constraintLeft_toRightOf="@id/back_image_view"
+                    app:layout_constraintRight_toLeftOf="@id/more_image_view"/>
+
+
+
+
+            </androidx.constraintlayout.motion.widget.MotionLayout>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_scroll_view"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Dark"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="16dp">
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/v_guide_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.30"/>
+
+                <View
+                    android:id="@+id/app_bar_fill_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+
+                <ImageView
+                    android:id="@+id/book_image_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/book_002_001"
+                    app:layout_constraintTop_toBottomOf="@id/app_bar_fill_view"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/v_guide_line"/>
+
+
+
+                <TextView
+                    android:id="@+id/title_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:text="白夜追凶"
+                    android:layout_marginLeft="12dp"
+                    app:layout_constraintTop_toBottomOf="@id/app_bar_fill_view"
+                    app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <TextView
+                    android:id="@+id/sub_title_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceSubtitle2"
+                    android:text="嬷嬷茶到底是什么东西"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintTop_toBottomOf="@id/title_text_view"
+                    app:layout_constraintLeft_toLeftOf="@id/title_text_view"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <TextView
+                    android:id="@+id/pub_info_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:text="列夫托尔斯泰/俄罗斯莫斯哥人/1898-02-12"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/transparent_white_80"
+                    app:layout_constraintTop_toBottomOf="@id/sub_title_text_view"
+                    app:layout_constraintLeft_toLeftOf="@id/title_text_view"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialBook.Button.Small"
+                    android:id="@+id/func_001_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="8dp"
+                    app:icon="@drawable/icon_archive"
+                    app:iconSize="16dp"
+                    android:text="想读"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintTop_toBottomOf="@id/pub_info_text_view"
+                    app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+                    app:layout_constraintRight_toLeftOf="@id/func_002_button"/>
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialBook.Button.Small"
+                    android:id="@+id/func_002_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    app:icon="@drawable/icon_archive"
+                    app:iconSize="16dp"
+                    android:text="在读"
+                    app:layout_constraintTop_toTopOf="@id/func_001_button"
+                    app:layout_constraintBottom_toBottomOf="@id/func_001_button"
+                    app:layout_constraintLeft_toRightOf="@id/func_001_button"
+                    app:layout_constraintRight_toLeftOf="@id/func_003_button"/>
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialBook.Button.Small"
+                    android:id="@+id/func_003_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    app:icon="@drawable/icon_archive"
+                    app:iconSize="16dp"
+                    android:text="读过"
+                    app:layout_constraintTop_toTopOf="@id/func_001_button"
+                    app:layout_constraintBottom_toBottomOf="@id/func_001_button"
+                    app:layout_constraintLeft_toRightOf="@id/func_002_button"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/title_barrier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="bottom"
+                    app:constraint_referenced_ids="book_image_view, func_001_button"/>
+
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/rating_card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/transparent_black_16_24"
+                    app:layout_constraintTop_toBottomOf="@id/title_barrier"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp">
+                        <TextView
+                            android:id="@+id/rating_title_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            android:text="花生评分"
+                            android:textColor="@color/gray_300"
+                            app:layout_constraintTop_toTopOf="@id/rating_more_image_view"
+                            app:layout_constraintBottom_toBottomOf="@id/rating_more_image_view"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+                        <TextView
+                            android:id="@+id/rating_tm_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="10dp"
+                            android:text="TM"
+                            android:textColor="@color/gray_300"
+                            app:layout_constraintTop_toTopOf="@id/rating_title_text_view"
+                            app:layout_constraintLeft_toRightOf="@id/rating_title_text_view"/>
+
+                        <ImageView
+                            android:id="@+id/rating_more_image_view"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/icon_keyboard_arrow_right"
+                            android:tint="@color/gray_500"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/rating_value_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceHeadline5"
+                            android:text="9.3"
+                            android:textColor="@color/gray_300"
+                            android:layout_marginBottom="8dp"
+                            app:layout_constraintBottom_toTopOf="@id/rating_rating_bar"
+                            app:layout_constraintLeft_toLeftOf="@id/rating_rating_bar"
+                            app:layout_constraintRight_toRightOf="@id/rating_rating_bar"/>
+
+                        <com.jacob.book.material.widgets.MaterialRatingBar
+                            android:id="@+id/rating_rating_bar"
+                            android:layout_width="80dp"
+                            android:layout_height="16dp"
+                            app:layout_constraintBottom_toBottomOf="@id/rating_douban_rating"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+
+                        <com.jacob.book.material.widgets.DouBanRating
+                            android:id="@+id/rating_douban_rating"
+                            android:layout_width="0dp"
+                            android:layout_height="56dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="8dp"
+                            app:layout_constraintTop_toBottomOf="@id/rating_title_text_view"
+                            app:layout_constraintLeft_toRightOf="@id/rating_rating_bar"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/rating_memo_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:textSize="10dp"
+                            android:text="125733人评分"
+                            android:textColor="@color/transparent_white_30"
+                            app:layout_constraintTop_toBottomOf="@id/rating_douban_rating"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+
+                        <View
+                            android:id="@+id/rating_line_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/transparent_white_05_01"
+                            android:layout_marginTop="4dp"
+                            app:layout_constraintTop_toBottomOf="@id/rating_memo_text_view"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/rating_summary_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:textSize="10dp"
+                            android:text="1234人读过，5678人在读，9235人想读"
+                            android:textColor="@color/transparent_white_30"
+                            app:layout_constraintTop_toBottomOf="@id/rating_line_view"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+                <TextView
+                    android:id="@+id/summary_title_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:text="简介"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintTop_toBottomOf="@id/rating_card_view"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+
+                <TextView
+                    android:id="@+id/summary_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:text="简介内容"
+                    android:layout_marginTop="12dp"
+                    android:lineHeight="22dp"
+                    app:layout_constraintTop_toBottomOf="@id/summary_title_text_view"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <TextView
+                    android:id="@+id/author_title_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:text="作者"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintTop_toBottomOf="@id/summary_text_view"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/author_image_view"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"
+                    android:layout_marginTop="12dp"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round.Small"
+                    app:srcCompat="@drawable/news_2_004"
+                    app:layout_constraintTop_toBottomOf="@id/author_title_text_view"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <TextView
+                    android:id="@+id/author_name_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:text="随便写的名字"
+                    app:layout_constraintTop_toTopOf="@id/author_image_view"
+                    app:layout_constraintLeft_toRightOf="@id/author_image_view"/>
+
+                <TextView
+                    android:id="@+id/author_info_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:text="1984年出生于北京昌平郊区的一个小院子里。"
+                    android:textColor="@color/transparent_white_80"
+                    app:layout_constraintTop_toBottomOf="@id/author_name_text_view"
+                    app:layout_constraintLeft_toLeftOf="@id/author_name_text_view"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <TextView
+                    android:id="@+id/author_product_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:text="爱好摄影，一开始喜欢拍风景，后来发现拍风景不赚钱，于是就开始拍人物。最辉煌的时候给某个大明星当过摄影师，后来大明星出事了，于是就自己给自己当模特了。"
+                    android:textColor="@color/transparent_white_80"
+                    app:layout_constraintTop_toBottomOf="@id/author_info_text_view"
+                    app:layout_constraintLeft_toLeftOf="@id/author_name_text_view"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+
+                <TextView
+                    android:id="@+id/note_title_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:text="书摘"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintTop_toBottomOf="@id/author_product_text_view"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/note_001_card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/transparent_black_16_24"
+                    app:layout_constraintTop_toBottomOf="@id/note_title_text_view"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp">
+                        <TextView
+                            android:id="@+id/note_001_title_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            android:text="想吃可爱熊的竹子"
+                            android:textColor="@color/gray_300"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/note_001_content_text_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:layout_marginTop="8dp"
+                            android:text="每个的方法均返回与该特定配置文件相关联的色样，其中会替换为六种颜色配置文件之一的名称。尽管调色板的方法不需要默认值参数，但如果图片中不存在该特定配置文件，则这些方法会返回。因此，在使用色样之前，应检查确保色样不为。例如，如果色样不为，则以下代码会从调色板中获取标题文本颜色。"
+                            app:layout_constraintTop_toBottomOf="@id/note_001_title_text_view"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/note_002_card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/transparent_black_16_24"
+                    app:layout_constraintTop_toBottomOf="@id/note_001_card_view"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp">
+                        <TextView
+                            android:id="@+id/note_002_title_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            android:text="牛奶煮萝莉"
+                            android:textColor="@color/gray_300"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/note_002_content_text_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:layout_marginTop="8dp"
+                            android:text="方法均返回与该特定配置文件相关联的调色板中的颜色，其中会替换为六种颜色配置文件之一的名称。例如，获取颜色配置文件的方法是。由于并非所有图片都包含所有颜色配置文件，因此您还必须提供默认颜色才能返回相应的颜色。"
+                            app:layout_constraintTop_toBottomOf="@id/note_002_title_text_view"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/note_003_card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/transparent_black_16_24"
+                    app:layout_constraintTop_toBottomOf="@id/note_002_card_view"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp">
+                        <TextView
+                            android:id="@+id/note_003_title_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            android:text="猫腻仙女抱"
+                            android:textColor="@color/gray_300"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/note_003_content_text_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:layout_marginTop="8dp"
+                            android:text="在大多数情况下，我们建议您使用库获取、解码和显示应用中的位图。在处理这些任务以及与位图和上的其他图片相关的其他任务时，会将大部分的复杂工作抽象出来。如需了解如何使用和下载，请访问上的代码库。"
+                            app:layout_constraintTop_toBottomOf="@id/note_003_title_text_view"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/bottom_sheet_linear_layout"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
+            app:layout_behavior=".widgets.ViewPager2BottomSheetBehavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="bottom">
+
+            <LinearLayout
+                android:id="@+id/bottom_sheet_title_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:background="?attr/colorPrimary">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab_layout"
+                    android:background="?attr/colorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    app:tabGravity="start"
+                    app:tabMode="scrollable"
+                    app:tabIndicatorFullWidth="true"
+                    app:tabIndicatorGravity="stretch"
+                    app:tabIndicatorColor="@color/transparent_black_16_24"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                </com.google.android.material.tabs.TabLayout>
+            </LinearLayout>
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="?android:attr/colorBackground"/>
+
+            <View
+                android:id="@+id/expanded_offsetstatus_fill_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

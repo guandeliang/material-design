@@ -37,7 +37,7 @@ public class TabBaseMainMyFragment extends TabBaseFragment implements LifecycleO
     private TabBaseMainMyFragmentBinding binding;
 
     public TabBaseMainMyFragment(){
-        super("我的", R.drawable.icon_person);
+        super("我的", -1);
         this.getLifecycle().addObserver(this);
     }
 

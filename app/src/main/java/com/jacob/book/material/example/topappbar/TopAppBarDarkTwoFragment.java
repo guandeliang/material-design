@@ -105,7 +105,6 @@ public class TopAppBarDarkTwoFragment extends TabBaseFragment {
     }
 
     private void initData(){
-        Log.d(TempConstant.LOG_TAG, "initData");
         if(binding.lineChart.getData() != null){
             binding.lineChart.getData().clearValues();
         }

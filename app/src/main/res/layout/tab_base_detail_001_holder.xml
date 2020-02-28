@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-20 下午11:07
+  ~
+  -->
+
+<androidx.core.widget.NestedScrollView
+    android:id="@+id/nested_scroll_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp">
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_view_001"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/header_image_view_001"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:srcCompat="@drawable/header_001"/>
+
+                <TextView
+                    android:id="@+id/name_text_view_001"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="想吃可爱熊的竹子"
+                    android:layout_marginLeft="4dp"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    app:layout_constraintLeft_toRightOf="@id/header_image_view_001"
+                    app:layout_constraintTop_toTopOf="@id/header_image_view_001"
+                    app:layout_constraintBottom_toBottomOf="@id/header_image_view_001"/>
+
+                <TextView
+                    android:id="@+id/state_text_view_001"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="读过"
+                    android:layout_marginLeft="4dp"
+                    android:textAppearance="?attr/textAppearanceOverline"
+                    app:layout_constraintLeft_toRightOf="@id/name_text_view_001"
+                    app:layout_constraintTop_toTopOf="@id/header_image_view_001"
+                    app:layout_constraintBottom_toBottomOf="@id/header_image_view_001"/>
+
+                <TextView
+                    android:id="@+id/content_text_view_001"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="但梅根嫁入王室前曾有过成功的演艺生涯，同时她也是一位女权活动人士和时尚生活的博主。美国总统特朗普任命了副总统彭斯协调该国政府对冠状病毒爆发的应对措施。不过，两人在白宫新闻发布会上说，肺炎疫情对美国人民造成的风险仍然很低。"
+                    android:layout_marginTop="4dp"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    app:layout_constraintTop_toBottomOf="@id/header_image_view_001"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_view_002"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/card_view_001"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/header_image_view_002"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:srcCompat="@drawable/header_002"/>
+
+                <TextView
+                    android:id="@+id/name_text_view_002"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="牛奶煮萝莉"
+                    android:layout_marginLeft="4dp"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    app:layout_constraintLeft_toRightOf="@id/header_image_view_002"
+                    app:layout_constraintTop_toTopOf="@id/header_image_view_002"
+                    app:layout_constraintBottom_toBottomOf="@id/header_image_view_002"/>
+
+                <TextView
+                    android:id="@+id/state_text_view_002"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="读过"
+                    android:layout_marginLeft="4dp"
+                    android:textAppearance="?attr/textAppearanceOverline"
+                    app:layout_constraintLeft_toRightOf="@id/name_text_view_002"
+                    app:layout_constraintTop_toTopOf="@id/header_image_view_002"
+                    app:layout_constraintBottom_toBottomOf="@id/header_image_view_002"/>
+
+                <TextView
+                    android:id="@+id/content_text_view_002"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="此外，奥泰尔说，梅根的混血背景使她所受到的种族歧视更是让两者的对比不成立。10月5日，第14届阿拉善英雄会在内蒙古自治区阿拉善盟圆满收官。本届英雄会共吸引了来自全国各地的近40万辆车，120万人次齐聚阿拉善。"
+                    android:layout_marginTop="4dp"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    app:layout_constraintTop_toBottomOf="@id/header_image_view_002"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_view_003"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/card_view_002"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/header_image_view_003"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:srcCompat="@drawable/header_003"/>
+
+                <TextView
+                    android:id="@+id/name_text_view_003"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="猫腻仙女抱"
+                    android:layout_marginLeft="4dp"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    app:layout_constraintLeft_toRightOf="@id/header_image_view_003"
+                    app:layout_constraintTop_toTopOf="@id/header_image_view_003"
+                    app:layout_constraintBottom_toBottomOf="@id/header_image_view_003"/>
+
+                <TextView
+                    android:id="@+id/state_text_view_003"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="读过"
+                    android:layout_marginLeft="4dp"
+                    android:textAppearance="?attr/textAppearanceOverline"
+                    app:layout_constraintLeft_toRightOf="@id/name_text_view_003"
+                    app:layout_constraintTop_toTopOf="@id/header_image_view_003"
+                    app:layout_constraintBottom_toBottomOf="@id/header_image_view_003"/>
+
+                <TextView
+                    android:id="@+id/content_text_view_003"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="当然，辛普森也受到了英国媒体的猛烈攻击，但奥泰尔认为其程度无法跟梅根所受到的相比。5月1日凌晨，德仁即位，正式成为日本第126代天皇。德仁的父亲明仁退位成为上皇。这是两个世纪以来日本首次在天皇在世时进行皇权交接。"
+                    android:layout_marginTop="4dp"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    app:layout_constraintTop_toBottomOf="@id/header_image_view_003"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_view_004"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/card_view_003"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/header_image_view_004"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:srcCompat="@drawable/header_004"/>
+
+                <TextView
+                    android:id="@+id/name_text_view_004"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="爱猫的软妹"
+                    android:layout_marginLeft="4dp"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    app:layout_constraintLeft_toRightOf="@id/header_image_view_004"
+                    app:layout_constraintTop_toTopOf="@id/header_image_view_004"
+                    app:layout_constraintBottom_toBottomOf="@id/header_image_view_004"/>
+
+                <TextView
+                    android:id="@+id/state_text_view_004"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="读过"
+                    android:layout_marginLeft="4dp"
+                    android:textAppearance="?attr/textAppearanceOverline"
+                    app:layout_constraintLeft_toRightOf="@id/name_text_view_004"
+                    app:layout_constraintTop_toTopOf="@id/header_image_view_004"
+                    app:layout_constraintBottom_toBottomOf="@id/header_image_view_004"/>
+
+                <TextView
+                    android:id="@+id/content_text_view_004"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="美国卫生部长阿扎尔（Alex Azar）表示，针对疫情白宫已经制定了一项计划，将重点放在五个优先事项上，包括改善疾病监测，与地方政府协调回应疫情，研发疗法以及增加个人健康保卫用品（如口罩）的制造。"
+                    android:layout_marginTop="4dp"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    app:layout_constraintTop_toBottomOf="@id/header_image_view_004"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_view_005"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/card_view_004"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/header_image_view_005"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:srcCompat="@drawable/header_005"/>
+
+                <TextView
+                    android:id="@+id/name_text_view_005"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="吃着可爱长大"
+                    android:layout_marginLeft="4dp"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    app:layout_constraintLeft_toRightOf="@id/header_image_view_005"
+                    app:layout_constraintTop_toTopOf="@id/header_image_view_005"
+                    app:layout_constraintBottom_toBottomOf="@id/header_image_view_005"/>
+
+                <TextView
+                    android:id="@+id/state_text_view_005"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="读过"
+                    android:layout_marginLeft="4dp"
+                    android:textAppearance="?attr/textAppearanceOverline"
+                    app:layout_constraintLeft_toRightOf="@id/name_text_view_005"
+                    app:layout_constraintTop_toTopOf="@id/header_image_view_005"
+                    app:layout_constraintBottom_toBottomOf="@id/header_image_view_005"/>
+
+                <TextView
+                    android:id="@+id/content_text_view_005"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="放弃王位后，爱德华八世和辛普森夫人在法国虽然过着流亡生活，但他们的社交圈子的都是王室成员，并依靠富贵朋友提供的金钱生活。对辛普森的其他传闻包括，她是一位性爱高手的女妖式人物，并说她在中国上海的妓院中学会了种种“中国古代的房术技巧”勾引了当时驻扎在上海的第一任丈夫，一位海军军官。"
+                    android:layout_marginTop="4dp"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    app:layout_constraintTop_toBottomOf="@id/header_image_view_005"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_view_006"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/card_view_005"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/header_image_view_006"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:srcCompat="@drawable/header_006"/>
+
+                <TextView
+                    android:id="@+id/name_text_view_006"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="仙女爷爷"
+                    android:layout_marginLeft="4dp"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    app:layout_constraintLeft_toRightOf="@id/header_image_view_006"
+                    app:layout_constraintTop_toTopOf="@id/header_image_view_006"
+                    app:layout_constraintBottom_toBottomOf="@id/header_image_view_006"/>
+
+                <TextView
+                    android:id="@+id/state_text_view_006"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="读过"
+                    android:layout_marginLeft="4dp"
+                    android:textAppearance="?attr/textAppearanceOverline"
+                    app:layout_constraintLeft_toRightOf="@id/name_text_view_006"
+                    app:layout_constraintTop_toTopOf="@id/header_image_view_006"
+                    app:layout_constraintBottom_toBottomOf="@id/header_image_view_006"/>
+
+                <TextView
+                    android:id="@+id/content_text_view_006"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="但最具讽刺意味的是，爱德华为了辛普森夫人抛弃了王位，于是有了轰动世界的所谓童话般的世纪之恋。英国布里斯托大学历史教授奥泰尔（Prof. Olivette Otele）表示， 两者的可比性较小，梅根是独立、成功女性，靠自己的本领赚钱。但辛普森一生从未作过任何工作。辛普森是社交名流。"
+                    android:layout_marginTop="4dp"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    app:layout_constraintTop_toBottomOf="@id/header_image_view_006"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
+
+

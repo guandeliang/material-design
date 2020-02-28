@@ -27,7 +27,7 @@ public class MaterialRatingBar extends View {
     private Paint bgPaint;
     private Paint lightPaint;
     private Paint darkPaint;
-    private float space;
+    private float rate;
 
     public MaterialRatingBar(Context context) {
         this(context, null);
@@ -43,17 +43,24 @@ public class MaterialRatingBar extends View {
 
         bgPaint = new Paint();
         bgPaint.setStyle(Paint.Style.FILL);
-        bgPaint.setColor(WidgetsUtils.getColorValue(this.getContext(), R.color.transparent_black_16_24));
+        bgPaint.setColor(WidgetsUtils.getColorValue(this.getContext(), R.color.transparent));
 
         lightPaint = new Paint();
         lightPaint.setStyle(Paint.Style.FILL);
         lightPaint.setAntiAlias(true);
-        lightPaint.setColor(WidgetsUtils.getColorValue(this.getContext(), R.color.gray_500));
+        lightPaint.setColor(WidgetsUtils.getColorValue(this.getContext(), R.color.material_color_orange));
 
         darkPaint = new Paint();
         darkPaint.setStyle(Paint.Style.FILL);
         darkPaint.setAntiAlias(true);
-        darkPaint.setColor(WidgetsUtils.getColorValue(this.getContext(), R.color.material_color_orange));
+        darkPaint.setColor(WidgetsUtils.getColorValue(this.getContext(), R.color.gray_500));
+
+        rate = 0f;
+    }
+
+    public void setRate(float rate){
+        this.rate = rate;
+        invalidate();
     }
 
     @Override
@@ -77,7 +84,6 @@ public class MaterialRatingBar extends View {
         float radius = (Math.min(this.height, colWidth) - WidgetsUtils.dpToPx(getContext(), 2))/2f;
 
 
-        space = WidgetsUtils.dpToPx(getContext(), 2);
         drawDarkStars(canvas, colWidth, radius);
         drawLightStars(canvas, colWidth, radius);
     }
@@ -102,7 +108,6 @@ public class MaterialRatingBar extends View {
     }
 
     private void drawLightStars(Canvas canvas, float colWidth, float radius){
-        float rate = 0.7f;
         float centerY = this.height/2f;
         for(int col = 0; col < 5; col++){
             if(rate >= 0.2f){//绘制完整的五角星
@@ -122,11 +127,6 @@ public class MaterialRatingBar extends View {
                 float starWidth = (float)(2f * radius * Math.cos(Math.PI * 18f/180f));
                 float clipWidth = col * colWidth + (colWidth - starWidth)/2 + starWidth*rate/0.2f;
                 canvas.clipRect(0, 0, clipWidth, this.height);
-
-                Log.d(TempConstant.LOG_TAG, "radius = " + radius);
-                Log.d(TempConstant.LOG_TAG, "colWidth = " + colWidth);
-                Log.d(TempConstant.LOG_TAG, "starWidth = " + starWidth);
-                Log.d(TempConstant.LOG_TAG, "clipWidth = " + clipWidth);
 
                 FloatPoint center = new FloatPoint();
                 center.x =  (col + 0.5f)*colWidth;

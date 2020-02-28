@@ -92,6 +92,11 @@
         <item name="tint">?attr/colorOnPrimary</item>
     </style>
 
+    <style name="Widget.MaterialBook.Button.Small" parent="Widget.MaterialComponents.Button">
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:paddingRight">4dp</item>
+        <item name="iconPadding">0dp</item>
+    </style>
 
 
     <!--BEGIN: 基础风格-->
@@ -293,7 +298,7 @@
         <item name="android:textSize">10dp</item>
         <item name="android:textColor">@color/material_on_primary_emphasis_medium</item>
     </style>
-    <style name="Widget.MaterialBook.SingleColor.Colored.Toolbar" parent="Widget.MaterialComponents.Toolbar.PrimarySurface">
+    <style name="Widget.MaterialBook.SingleColor.Colored.Toolbar" parent="Widget.MaterialComponents.Toolbar.Primary">
         <item name="android:backgroundTint">@color/transparent_white_00_00</item>
         <item name="android:elevation">0dp</item>
         <item name="materialThemeOverlay">@style/ThemeOverlay.MaterialBook.SingleColor.Colored.Toolbar</item>

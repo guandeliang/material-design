@@ -19,16 +19,27 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingTop="16dp"
             android:paddingBottom="16dp">
 
-            <com.jacob.book.material.widgets.sliderbanner.CardViewSlider
-                android:id="@+id/card_view_slider"
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/slider_carc_view"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
                 app:layout_constraintDimensionRatio="H,39:20"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"/>
+                app:layout_constraintRight_toRightOf="parent">
+
+                <com.jacob.book.material.widgets.sliderbanner.CardViewSlider
+                    android:id="@+id/card_view_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
 
 
             <LinearLayout
@@ -41,7 +52,7 @@
                 android:paddingBottom="8dp"
                 android:orientation="vertical"
                 android:gravity="center_horizontal"
-                app:layout_constraintTop_toBottomOf="@id/card_view_slider"
+                app:layout_constraintTop_toBottomOf="@id/slider_carc_view"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toLeftOf="@id/category_002_linear_layout">
                 <ImageView
@@ -141,8 +152,8 @@
                 android:scaleType="fitXY"
                 android:adjustViewBounds="true"
                 android:src="@drawable/book_001_search"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
                 app:layout_constraintTop_toBottomOf="@id/category_001_linear_layout"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"/>
@@ -154,7 +165,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?attr/textAppearanceHeadline6"
                 android:text="新书推荐"
-                android:layout_marginLeft="8dp"
+                android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 app:layout_constraintTop_toBottomOf="@id/search_image_view"
                 app:layout_constraintLeft_toLeftOf="parent"/>
@@ -166,6 +177,7 @@
                 android:layout_height="wrap_content"
                 android:text="更多"
                 android:textAlignment="viewEnd"
+                android:layout_marginRight="8dp"
                 app:layout_constraintBaseline_toBaselineOf="@id/list_title_001_text_view"
                 app:layout_constraintRight_toRightOf="parent"/>
 
@@ -175,7 +187,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:layout_marginLeft="8dp"
+                android:layout_marginLeft="16dp"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
                 app:layout_constraintTop_toBottomOf="@id/list_title_001_text_view"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toLeftOf="@id/card_view_002"
@@ -224,6 +238,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
                 app:layout_constraintTop_toTopOf="@id/card_view_001"
                 app:layout_constraintBottom_toBottomOf="@id/card_view_001"
                 app:layout_constraintLeft_toRightOf="@id/card_view_001"
@@ -267,7 +283,9 @@
                 android:id="@+id/card_view_003"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="8dp"
+                android:layout_marginRight="16dp"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
                 app:layout_constraintTop_toTopOf="@id/card_view_001"
                 app:layout_constraintBottom_toBottomOf="@id/card_view_001"
                 app:layout_constraintLeft_toRightOf="@id/card_view_002"
@@ -313,7 +331,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?attr/textAppearanceHeadline6"
                 android:text="实力作家"
-                android:layout_marginLeft="8dp"
+                android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 app:layout_constraintTop_toBottomOf="@id/card_view_001"
                 app:layout_constraintLeft_toLeftOf="parent"/>
@@ -323,6 +341,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="更多"
+                android:layout_marginRight="8dp"
                 android:textAlignment="viewEnd"
                 app:layout_constraintBaseline_toBaselineOf="@id/list_title_002_text_view"
                 app:layout_constraintRight_toRightOf="parent"/>
@@ -333,7 +352,7 @@
                 android:id="@+id/author_001_image_view"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_marginLeft="8dp"
+                android:layout_marginLeft="16dp"
                 android:layout_marginTop="12dp"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
                 app:layout_constraintDimensionRatio="H,1:1"
@@ -386,7 +405,7 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginRight="16dp"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
                 app:layout_constraintDimensionRatio="H,1:1"
                 app:layout_constraintTop_toTopOf="@id/author_001_image_view"

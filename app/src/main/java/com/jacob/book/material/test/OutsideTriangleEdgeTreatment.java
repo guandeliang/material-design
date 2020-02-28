@@ -44,7 +44,6 @@ public class OutsideTriangleEdgeTreatment extends EdgeTreatment {
         float startY  = (float)(Math.tan(angle)*length);
         shapePath.reset(0, startY);
         shapePath.lineTo(length, 0);
-        Log.d(TempConstant.LOG_TAG, "getLeftEdgePath startY = " + startY);
     }
 
     private void getBottomEdgePath(float length, @NonNull ShapePath shapePath){
@@ -54,16 +53,12 @@ public class OutsideTriangleEdgeTreatment extends EdgeTreatment {
         float endX = length- startX;
         shapePath.reset(startX, 0);
         shapePath.lineTo(endX, 0);
-
-        Log.d(TempConstant.LOG_TAG, "getBottomEdgePath startX = " + startX + " shapePath.startX " + shapePath.startX);
-        Log.d(TempConstant.LOG_TAG, "getBottomEdgePath endX = " + endX + " shapePath.endX " + shapePath.endX);
     }
 
 
     private void getRightEdgePath(float length, @NonNull ShapePath shapePath){
         float endY  = (float)(Math.tan(angle)*length);
         shapePath.lineTo(length, endY);
-        Log.d(TempConstant.LOG_TAG, "getRightEdgePath endY = " + endY);
     }
 
 }

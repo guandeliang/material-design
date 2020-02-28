@@ -54,7 +54,7 @@ public class BottomNavigationDemoPlayListFragment extends Fragment implements Li
 
         initPlayListList();
 
-        sheetBehavior = BottomSheetBehavior.from(binding.bottomsheetLinearView);
+        sheetBehavior = BottomSheetBehavior.from(binding.bottomsheetLinearLayout);
         sheetBehavior.setFitToContents(true);
         sheetBehavior.setHideable(false);
         sheetBehavior.setPeekHeight(WidgetsUtils.dpToPx(this.getContext(), 112));

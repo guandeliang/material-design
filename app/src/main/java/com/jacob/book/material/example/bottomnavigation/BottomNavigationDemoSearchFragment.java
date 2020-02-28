@@ -59,28 +59,9 @@ public class BottomNavigationDemoSearchFragment extends Fragment implements Life
 
     @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
     private void onLifecycleDistory(){
-        Log.d(TempConstant.LOG_TAG, "1 Lifecycle.Event.ON_RESUME");
-
         if(binding.searchEditText.requestFocus()){
             InputMethodManager imm =(InputMethodManager)this.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.showSoftInput(binding.searchEditText, InputMethodManager.SHOW_IMPLICIT);
         }
     }
-
-
-    @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
-    private void onLifecyclePause(){
-        Log.d(TempConstant.LOG_TAG, "2 Lifecycle.Event.ON_PAUSE");
-    }
-
-    @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
-    private void onLifecycleStop(){
-        Log.d(TempConstant.LOG_TAG, "3 Lifecycle.Event.ON_STOP");
-    }
-
-    @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
-    private void onLifecycleDestory(){
-        Log.d(TempConstant.LOG_TAG, "4 Lifecycle.Event.ON_DESTROY");
-    }
-
 }

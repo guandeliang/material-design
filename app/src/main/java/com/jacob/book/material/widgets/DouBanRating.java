@@ -33,12 +33,9 @@ public class DouBanRating extends View {
 
     private Paint startPaint;
     private Paint ratingPaint;
-    private float pointRadius;
-    private float pointSpace;
-    private int pointCount;
-    private int currPointIdx;
     private float space;
     private float lineHeight;
+    private float[] rates;
 
     public DouBanRating(Context context) {
         this(context, null);
@@ -51,14 +48,10 @@ public class DouBanRating extends View {
         super(context, attrs, defStyleAttr);
         this.width = -1;
         this.height = -1;
-        this.pointCount = 0;
-        this.currPointIdx = -1;
-        this.pointRadius = WidgetsUtils.dpToPx(context, 3);
-        this.pointSpace = pointRadius*3;
 
         bgPaint = new Paint();
         bgPaint.setStyle(Paint.Style.FILL);
-        bgPaint.setColor(WidgetsUtils.getColorValue(this.getContext(), R.color.transparent_black_16_24));
+        bgPaint.setColor(WidgetsUtils.getColorValue(this.getContext(), R.color.transparent));
 
         barPaint = new Paint();
         barPaint.setStyle(Paint.Style.FILL);
@@ -73,6 +66,20 @@ public class DouBanRating extends View {
         ratingPaint.setStyle(Paint.Style.FILL);
         ratingPaint.setAntiAlias(true);
         ratingPaint.setColor(WidgetsUtils.getColorValue(this.getContext(), R.color.material_color_orange));
+
+        rates = new float[5];
+    }
+
+    public void setRates(float[] rates){
+        if(rates == null || rates.length != 5){
+            this.rates = new float[5];
+        }else{
+            for(int i=0; i<5; i++){
+                this.rates[i] = rates[i];
+            }
+        }
+
+        this.invalidate();
     }
 
     @Override
@@ -123,13 +130,6 @@ public class DouBanRating extends View {
         float left = lineHeight*5 + space*3;
         float right = width - space;
         float barWidth = right - left;
-        float[] rates = new float[5];
-        rates[0] = 0.66f;
-        rates[1] = 0.21f;
-        rates[2] = 0.09f;
-        rates[3] = 0.03f;
-        rates[4] = 0.01f;
-
         for(int row = 0; row<5; row++){
             float vCenter = (row + 1)*space + (row + 0.5f)*lineHeight;
             float top = vCenter - 0.35f*lineHeight;

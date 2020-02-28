@@ -43,7 +43,6 @@ public class TopAppBarCollapseActivity extends AppCompatActivity {
             @Override
             public void onGlobalLayout() {
                 int titleLayoutHeight = binding.titleLinearLayout.getHeight();
-                Log.d(TempConstant.LOG_TAG, "2 TopAppBarCollapseActivity titleLayoutHeight = " + titleLayoutHeight);
                 int left = binding.toolbar.getPaddingLeft();
                 int top = binding.toolbar.getPaddingTop();
                 int right = binding.toolbar.getPaddingRight();

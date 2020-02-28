@@ -228,7 +228,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
-            android:id="@+id/bottomsheet_linear_view"
+            android:id="@+id/bottomsheet_linear_layout"
             android:theme="@style/Theme.MaterialBook.SingleColor.Light"
             app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
             android:layout_width="match_parent"

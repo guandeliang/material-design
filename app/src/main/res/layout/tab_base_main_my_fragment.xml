@@ -23,8 +23,8 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?attr/textAppearanceHeadline6"
                 android:text="推荐书目"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"/>
             <Button
@@ -32,6 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAlignment="viewEnd"
+                android:layout_marginRight="8dp"
                 android:text="更多"
                 app:layout_constraintBaseline_toBaselineOf="@id/recommend_text_view"
                 app:layout_constraintRight_toRightOf="parent"/>
@@ -40,8 +41,8 @@
                 android:id="@+id/recycler_view_host"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
                 android:layout_marginTop="12dp"
                 app:layout_constraintTop_toBottomOf="@id/recommend_text_view"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -99,28 +100,28 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
-                        app:layout_constraintGuide_begin="56dp"/>
+                        app:layout_constraintGuide_begin="64dp"/>
 
                     <androidx.constraintlayout.widget.Guideline
                         android:id="@+id/h_guide_line_002"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
-                        app:layout_constraintGuide_begin="112dp"/>
+                        app:layout_constraintGuide_begin="128dp"/>
 
                     <androidx.constraintlayout.widget.Guideline
                         android:id="@+id/h_guide_line_003"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
-                        app:layout_constraintGuide_begin="168dp"/>
+                        app:layout_constraintGuide_begin="192dp"/>
 
                     <androidx.constraintlayout.widget.Guideline
                         android:id="@+id/h_guide_line_004"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
-                        app:layout_constraintGuide_begin="224dp"/>
+                        app:layout_constraintGuide_begin="256dp"/>
 
                     <ImageView
                         android:id="@+id/icon_001_image_view"
@@ -148,7 +149,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?attr/textAppearanceSubtitle2"
                         android:text="正在阅读"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="12dp"
                         app:layout_constraintTop_toBottomOf="@id/h_guide_line_000"
                         app:layout_constraintLeft_toRightOf="@id/text_guide_line"/>
 
@@ -158,7 +159,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?attr/textAppearanceCaption"
                         android:text="总共12本书"
-                        android:layout_marginBottom="8dp"
+                        android:layout_marginBottom="12dp"
                         app:layout_constraintBottom_toTopOf="@id/h_guide_line_001"
                         app:layout_constraintLeft_toRightOf="@id/text_guide_line"/>
 
@@ -190,7 +191,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?attr/textAppearanceSubtitle2"
                         android:text="以后准备阅读"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="12dp"
                         app:layout_constraintTop_toBottomOf="@id/h_guide_line_001"
                         app:layout_constraintLeft_toRightOf="@id/text_guide_line"/>
 
@@ -200,7 +201,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?attr/textAppearanceCaption"
                         android:text="13本杂志，22本图书"
-                        android:layout_marginBottom="8dp"
+                        android:layout_marginBottom="12dp"
                         app:layout_constraintBottom_toTopOf="@id/h_guide_line_002"
                         app:layout_constraintLeft_toRightOf="@id/text_guide_line"/>
 
@@ -232,7 +233,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?attr/textAppearanceSubtitle2"
                         android:text="已经读完的书"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="12dp"
                         app:layout_constraintTop_toBottomOf="@id/h_guide_line_002"
                         app:layout_constraintLeft_toRightOf="@id/text_guide_line"/>
 
@@ -242,7 +243,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?attr/textAppearanceCaption"
                         android:text="33本杂志，122本图书"
-                        android:layout_marginBottom="8dp"
+                        android:layout_marginBottom="12dp"
                         app:layout_constraintBottom_toTopOf="@id/h_guide_line_003"
                         app:layout_constraintLeft_toRightOf="@id/text_guide_line"/>
 
@@ -274,7 +275,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?attr/textAppearanceSubtitle2"
                         android:text="我的全部图书"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="12dp"
                         app:layout_constraintTop_toBottomOf="@id/h_guide_line_003"
                         app:layout_constraintLeft_toRightOf="@id/text_guide_line"/>
 
@@ -284,7 +285,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?attr/textAppearanceCaption"
                         android:text="99本杂志，152本图书"
-                        android:layout_marginBottom="8dp"
+                        android:layout_marginBottom="12dp"
                         app:layout_constraintBottom_toTopOf="@id/h_guide_line_004"
                         app:layout_constraintLeft_toRightOf="@id/text_guide_line"/>
 

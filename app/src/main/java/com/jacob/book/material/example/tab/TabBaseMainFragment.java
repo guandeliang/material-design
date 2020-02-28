@@ -11,11 +11,16 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowInsets;
+import android.widget.LinearLayout;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.LifecycleObserver;
 
+import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 import com.jacob.book.WidgetsUtils;
 import com.jacob.book.material.R;
@@ -37,9 +42,7 @@ public class TabBaseMainFragment extends Fragment implements LifecycleObserver {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.tab_base_main_fragment, container, false);
-
-        binding.toolbar.setNavigationIcon(R.drawable.icon_menu);
-        binding.toolbar.getNavigationIcon().setTint(WidgetsUtils.getColorValue(this.getActivity(), android.R.attr.textColorPrimaryInverse));
+        binding.linearLayout.setOnApplyWindowInsetsListener(new ApplyWindowInsetsListener());
 
         fragmentList = new ArrayList<>();
         fragmentList.add(new TabBaseMainIndexFragment());
@@ -58,5 +61,15 @@ public class TabBaseMainFragment extends Fragment implements LifecycleObserver {
 
         return binding.getRoot();
     }
+
+    private class ApplyWindowInsetsListener implements View.OnApplyWindowInsetsListener {
+        @Override
+        public WindowInsets onApplyWindowInsets(View view, WindowInsets windowInsets) {
+            int statusBarHeight = windowInsets.getSystemWindowInsetTop();
+            binding.statusBarBackgroundView.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, statusBarHeight));
+            return windowInsets;
+        }
+    }
+
 
 }

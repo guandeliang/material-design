@@ -16,22 +16,42 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.OnLifecycleEvent;
+import androidx.navigation.Navigation;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.listener.OnItemClickListener;
+import com.jacob.book.JsonUtils;
 import com.jacob.book.material.R;
 import com.jacob.book.material.base.TabBaseFragment;
 import com.jacob.book.material.databinding.TabBaseMainIndexFragmentBinding;
+import com.jacob.book.material.example.adapter.MailInBoxAdapter;
+import com.jacob.book.material.example.bottomappbar.BottomAppBarDemoMailContentFragment;
+import com.jacob.book.material.example.model.Book;
+import com.jacob.book.material.example.model.Mail;
+
+import java.util.List;
 
 public class TabBaseMainIndexFragment extends TabBaseFragment implements LifecycleObserver {
     private TabBaseMainIndexFragmentBinding binding;
+    private List<Book> bookList;
 
     public TabBaseMainIndexFragment(){
-        super("首页", R.drawable.icon_home);
+        super("首页", -1);
         this.getLifecycle().addObserver(this);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.tab_base_main_index_fragment, container, false);
+        bookList = JsonUtils.loadBooks(getResources());
+
+        binding.cardView001.setOnClickListener(new OnBookClickListener(0));
+        binding.cardView002.setOnClickListener(new OnBookClickListener(1));
+        binding.cardView003.setOnClickListener(new OnBookClickListener(2));
+
+
+
+
         initBanner();
         return binding.getRoot();
     }
@@ -46,6 +66,25 @@ public class TabBaseMainIndexFragment extends TabBaseFragment implements Lifecyc
                 R.drawable.book_001_004,
                 R.drawable.book_001_005
         );
+    }
+
+
+    private class OnBookClickListener implements View.OnClickListener {
+        private int position;
+
+        public OnBookClickListener(int position){
+            this.position = position;
+        }
+
+        @Override
+        public void onClick(View v) {
+            Bundle bundle = new Bundle();
+            if(bookList != null && position >=0 && position < bookList.size()){
+                Book book = bookList.get(position);
+                bundle.putSerializable(TabBaseDetailFragment.PARAM_BOOK, book);
+            }
+            Navigation.findNavController(getActivity(),  R.id.nav_host_fragment).navigate(R.id.show_detail, bundle);
+        }
     }
 
 

@@ -14,9 +14,12 @@ import android.view.ViewGroup;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleObserver;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.jacob.book.JsonUtils;
 import com.jacob.book.WidgetsUtils;
 import com.jacob.book.material.R;
@@ -32,7 +35,7 @@ public class TabBaseMainLibraryFragment extends TabBaseFragment implements Lifec
     private TabBaseMainLibraryFragmentBinding binding;
 
     public TabBaseMainLibraryFragment(){
-        super("书目", R.drawable.icon_photo_library);
+        super("书目", -1);
         this.getLifecycle().addObserver(this);
     }
 
@@ -48,11 +51,28 @@ public class TabBaseMainLibraryFragment extends TabBaseFragment implements Lifec
         GridLayoutManager layoutManager = new GridLayoutManager(getContext(), 2, RecyclerView.VERTICAL, false);
         binding.recyclerView.setLayoutManager(layoutManager);
         int px_08 = WidgetsUtils.dpToPx(getContext(), 8);
-        GridLayoutVertialItemDecoration decoration = new GridLayoutVertialItemDecoration(px_08, px_08, px_08, px_08);
+        int px_16 = WidgetsUtils.dpToPx(getContext(), 16);
+        GridLayoutVertialItemDecoration decoration = new GridLayoutVertialItemDecoration(px_16, px_16, px_08, px_08);
         binding.recyclerView.addItemDecoration(decoration);
 
         BookAdapter adapter = new BookAdapter(list, -1, 0);
+        adapter.setOnItemClickListener(new OnBookItemClickListener());
 
         binding.recyclerView.setAdapter(adapter);
     }
+
+    private class OnBookItemClickListener implements OnItemClickListener {
+        @Override
+        public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+            Bundle bundle = new Bundle();
+            BookAdapter bookAdapter = (BookAdapter)adapter;
+            Book book = bookAdapter.getData().get(position);
+            bundle.putSerializable(TabBaseDetailFragment.PARAM_BOOK, book);
+            Navigation.findNavController(getActivity(),  R.id.nav_host_fragment).navigate(R.id.show_detail, bundle);
+
+        }
+
+    }
+
+
 }
