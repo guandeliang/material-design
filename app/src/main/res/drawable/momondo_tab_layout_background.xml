@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-3-1 下午5:04
+  ~
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="8dp"/>
+    <solid android:color="@color/transparent_white_15_16"/>
+</shape>

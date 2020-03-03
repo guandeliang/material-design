@@ -20,8 +20,8 @@ import androidx.lifecycle.LifecycleObserver;
 import com.google.android.material.tabs.TabLayoutMediator;
 import com.jacob.book.WidgetsUtils;
 import com.jacob.book.material.R;
-import com.jacob.book.material.base.TabBaseAdapter;
-import com.jacob.book.material.base.TabBaseFragment;
+import com.jacob.book.material.base.TabViewPagerAdapter;
+import com.jacob.book.material.base.TabViewPagerBaseFragment;
 import com.jacob.book.material.databinding.BottomNavigationDemoLibraryFragmentBinding;
 
 import java.util.ArrayList;
@@ -29,7 +29,7 @@ import java.util.List;
 
 public class BottomNavigationDemoLibraryFragment extends Fragment implements LifecycleObserver {
     private BottomNavigationDemoLibraryFragmentBinding binding;
-    private List<TabBaseFragment> fragmentList;
+    private List<TabViewPagerBaseFragment> fragmentList;
 
 
 
@@ -64,13 +64,13 @@ public class BottomNavigationDemoLibraryFragment extends Fragment implements Lif
         fragmentList.add(new BottomNavigationDemoLibraryArtistFragment());
         fragmentList.add(new BottomNavigationDemoLibraryAlbumFragment());
 
-        TabBaseAdapter adapter = new TabBaseAdapter(this.getActivity(), fragmentList);
+        TabViewPagerAdapter adapter = new TabViewPagerAdapter(this.getActivity(), fragmentList);
         binding.viewPager.setAdapter(adapter);
 
         TabLayoutMediator mediator = new TabLayoutMediator(
                 binding.tabLayout,
                 binding.viewPager,
-                new TabBaseFragment.ConfigurationStrategy(fragmentList)
+                new TabViewPagerBaseFragment.ConfigurationStrategy(fragmentList)
         );
         mediator.attach();
 

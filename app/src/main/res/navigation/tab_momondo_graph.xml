@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-25 上午11:03
+  ~
+  -->
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_example_graph"
+    app:startDestination="@id/search">
+
+    <fragment
+        android:id="@+id/search"
+        android:name="com.jacob.book.material.example.tab.TabMomondoSearchFragment"
+        android:label="search"
+        tools:layout="@layout/tab_momondo_search_fragment" >
+    </fragment>
+
+</navigation>

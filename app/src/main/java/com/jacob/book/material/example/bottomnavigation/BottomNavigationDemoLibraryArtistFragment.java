@@ -18,7 +18,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.jacob.book.JsonUtils;
 import com.jacob.book.WidgetsUtils;
 import com.jacob.book.material.R;
-import com.jacob.book.material.base.TabBaseFragment;
+import com.jacob.book.material.base.TabItemContent;
+import com.jacob.book.material.base.TabViewPagerBaseFragment;
 import com.jacob.book.material.databinding.BottomNavigationDemoLibraryArtistFragmentBinding;
 import com.jacob.book.material.example.adapter.GrammyLibraryArtistAdapter;
 import com.jacob.book.material.example.model.GrammySinger;
@@ -26,11 +27,11 @@ import com.jacob.book.material.widgets.LinearLayoutVertialItemDecoration;
 
 import java.util.List;
 
-public class BottomNavigationDemoLibraryArtistFragment extends TabBaseFragment {
+public class BottomNavigationDemoLibraryArtistFragment extends TabViewPagerBaseFragment {
     private BottomNavigationDemoLibraryArtistFragmentBinding binding;
 
     public BottomNavigationDemoLibraryArtistFragment(){
-        super("实力歌手", -1);
+        super(new TabItemContent("实力歌手", -1));
     }
 
 

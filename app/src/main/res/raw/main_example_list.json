@@ -170,6 +170,12 @@
         "title":"Tab基本功能演示",
         "path":"com.jacob.book.material.example.tab.TabBaseActivity"
 
+      },
+      {
+        "id":10401040,
+        "title":"模仿谷歌设计大奖作品Momondo",
+        "path":"com.jacob.book.material.example.tab.TabMomondoActivity"
+
       }
     ]
   },

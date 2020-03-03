@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-3-1 下午9:02
+  ~
+  -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:alpha="0.80" android:color="@color/light_color_primary" android:state_selected="true"/>
+    <item android:color="@color/gray_300"/>
+</selector>

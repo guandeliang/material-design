@@ -9,17 +9,15 @@ package com.jacob.book.material.example.topappbar;
 
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 import com.jacob.book.WidgetsUtils;
 import com.jacob.book.material.R;
-import com.jacob.book.material.base.TabBaseAdapter;
-import com.jacob.book.material.base.TabBaseFragment;
+import com.jacob.book.material.base.TabViewPagerAdapter;
+import com.jacob.book.material.base.TabViewPagerBaseFragment;
 import com.jacob.book.material.databinding.TopAppBarDarkActivityBinding;
 
 import java.util.ArrayList;
@@ -28,7 +26,7 @@ import java.util.List;
 public class TopAppBarDarkActivity extends AppCompatActivity {
 
     private TopAppBarDarkActivityBinding binding;
-    private List<TabBaseFragment> fragmentList;
+    private List<TabViewPagerBaseFragment> fragmentList;
 
 
     @Override
@@ -47,13 +45,13 @@ public class TopAppBarDarkActivity extends AppCompatActivity {
         fragmentList.add(new TopAppBarDarkTwoFragment());
         fragmentList.add(new TopAppBarDarkThreeFragment());
 
-        TabBaseAdapter adapter = new TabBaseAdapter(this, fragmentList);
+        TabViewPagerAdapter adapter = new TabViewPagerAdapter(this, fragmentList);
         binding.viewPager.setAdapter(adapter);
 
         TabLayoutMediator mediator = new TabLayoutMediator(
                 binding.tabLayout,
                 binding.viewPager,
-                new TabBaseFragment.ConfigurationStrategy(fragmentList)
+                new TabViewPagerBaseFragment.ConfigurationStrategy(fragmentList)
         );
         mediator.attach();
 

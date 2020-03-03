@@ -14,10 +14,10 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import java.util.List;
 
-public class TabBaseAdapter extends FragmentStateAdapter {
-    private List<TabBaseFragment> fragmentList;
+public class TabViewPagerAdapter extends FragmentStateAdapter {
+    private List<TabViewPagerBaseFragment> fragmentList;
 
-    public TabBaseAdapter(FragmentActivity activity, List<TabBaseFragment> fragmentList){
+    public TabViewPagerAdapter(FragmentActivity activity, List<TabViewPagerBaseFragment> fragmentList){
         super(activity);
         this.fragmentList = fragmentList;
     }

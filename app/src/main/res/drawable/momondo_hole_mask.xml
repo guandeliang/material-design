@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-3-2 下午8:50
+  ~
+  -->
+
+<transition xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape
+            android:shape="ring"
+            android:thicknessRatio="1"
+            android:innerRadiusRatio="10"
+            android:useLevel="false">
+            <solid android:color="@color/material_color_amber"/>
+        </shape>
+    </item>
+
+    <item>
+        <shape
+            android:shape="ring"
+            android:thicknessRatio="1"
+            android:innerRadiusRatio="2.1"
+            android:useLevel="false">
+            <solid android:color="@color/material_color_blue"/>
+        </shape>
+    </item>
+
+</transition>

@@ -98,6 +98,9 @@
         <item name="iconPadding">0dp</item>
     </style>
 
+    <style name="Widget.MaterialBook.AppBarLayout.Primary" parent="Widget.MaterialComponents.AppBarLayout.Primary">
+    </style>
+
 
     <!--BEGIN: 基础风格-->
     <!--DayNight主题基础风格-->
@@ -371,6 +374,10 @@
     <style name="Widget.MaterialBook.SingleColor.Light.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
     </style>
 
+    <!--沉浸式状态栏单色主题风格，解决占用状态栏问题-->
+    <style name="Theme.MaterialBook.SingleColor.Light.TranslucentStatus" parent="Theme.MaterialBook.SingleColor.Light">
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
 
     <!--END：浅色主题-->
 

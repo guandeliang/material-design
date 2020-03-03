@@ -13,7 +13,6 @@ import android.graphics.drawable.AnimatedVectorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,9 +33,9 @@ import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 import com.jacob.book.WidgetsUtils;
 import com.jacob.book.material.R;
-import com.jacob.book.material.base.TabBaseFragment;
+import com.jacob.book.material.base.TabItemContent;
+import com.jacob.book.material.base.TabViewPagerBaseFragment;
 import com.jacob.book.material.databinding.TopAppBarDarkTwoFragmentBinding;
-import com.jacob.book.temp.TempConstant;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -45,14 +44,14 @@ import java.util.Random;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class TopAppBarDarkTwoFragment extends TabBaseFragment {
+public class TopAppBarDarkTwoFragment extends TabViewPagerBaseFragment {
 
     private TopAppBarDarkTwoFragmentBinding binding;
     private Animatable ringAni;
 
 
     public TopAppBarDarkTwoFragment() {
-        super("本周活跃度", -1);
+        super(new TabItemContent("本周活跃度", -1));
     }
 
 

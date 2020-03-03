@@ -17,20 +17,21 @@ import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
 import com.jacob.book.material.R;
-import com.jacob.book.material.base.TabBaseFragment;
+import com.jacob.book.material.base.TabItemContent;
+import com.jacob.book.material.base.TabViewPagerBaseFragment;
 import com.jacob.book.material.databinding.TopAppBarDarkThreeFragmentBinding;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class TopAppBarDarkThreeFragment extends TabBaseFragment {
+public class TopAppBarDarkThreeFragment extends TabViewPagerBaseFragment {
 
     private TopAppBarDarkThreeFragmentBinding binding;
 
 
     public TopAppBarDarkThreeFragment() {
-        super("最新用户", -1);
+        super(new TabItemContent("最新用户", -1));
     }
 
 

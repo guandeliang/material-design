@@ -163,6 +163,10 @@
             android:theme="@style/Theme.MaterialBook.SingleColor.Colored.TranslucentStatus"
             android:screenOrientation="portrait"/>
 
+        <activity
+            android:name=".example.tab.TabMomondoActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Light.TranslucentStatus"
+            android:screenOrientation="portrait"/>
 
 
 

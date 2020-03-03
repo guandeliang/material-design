@@ -8,11 +8,9 @@
 package com.jacob.book.material.example.bottomnavigation;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -20,21 +18,21 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.jacob.book.JsonUtils;
 import com.jacob.book.WidgetsUtils;
 import com.jacob.book.material.R;
-import com.jacob.book.material.base.TabBaseFragment;
+import com.jacob.book.material.base.TabItemContent;
+import com.jacob.book.material.base.TabViewPagerBaseFragment;
 import com.jacob.book.material.databinding.BottomNavigationDemoLibraryAlbumFragmentBinding;
 import com.jacob.book.material.example.adapter.GrammyLibraryAlbumAdapter;
 import com.jacob.book.material.example.model.Grammy;
 import com.jacob.book.material.widgets.LinearLayoutVertialItemDecoration;
-import com.jacob.book.temp.TempConstant;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class BottomNavigationDemoLibraryAlbumFragment extends TabBaseFragment {
+public class BottomNavigationDemoLibraryAlbumFragment extends TabViewPagerBaseFragment {
     private BottomNavigationDemoLibraryAlbumFragmentBinding binding;
 
     public BottomNavigationDemoLibraryAlbumFragment(){
-        super("经典唱片", -1);
+        super(new TabItemContent("经典唱片", -1));
     }
 
 

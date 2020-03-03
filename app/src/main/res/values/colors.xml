@@ -87,8 +87,8 @@
     <!--Material颜色，用于需要主题以外颜色的地方-->
     <color name="material_color_red">#F44336</color>
     <color name="material_color_pink">#E91E63</color>
-    <color name="material_color_purple">#9C27B0</color>
-    <color name="material_color_deep_purple">#673AB7</color>
+    <color name="material_color_purple">#4A148C</color>
+    <color name="material_color_deep_purple">#22033F</color>
     <color name="material_color_indigo">#3F51B5</color>
     <color name="material_color_blue">#2196F3</color>
     <color name="material_color_light_blue">#03A9F4</color>

@@ -13,31 +13,28 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.databinding.DataBindingUtil;
-import androidx.fragment.app.Fragment;
 import androidx.lifecycle.LifecycleObserver;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.jacob.book.JsonUtils;
 import com.jacob.book.WidgetsUtils;
 import com.jacob.book.material.R;
-import com.jacob.book.material.base.TabBaseFragment;
+import com.jacob.book.material.base.TabItemContent;
+import com.jacob.book.material.base.TabViewPagerBaseFragment;
 import com.jacob.book.material.databinding.TabBaseMainMyFragmentBinding;
 import com.jacob.book.material.example.adapter.BookAdapter;
 import com.jacob.book.material.example.model.Book;
-import com.jacob.book.material.widgets.GridLayoutVertialItemDecoration;
 import com.jacob.book.material.widgets.HorizontalEdgeSnapHelper;
 import com.jacob.book.material.widgets.LinearLayoutHorizontalItemDecoration;
 import com.jacob.book.material.widgets.NestedScrollableHost;
 
 import java.util.List;
 
-public class TabBaseMainMyFragment extends TabBaseFragment implements LifecycleObserver {
+public class TabBaseMainMyFragment extends TabViewPagerBaseFragment implements LifecycleObserver {
     private TabBaseMainMyFragmentBinding binding;
 
     public TabBaseMainMyFragment(){
-        super("我的", -1);
+        super(new TabItemContent("我的", -1));
         this.getLifecycle().addObserver(this);
     }
 

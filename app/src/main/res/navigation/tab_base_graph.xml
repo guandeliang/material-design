@@ -32,7 +32,7 @@
     <fragment
         android:id="@+id/detail"
         android:name="com.jacob.book.material.example.tab.TabBaseDetailFragment"
-        android:label="main"
+        android:label="detail"
         tools:layout="@layout/tab_base_detail_fragment" >
     </fragment>
 

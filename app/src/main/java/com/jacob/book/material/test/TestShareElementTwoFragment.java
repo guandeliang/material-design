@@ -18,11 +18,7 @@ import androidx.lifecycle.LifecycleObserver;
 import androidx.transition.TransitionInflater;
 
 import com.jacob.book.material.R;
-import com.jacob.book.material.base.TabBaseFragment;
-import com.jacob.book.material.databinding.TestShareElementOneFragmentBinding;
 import com.jacob.book.material.databinding.TestShareElementTwoFragmentBinding;
-
-import java.util.List;
 
 public class TestShareElementTwoFragment extends Fragment implements LifecycleObserver {
     private TestShareElementTwoFragmentBinding binding;

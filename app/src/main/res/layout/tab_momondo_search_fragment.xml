@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-25 下午6:36
+  ~
+  -->
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorPrimary"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/status_bar_background_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="?attr/colorPrimary"/>
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            style="@style/Widget.MaterialBook.AppBarLayout.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/menu_image_view"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="12dp"
+                    android:layout_marginLeft="4dp"
+                    android:src="@drawable/icon_menu"
+                    android:tint="@color/white"
+                    android:clickable="true"
+                    android:background="@drawable/click_ripple_round"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+                <com.google.android.material.tabs.TabLayout
+                    style="@style/Widget.MaterialComponents.TabLayout.Colored"
+                    android:id="@+id/tab_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:elevation="0dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    app:tabUnboundedRipple="false"
+                    app:tabTextAppearance="?attr/textAppearanceHeadline6"
+                    app:tabIndicatorFullWidth="true"
+                    app:tabIndicatorGravity="bottom"
+                    app:layout_constraintLeft_toRightOf="@id/menu_image_view"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        </androidx.viewpager2.widget.ViewPager2>
+
+    </LinearLayout>
+</layout>

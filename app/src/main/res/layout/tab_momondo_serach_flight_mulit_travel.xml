@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-3-2 上午9:33
+  ~
+  -->
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/member_linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:clickable="true"
+            android:background="@drawable/click_ripple_round"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+            <TextView
+                android:id="@+id/member_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:text="1名乘客"/>
+
+            <TextView
+                android:id="@+id/cabin_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceSubtitle2"
+                android:textColor="@color/gray_500"
+                android:layout_marginTop="4dp"
+                android:text="经济舱"/>
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/line_view_000"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/transparent_white_15_16"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/member_linear_layout"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+        <LinearLayout
+            android:id="@+id/from_linear_layout_001"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:clickable="true"
+            android:background="@drawable/click_ripple_round"
+            android:layout_marginTop="16dp"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintTop_toBottomOf="@id/line_view_000"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/arrow_image_view_001">
+            <TextView
+                android:id="@+id/from_title_text_view_001"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textStyle="bold"
+                android:text="出发"/>
+
+            <TextView
+                android:id="@+id/from_sub_title_text_view_001"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textAppearance="?attr/textAppearanceSubtitle2"
+                android:textColor="@color/gray_500"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="哈尔滨•中国"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/arrow_image_view_001"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icon_arrow_forward"
+            android:tint="@color/gray_300"
+            app:layout_constraintTop_toTopOf="@id/from_linear_layout_001"
+            app:layout_constraintBottom_toBottomOf="@id/from_linear_layout_001"
+            app:layout_constraintLeft_toRightOf="@id/from_linear_layout_001"
+            app:layout_constraintRight_toLeftOf="@id/to_linear_layout_001"/>
+
+        <LinearLayout
+            android:id="@+id/to_linear_layout_001"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:clickable="true"
+            android:background="@drawable/click_ripple_round"
+            app:layout_constraintTop_toTopOf="@id/from_linear_layout_001"
+            app:layout_constraintBottom_toBottomOf="@id/from_linear_layout_001"
+            app:layout_constraintLeft_toRightOf="@id/arrow_image_view_001"
+            app:layout_constraintRight_toLeftOf="@id/schedule_linear_layout_001">
+            <TextView
+                android:id="@+id/to_title_text_view_001"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textStyle="bold"
+                android:text="抵达"/>
+
+            <TextView
+                android:id="@+id/to_sub_title_text_view_001"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textAppearance="?attr/textAppearanceSubtitle2"
+                android:textColor="@color/gray_500"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="上海•中国"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/schedule_linear_layout_001"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:clickable="true"
+            android:background="@drawable/click_ripple_round"
+            app:layout_constraintTop_toTopOf="@id/from_linear_layout_001"
+            app:layout_constraintBottom_toBottomOf="@id/from_linear_layout_001"
+            app:layout_constraintLeft_toRightOf="@id/to_linear_layout_001"
+            app:layout_constraintRight_toRightOf="parent">
+            <TextView
+                android:id="@+id/date_text_view_001"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:text="03:03"/>
+
+            <TextView
+                android:id="@+id/week_text_view_001"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceSubtitle2"
+                android:textColor="@color/gray_500"
+                android:layout_marginTop="4dp"
+                android:text="周三"/>
+        </LinearLayout>
+
+
+
+        <View
+            android:id="@+id/line_view_001"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/transparent_white_15_16"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/from_linear_layout_001"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/from_linear_layout_002"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:clickable="true"
+            android:background="@drawable/click_ripple_round"
+            android:layout_marginTop="16dp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintTop_toBottomOf="@id/line_view_001"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/arrow_image_view_002">
+            <TextView
+                android:id="@+id/from_title_text_view_002"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textStyle="bold"
+                android:text="出发"/>
+
+            <TextView
+                android:id="@+id/from_sub_title_text_view_002"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textAppearance="?attr/textAppearanceSubtitle2"
+                android:textColor="@color/gray_500"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="哈尔滨•中国"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/arrow_image_view_002"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icon_arrow_forward"
+            android:tint="@color/gray_300"
+            app:layout_constraintTop_toTopOf="@id/from_linear_layout_002"
+            app:layout_constraintBottom_toBottomOf="@id/from_linear_layout_002"
+            app:layout_constraintLeft_toRightOf="@id/from_linear_layout_002"
+            app:layout_constraintRight_toLeftOf="@id/to_linear_layout_002"/>
+
+        <LinearLayout
+            android:id="@+id/to_linear_layout_002"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:clickable="true"
+            android:background="@drawable/click_ripple_round"
+            app:layout_constraintTop_toTopOf="@id/from_linear_layout_002"
+            app:layout_constraintBottom_toBottomOf="@id/from_linear_layout_002"
+            app:layout_constraintLeft_toRightOf="@id/arrow_image_view_002"
+            app:layout_constraintRight_toLeftOf="@id/schedule_linear_layout_002">
+            <TextView
+                android:id="@+id/to_title_text_view_002"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textStyle="bold"
+                android:text="抵达"/>
+
+            <TextView
+                android:id="@+id/to_sub_title_text_view_002"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textAppearance="?attr/textAppearanceSubtitle2"
+                android:textColor="@color/gray_500"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="上海•中国"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/schedule_linear_layout_002"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:clickable="true"
+            android:background="@drawable/click_ripple_round"
+            app:layout_constraintTop_toTopOf="@id/from_linear_layout_002"
+            app:layout_constraintBottom_toBottomOf="@id/from_linear_layout_002"
+            app:layout_constraintLeft_toRightOf="@id/to_linear_layout_002"
+            app:layout_constraintRight_toRightOf="parent">
+            <TextView
+                android:id="@+id/date_text_view_002"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:text="03:04"/>
+
+            <TextView
+                android:id="@+id/week_text_view_002"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceSubtitle2"
+                android:textColor="@color/gray_500"
+                android:layout_marginTop="4dp"
+                android:text="周四"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line_view_002"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/transparent_white_15_16"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/from_linear_layout_002"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/from_linear_layout_003"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:clickable="true"
+            android:background="@drawable/click_ripple_round"
+            android:layout_marginTop="16dp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintTop_toBottomOf="@id/line_view_002"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/arrow_image_view_003">
+            <TextView
+                android:id="@+id/from_title_text_view_003"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textStyle="bold"
+                android:text="出发"/>
+
+            <TextView
+                android:id="@+id/from_sub_title_text_view_003"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textAppearance="?attr/textAppearanceSubtitle2"
+                android:textColor="@color/gray_500"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="哈尔滨•中国"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/arrow_image_view_003"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icon_arrow_forward"
+            android:tint="@color/gray_300"
+            app:layout_constraintTop_toTopOf="@id/from_linear_layout_003"
+            app:layout_constraintBottom_toBottomOf="@id/from_linear_layout_003"
+            app:layout_constraintLeft_toRightOf="@id/from_linear_layout_003"
+            app:layout_constraintRight_toLeftOf="@id/to_linear_layout_003"/>
+
+        <LinearLayout
+            android:id="@+id/to_linear_layout_003"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:clickable="true"
+            android:background="@drawable/click_ripple_round"
+            app:layout_constraintTop_toTopOf="@id/from_linear_layout_003"
+            app:layout_constraintBottom_toBottomOf="@id/from_linear_layout_003"
+            app:layout_constraintLeft_toRightOf="@id/arrow_image_view_003"
+            app:layout_constraintRight_toLeftOf="@id/schedule_linear_layout_003">
+            <TextView
+                android:id="@+id/to_title_text_view_003"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textStyle="bold"
+                android:text="抵达"/>
+
+            <TextView
+                android:id="@+id/to_sub_title_text_view_003"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textAppearance="?attr/textAppearanceSubtitle2"
+                android:textColor="@color/gray_500"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="上海•中国"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/schedule_linear_layout_003"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:clickable="true"
+            android:background="@drawable/click_ripple_round"
+            app:layout_constraintTop_toTopOf="@id/from_linear_layout_003"
+            app:layout_constraintBottom_toBottomOf="@id/from_linear_layout_003"
+            app:layout_constraintLeft_toRightOf="@id/to_linear_layout_003"
+            app:layout_constraintRight_toRightOf="parent">
+            <TextView
+                android:id="@+id/date_text_view_003"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:text="03:05"/>
+
+            <TextView
+                android:id="@+id/week_text_view_003"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceSubtitle2"
+                android:textColor="@color/gray_500"
+                android:layout_marginTop="4dp"
+                android:text="周五"/>
+        </LinearLayout>
+
+
+
+        <View
+            android:id="@+id/line_view_003"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/transparent_white_15_16"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/from_linear_layout_003"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/from_linear_layout_004"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:clickable="true"
+            android:background="@drawable/click_ripple_round"
+            android:layout_marginTop="16dp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintTop_toBottomOf="@id/line_view_003"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/arrow_image_view_004">
+            <TextView
+                android:id="@+id/from_title_text_view_004"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textStyle="bold"
+                android:text="出发"/>
+
+            <TextView
+                android:id="@+id/from_sub_title_text_view_004"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textAppearance="?attr/textAppearanceSubtitle2"
+                android:textColor="@color/gray_500"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="哈尔滨•中国"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/arrow_image_view_004"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icon_arrow_forward"
+            android:tint="@color/gray_300"
+            app:layout_constraintTop_toTopOf="@id/from_linear_layout_004"
+            app:layout_constraintBottom_toBottomOf="@id/from_linear_layout_004"
+            app:layout_constraintLeft_toRightOf="@id/from_linear_layout_004"
+            app:layout_constraintRight_toLeftOf="@id/to_linear_layout_004"/>
+
+        <LinearLayout
+            android:id="@+id/to_linear_layout_004"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:clickable="true"
+            android:background="@drawable/click_ripple_round"
+            app:layout_constraintTop_toTopOf="@id/from_linear_layout_004"
+            app:layout_constraintBottom_toBottomOf="@id/from_linear_layout_004"
+            app:layout_constraintLeft_toRightOf="@id/arrow_image_view_004"
+            app:layout_constraintRight_toLeftOf="@id/schedule_linear_layout_004">
+            <TextView
+                android:id="@+id/to_title_text_view_004"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textStyle="bold"
+                android:text="抵达"/>
+
+            <TextView
+                android:id="@+id/to_sub_title_text_view_004"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textAppearance="?attr/textAppearanceSubtitle2"
+                android:textColor="@color/gray_500"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="上海•中国"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/schedule_linear_layout_004"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:clickable="true"
+            android:background="@drawable/click_ripple_round"
+            app:layout_constraintTop_toTopOf="@id/from_linear_layout_004"
+            app:layout_constraintBottom_toBottomOf="@id/from_linear_layout_004"
+            app:layout_constraintLeft_toRightOf="@id/to_linear_layout_004"
+            app:layout_constraintRight_toRightOf="parent">
+            <TextView
+                android:id="@+id/date_text_view_004"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:text="03:06"/>
+
+            <TextView
+                android:id="@+id/week_text_view_004"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceSubtitle2"
+                android:textColor="@color/gray_500"
+                android:layout_marginTop="4dp"
+                android:text="周六"/>
+        </LinearLayout>
+
+
+
+        <View
+            android:id="@+id/line_view_004"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/transparent_white_15_16"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/from_linear_layout_004"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/from_linear_layout_005"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:clickable="true"
+            android:background="@drawable/click_ripple_round"
+            android:layout_marginTop="16dp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintTop_toBottomOf="@id/line_view_004"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/arrow_image_view_005">
+            <TextView
+                android:id="@+id/from_title_text_view_005"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textStyle="bold"
+                android:text="出发"/>
+
+            <TextView
+                android:id="@+id/from_sub_title_text_view_005"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textAppearance="?attr/textAppearanceSubtitle2"
+                android:textColor="@color/gray_500"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="哈尔滨•中国"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/arrow_image_view_005"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icon_arrow_forward"
+            android:tint="@color/gray_300"
+            app:layout_constraintTop_toTopOf="@id/from_linear_layout_005"
+            app:layout_constraintBottom_toBottomOf="@id/from_linear_layout_005"
+            app:layout_constraintLeft_toRightOf="@id/from_linear_layout_005"
+            app:layout_constraintRight_toLeftOf="@id/to_linear_layout_005"/>
+
+        <LinearLayout
+            android:id="@+id/to_linear_layout_005"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:clickable="true"
+            android:background="@drawable/click_ripple_round"
+            app:layout_constraintTop_toTopOf="@id/from_linear_layout_005"
+            app:layout_constraintBottom_toBottomOf="@id/from_linear_layout_005"
+            app:layout_constraintLeft_toRightOf="@id/arrow_image_view_005"
+            app:layout_constraintRight_toLeftOf="@id/schedule_linear_layout_005">
+            <TextView
+                android:id="@+id/to_title_text_view_005"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textStyle="bold"
+                android:text="抵达"/>
+
+            <TextView
+                android:id="@+id/to_sub_title_text_view_005"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textAppearance="?attr/textAppearanceSubtitle2"
+                android:textColor="@color/gray_500"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="上海•中国"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/schedule_linear_layout_005"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:clickable="true"
+            android:background="@drawable/click_ripple_round"
+            app:layout_constraintTop_toTopOf="@id/from_linear_layout_005"
+            app:layout_constraintBottom_toBottomOf="@id/from_linear_layout_005"
+            app:layout_constraintLeft_toRightOf="@id/to_linear_layout_005"
+            app:layout_constraintRight_toRightOf="parent">
+            <TextView
+                android:id="@+id/date_text_view_005"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:text="03:07"/>
+
+            <TextView
+                android:id="@+id/week_text_view_005"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceSubtitle2"
+                android:textColor="@color/gray_500"
+                android:layout_marginTop="4dp"
+                android:text="周日"/>
+        </LinearLayout>
+
+
+
+        <View
+            android:id="@+id/line_view_005"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/transparent_white_15_16"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/from_linear_layout_005"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/from_linear_layout_006"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:clickable="true"
+            android:background="@drawable/click_ripple_round"
+            android:layout_marginTop="16dp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintTop_toBottomOf="@id/line_view_005"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/arrow_image_view_006">
+            <TextView
+                android:id="@+id/from_title_text_view_006"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textStyle="bold"
+                android:text="出发"/>
+
+            <TextView
+                android:id="@+id/from_sub_title_text_view_006"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textAppearance="?attr/textAppearanceSubtitle2"
+                android:textColor="@color/gray_500"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="哈尔滨•中国"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/arrow_image_view_006"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icon_arrow_forward"
+            android:tint="@color/gray_300"
+            app:layout_constraintTop_toTopOf="@id/from_linear_layout_006"
+            app:layout_constraintBottom_toBottomOf="@id/from_linear_layout_006"
+            app:layout_constraintLeft_toRightOf="@id/from_linear_layout_006"
+            app:layout_constraintRight_toLeftOf="@id/to_linear_layout_006"/>
+
+        <LinearLayout
+            android:id="@+id/to_linear_layout_006"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:clickable="true"
+            android:background="@drawable/click_ripple_round"
+            app:layout_constraintTop_toTopOf="@id/from_linear_layout_006"
+            app:layout_constraintBottom_toBottomOf="@id/from_linear_layout_006"
+            app:layout_constraintLeft_toRightOf="@id/arrow_image_view_006"
+            app:layout_constraintRight_toLeftOf="@id/schedule_linear_layout_006">
+            <TextView
+                android:id="@+id/to_title_text_view_006"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textStyle="bold"
+                android:text="抵达"/>
+
+            <TextView
+                android:id="@+id/to_sub_title_text_view_006"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textAppearance="?attr/textAppearanceSubtitle2"
+                android:textColor="@color/gray_500"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="上海•中国"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/schedule_linear_layout_006"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:clickable="true"
+            android:background="@drawable/click_ripple_round"
+            app:layout_constraintTop_toTopOf="@id/from_linear_layout_006"
+            app:layout_constraintBottom_toBottomOf="@id/from_linear_layout_006"
+            app:layout_constraintLeft_toRightOf="@id/to_linear_layout_006"
+            app:layout_constraintRight_toRightOf="parent">
+            <TextView
+                android:id="@+id/date_text_view_006"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:text="03:08"/>
+
+            <TextView
+                android:id="@+id/week_text_view_006"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceSubtitle2"
+                android:textColor="@color/gray_500"
+                android:layout_marginTop="4dp"
+                android:text="周一"/>
+        </LinearLayout>
+
+
+
+        <View
+            android:id="@+id/line_view_006"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/transparent_white_15_16"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/from_linear_layout_006"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <androidx.constraintlayout.helper.widget.Layer
+            android:id="@+id/layer_001"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/from_linear_layout_001"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/line_view_001"
+            app:constraint_referenced_ids="from_linear_layout_001,arrow_image_view_001,to_linear_layout_001,schedule_linear_layout_001,line_view_001"/>
+        <androidx.constraintlayout.helper.widget.Layer
+            android:id="@+id/layer_002"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/from_linear_layout_002"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/line_view_002"
+            app:constraint_referenced_ids="from_linear_layout_002,arrow_image_view_002,to_linear_layout_002,schedule_linear_layout_002,line_view_002"/>
+        <androidx.constraintlayout.helper.widget.Layer
+            android:id="@+id/layer_003"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="@id/from_linear_layout_003"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/line_view_003"
+            app:constraint_referenced_ids="from_linear_layout_003,arrow_image_view_003,to_linear_layout_003,schedule_linear_layout_003,line_view_003"/>
+        <androidx.constraintlayout.helper.widget.Layer
+            android:id="@+id/layer_004"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="@id/from_linear_layout_004"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/line_view_004"
+            app:constraint_referenced_ids="from_linear_layout_004,arrow_image_view_004,to_linear_layout_004,schedule_linear_layout_004,line_view_004"/>
+        <androidx.constraintlayout.helper.widget.Layer
+            android:id="@+id/layer_005"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="@id/from_linear_layout_005"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/line_view_005"
+            app:constraint_referenced_ids="from_linear_layout_005,arrow_image_view_005,to_linear_layout_005,schedule_linear_layout_005,line_view_005"/>
+        <androidx.constraintlayout.helper.widget.Layer
+            android:id="@+id/layer_006"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="@id/from_linear_layout_006"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/line_view_006"
+            app:constraint_referenced_ids="from_linear_layout_006,arrow_image_view_006,to_linear_layout_006,schedule_linear_layout_006,line_view_006"/>
+
+
+
+        <LinearLayout
+            android:id="@+id/add_linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:clickable="true"
+            android:layout_marginTop="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:background="@drawable/click_ripple_round"
+            app:layout_constraintTop_toBottomOf="@id/line_view_006"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/delete_linear_layout">
+            <ImageView
+                android:id="@+id/add_image_view"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/icon_add_circle_outline"
+                android:tint="@color/gray_300"/>
+
+            <TextView
+                android:id="@+id/add_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:text="添加"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/delete_linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:clickable="true"
+            android:layout_marginTop="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:background="@drawable/click_ripple_round"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/line_view_006"
+            app:layout_constraintLeft_toRightOf="@id/add_linear_layout"
+            app:layout_constraintRight_toRightOf="parent">
+            <ImageView
+                android:id="@+id/delete_image_view"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/icon_remove_circle_outline"
+                android:tint="@color/gray_300"/>
+
+            <TextView
+                android:id="@+id/delete_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:text="删除"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

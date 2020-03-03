@@ -23,7 +23,8 @@ import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.jacob.book.JsonUtils;
 import com.jacob.book.WidgetsUtils;
 import com.jacob.book.material.R;
-import com.jacob.book.material.base.TabBaseFragment;
+import com.jacob.book.material.base.TabItemContent;
+import com.jacob.book.material.base.TabViewPagerBaseFragment;
 import com.jacob.book.material.databinding.TabBaseMainLibraryFragmentBinding;
 import com.jacob.book.material.example.adapter.BookAdapter;
 import com.jacob.book.material.example.model.Book;
@@ -31,11 +32,11 @@ import com.jacob.book.material.widgets.GridLayoutVertialItemDecoration;
 
 import java.util.List;
 
-public class TabBaseMainLibraryFragment extends TabBaseFragment implements LifecycleObserver {
+public class TabBaseMainLibraryFragment extends TabViewPagerBaseFragment implements LifecycleObserver {
     private TabBaseMainLibraryFragmentBinding binding;
 
     public TabBaseMainLibraryFragment(){
-        super("书目", -1);
+        super(new TabItemContent("书目", -1));
         this.getLifecycle().addObserver(this);
     }
 

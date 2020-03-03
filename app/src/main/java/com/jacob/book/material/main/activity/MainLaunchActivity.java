@@ -24,7 +24,6 @@ import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat;
 import com.jacob.book.WidgetsUtils;
 import com.jacob.book.material.R;
 import com.jacob.book.material.databinding.MainLaunchActivityBinding;
-import com.jacob.book.material.example.topappbar.TopAppBarDarkTwoFragment;
 
 
 public class MainLaunchActivity extends AppCompatActivity {

@@ -26,7 +26,8 @@ import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.jacob.book.JsonUtils;
 import com.jacob.book.WidgetsUtils;
 import com.jacob.book.material.R;
-import com.jacob.book.material.base.TabBaseFragment;
+import com.jacob.book.material.base.TabItemContent;
+import com.jacob.book.material.base.TabViewPagerBaseFragment;
 import com.jacob.book.material.databinding.BottomNavigationDemoLibraryLiveFragmentBinding;
 import com.jacob.book.material.example.adapter.GrammyLibraryLiveAdapter;
 import com.jacob.book.material.example.model.Thrones;
@@ -34,11 +35,11 @@ import com.jacob.book.material.widgets.GridLayoutVertialItemDecoration;
 
 import java.util.List;
 
-public class BottomNavigationDemoLibraryLiveFragment extends TabBaseFragment implements LifecycleObserver {
+public class BottomNavigationDemoLibraryLiveFragment extends TabViewPagerBaseFragment implements LifecycleObserver {
     private BottomNavigationDemoLibraryLiveFragmentBinding binding;
 
     public BottomNavigationDemoLibraryLiveFragment(){
-        super("在线直播", -1);
+        super(new TabItemContent("在线直播", -1));
         this.getLifecycle().addObserver(this);
     }
 

@@ -28,7 +28,8 @@ import com.github.mikephil.charting.formatter.ValueFormatter;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 import com.jacob.book.WidgetsUtils;
 import com.jacob.book.material.R;
-import com.jacob.book.material.base.TabBaseFragment;
+import com.jacob.book.material.base.TabItemContent;
+import com.jacob.book.material.base.TabViewPagerBaseFragment;
 import com.jacob.book.material.databinding.TopAppBarDarkOneFragmentBinding;
 
 import java.util.ArrayList;
@@ -38,13 +39,13 @@ import java.util.Random;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class TopAppBarDarkOneFragment extends TabBaseFragment {
+public class TopAppBarDarkOneFragment extends TabViewPagerBaseFragment {
 
     private TopAppBarDarkOneFragmentBinding binding;
 
 
     public TopAppBarDarkOneFragment() {
-        super("今日活跃度", -1);
+        super(new TabItemContent("今日活跃度", -1));
     }
 
 

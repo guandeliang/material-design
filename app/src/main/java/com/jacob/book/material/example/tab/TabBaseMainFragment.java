@@ -14,18 +14,14 @@ import android.view.ViewGroup;
 import android.view.WindowInsets;
 import android.widget.LinearLayout;
 
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.LifecycleObserver;
 
-import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
-import com.jacob.book.WidgetsUtils;
 import com.jacob.book.material.R;
-import com.jacob.book.material.base.TabBaseAdapter;
-import com.jacob.book.material.base.TabBaseFragment;
+import com.jacob.book.material.base.TabViewPagerAdapter;
+import com.jacob.book.material.base.TabViewPagerBaseFragment;
 import com.jacob.book.material.databinding.TabBaseMainFragmentBinding;
 
 import java.util.ArrayList;
@@ -33,7 +29,7 @@ import java.util.List;
 
 public class TabBaseMainFragment extends Fragment implements LifecycleObserver {
     private TabBaseMainFragmentBinding binding;
-    private List<TabBaseFragment> fragmentList;
+    private List<TabViewPagerBaseFragment> fragmentList;
 
     public TabBaseMainFragment(){
         this.getLifecycle().addObserver(this);
@@ -48,13 +44,13 @@ public class TabBaseMainFragment extends Fragment implements LifecycleObserver {
         fragmentList.add(new TabBaseMainIndexFragment());
         fragmentList.add(new TabBaseMainLibraryFragment());
         fragmentList.add(new TabBaseMainMyFragment());
-        TabBaseAdapter adapter = new TabBaseAdapter(getActivity(), fragmentList);
+        TabViewPagerAdapter adapter = new TabViewPagerAdapter(getActivity(), fragmentList);
         binding.viewPager.setAdapter(adapter);
 
         TabLayoutMediator mediator = new TabLayoutMediator(
                 binding.tabLayout,
                 binding.viewPager,
-                new TabBaseFragment.ConfigurationStrategy(fragmentList)
+                new TabViewPagerBaseFragment.ConfigurationStrategy(fragmentList)
         );
         mediator.attach();
 

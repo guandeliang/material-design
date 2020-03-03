@@ -18,25 +18,21 @@ import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.OnLifecycleEvent;
 import androidx.navigation.Navigation;
 
-import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.jacob.book.JsonUtils;
 import com.jacob.book.material.R;
-import com.jacob.book.material.base.TabBaseFragment;
+import com.jacob.book.material.base.TabItemContent;
+import com.jacob.book.material.base.TabViewPagerBaseFragment;
 import com.jacob.book.material.databinding.TabBaseMainIndexFragmentBinding;
-import com.jacob.book.material.example.adapter.MailInBoxAdapter;
-import com.jacob.book.material.example.bottomappbar.BottomAppBarDemoMailContentFragment;
 import com.jacob.book.material.example.model.Book;
-import com.jacob.book.material.example.model.Mail;
 
 import java.util.List;
 
-public class TabBaseMainIndexFragment extends TabBaseFragment implements LifecycleObserver {
+public class TabBaseMainIndexFragment extends TabViewPagerBaseFragment implements LifecycleObserver {
     private TabBaseMainIndexFragmentBinding binding;
     private List<Book> bookList;
 
     public TabBaseMainIndexFragment(){
-        super("首页", -1);
+        super(new TabItemContent("首页", -1));
         this.getLifecycle().addObserver(this);
     }
 
