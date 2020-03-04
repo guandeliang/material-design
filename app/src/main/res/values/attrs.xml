@@ -9,6 +9,8 @@
 <resources>
     <declare-styleable name="theme_switch_app_bar_layout">
         <attr name="title_text" format="string"/>
+        <attr name="menu_icon" format="reference"/>
+
     </declare-styleable>
 
     <declare-styleable name="fab_bottom_navigation_view">

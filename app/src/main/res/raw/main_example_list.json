@@ -181,6 +181,47 @@
   },
 
   {
+    "id":10500000,
+    "iconName":"icon_subject",
+    "title":"Drawer",
+    "itemList":[
+      {
+        "id":10401010,
+        "title":"默认DayNight主题Drawer",
+        "path":"com.jacob.book.material.example.drawer.DrawerDayNightDefaultActivity"
+      },
+
+      {
+        "id":10401010,
+        "title":"半自定义布局",
+        "path":"com.jacob.book.material.example.drawer.DrawerDayNightDefaultActivity"
+      },
+      {
+        "id":10401010,
+        "title":"全自定义布局",
+        "path":"com.jacob.book.material.example.drawer.DrawerDayNightDefaultActivity"
+      },
+
+      {
+        "id":10401010,
+        "title":"在TOOLBAR以下",
+        "path":"com.jacob.book.material.example.drawer.DrawerDayNightDefaultActivity"
+      },
+      {
+        "id":10401010,
+        "title":"像BottomNavigationDemoActivity一样关联导航图",
+        "path":"com.jacob.book.material.example.drawer.DrawerDayNightDefaultActivity"
+      },
+      {
+        "id":10401010,
+        "title":"CoordinatorLayout和DrawerLayout都支持设置状态栏颜色，应该回头修改有一下侵入方式了",
+        "path":"com.jacob.book.material.example.drawer.DrawerDayNightDefaultActivity"
+      }
+
+    ]
+  },
+
+  {
     "id":10400000,
     "iconName":"icon_example_appbar_top",
     "title":"Banners",
@@ -302,12 +343,6 @@
     "itemList":[]
   },
 
-  {
-    "id":11600000,
-    "iconName":"icon_example_appbar_top",
-    "title":"Navigation drawer",
-    "itemList":[]
-  },
 
   {
     "id":11700000,

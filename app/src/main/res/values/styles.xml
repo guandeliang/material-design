@@ -162,6 +162,12 @@
         <item name="colorOnError">@color/dn_default_color_on_error</item>
         <item name="scrimBackground">@color/mtrl_scrim_color</item>
     </style>
+    <style name="Theme.MaterialBook.DayNight.Default.TranslucentStatus" parent="Theme.MaterialBook.DayNight.Default">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+
+
     <!--END：默认的DayNight主题-->
 
 

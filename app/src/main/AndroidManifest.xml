@@ -168,7 +168,12 @@
             android:theme="@style/Theme.MaterialBook.SingleColor.Light.TranslucentStatus"
             android:screenOrientation="portrait"/>
 
+        <!-- Drawer -->
 
+        <activity
+            android:name=".example.drawer.DrawerDayNightDefaultActivity"
+            android:theme="@style/Theme.MaterialBook.DayNight.Default.TranslucentStatus"
+            android:screenOrientation="portrait"/>
 
 
         <activity

@@ -38,10 +38,5 @@
             android:layout_weight="1">
 
         </androidx.viewpager2.widget.ViewPager2>
-
-
-
-
-
     </LinearLayout>
 </layout>

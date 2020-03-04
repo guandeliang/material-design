@@ -24,9 +24,11 @@ import com.jacob.book.material.R;
 
 public class ThemeSwitchAppBarLayout extends AppBarLayout {
     private String titleText;
-    private ImageView backImageView;
+    private int menuImageResId;
+    private ImageView menuImageView;
     private TextView titleTextView;
     private ImageView themeImageView;
+    private OnClickListener onMenuClickListener;
 
     public ThemeSwitchAppBarLayout(@NonNull Context context) {
         this(context, null);
@@ -41,12 +43,16 @@ public class ThemeSwitchAppBarLayout extends AppBarLayout {
         inflate(context, R.layout.widget_theme_switch_app_bar_layout, this);
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.theme_switch_app_bar_layout, 0, 0);
         titleText = typedArray.getString(R.styleable.theme_switch_app_bar_layout_title_text);
+        menuImageResId = typedArray.getResourceId(R.styleable.theme_switch_app_bar_layout_menu_icon, R.drawable.icon_arrow_back);
         typedArray.recycle();
 
-        backImageView = findViewById(R.id.back_image_view);
+        menuImageView = findViewById(R.id.menu_image_view);
         titleTextView = findViewById(R.id.title_text_view);
         themeImageView = findViewById(R.id.theme_image_view);
+        menuImageView.setImageResource(menuImageResId);
         titleTextView.setText(titleText);
+
+        menuImageView.setOnClickListener(new OnMenuClickListener());
         themeImageView.setOnClickListener(new OnThemeImageViewCliclLintener());
 
         initView();
@@ -72,6 +78,19 @@ public class ThemeSwitchAppBarLayout extends AppBarLayout {
     public void setTitle(String title){
         this.titleText = title;
         this.titleTextView.setText(titleText);
+    }
+
+    public void setOnMenuClickListener(OnClickListener listener){
+        this.onMenuClickListener = listener;
+    }
+
+    private class OnMenuClickListener implements View.OnClickListener{
+        @Override
+        public void onClick(View v) {
+            if(onMenuClickListener != null){
+                onMenuClickListener.onClick(v);
+            }
+        }
     }
 
     private class OnThemeImageViewCliclLintener implements View.OnClickListener{
