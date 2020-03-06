@@ -101,6 +101,18 @@
     <style name="Widget.MaterialBook.AppBarLayout.Primary" parent="Widget.MaterialComponents.AppBarLayout.Primary">
     </style>
 
+    <style name="ShapeAppearanceOverlay.MaterialBook.NavigationView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">16dp</item>
+        <item name="cornerSizeBottomRight">16dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+    </style>
+
+    <style name="ThemeOverlay.MaterialBook.NavigationView.TransparentBackground" parent="">
+        <item name="android:colorControlHighlight">@android:color/transparent</item>
+    </style>
+
 
     <!--BEGIN: 基础风格-->
     <!--DayNight主题基础风格-->
@@ -326,6 +338,7 @@
     <!--沉浸式状态栏单色主题风格，解决占用状态栏问题-->
     <style name="Theme.MaterialBook.SingleColor.Colored.TranslucentStatus" parent="Theme.MaterialBook.SingleColor.Colored">
         <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
     </style>
     <!--END：彩色主题-->
 

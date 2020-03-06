@@ -9,7 +9,6 @@ package com.jacob.book.material.example.drawer;
 
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioGroup;
@@ -22,7 +21,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.navigation.NavigationView;
 import com.jacob.book.material.R;
 import com.jacob.book.material.databinding.DrawerDayNightDefaultActivityBinding;
-import com.jacob.book.temp.TempConstant;
 
 public class DrawerDayNightDefaultActivity extends AppCompatActivity {
     private DrawerDayNightDefaultActivityBinding binding;

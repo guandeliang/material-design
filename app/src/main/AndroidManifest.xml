@@ -175,6 +175,16 @@
             android:theme="@style/Theme.MaterialBook.DayNight.Default.TranslucentStatus"
             android:screenOrientation="portrait"/>
 
+        <activity
+            android:name=".example.drawer.DrawerDayNightCustomActivity"
+            android:theme="@style/Theme.MaterialBook.DayNight.Custom"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".example.drawer.DrawerTopAppBarActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored.TranslucentStatus"
+            android:screenOrientation="portrait"/>
+
 
         <activity
             android:name=".test.TestSnapActivity"

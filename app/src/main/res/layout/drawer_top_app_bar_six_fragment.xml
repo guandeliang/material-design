@@ -2,7 +2,7 @@
 <!--
   ~ Create by Jacob G(GuanDeLiang) on 2020.
   ~ Copyright (c) 2020 . All rights reserved.
-  ~ Last modified 20-2-2 下午1:55
+  ~ Last modified 20-2-19 上午9:41
   ~
   -->
 
@@ -13,17 +13,6 @@
     <data>
 
     </data>
-
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <com.jacob.book.material.widgets.ThemeSwitchAppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:title_text="自定义DayNight主题"/>
-
-
 
         <androidx.core.widget.NestedScrollView
             android:id="@+id/nested_scroll_view"
@@ -43,7 +32,7 @@
                     app:layout_constraintRight_toRightOf="parent"/>
 
 
-                <include layout="@layout/include_ring"
+                <include layout="@layout/include_movie"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="16dp"
@@ -53,24 +42,6 @@
 
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
-
-
-
-        <com.google.android.material.bottomappbar.BottomAppBar
-            android:id="@+id/bottom_app_bar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            app:hideOnScroll="true"
-            app:menu="@menu/regular_menu"
-            app:navigationIcon="@drawable/icon_menu"/>
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_anchor="@id/bottom_app_bar"
-            android:src="@drawable/icon_favorite_border"/>
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 
 </layout>

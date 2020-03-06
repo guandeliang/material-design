@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-3-4 下午8:21
+  ~
+  -->
+
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/search"
+        android:orderInCategory="101"
+        android:title="@null"
+        app:actionLayout="@layout/menu_action_layout_search"/>
+
+    <item
+        android:id="@+id/camera"
+        android:orderInCategory="200"
+        android:title="@null"
+        android:enabled="false"
+        app:actionLayout="@layout/menu_action_layout_group_title"/>
+    <item
+        android:id="@+id/all"
+        android:orderInCategory="201"
+        android:title="全部照片"
+        android:checkable="true"
+        android:icon="@drawable/icon_photo_library"/>
+    <item
+        android:id="@+id/share_me"
+        android:orderInCategory="202"
+        android:title="好友分享"
+        android:checkable="true"
+        android:icon="@drawable/icon_group"
+        app:actionLayout="@layout/menu_action_layout_badge"/>
+    <item
+        android:id="@+id/star"
+        android:orderInCategory="203"
+        android:title="优质图片"
+        android:checkable="true"
+        android:icon="@drawable/icon_star"/>
+    <item
+        android:id="@+id/recent"
+        android:orderInCategory="204"
+        android:title="最近拍摄"
+        android:checkable="true"
+        android:icon="@drawable/icon_access_time"
+        app:actionLayout="@layout/menu_action_layout_badge"/>
+
+    <item
+        android:id="@+id/collection"
+        android:orderInCategory="300"
+        android:title="@null"
+        app:actionLayout="@layout/menu_action_layout_group_title"/>
+</menu>

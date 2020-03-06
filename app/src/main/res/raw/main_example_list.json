@@ -186,9 +186,19 @@
     "title":"Drawer",
     "itemList":[
       {
-        "id":10401010,
+        "id":10501010,
         "title":"默认DayNight主题Drawer",
         "path":"com.jacob.book.material.example.drawer.DrawerDayNightDefaultActivity"
+      },
+      {
+        "id":10501020,
+        "title":"自定义DayNight主题Drawer",
+        "path":"com.jacob.book.material.example.drawer.DrawerDayNightCustomActivity"
+      },
+      {
+        "id":10501030,
+        "title":"Drawer和Top App Bar",
+        "path":"com.jacob.book.material.example.drawer.DrawerTopAppBarActivity"
       },
 
       {
@@ -202,11 +212,6 @@
         "path":"com.jacob.book.material.example.drawer.DrawerDayNightDefaultActivity"
       },
 
-      {
-        "id":10401010,
-        "title":"在TOOLBAR以下",
-        "path":"com.jacob.book.material.example.drawer.DrawerDayNightDefaultActivity"
-      },
       {
         "id":10401010,
         "title":"像BottomNavigationDemoActivity一样关联导航图",

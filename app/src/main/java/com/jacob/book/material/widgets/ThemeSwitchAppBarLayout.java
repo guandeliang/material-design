@@ -10,6 +10,7 @@ package com.jacob.book.material.widgets;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
@@ -24,7 +25,6 @@ import com.jacob.book.material.R;
 
 public class ThemeSwitchAppBarLayout extends AppBarLayout {
     private String titleText;
-    private int menuImageResId;
     private ImageView menuImageView;
     private TextView titleTextView;
     private ImageView themeImageView;
@@ -43,7 +43,7 @@ public class ThemeSwitchAppBarLayout extends AppBarLayout {
         inflate(context, R.layout.widget_theme_switch_app_bar_layout, this);
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.theme_switch_app_bar_layout, 0, 0);
         titleText = typedArray.getString(R.styleable.theme_switch_app_bar_layout_title_text);
-        menuImageResId = typedArray.getResourceId(R.styleable.theme_switch_app_bar_layout_menu_icon, R.drawable.icon_arrow_back);
+        int menuImageResId = typedArray.getResourceId(R.styleable.theme_switch_app_bar_layout_menu_icon, R.drawable.icon_arrow_back);
         typedArray.recycle();
 
         menuImageView = findViewById(R.id.menu_image_view);
@@ -82,6 +82,10 @@ public class ThemeSwitchAppBarLayout extends AppBarLayout {
 
     public void setOnMenuClickListener(OnClickListener listener){
         this.onMenuClickListener = listener;
+    }
+
+    public void setMenuImageDrawable(Drawable drawable){
+        this.menuImageView.setImageDrawable(drawable);
     }
 
     private class OnMenuClickListener implements View.OnClickListener{

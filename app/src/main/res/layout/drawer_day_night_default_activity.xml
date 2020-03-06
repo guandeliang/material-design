@@ -20,7 +20,6 @@
 
     <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/drawer_layout"
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true">
@@ -55,8 +54,8 @@
                 android:id="@+id/gravity_radio_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:onCheckedChanged="@{activity.onGravityCheckedChanged}"
@@ -74,6 +73,7 @@
                     android:id="@+id/gravity_end_radio_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
                     android:text="右侧：end"/>
             </RadioGroup>
 
@@ -96,7 +96,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:onCheckedChanged="@{activity.onLockCheckedChanged}"
@@ -155,7 +155,7 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:background="@color/material_color_red"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
                 android:onClick="@{(view) -> activity.onScrimColorClick(view)}"
@@ -168,7 +168,7 @@
                 android:id="@+id/scrim_002_image_view"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_marginLeft="16dp"
+                android:layout_marginLeft="24dp"
                 android:background="@color/material_color_purple"
                 android:onClick="@{(view) -> activity.onScrimColorClick(view)}"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
@@ -182,7 +182,7 @@
                 android:id="@+id/scrim_003_image_view"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_marginLeft="16dp"
+                android:layout_marginLeft="24dp"
                 android:background="@color/material_color_blue"
                 android:onClick="@{(view) -> activity.onScrimColorClick(view)}"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
@@ -196,7 +196,7 @@
                 android:id="@+id/scrim_004_image_view"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_marginLeft="16dp"
+                android:layout_marginLeft="24dp"
                 android:background="@color/material_color_green"
                 android:onClick="@{(view) -> activity.onScrimColorClick(view)}"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
@@ -210,7 +210,7 @@
                 android:id="@+id/scrim_005_image_view"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_marginLeft="16dp"
+                android:layout_marginLeft="24dp"
                 android:layout_marginRight="16dp"
                 android:background="@color/material_color_orange"
                 android:onClick="@{(view) -> activity.onScrimColorClick(view)}"
@@ -233,7 +233,8 @@
             android:layout_height="match_parent"
             android:layout_gravity="@{isGravityLeft ? Gravity.START : Gravity.END}"
             android:fitsSystemWindows="true"
-            app:headerLayout="@layout/drawer_ding_header_one"
+            app:insetForeground="@color/transparent"
+            app:headerLayout="@layout/drawer_header_one"
             app:menu="@menu/ding_drawer_menu">
 
             <ImageView
