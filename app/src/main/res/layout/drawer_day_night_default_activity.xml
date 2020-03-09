@@ -58,7 +58,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                android:onCheckedChanged="@{activity.onGravityCheckedChanged}"
+                android:onCheckedChanged="@{activity::onGravityCheckedChanged}"
                 app:layout_constraintTop_toBottomOf="@id/gravity_title_text_view"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent">
@@ -99,7 +99,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                android:onCheckedChanged="@{activity.onLockCheckedChanged}"
+                android:onCheckedChanged="@{activity::onLockCheckedChanged}"
                 app:layout_constraintTop_toBottomOf="@id/lock_title_text_view"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent">

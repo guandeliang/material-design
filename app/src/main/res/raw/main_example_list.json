@@ -203,25 +203,10 @@
 
       {
         "id":10401010,
-        "title":"半自定义布局",
-        "path":"com.jacob.book.material.example.drawer.DrawerDayNightDefaultActivity"
-      },
-      {
-        "id":10401010,
-        "title":"全自定义布局",
-        "path":"com.jacob.book.material.example.drawer.DrawerDayNightDefaultActivity"
-      },
-
-      {
-        "id":10401010,
-        "title":"像BottomNavigationDemoActivity一样关联导航图",
-        "path":"com.jacob.book.material.example.drawer.DrawerDayNightDefaultActivity"
-      },
-      {
-        "id":10401010,
-        "title":"CoordinatorLayout和DrawerLayout都支持设置状态栏颜色，应该回头修改有一下侵入方式了",
-        "path":"com.jacob.book.material.example.drawer.DrawerDayNightDefaultActivity"
+        "title":"Shop Filter Menu",
+        "path":"com.jacob.book.material.example.drawer.DrawerShopActivity"
       }
+
 
     ]
   },
@@ -250,8 +235,13 @@
         "id":10401040,
         "title":"Shape测试",
         "path":"com.jacob.book.material.test.TestShapeActivity"
-      }
+      },
 
+      {
+        "id":10401010,
+        "title":"CoordinatorLayout和DrawerLayout都支持设置状态栏颜色，应该回头修改有一下侵入方式了",
+        "path":"com.jacob.book.material.example.drawer.DrawerDayNightDefaultActivity"
+      }
 
 
     ]

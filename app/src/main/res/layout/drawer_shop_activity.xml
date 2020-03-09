@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-3-6 下午7:42
+  ~
+  -->
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.jacob.book.material.example.drawer.DrawerShopViewModel"/>
+        <variable name="viewModel" type="com.jacob.book.material.example.drawer.DrawerShopViewModel" />
+        <variable name="activity" type="com.jacob.book.material.example.drawer.DrawerShopActivity" />
+    </data>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <com.google.android.material.appbar.AppBarLayout
+                style="@style/Widget.MaterialComponents.AppBarLayout.Primary"
+                android:id="@+id/app_bar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/logo_image_view"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/logo_006"
+                        android:layout_marginLeft="16dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/category_title_text_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        android:layout_marginLeft="16dp"
+                        android:textColor="@color/gray_300"
+                        android:text="标题"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/logo_image_view"
+                        app:layout_constraintRight_toLeftOf="@id/filter_image_view"/>
+
+                    <ImageView
+                        android:id="@+id/filter_image_view"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:padding="12dp"
+                        android:layout_marginRight="4dp"
+                        android:src="@drawable/icon_filter_list"
+                        android:tint="@color/gray_300"
+                        android:clickable="true"
+                        android:background="@drawable/click_ripple_round"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:onClick="@{() -> activity.openDrawer()}"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragment_container_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+       </LinearLayout>
+
+
+
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:fitsSystemWindows="false">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/drawer_title_card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:cardCornerRadius="0dp">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            android:layout_marginLeft="16dp"
+                            android:text="筛选商品"
+                            android:textColor="?attr/colorPrimary"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="12dp"
+                            android:layout_marginRight="4dp"
+                            android:src="@drawable/icon_close"
+                            android:tint="?attr/colorPrimary"
+                            android:clickable="true"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:onClick="@{() -> activity.closeDrawer()}"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <ImageView
+                    android:id="@+id/drawer_top_background_image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/shop_drawer_001"
+                    app:layout_constraintTop_toBottomOf="@id/drawer_title_card_view"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <View
+                    android:id="@+id/drawer_top_background_corver_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@drawable/drawer_shop_top_shape"
+                    app:layout_constraintTop_toTopOf="@id/drawer_top_background_image_view"
+                    app:layout_constraintLeft_toLeftOf="@id/drawer_top_background_image_view"
+                    app:layout_constraintRight_toRightOf="@id/drawer_top_background_image_view"
+                    app:layout_constraintBottom_toBottomOf="@id/drawer_top_background_image_view"/>
+
+                <ImageView
+                    android:id="@+id/drawer_bottom_background_image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/shop_drawer_002"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <View
+                    android:id="@+id/drawer_bottom_background_corver_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@drawable/drawer_shop_bottom_shape"
+                    app:layout_constraintTop_toTopOf="@id/drawer_bottom_background_image_view"
+                    app:layout_constraintLeft_toLeftOf="@id/drawer_bottom_background_image_view"
+                    app:layout_constraintRight_toRightOf="@id/drawer_bottom_background_image_view"
+                    app:layout_constraintBottom_toBottomOf="@id/drawer_bottom_background_image_view"/>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/clthes_card_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="6dp"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:cardBackgroundColor="@color/transparent_white_80"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/drawer_shop_button_color_selector"
+                    app:layout_constraintTop_toBottomOf="@id/drawer_title_card_view"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/coverall_card_view"
+                    app:selected="@{viewModel.currCategory == DrawerShopViewModel.Category.CLTHES}"
+                    android:onClick="@{() -> viewModel.setCurrCategory(DrawerShopViewModel.Category.CLTHES)}">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/drawer_shop_clthes"
+                            android:tint="@color/drawer_shop_button_color_selector"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceButton"
+                            android:paddingTop="4dp"
+                            android:textColor="@color/drawer_shop_button_color_selector"
+                            android:text="品质正装"/>
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/coverall_card_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="16dp"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:cardBackgroundColor="@color/transparent_white_80"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/drawer_shop_button_color_selector"
+                    app:layout_constraintTop_toBottomOf="@id/drawer_title_card_view"
+                    app:layout_constraintLeft_toRightOf="@id/clthes_card_view"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:selected="@{viewModel.currCategory == DrawerShopViewModel.Category.COVERALL}"
+                    android:onClick="@{() -> viewModel.setCurrCategory(DrawerShopViewModel.Category.COVERALL)}">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/drawer_shop_coverall"
+                            android:tint="@color/drawer_shop_button_color_selector"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="4dp"
+                            android:textAppearance="?attr/textAppearanceButton"
+                            android:textColor="@color/drawer_shop_button_color_selector"
+                            android:text="职业工装"/>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/car_card_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="6dp"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:cardBackgroundColor="@color/transparent_white_80"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/drawer_shop_button_color_selector"
+                    app:layout_constraintTop_toBottomOf="@id/clthes_card_view"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/yacht_card_view"
+                    app:selected="@{viewModel.currCategory == DrawerShopViewModel.Category.CAR}"
+                    android:onClick="@{() -> viewModel.setCurrCategory(DrawerShopViewModel.Category.CAR)}">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/drawer_shop_car"
+                            android:tint="@color/drawer_shop_button_color_selector"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="4dp"
+                            android:textAppearance="?attr/textAppearanceButton"
+                            android:textColor="@color/drawer_shop_button_color_selector"
+                            android:text="草原名车"/>
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/yacht_card_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="16dp"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:cardBackgroundColor="@color/transparent_white_80"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/drawer_shop_button_color_selector"
+                    app:layout_constraintTop_toBottomOf="@id/coverall_card_view"
+                    app:layout_constraintLeft_toRightOf="@id/car_card_view"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:selected="@{viewModel.currCategory == DrawerShopViewModel.Category.YACHT}"
+                    android:onClick="@{() -> viewModel.setCurrCategory(DrawerShopViewModel.Category.YACHT)}">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/drawer_shop_yacht"
+                            android:tint="@color/drawer_shop_button_color_selector"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="4dp"
+                            android:textAppearance="?attr/textAppearanceButton"
+                            android:textColor="@color/drawer_shop_button_color_selector"
+                            android:text="沙漠游艇"/>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/watch_card_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="6dp"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:cardBackgroundColor="@color/transparent_white_80"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/drawer_shop_button_color_selector"
+                    app:layout_constraintTop_toBottomOf="@id/car_card_view"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/food_card_view"
+                    app:selected="@{viewModel.currCategory == DrawerShopViewModel.Category.WATCH}"
+                    android:onClick="@{() -> viewModel.setCurrCategory(DrawerShopViewModel.Category.WATCH)}">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/drawer_shop_watch"
+                            android:tint="@color/drawer_shop_button_color_selector"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="4dp"
+                            android:textAppearance="?attr/textAppearanceButton"
+                            android:textColor="@color/drawer_shop_button_color_selector"
+                            android:text="广东名表"/>
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/food_card_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="16dp"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:cardBackgroundColor="@color/transparent_white_80"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/drawer_shop_button_color_selector"
+                    app:layout_constraintTop_toBottomOf="@id/yacht_card_view"
+                    app:layout_constraintLeft_toRightOf="@id/watch_card_view"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:selected="@{viewModel.currCategory == DrawerShopViewModel.Category.FOOD}"
+                    android:onClick="@{() -> viewModel.setCurrCategory(DrawerShopViewModel.Category.FOOD)}">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/drawer_shop_food"
+                            android:tint="@color/drawer_shop_button_color_selector"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="4dp"
+                            android:textAppearance="?attr/textAppearanceButton"
+                            android:textColor="@color/drawer_shop_button_color_selector"
+                            android:text="福建美食"/>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/dling_card_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="6dp"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:cardBackgroundColor="@color/transparent_white_80"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/drawer_shop_button_color_selector"
+                    app:layout_constraintTop_toBottomOf="@id/watch_card_view"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/wheel_card_view"
+                    app:selected="@{viewModel.currCategory == DrawerShopViewModel.Category.DLING}"
+                    android:onClick="@{() -> viewModel.setCurrCategory(DrawerShopViewModel.Category.DLING)}">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/drawer_shop_dling"
+                            android:tint="@color/drawer_shop_button_color_selector"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="4dp"
+                            android:textAppearance="?attr/textAppearanceButton"
+                            android:textColor="@color/drawer_shop_button_color_selector"
+                            android:text="闪闪一族"/>
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/wheel_card_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="16dp"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:cardBackgroundColor="@color/transparent_white_80"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/drawer_shop_button_color_selector"
+                    app:layout_constraintTop_toBottomOf="@id/food_card_view"
+                    app:layout_constraintLeft_toRightOf="@id/dling_card_view"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:selected="@{viewModel.currCategory == DrawerShopViewModel.Category.WHEEL}"
+                    android:onClick="@{() -> viewModel.setCurrCategory(DrawerShopViewModel.Category.WHEEL)}">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/drawer_shop_wheel"
+                            android:tint="@color/drawer_shop_button_color_selector"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="4dp"
+                            android:textAppearance="?attr/textAppearanceButton"
+                            android:textColor="@color/drawer_shop_button_color_selector"
+                            android:text="拍照利器"/>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/used_card_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="6dp"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:cardBackgroundColor="@color/transparent_white_80"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/drawer_shop_button_color_selector"
+                    app:layout_constraintTop_toBottomOf="@id/dling_card_view"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/gun_card_view"
+                    app:selected="@{viewModel.currCategory == DrawerShopViewModel.Category.USED}"
+                    android:onClick="@{() -> viewModel.setCurrCategory(DrawerShopViewModel.Category.USED)}">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/drawer_shop_used"
+                            android:tint="@color/drawer_shop_button_color_selector"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="4dp"
+                            android:textAppearance="?attr/textAppearanceButton"
+                            android:textColor="@color/drawer_shop_button_color_selector"
+                            android:text="二手精品"/>
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/gun_card_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="16dp"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:cardBackgroundColor="@color/transparent_white_80"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/drawer_shop_button_color_selector"
+                    app:layout_constraintTop_toBottomOf="@id/wheel_card_view"
+                    app:layout_constraintLeft_toRightOf="@id/used_card_view"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:selected="@{viewModel.currCategory == DrawerShopViewModel.Category.GUN}"
+                    android:onClick="@{() -> viewModel.setCurrCategory(DrawerShopViewModel.Category.GUN)}">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/drawer_shop_gun"
+                            android:tint="@color/drawer_shop_button_color_selector"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="4dp"
+                            android:textAppearance="?attr/textAppearanceButton"
+                            android:textColor="@color/drawer_shop_button_color_selector"
+                            android:text="防身必备"/>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.navigation.NavigationView>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+</layout>

@@ -185,6 +185,11 @@
             android:theme="@style/Theme.MaterialBook.SingleColor.Colored.TranslucentStatus"
             android:screenOrientation="portrait"/>
 
+        <activity
+            android:name=".example.drawer.DrawerShopActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Light"
+            android:screenOrientation="portrait"/>
+
 
         <activity
             android:name=".test.TestSnapActivity"
@@ -198,7 +203,7 @@
 
         <activity
             android:name=".test.TestShareElementActivity"
-            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Light"
             android:screenOrientation="portrait"/>
 
         <activity

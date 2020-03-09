@@ -27,6 +27,7 @@ import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 import com.jacob.book.material.R;
 import com.jacob.book.material.databinding.DrawerTopAppBarActivityBinding;
 
@@ -69,7 +70,7 @@ public class DrawerTopAppBarActivity extends AppCompatActivity {
         int fragmentContainerId = binding.fragmentContainerView.getId();
         NavHostFragment navHostFragment = NavHostFragment.create(R.navigation.drawer_photp_graph);
         FragmentManager fragmentManager = this.getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction().add(fragmentContainerId, navHostFragment, "fragmentTag");
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction().add(fragmentContainerId, navHostFragment, "nav_host_fragment");
         fragmentTransaction.commitNow();
 
         navController = navHostFragment.getNavController();
@@ -78,7 +79,6 @@ public class DrawerTopAppBarActivity extends AppCompatActivity {
         //NavigationUI.setupWithNavController(binding.navigationView, navController);
         binding.navigationView.setNavigationItemSelectedListener(new NavItemSelectedListener());
 
-
         navController.addOnDestinationChangedListener(new NavDestinationChangedListener());
 
     }
@@ -86,6 +86,9 @@ public class DrawerTopAppBarActivity extends AppCompatActivity {
     private void initNavigationMenu(){
         Menu menu = binding.navigationView.getMenu();
         menu.findItem(R.id.all).setChecked(true);
+
+        MenuItem serach = menu.findItem(R.id.search);
+        serach.getActionView().findViewById(R.id.search_card_view).setOnClickListener(new SearchClickListener());
 
         MenuItem camera = menu.findItem(R.id.camera);
         camera.getActionView().findViewById(R.id.button).setVisibility(View.INVISIBLE);
@@ -108,6 +111,15 @@ public class DrawerTopAppBarActivity extends AppCompatActivity {
 
     }
 
+    private class SearchClickListener implements View.OnClickListener{
+        @Override
+        public void onClick(View view) {
+            Snackbar snackbar = Snackbar.make(binding.drawerLayout, "搜索", Snackbar.LENGTH_LONG);
+            snackbar.show();
+        }
+    }
+
+
     private class AddButtonClickListener implements View.OnClickListener{
         @Override
         public void onClick(View view) {
@@ -129,6 +141,9 @@ public class DrawerTopAppBarActivity extends AppCompatActivity {
                 menuItem.setIcon(R.drawable.icon_image);
                 //menuItem.setActionView(R.layout.menu_action_layout_badge);
                 menuItem.setCheckable(true);
+            }else{
+                Snackbar snackbar = Snackbar.make(binding.drawerLayout, "新建完了，想要更多，就不适合在这里实现了，最好使用单独界面管理。", Snackbar.LENGTH_LONG);
+                snackbar.show();
             }
         }
     }
@@ -136,22 +151,36 @@ public class DrawerTopAppBarActivity extends AppCompatActivity {
     private class NavItemSelectedListener implements NavigationView.OnNavigationItemSelectedListener{
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            if(item.getOrder() == 101){//search
-
-            }else if(item.getOrder() > 200 && item.getOrder() < 300){//固定的Fragment
-                navController.navigate(item.getItemId());
-            }else if(item.getOrder() > 300){//动态创建的链接
-
+            if(item.getOrder() == 101 || item.getOrder() == 200 || item.getOrder() == 300){//search、camera、category
+                return false;
             }
-            return true;
+
+            if(item.getOrder() > 200 && item.getOrder() < 300){//fix Fragment
+                navController.navigate(item.getItemId());
+                binding.drawerLayout.closeDrawer(binding.navigationView);
+                binding.materialToolbar.setTitle(item.getTitle());
+                return true;
+            }
+
+            if(item.getOrder() > 300){//run time create Fragement
+                int currDesId =  navController.getCurrentDestination().getId();
+                if(currDesId != R.id.random){
+                    navController.navigate(R.id.random);
+                }else{
+                    navController.navigate(R.id.random);
+                }
+                binding.drawerLayout.closeDrawer(binding.navigationView);
+                binding.materialToolbar.setTitle(item.getTitle());
+                return true;
+            }
+
+            return false;
         }
     }
 
     private class NavDestinationChangedListener implements NavController.OnDestinationChangedListener{
         @Override
         public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable Bundle arguments) {
-
-
         }
     }
 

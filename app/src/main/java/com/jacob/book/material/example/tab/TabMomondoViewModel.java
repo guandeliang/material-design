@@ -13,7 +13,6 @@ import androidx.lifecycle.ViewModel;
 
 public class TabMomondoViewModel extends ViewModel {
     public static final Integer ACTION_SHOW_DRAWER = 0;
-    public static final Integer ACTION_SHOW_C = 1;
 
     public MutableLiveData<Integer> actionLiveData = new MutableLiveData<>();
 
