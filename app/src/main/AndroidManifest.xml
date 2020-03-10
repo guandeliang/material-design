@@ -191,6 +191,17 @@
             android:screenOrientation="portrait"/>
 
 
+        <!-- Backdrop -->
+
+        <activity
+            android:name=".example.backdrop.BackdropIntroActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Light"
+            android:screenOrientation="portrait"/>
+
+
+
+
+
         <activity
             android:name=".test.TestSnapActivity"
             android:theme="@style/Theme.MaterialBook.SingleColor.Colored"

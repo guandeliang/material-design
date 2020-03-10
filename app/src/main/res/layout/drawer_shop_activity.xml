@@ -11,8 +11,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <import type="com.jacob.book.material.example.drawer.DrawerShopViewModel"/>
-        <variable name="viewModel" type="com.jacob.book.material.example.drawer.DrawerShopViewModel" />
+        <import type="com.jacob.book.material.base.LivelyShopViewModel"/>
+        <variable name="viewModel" type="com.jacob.book.material.base.LivelyShopViewModel" />
         <variable name="activity" type="com.jacob.book.material.example.drawer.DrawerShopActivity" />
     </data>
 
@@ -189,8 +189,8 @@
                     app:layout_constraintTop_toBottomOf="@id/drawer_title_card_view"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toLeftOf="@id/coverall_card_view"
-                    app:selected="@{viewModel.currCategory == DrawerShopViewModel.Category.CLTHES}"
-                    android:onClick="@{() -> viewModel.setCurrCategory(DrawerShopViewModel.Category.CLTHES)}">
+                    app:selected="@{viewModel.currCategory == LivelyShopViewModel.Category.CLTHES}"
+                    android:onClick="@{() -> viewModel.setCurrCategory(LivelyShopViewModel.Category.CLTHES)}">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -234,8 +234,8 @@
                     app:layout_constraintTop_toBottomOf="@id/drawer_title_card_view"
                     app:layout_constraintLeft_toRightOf="@id/clthes_card_view"
                     app:layout_constraintRight_toRightOf="parent"
-                    app:selected="@{viewModel.currCategory == DrawerShopViewModel.Category.COVERALL}"
-                    android:onClick="@{() -> viewModel.setCurrCategory(DrawerShopViewModel.Category.COVERALL)}">
+                    app:selected="@{viewModel.currCategory == LivelyShopViewModel.Category.COVERALL}"
+                    android:onClick="@{() -> viewModel.setCurrCategory(LivelyShopViewModel.Category.COVERALL)}">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -278,8 +278,8 @@
                     app:layout_constraintTop_toBottomOf="@id/clthes_card_view"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toLeftOf="@id/yacht_card_view"
-                    app:selected="@{viewModel.currCategory == DrawerShopViewModel.Category.CAR}"
-                    android:onClick="@{() -> viewModel.setCurrCategory(DrawerShopViewModel.Category.CAR)}">
+                    app:selected="@{viewModel.currCategory == LivelyShopViewModel.Category.CAR}"
+                    android:onClick="@{() -> viewModel.setCurrCategory(LivelyShopViewModel.Category.CAR)}">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -323,8 +323,8 @@
                     app:layout_constraintTop_toBottomOf="@id/coverall_card_view"
                     app:layout_constraintLeft_toRightOf="@id/car_card_view"
                     app:layout_constraintRight_toRightOf="parent"
-                    app:selected="@{viewModel.currCategory == DrawerShopViewModel.Category.YACHT}"
-                    android:onClick="@{() -> viewModel.setCurrCategory(DrawerShopViewModel.Category.YACHT)}">
+                    app:selected="@{viewModel.currCategory == LivelyShopViewModel.Category.YACHT}"
+                    android:onClick="@{() -> viewModel.setCurrCategory(LivelyShopViewModel.Category.YACHT)}">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -367,8 +367,8 @@
                     app:layout_constraintTop_toBottomOf="@id/car_card_view"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toLeftOf="@id/food_card_view"
-                    app:selected="@{viewModel.currCategory == DrawerShopViewModel.Category.WATCH}"
-                    android:onClick="@{() -> viewModel.setCurrCategory(DrawerShopViewModel.Category.WATCH)}">
+                    app:selected="@{viewModel.currCategory == LivelyShopViewModel.Category.WATCH}"
+                    android:onClick="@{() -> viewModel.setCurrCategory(LivelyShopViewModel.Category.WATCH)}">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -412,8 +412,8 @@
                     app:layout_constraintTop_toBottomOf="@id/yacht_card_view"
                     app:layout_constraintLeft_toRightOf="@id/watch_card_view"
                     app:layout_constraintRight_toRightOf="parent"
-                    app:selected="@{viewModel.currCategory == DrawerShopViewModel.Category.FOOD}"
-                    android:onClick="@{() -> viewModel.setCurrCategory(DrawerShopViewModel.Category.FOOD)}">
+                    app:selected="@{viewModel.currCategory == LivelyShopViewModel.Category.FOOD}"
+                    android:onClick="@{() -> viewModel.setCurrCategory(LivelyShopViewModel.Category.FOOD)}">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -456,8 +456,8 @@
                     app:layout_constraintTop_toBottomOf="@id/watch_card_view"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toLeftOf="@id/wheel_card_view"
-                    app:selected="@{viewModel.currCategory == DrawerShopViewModel.Category.DLING}"
-                    android:onClick="@{() -> viewModel.setCurrCategory(DrawerShopViewModel.Category.DLING)}">
+                    app:selected="@{viewModel.currCategory == LivelyShopViewModel.Category.DLING}"
+                    android:onClick="@{() -> viewModel.setCurrCategory(LivelyShopViewModel.Category.DLING)}">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -501,8 +501,8 @@
                     app:layout_constraintTop_toBottomOf="@id/food_card_view"
                     app:layout_constraintLeft_toRightOf="@id/dling_card_view"
                     app:layout_constraintRight_toRightOf="parent"
-                    app:selected="@{viewModel.currCategory == DrawerShopViewModel.Category.WHEEL}"
-                    android:onClick="@{() -> viewModel.setCurrCategory(DrawerShopViewModel.Category.WHEEL)}">
+                    app:selected="@{viewModel.currCategory == LivelyShopViewModel.Category.WHEEL}"
+                    android:onClick="@{() -> viewModel.setCurrCategory(LivelyShopViewModel.Category.WHEEL)}">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -545,8 +545,8 @@
                     app:layout_constraintTop_toBottomOf="@id/dling_card_view"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toLeftOf="@id/gun_card_view"
-                    app:selected="@{viewModel.currCategory == DrawerShopViewModel.Category.USED}"
-                    android:onClick="@{() -> viewModel.setCurrCategory(DrawerShopViewModel.Category.USED)}">
+                    app:selected="@{viewModel.currCategory == LivelyShopViewModel.Category.USED}"
+                    android:onClick="@{() -> viewModel.setCurrCategory(LivelyShopViewModel.Category.USED)}">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -590,8 +590,8 @@
                     app:layout_constraintTop_toBottomOf="@id/wheel_card_view"
                     app:layout_constraintLeft_toRightOf="@id/used_card_view"
                     app:layout_constraintRight_toRightOf="parent"
-                    app:selected="@{viewModel.currCategory == DrawerShopViewModel.Category.GUN}"
-                    android:onClick="@{() -> viewModel.setCurrCategory(DrawerShopViewModel.Category.GUN)}">
+                    app:selected="@{viewModel.currCategory == LivelyShopViewModel.Category.GUN}"
+                    android:onClick="@{() -> viewModel.setCurrCategory(LivelyShopViewModel.Category.GUN)}">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

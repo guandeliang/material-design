@@ -64,15 +64,9 @@
         <item name="android:textColor">?android:textColorPrimary</item>
     </style>
 
-    <!--很多地方都会用到的圆形-->
     <style name="ShapeAppearanceOverlay.MaterialBook.Round" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
-    </style>
-
-    <style name="ShapeAppearanceOverlay.MaterialBook.Round.Small" parent="">
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">4dp</item>
     </style>
 
     <style name="ShapeAppearanceOverlay.MaterialBook.Round.Medium" parent="">
@@ -80,10 +74,20 @@
         <item name="cornerSize">24dp</item>
     </style>
 
-    <!--很多地方都会用到的菱形-->
+    <style name="ShapeAppearanceOverlay.MaterialBook.Round.Small" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">4dp</item>
+    </style>
+
+
     <style name="ShapeAppearanceOverlay.MaterialBook.Diamond" parent="">
         <item name="cornerFamily">cut</item>
         <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MaterialBook.Backdrop.RoundCorner" parent="">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerSizeTopLeft">56dp</item>
     </style>
 
 

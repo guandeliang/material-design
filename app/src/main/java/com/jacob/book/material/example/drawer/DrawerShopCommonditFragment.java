@@ -22,8 +22,9 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import com.chad.library.BR;
 import com.jacob.book.JsonUtils;
 import com.jacob.book.material.R;
+import com.jacob.book.material.base.LivelyShopViewModel;
 import com.jacob.book.material.databinding.DrawerShopCommonditFragmentBinding;
-import com.jacob.book.material.example.adapter.DrawerCommoditAdapter;
+import com.jacob.book.material.example.adapter.LivelyCommoditAdapter;
 import com.jacob.book.material.example.model.Commodit;
 
 import java.util.ArrayList;
@@ -31,8 +32,8 @@ import java.util.List;
 
 public class DrawerShopCommonditFragment extends Fragment implements LifecycleObserver {
     private DrawerShopCommonditFragmentBinding binding;
-    private DrawerShopViewModel viewModel;
-    private DrawerCommoditAdapter adapter;
+    private LivelyShopViewModel viewModel;
+    private LivelyCommoditAdapter adapter;
 
     public DrawerShopCommonditFragment(){
         this.getLifecycle().addObserver(this);
@@ -41,7 +42,7 @@ public class DrawerShopCommonditFragment extends Fragment implements LifecycleOb
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.drawer_shop_commondit_fragment, container, false);
-        viewModel = new ViewModelProvider(getActivity()).get(DrawerShopViewModel.class);
+        viewModel = new ViewModelProvider(getActivity()).get(LivelyShopViewModel.class);
         viewModel.addOnPropertyChangedCallback(new ViewModelPropertyChangedCallback());
 
 
@@ -58,10 +59,10 @@ public class DrawerShopCommonditFragment extends Fragment implements LifecycleOb
         int smallPadding = getResources().getDimensionPixelSize(R.dimen.dp_4)*4;
         DrawerShopItemDecoration decoration = new DrawerShopItemDecoration(largePadding, smallPadding);
         binding.recyclerView.addItemDecoration(decoration);
-        adapter = new DrawerCommoditAdapter(getContext(), new ArrayList<>());
+        adapter = new LivelyCommoditAdapter(getContext(), new ArrayList<>());
         binding.recyclerView.setAdapter(adapter);
 
-        viewModel.setCurrCategory(DrawerShopViewModel.Category.CLTHES);
+        viewModel.setCurrCategory(LivelyShopViewModel.Category.CLTHES);
 
         return binding.getRoot();
     }
@@ -72,7 +73,7 @@ public class DrawerShopCommonditFragment extends Fragment implements LifecycleOb
             if(propertyId != BR.currCategory){
                 return;
             }
-            DrawerShopViewModel.Category currCategory = viewModel.getCurrCategory();
+            LivelyShopViewModel.Category currCategory = viewModel.getCurrCategory();
             List<Commodit> commoditList = getCommoditList(currCategory.getId());
             if(adapter != null){
                 adapter.setDataList(commoditList);

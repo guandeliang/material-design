@@ -1,11 +1,11 @@
 /*
  * Create by Jacob G(GuanDeLiang) on 2020.
  * Copyright (c) 2020 . All rights reserved.
- * Last modified 20-3-3 下午8:57
+ * Last modified 20-3-9 下午7:16
  *
  */
 
-package com.jacob.book.material.example.drawer;
+package com.jacob.book.material.base;
 
 
 import android.util.Log;
@@ -18,7 +18,7 @@ import androidx.lifecycle.ViewModel;
 import com.jacob.book.material.BR;
 import com.jacob.book.temp.TempConstant;
 
-public class DrawerShopViewModel extends ViewModel implements Observable {
+public class LivelyShopViewModel extends ViewModel implements Observable {
     public enum Category{
         CAR(101, "草原名车"),
         CLTHES(102, "品质正装"),

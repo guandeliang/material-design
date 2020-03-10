@@ -21,23 +21,20 @@ import androidx.navigation.fragment.NavHostFragment;
 import com.chad.library.BR;
 import com.jacob.book.ViewAnimation;
 import com.jacob.book.material.R;
+import com.jacob.book.material.base.LivelyShopViewModel;
 import com.jacob.book.material.databinding.DrawerShopActivityBinding;
-import com.jacob.book.material.example.model.Commodit;
-
-import java.util.List;
 
 public class DrawerShopActivity extends AppCompatActivity {
     private DrawerShopActivityBinding binding;
     private NavController navController;
-    private DrawerShopViewModel viewModel;
+    private LivelyShopViewModel viewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.drawer_shop_activity);
         binding.setLifecycleOwner(this);
-
-        viewModel = new ViewModelProvider(this).get(DrawerShopViewModel.class);
+        viewModel = new ViewModelProvider(this).get(LivelyShopViewModel.class);
         viewModel.addOnPropertyChangedCallback(new ViewModelPropertyChangedCallback());
         binding.setViewModel(viewModel);
         binding.setActivity(this);
@@ -61,7 +58,7 @@ public class DrawerShopActivity extends AppCompatActivity {
                 return;
             }
             closeDrawer();
-            DrawerShopViewModel.Category currCategory = viewModel.getCurrCategory();
+            LivelyShopViewModel.Category currCategory = viewModel.getCurrCategory();
             binding.categoryTitleTextView.setText(currCategory.getTitle());
             ViewAnimation.fadeIn(binding.fragmentContainerView);
         }
