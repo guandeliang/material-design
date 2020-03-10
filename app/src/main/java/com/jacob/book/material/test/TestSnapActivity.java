@@ -8,6 +8,9 @@
 package com.jacob.book.material.test;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -20,6 +23,7 @@ import com.jacob.book.material.databinding.TestSnapActivityBinding;
 import com.jacob.book.material.example.model.ExampleImage;
 import com.jacob.book.material.widgets.HorizontalEdgeSnapHelper;
 import com.jacob.book.material.widgets.LinearLayoutHorizontalItemDecoration;
+import com.jacob.book.temp.TempConstant;
 
 import java.util.List;
 
@@ -31,25 +35,39 @@ public class TestSnapActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.test_snap_activity);
+        /*
+        binding.rootButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d(TempConstant.LOG_TAG, "000000000000000000000000000000000000000000000000");
+            }
+        });
 
+        binding.oneButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d(TempConstant.LOG_TAG, "11111111111111111111111111111111111111111111111");
+            }
+        });
 
-
-
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        binding.recyclerView.setLayoutManager(layoutManager);
-        LinearLayoutHorizontalItemDecoration decoration = new LinearLayoutHorizontalItemDecoration(0, 0, 0, 0, WidgetsUtils.dpToPx(this, 16));
-        binding.recyclerView.addItemDecoration(decoration);
-
-        HorizontalEdgeSnapHelper snapHelper = new HorizontalEdgeSnapHelper();
-        snapHelper.attachToRecyclerView(binding.recyclerView);
-
-        List<ExampleImage> imageList = JsonUtils.loadExampleImage(getResources());
-
-        TestSnapAdapter adapter = new TestSnapAdapter(imageList, 3, WidgetsUtils.dpToPx(this, 16));
-
-
-        binding.recyclerView.setAdapter(adapter);
+         */
     }
 
 
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        Log.i(TempConstant.LOG_TAG, "dispatchTouchEvent    action:" + MotionEvent.actionToString(ev.getAction()));
+        boolean superReturn = super.dispatchTouchEvent(ev);
+        //Log.d(TempConstant.LOG_TAG, "dispatchTouchEvent    action:" + MotionEvent.actionToString(ev.getAction()) + " " + superReturn);
+        return superReturn;
+    }
+/*
+    @Override
+    public boolean onTouchEvent(MotionEvent ev) {
+        Log.i(TempConstant.LOG_TAG, "onTouchEvent          action:" + MotionEvent.actionToString(ev.getAction()));
+        boolean superReturn = super.onTouchEvent(ev);
+        Log.d(TempConstant.LOG_TAG, "onTouchEvent          action:" + MotionEvent.actionToString(ev.getAction()) + " " + superReturn);
+        return superReturn;
+    }
+*/
 }

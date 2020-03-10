@@ -8,6 +8,7 @@
 package com.jacob.book.material.example.backdrop;
 
 import android.os.Bundle;
+import android.view.View;
 import android.view.ViewTreeObserver;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -45,7 +46,7 @@ public class BackdropIntroActivity extends AppCompatActivity {
         viewModel.addOnPropertyChangedCallback(new ViewModelPropertyChangedCallback());
         binding.setViewModel(viewModel);
         binding.setActivity(this);
-
+        binding.dropContentEventHostFrameLayout.setVisibility(View.GONE);
 
         isShowBack = false;
         backHeight = 0;
@@ -76,7 +77,6 @@ public class BackdropIntroActivity extends AppCompatActivity {
         binding.recyclerView.addItemDecoration(decoration);
         adapter = new LivelyCommoditAdapter(this, new ArrayList<>());
         binding.recyclerView.setAdapter(adapter);
-
         viewModel.setCurrCategory(LivelyShopViewModel.Category.CLTHES);
 
     }
@@ -114,12 +114,16 @@ public class BackdropIntroActivity extends AppCompatActivity {
             isShowBack = true;
             binding.menuImageView.setImageResource(R.drawable.icon_close);
             binding.titleTextView.setText("选择品类");
-            binding.dropLinearLayout.animate().translationY(backHeight).setDuration(300);
+            binding.switchImageView.setImageResource(R.drawable.icon_keyboard_arrow_up);
+            binding.dropContentEventHostFrameLayout.setVisibility(View.VISIBLE);
+            binding.dropEventHostFrameLayout.animate().translationY(backHeight).setDuration(300);
         }else{
             isShowBack = false;
             binding.menuImageView.setImageResource(R.drawable.backdrop_branded_menu);
             binding.titleTextView.setText("杉杉奥特莱斯");
-            binding.dropLinearLayout.animate().translationY(0).setDuration(300);
+            binding.switchImageView.setImageResource(R.drawable.icon_keyboard_arrow_down);
+            binding.dropContentEventHostFrameLayout.setVisibility(View.GONE);
+            binding.dropEventHostFrameLayout.animate().translationY(0).setDuration(300);
         }
     }
 

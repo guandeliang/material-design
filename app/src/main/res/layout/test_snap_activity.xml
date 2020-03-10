@@ -14,19 +14,54 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraint_layout"
+
+    <com.jacob.book.material.widgets.EventHostFrameLayout
+        android:id="@+id/root_layout"
+        android:tag="root_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp">
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_view"
-            android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.jacob.book.material.widgets.EventHostFrameLayout
+            android:id="@+id/left_layout"
+            android:tag="left_layout"
+            android:layout_width="100dp"
             android:layout_height="match_parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_gravity="left"
+            android:background="#FF0000">
+        </com.jacob.book.material.widgets.EventHostFrameLayout>
+
+        <com.jacob.book.material.widgets.EventHostFrameLayout
+            android:id="@+id/right_layout"
+            android:tag="left_layout"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="#00FF00">
+        </com.jacob.book.material.widgets.EventHostFrameLayout>
+
+        <com.jacob.book.material.widgets.EventHostFrameLayout
+            android:id="@+id/center_layout"
+            android:tag="center_layout"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_gravity="center_vertical"
+            android:background="#0000FF">
+
+            <com.jacob.book.material.widgets.EventHostFrameLayout
+                android:id="@+id/center_child_layout"
+                android:tag="center_child_layout"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="20dp"
+                android:layout_gravity="center_vertical"
+                android:background="#FF0000">
+
+            </com.jacob.book.material.widgets.EventHostFrameLayout>
+
+        </com.jacob.book.material.widgets.EventHostFrameLayout>
+
+
+    </com.jacob.book.material.widgets.EventHostFrameLayout>
+
 </layout>
