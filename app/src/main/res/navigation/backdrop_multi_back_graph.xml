@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-3-8 下午2:09
+  ~
+  -->
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_app_bar_base_graph"
+    app:startDestination="@id/category">
+
+    <fragment
+        android:id="@+id/category"
+        android:name="com.jacob.book.material.example.backdrop.BackdropMultiBackCategoryFragment"
+        android:label="category"
+        tools:layout="@layout/backdrop_multi_back_category_fragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/filter"
+        android:name="com.jacob.book.material.example.backdrop.BackdropMultiBackFilterFragment"
+        android:label="filter"
+        tools:layout="@layout/backdrop_multi_back_filter_fragment">
+    </fragment>
+
+</navigation>

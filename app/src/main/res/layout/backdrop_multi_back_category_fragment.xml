@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-19 上午9:41
+  ~
+  -->
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:theme="@style/Theme.MaterialBook.SingleColor.Dark"
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/v_guide_line"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.50"/>
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guide_line_001"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="64dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:text="女士裙装"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/h_guide_line_001"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/transparent_white_60"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/h_guide_line_001"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guide_line_002"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="112dp"/>
+
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="套装裙"
+                android:button="@null"
+                android:textAlignment="textStart"
+                android:drawableEnd="@drawable/check_box_right_selecter"
+                android:layout_marginRight="24dp"
+                app:layout_constraintRight_toLeftOf="@id/v_guide_line"
+                app:layout_constraintBottom_toTopOf="@id/h_guide_line_002"/>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="半身裙"
+                android:button="@null"
+                android:textAlignment="textEnd"
+                android:drawableStart="@drawable/check_box_left_selecter"
+                android:layout_marginLeft="24dp"
+                app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+                app:layout_constraintBottom_toTopOf="@id/h_guide_line_002"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guide_line_003"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="160dp"/>
+
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="牛仔裙"
+                android:button="@null"
+                android:textAlignment="textStart"
+                android:drawableEnd="@drawable/check_box_right_selecter"
+                android:layout_marginRight="24dp"
+                app:layout_constraintRight_toLeftOf="@id/v_guide_line"
+                app:layout_constraintBottom_toTopOf="@id/h_guide_line_003"/>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="蕾丝连衣裙"
+                android:button="@null"
+                android:textAlignment="textEnd"
+                android:drawableStart="@drawable/check_box_left_selecter"
+                android:layout_marginLeft="24dp"
+                app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+                app:layout_constraintBottom_toTopOf="@id/h_guide_line_003"/>
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guide_line_004"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="208dp"/>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="沙滩裙"
+                android:button="@null"
+                android:textAlignment="textStart"
+                android:drawableEnd="@drawable/check_box_right_selecter"
+                android:layout_marginRight="24dp"
+                app:layout_constraintRight_toLeftOf="@id/v_guide_line"
+                app:layout_constraintBottom_toTopOf="@id/h_guide_line_004"/>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="雪纺连衣裙"
+                android:button="@null"
+                android:textAlignment="textEnd"
+                android:drawableStart="@drawable/check_box_left_selecter"
+                android:layout_marginLeft="24dp"
+                app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+                app:layout_constraintBottom_toTopOf="@id/h_guide_line_004"/>
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guide_line_005"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="256dp"/>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="真丝连衣裙"
+                android:button="@null"
+                android:textAlignment="textStart"
+                android:drawableEnd="@drawable/check_box_right_selecter"
+                android:layout_marginRight="24dp"
+                app:layout_constraintRight_toLeftOf="@id/v_guide_line"
+                app:layout_constraintBottom_toTopOf="@id/h_guide_line_005"/>
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guide_line_006"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="320dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:text="女士上装"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/h_guide_line_006"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/transparent_white_60"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/h_guide_line_006"/>
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guide_line_007"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="368dp"/>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="T恤"
+                android:button="@null"
+                android:textAlignment="textStart"
+                android:drawableEnd="@drawable/check_box_right_selecter"
+                android:layout_marginRight="24dp"
+                app:layout_constraintRight_toLeftOf="@id/v_guide_line"
+                app:layout_constraintBottom_toTopOf="@id/h_guide_line_007"/>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="衬衫"
+                android:button="@null"
+                android:textAlignment="textEnd"
+                android:drawableStart="@drawable/check_box_left_selecter"
+                android:layout_marginLeft="24dp"
+                app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+                app:layout_constraintBottom_toTopOf="@id/h_guide_line_007"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guide_line_008"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="416dp"/>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="针织衫"
+                android:button="@null"
+                android:textAlignment="textStart"
+                android:drawableEnd="@drawable/check_box_right_selecter"
+                android:layout_marginRight="24dp"
+                app:layout_constraintRight_toLeftOf="@id/v_guide_line"
+                app:layout_constraintBottom_toTopOf="@id/h_guide_line_008"/>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="风衣"
+                android:button="@null"
+                android:textAlignment="textEnd"
+                android:drawableStart="@drawable/check_box_left_selecter"
+                android:layout_marginLeft="24dp"
+                app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+                app:layout_constraintBottom_toTopOf="@id/h_guide_line_008"/>
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guide_line_009"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="464dp"/>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="雪纺衫"
+                android:button="@null"
+                android:textAlignment="textStart"
+                android:drawableEnd="@drawable/check_box_right_selecter"
+                android:layout_marginRight="24dp"
+                app:layout_constraintRight_toLeftOf="@id/v_guide_line"
+                app:layout_constraintBottom_toTopOf="@id/h_guide_line_009"/>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="马甲"
+                android:button="@null"
+                android:textAlignment="textEnd"
+                android:drawableStart="@drawable/check_box_left_selecter"
+                android:layout_marginLeft="24dp"
+                app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+                app:layout_constraintBottom_toTopOf="@id/h_guide_line_009"/>
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guide_line_010"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="512dp"/>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="吊带背心"
+                android:button="@null"
+                android:textAlignment="textStart"
+                android:drawableEnd="@drawable/check_box_right_selecter"
+                android:layout_marginRight="24dp"
+                app:layout_constraintRight_toLeftOf="@id/v_guide_line"
+                app:layout_constraintBottom_toTopOf="@id/h_guide_line_010"/>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="小西装"
+                android:button="@null"
+                android:textAlignment="textEnd"
+                android:drawableStart="@drawable/check_box_left_selecter"
+                android:layout_marginLeft="24dp"
+                app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+                app:layout_constraintBottom_toTopOf="@id/h_guide_line_010"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guide_line_011"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="560dp"/>
+
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="牛仔外套"
+                android:button="@null"
+                android:textAlignment="textStart"
+                android:drawableEnd="@drawable/check_box_right_selecter"
+                android:layout_marginRight="24dp"
+                app:layout_constraintRight_toLeftOf="@id/v_guide_line"
+                app:layout_constraintBottom_toTopOf="@id/h_guide_line_011"/>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="棒球服"
+                android:button="@null"
+                android:textAlignment="textEnd"
+                android:drawableStart="@drawable/check_box_left_selecter"
+                android:layout_marginLeft="24dp"
+                app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+                app:layout_constraintBottom_toTopOf="@id/h_guide_line_011"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guide_line_012"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="624dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:text="女士下装"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/h_guide_line_012"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/transparent_white_60"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/h_guide_line_012"/>
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guide_line_013"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="672dp"/>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="牛仔裤"
+                android:button="@null"
+                android:textAlignment="textStart"
+                android:drawableEnd="@drawable/check_box_right_selecter"
+                android:layout_marginRight="24dp"
+                app:layout_constraintRight_toLeftOf="@id/v_guide_line"
+                app:layout_constraintBottom_toTopOf="@id/h_guide_line_013"/>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="阔腿裤"
+                android:button="@null"
+                android:textAlignment="textEnd"
+                android:drawableStart="@drawable/check_box_left_selecter"
+                android:layout_marginLeft="24dp"
+                app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+                app:layout_constraintBottom_toTopOf="@id/h_guide_line_013"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guide_line_014"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="720dp"/>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="休闲裤"
+                android:button="@null"
+                android:textAlignment="textStart"
+                android:drawableEnd="@drawable/check_box_right_selecter"
+                android:layout_marginRight="24dp"
+                app:layout_constraintRight_toLeftOf="@id/v_guide_line"
+                app:layout_constraintBottom_toTopOf="@id/h_guide_line_014"/>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="哈伦裤"
+                android:button="@null"
+                android:textAlignment="textEnd"
+                android:drawableStart="@drawable/check_box_left_selecter"
+                android:layout_marginLeft="24dp"
+                app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+                app:layout_constraintBottom_toTopOf="@id/h_guide_line_014"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guide_line_015"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="768dp"/>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="九分裤"
+                android:button="@null"
+                android:textAlignment="textStart"
+                android:drawableEnd="@drawable/check_box_right_selecter"
+                android:layout_marginRight="24dp"
+                app:layout_constraintRight_toLeftOf="@id/v_guide_line"
+                app:layout_constraintBottom_toTopOf="@id/h_guide_line_015"/>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="小脚裤"
+                android:button="@null"
+                android:textAlignment="textEnd"
+                android:drawableStart="@drawable/check_box_left_selecter"
+                android:layout_marginLeft="24dp"
+                app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+                app:layout_constraintBottom_toTopOf="@id/h_guide_line_015"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>

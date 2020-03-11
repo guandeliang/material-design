@@ -198,6 +198,10 @@
             android:theme="@style/Theme.MaterialBook.SingleColor.Light"
             android:screenOrientation="portrait"/>
 
+        <activity
+            android:name=".example.backdrop.BackdropMultiBackActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
+            android:screenOrientation="portrait"/>
 
 
 

@@ -434,14 +434,23 @@
         <item name="scrimBackground">@color/mtrl_scrim_color</item>
 
         <!--文字颜色-->
-        <item name="android:textColorPrimary">?attr/colorOnBackground</item><!--H5、H6、S1、S2、B1、B2、BUTTON、OVERLINE文字颜色-->
-        <item name="android:textColorSecondary">@color/gray_500</item><!--H1、H2、H3、H4、CAPTION文字颜色-->
+        <!--H5、H6、S1、S2、B1、B2、BUTTON、OVERLINE文字颜色-->
+        <item name="android:textColorPrimary">?attr/colorOnBackground</item>
+        <!--H1、H2、H3、H4、CAPTION文字颜色-->
+        <item name="android:textColorSecondary">@color/gray_500</item>
 
         <!--元件风格-->
+        <item name="checkboxStyle">@style/Widget.MaterialBook.SingleColor.Dark.CheckBox</item>
+
         <item name="appBarLayoutStyle">@style/Widget.MaterialBook.SingleColor.Dark.ToolbarLayout</item>
         <item name="toolbarStyle">@style/Widget.MaterialBook.SingleColor.Dark.Toolbar</item>
         <item name="tabStyle">@style/Widget.MaterialBook.SingleColor.Dark.TabLayout</item>
         <item name="floatingActionButtonStyle">@style/Widget.MaterialBook.SingleColor.Dark.FloatingActionButton</item>
+    </style>
+
+    <style name="Widget.MaterialBook.SingleColor.Dark.CheckBox" parent="Widget.MaterialComponents.CompoundButton.CheckBox">
+        <item name="android:textAppearance">?attr/textAppearanceButton</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
     </style>
 
     <style name="Widget.MaterialBook.SingleColor.Dark.ToolbarLayout" parent="Widget.MaterialComponents.AppBarLayout.Surface">

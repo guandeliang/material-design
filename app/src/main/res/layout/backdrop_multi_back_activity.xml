@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-3-10 下午10:09
+  ~
+  -->
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="activity" type="com.jacob.book.material.example.backdrop.BackdropMultiBackActivity" />
+
+
+    </data>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/motion_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorPrimary">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:elevation="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/category_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:src="@drawable/backdrop_branded_menu"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:tint="@color/gray_300"
+                    android:clickable="true"
+                    android:background="@drawable/click_ripple_round"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:tag="category"
+                    android:onClick="@{(view) -> activity.onBackSwitchButtonClick(view)}"/>
+
+                <TextView
+                    android:id="@+id/title_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textColor="@color/gray_300"
+                    android:text="杉杉奥特莱斯"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/category_image_view"
+                    app:layout_constraintRight_toLeftOf="@id/search_image_view"/>
+
+                <ImageView
+                    android:id="@+id/search_image_view"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="12dp"
+                    android:src="@drawable/icon_search"
+                    android:tint="@color/gray_300"
+                    android:clickable="true"
+                    android:background="@drawable/click_ripple_round"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/filter_image_view"/>
+
+                <ImageView
+                    android:id="@+id/filter_image_view"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="16dp"
+                    android:src="@drawable/icon_filter"
+                    android:tint="@color/gray_300"
+                    android:clickable="true"
+                    android:background="@drawable/click_ripple_round"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:tag="filter"
+                    android:onClick="@{(view) -> activity.onBackSwitchButtonClick(view)}"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragment_container_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="56dp"
+            android:layout_marginBottom="56dp"/>
+
+
+
+
+
+
+
+        <com.jacob.book.material.widgets.FabBottomNavigationView
+            app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+            android:id="@+id/bottom_navigation_view"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_gravity="bottom"
+            app:menu="@menu/bottom_navigation_fab_menu"
+            app:itemIconSize="18dp"
+            app:labelVisibilityMode="labeled"
+            app:fab_size="56dp"
+            app:fab_cradle_rounded_corner_radius="5dp"
+            app:fab_cradle_margin="5dp"
+            app:fab_cradle_vertical_offset="0dp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_anchorGravity="fill_vertical|center_horizontal"
+            app:fabCustomSize="56dp"
+            app:layout_anchor="@id/bottom_navigation_view"
+            android:src="@drawable/icon_favorite_border"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</layout>

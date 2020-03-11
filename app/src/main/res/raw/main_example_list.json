@@ -222,9 +222,14 @@
         "path":"com.jacob.book.material.example.backdrop.BackdropIntroActivity"
       },
       {
+        "id":10601020,
+        "title":"带有复杂背景层的Backdrop",
+        "path":"com.jacob.book.material.example.backdrop.BackdropMultiBackActivity"
+      },
+      {
         "id":10601010,
-        "title":"基本演示，使用MotionLayout再实现一次上面的",
-        "path":"com.jacob.book.material.example.drawer.DrawerDayNightDefaultActivity"
+        "title":"完成样板项目CRANE",
+        "path":"https://material.io/design/material-studies/crane.html#motion"
       },
       {
         "id":10601010,

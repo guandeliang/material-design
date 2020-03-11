@@ -24,7 +24,7 @@
         android:textAlignment="center"
         android:minWidth="24dp"
         android:textAppearance="?attr/textAppearanceCaption"
-        android:background="@drawable/budge__background"
+        android:background="@drawable/budge_background"
         android:text="99"
         android:lines="1"
         android:maxLines="1"

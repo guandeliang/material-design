@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-3-11 上午9:38
+  ~
+  -->
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="fragment" type="com.jacob.book.material.example.backdrop.BackdropMultiBackFilterFragment" />
+
+    </data>
+
+        <androidx.core.widget.NestedScrollView
+            android:theme="@style/Theme.MaterialBook.SingleColor.Dark"
+            android:id="@+id/nested_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/h_guide_line_001"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="64dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:text="尺码"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/h_guide_line_001"/>
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/h_guide_line_002"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="128dp"/>
+
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/size_check_box_one"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:gravity="center"
+                    android:text="XS"
+                    android:button="@null"
+                    android:textAppearance="?attr/textAppearanceButton"
+                    android:background="@drawable/check_box_background_selecter"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/size_check_box_two"
+                    app:layout_constraintBottom_toTopOf="@id/h_guide_line_002"/>
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/size_check_box_two"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:text="S"
+                    android:button="@null"
+                    android:textAppearance="?attr/textAppearanceButton"
+                    android:background="@drawable/check_box_background_selecter"
+                    app:layout_constraintLeft_toRightOf="@id/size_check_box_one"
+                    app:layout_constraintRight_toLeftOf="@id/size_check_box_three"
+                    app:layout_constraintBottom_toTopOf="@id/h_guide_line_002"/>
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/size_check_box_three"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:text="M"
+                    android:button="@null"
+                    android:textAppearance="?attr/textAppearanceButton"
+                    android:background="@drawable/check_box_background_selecter"
+                    app:layout_constraintLeft_toRightOf="@id/size_check_box_two"
+                    app:layout_constraintRight_toLeftOf="@id/size_check_box_four"
+                    app:layout_constraintBottom_toTopOf="@id/h_guide_line_002"/>
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/size_check_box_four"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:text="L"
+                    android:button="@null"
+                    android:textAppearance="?attr/textAppearanceButton"
+                    android:background="@drawable/check_box_background_selecter"
+                    app:layout_constraintLeft_toRightOf="@id/size_check_box_three"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/h_guide_line_002"/>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/h_guide_line_003"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="192dp"/>
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/size_check_box_five"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:gravity="center"
+                    android:text="XL"
+                    android:button="@null"
+                    android:textAppearance="?attr/textAppearanceButton"
+                    android:background="@drawable/check_box_background_selecter"
+                    app:layout_constraintLeft_toLeftOf="@id/size_check_box_one"
+                    app:layout_constraintRight_toRightOf="@id/size_check_box_one"
+                    app:layout_constraintBottom_toTopOf="@id/h_guide_line_003"/>
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/size_check_box_siz"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:gravity="center"
+                    android:text="XXL"
+                    android:button="@null"
+                    android:textAppearance="?attr/textAppearanceButton"
+                    android:background="@drawable/check_box_background_selecter"
+                    app:layout_constraintLeft_toLeftOf="@id/size_check_box_two"
+                    app:layout_constraintRight_toRightOf="@id/size_check_box_two"
+                    app:layout_constraintBottom_toTopOf="@id/h_guide_line_003"/>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/h_guide_line_004"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="256dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:text="颜色"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/h_guide_line_004"/>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/h_guide_line_005"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="320dp"/>
+
+
+                <ImageView
+                    android:id="@+id/color_1_image_view"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/check_box_circle_selecter"
+                    android:tint="@color/material_color_orange"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/color_2_image_view"
+                    app:layout_constraintBottom_toTopOf="@id/h_guide_line_005"
+                    android:onClick="@{(view) -> fragment.onColorClick(view)}"/>
+
+
+                <ImageView
+                    android:id="@+id/color_2_image_view"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="16dp"
+                    android:tint="@color/material_color_blue"
+                    android:src="@drawable/check_box_circle_selecter"
+                    app:layout_constraintLeft_toRightOf="@id/color_1_image_view"
+                    app:layout_constraintRight_toLeftOf="@id/color_3_image_view"
+                    app:layout_constraintBottom_toTopOf="@id/h_guide_line_005"
+                    android:onClick="@{(view) -> fragment.onColorClick(view)}"/>
+
+                <ImageView
+                    android:id="@+id/color_3_image_view"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="16dp"
+                    android:tint="@color/material_color_blue_gray"
+                    android:src="@drawable/check_box_circle_selecter"
+                    app:layout_constraintLeft_toRightOf="@id/color_2_image_view"
+                    app:layout_constraintRight_toLeftOf="@id/color_4_image_view"
+                    app:layout_constraintBottom_toTopOf="@id/h_guide_line_005"
+                    android:onClick="@{(view) -> fragment.onColorClick(view)}"/>
+
+
+                <ImageView
+                    android:id="@+id/color_4_image_view"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="16dp"
+                    android:src="@drawable/check_box_circle_selecter"
+                    android:tint="@color/material_color_green"
+                    app:layout_constraintLeft_toRightOf="@id/color_3_image_view"
+                    app:layout_constraintRight_toLeftOf="@id/color_5_image_view"
+                    app:layout_constraintBottom_toTopOf="@id/h_guide_line_005"
+                    android:onClick="@{(view) -> fragment.onColorClick(view)}"/>
+
+
+                <ImageView
+                    android:id="@+id/color_5_image_view"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="16dp"
+                    android:src="@drawable/check_box_circle_selecter"
+                    android:tint="@color/material_color_light_green"
+                    app:layout_constraintLeft_toRightOf="@id/color_4_image_view"
+                    app:layout_constraintRight_toLeftOf="@id/color_6_image_view"
+                    app:layout_constraintBottom_toTopOf="@id/h_guide_line_005"
+                    android:onClick="@{(view) -> fragment.onColorClick(view)}"/>
+
+                <ImageView
+                    android:id="@+id/color_6_image_view"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="16dp"
+                    android:src="@drawable/check_box_circle_selecter"
+                    android:tint="@color/material_color_purple"
+                    app:layout_constraintLeft_toRightOf="@id/color_5_image_view"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/h_guide_line_005"
+                    android:onClick="@{(view) -> fragment.onColorClick(view)}"/>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/h_guide_line_006"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="384dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:text="价格范围"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/h_guide_line_006"/>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/h_guide_line_007"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="448dp"/>
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/price_check_box_one"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:gravity="center"
+                    android:text="100以下"
+                    android:button="@null"
+                    android:textAppearance="?attr/textAppearanceButton"
+                    android:background="@drawable/check_box_background_selecter"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/price_check_box_two"
+                    app:layout_constraintBottom_toTopOf="@id/h_guide_line_007"/>
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/price_check_box_two"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:text="100-500"
+                    android:button="@null"
+                    android:textAppearance="?attr/textAppearanceButton"
+                    android:background="@drawable/check_box_background_selecter"
+                    app:layout_constraintLeft_toRightOf="@id/price_check_box_one"
+                    app:layout_constraintRight_toLeftOf="@id/price_check_box_three"
+                    app:layout_constraintBottom_toTopOf="@id/h_guide_line_007"/>
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/price_check_box_three"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:text="500以上"
+                    android:button="@null"
+                    android:textAppearance="?attr/textAppearanceButton"
+                    android:background="@drawable/check_box_background_selecter"
+                    app:layout_constraintLeft_toRightOf="@id/price_check_box_two"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/h_guide_line_007"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+</layout>
