@@ -12,8 +12,6 @@
 
     <data>
         <variable name="activity" type="com.jacob.book.material.example.backdrop.BackdropMultiBackActivity" />
-
-
     </data>
 
 
@@ -51,7 +49,6 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    android:tag="category"
                     android:onClick="@{(view) -> activity.onBackSwitchButtonClick(view)}"/>
 
                 <TextView
@@ -64,19 +61,6 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/category_image_view"
-                    app:layout_constraintRight_toLeftOf="@id/search_image_view"/>
-
-                <ImageView
-                    android:id="@+id/search_image_view"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:padding="12dp"
-                    android:src="@drawable/icon_search"
-                    android:tint="@color/gray_300"
-                    android:clickable="true"
-                    android:background="@drawable/click_ripple_round"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintRight_toLeftOf="@id/filter_image_view"/>
 
                 <ImageView
@@ -90,23 +74,36 @@
                     android:background="@drawable/click_ripple_round"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/search_image_view"
+                    android:onClick="@{(view) -> activity.onBackSwitchButtonClick(view)}"/>
+
+                <ImageView
+                    android:id="@+id/search_image_view"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="12dp"
+                    android:src="@drawable/icon_search"
+                    android:tint="@color/gray_300"
+                    android:clickable="true"
+                    android:background="@drawable/click_ripple_round"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
-                    android:tag="filter"
                     android:onClick="@{(view) -> activity.onBackSwitchButtonClick(view)}"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/fragment_container_view"
+            android:id="@+id/back_fragment_container_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="56dp"
-            android:layout_marginBottom="56dp"/>
+            android:layout_marginTop="56dp"/>
 
-
-
-
-
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/drop_fragment_container_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="56dp"/>
 
 
         <com.jacob.book.material.widgets.FabBottomNavigationView

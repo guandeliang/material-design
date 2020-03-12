@@ -22,25 +22,70 @@
             android:layout_height="match_parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="16dp"
-                android:paddingRight="16dp">
+                android:paddingRight="16dp"
+                android:paddingBottom="16dp">
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/h_guide_line_000"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="64dp"/>
+
+                <Button
+                    android:id="@+id/clear_button"
+                    style="@style/Widget.MaterialBook.Button.Round.Outlined"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="重置"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/h_guide_line_000"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/ok_button"
+                    android:onClick="@{(view) -> fragment.onButtonClick(view)}"/>
+
+                <Button
+                    android:id="@+id/ok_button"
+                    style="@style/Widget.MaterialBook.Button.Round.Solid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="确定"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/h_guide_line_000"
+                    app:layout_constraintLeft_toRightOf="@id/clear_button"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:onClick="@{(view) -> fragment.onButtonClick(view)}"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="@color/transparent_white_15_16"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/h_guide_line_000"/>
 
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/h_guide_line_001"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:orientation="horizontal"
-                    app:layout_constraintGuide_begin="64dp"/>
+                    app:layout_constraintGuide_begin="128dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
                     android:text="尺码"
+                    android:layout_marginBottom="12dp"
                     app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintBottom_toTopOf="@id/h_guide_line_001"/>
+
 
 
                 <androidx.constraintlayout.widget.Guideline
@@ -48,7 +93,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:orientation="horizontal"
-                    app:layout_constraintGuide_begin="128dp"/>
+                    app:layout_constraintGuide_begin="180dp"/>
 
 
                 <com.google.android.material.checkbox.MaterialCheckBox
@@ -69,7 +114,7 @@
                     android:layout_width="0dp"
                     android:layout_height="36dp"
                     android:gravity="center"
-                    android:layout_marginLeft="16dp"
+                    android:layout_marginLeft="8dp"
                     android:text="S"
                     android:button="@null"
                     android:textAppearance="?attr/textAppearanceButton"
@@ -83,7 +128,7 @@
                     android:layout_width="0dp"
                     android:layout_height="36dp"
                     android:gravity="center"
-                    android:layout_marginLeft="16dp"
+                    android:layout_marginLeft="8dp"
                     android:text="M"
                     android:button="@null"
                     android:textAppearance="?attr/textAppearanceButton"
@@ -97,7 +142,7 @@
                     android:layout_width="0dp"
                     android:layout_height="36dp"
                     android:gravity="center"
-                    android:layout_marginLeft="16dp"
+                    android:layout_marginLeft="8dp"
                     android:text="L"
                     android:button="@null"
                     android:textAppearance="?attr/textAppearanceButton"
@@ -111,7 +156,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:orientation="horizontal"
-                    app:layout_constraintGuide_begin="192dp"/>
+                    app:layout_constraintGuide_begin="240dp"/>
 
                 <com.google.android.material.checkbox.MaterialCheckBox
                     android:id="@+id/size_check_box_five"
@@ -139,19 +184,30 @@
                     app:layout_constraintRight_toRightOf="@id/size_check_box_two"
                     app:layout_constraintBottom_toTopOf="@id/h_guide_line_003"/>
 
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="@color/transparent_white_15_16"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/h_guide_line_003"/>
+
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/h_guide_line_004"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:orientation="horizontal"
-                    app:layout_constraintGuide_begin="256dp"/>
+                    app:layout_constraintGuide_begin="320dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
                     android:text="颜色"
+                    android:layout_marginBottom="12dp"
                     app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintBottom_toTopOf="@id/h_guide_line_004"/>
 
                 <androidx.constraintlayout.widget.Guideline
@@ -159,7 +215,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:orientation="horizontal"
-                    app:layout_constraintGuide_begin="320dp"/>
+                    app:layout_constraintGuide_begin="368dp"/>
 
 
                 <ImageView
@@ -237,19 +293,30 @@
                     app:layout_constraintBottom_toTopOf="@id/h_guide_line_005"
                     android:onClick="@{(view) -> fragment.onColorClick(view)}"/>
 
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/transparent_white_15_16"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/h_guide_line_005"/>
+
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/h_guide_line_006"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:orientation="horizontal"
-                    app:layout_constraintGuide_begin="384dp"/>
+                    app:layout_constraintGuide_begin="448dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
                     android:text="价格范围"
+                    android:layout_marginBottom="12dp"
                     app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintBottom_toTopOf="@id/h_guide_line_006"/>
 
                 <androidx.constraintlayout.widget.Guideline
@@ -257,7 +324,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:orientation="horizontal"
-                    app:layout_constraintGuide_begin="448dp"/>
+                    app:layout_constraintGuide_begin="500dp"/>
 
                 <com.google.android.material.checkbox.MaterialCheckBox
                     android:id="@+id/price_check_box_one"

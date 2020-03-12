@@ -106,9 +106,25 @@
         <item name="iconPadding">0dp</item>
     </style>
 
+    <style name="ShapeAppearance.MaterialBook.Round" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="Widget.MaterialBook.Button.Round.Solid" parent="Widget.MaterialComponents.Button">
+        <item name="shapeAppearance">@style/ShapeAppearance.MaterialBook.Round</item>
+    </style>
+
+    <style name="Widget.MaterialBook.Button.Round.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="shapeAppearance">@style/ShapeAppearance.MaterialBook.Round</item>
+        <item name="strokeColor">?attr/colorPrimary</item>
+    </style>
+
+
     <style name="Widget.MaterialBook.AppBarLayout.Primary" parent="Widget.MaterialComponents.AppBarLayout.Primary">
     </style>
 
+    <!--Drawer item style-->
     <style name="ShapeAppearanceOverlay.MaterialBook.NavigationView" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSizeTopRight">16dp</item>

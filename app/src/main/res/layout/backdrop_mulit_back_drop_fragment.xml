@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-3-6 下午10:47
+  ~
+  -->
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <com.jacob.book.material.widgets.EventHostFrameLayout
+        android:id="@+id/drop_event_host_frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/drop_constraint_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="8dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/drop_title_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Backdrop.RoundTop"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/category_title_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="14dp"
+                        android:textAppearance="?attr/textAppearanceSubtitle2"
+                        android:textColor="@color/transparent_black_80"
+                        android:gravity="center_vertical"
+                        android:text="全部品类"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <LinearLayout
+                android:id="@+id/drop_content_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="?android:attr/colorBackground"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/drop_title_card_view"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/nested_scroll_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                        <include layout="@layout/include_random_image"
+                            android:id="@+id/include"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="16dp"/>
+
+                </androidx.core.widget.NestedScrollView>
+
+            </LinearLayout>
+
+            <com.jacob.book.material.widgets.EventHostFrameLayout
+                android:id="@+id/drop_content_event_host_frame_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/transparent_white_80"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="@id/drop_content_linear_layout"
+                app:layout_constraintLeft_toLeftOf="@id/drop_content_linear_layout"
+                app:layout_constraintRight_toRightOf="@id/drop_content_linear_layout"
+                app:layout_constraintBottom_toBottomOf="@id/drop_content_linear_layout"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+    </com.jacob.book.material.widgets.EventHostFrameLayout>
+
+
+
+
+</layout>

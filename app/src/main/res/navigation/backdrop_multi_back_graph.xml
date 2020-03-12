@@ -19,11 +19,19 @@
         tools:layout="@layout/backdrop_multi_back_category_fragment">
     </fragment>
 
+
     <fragment
         android:id="@+id/filter"
         android:name="com.jacob.book.material.example.backdrop.BackdropMultiBackFilterFragment"
         android:label="filter"
         tools:layout="@layout/backdrop_multi_back_filter_fragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/search"
+        android:name="com.jacob.book.material.example.backdrop.BackdropMultiBackSearchFragment"
+        android:label="search"
+        tools:layout="@layout/backdrop_multi_back_search_fragment">
     </fragment>
 
 </navigation>

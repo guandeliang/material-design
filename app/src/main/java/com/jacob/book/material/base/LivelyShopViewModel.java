@@ -67,7 +67,6 @@ public class LivelyShopViewModel extends ViewModel implements Observable {
     }
 
     public void setCurrCategory(Category currCategory) {
-        Log.d(TempConstant.LOG_TAG, "category = " + currCategory.getId());
         this.currCategory = currCategory;
         callbacks.notifyCallbacks(this, BR.currCategory, null);
     }
