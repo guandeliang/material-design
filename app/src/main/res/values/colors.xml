@@ -192,34 +192,4 @@
 
 
 
-    <!--根据功能命名的颜色-->
-    <!--
-    <color name="primary_color">@color/green_800_normal</color>
-    <color name="primary_light_color">@color/green_800_ligth</color>
-    <color name="primary_dark_color">@color/green_800_drak</color>
-    <color name="secondary_color">@color/amber_800_normal</color>
-    <color name="secondary_light_color">@color/amber_800_ligth</color>
-    <color name="secondary_dark_color">@color/amber_800_drak</color>
-
-
-    <color name="green_800_ligth">#60AD5E</color>
-    <color name="green_800_normal">#2E7D32</color>
-    <color name="green_800_drak">#005005</color>
-    <color name="amber_800_ligth">#FFC046</color>
-    <color name="amber_800_normal">#FF8F00</color>
-    <color name="amber_800_drak">#C56000</color>
-
-    <color name="p1">#004955</color>
-    <color name="p2">#0C7E98</color>
-    <color name="p3">#19A0C4</color>
-    <color name="p4">#4ABAD9</color>
-
-    <color name="s1">#D82F38</color>
-    <color name="s2">#F74046</color>
-    <color name="s3">#FF5A60</color>
-    <color name="s4">#F8A0A4</color>
-
-    <color name="E1">#FFA75A</color>
-    <color name="E2">#FFC079</color>
--->
 </resources>

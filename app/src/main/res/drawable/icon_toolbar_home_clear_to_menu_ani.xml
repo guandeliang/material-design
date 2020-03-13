@@ -10,10 +10,6 @@
     xmlns:aapt="http://schemas.android.com/aapt"
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="newApi">
-    <!--
-    https://developer.android.com/guide/topics/resources/animation-resource
-    https://developer.android.com/reference/android/graphics/drawable/AnimatedVectorDrawable.html?hl=en
-    -->
     <aapt:attr name="android:drawable">
         <vector
             android:width="24dp"

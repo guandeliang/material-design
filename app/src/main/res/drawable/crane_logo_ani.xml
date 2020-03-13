@@ -1,0 +1,178 @@
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 19-12-30 下午10:32
+  ~
+  -->
+
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="newApi">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:width="24dp"
+            android:height="32dp"
+            android:viewportWidth="240"
+            android:viewportHeight="320">
+            <path
+                android:name="mouth"
+                android:fillColor="#FFFFFFFF"
+                android:pathData="M165,125 L185,85 L195,90 L170,130 z"/>
+            <path
+                android:name="head"
+                android:fillColor="#FFE91E63"
+                android:pathData="M185,85 C200,60,225,60,235,85 L235,85 L195,90 z"/>
+            <path
+                android:name="chest"
+                android:fillColor="#FFFFFFFF"
+                android:pathData="M215,87 L235,85 C236,92,236,92,230,100 L203,140 C186,165,190,159,225,164 L273,169 L320,190 L205,180 C165,175,160,175,185,135 z"/>
+            <path
+                android:name="back"
+                android:fillColor="#FFFFFFFF"
+                android:pathData="M212,126 L223,110 C280,140,276,145,320,190 L273,169 C245,143,240,140,212,126 z"/>
+            <path
+                android:name="left_thigh"
+                android:fillColor="#FFFFFFFF"
+                android:pathData="M175,185 L227,133 L244,143 L196,190 z"/>
+            <path
+                android:name="left_shank"
+                android:fillColor="#FFFFFFFF"
+                android:pathData="M175,185 L196,190 L220,245 L200,245 z"/>
+            <path
+                android:name="right_thigh"
+                android:fillColor="#FFFFFFFF"
+                android:pathData="M225,182 L244,183 L240,195 L220,200 z"/>
+            <path
+                android:name="right_shank"
+                android:fillColor="#FFFFFFFF"
+                android:pathData="M220,200 L240,195 L290,230 L280,245 z"/>
+            <path
+                android:name="background"
+                android:fillColor="#FF880D4E"
+                android:pathData="M100,160 a20,20,0,0,1,40,0 v0 a20,20,0,0,1,-40,0 v-0 z M0,0 v320 h240 v-320 h-240 z"/>
+            <path
+                android:name="border"
+                android:fillColor="#FFFFFFFF"
+                android:pathData="M120,160 a0,0,0,0,1,0,0 v0 a0,0,0,0,1,-0,0 v-0 z M100,160 v0 a20,20,0,0,0,40,0 v-0 a20,20,0,0,0,-40,0 z"/>
+        </vector>
+    </aapt:attr>
+    <target android:name="mouth">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="pathData"
+                android:valueFrom =  "M165,125  L185,85  L195,90  L170,130  z"
+                android:valueTo   =  "M52, 117  L87, 87  L95, 95  L57, 124  z"
+                android:duration="1000"
+                android:valueType="pathType"/>
+        </aapt:attr>
+    </target>
+
+
+    <target android:name="head">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="pathData"
+                android:valueFrom =  "M185,85  C200,60,225,60,235,85  L235,85  L195,90  z"
+                android:valueTo   =  "M87, 87  C120,58,125,60,135,95  L95, 95  L87, 87  z"
+                android:duration="1000"
+                android:valueType="pathType" />
+        </aapt:attr>
+    </target>
+
+
+    <target android:name="chest">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="pathData"
+                android:valueFrom =  "M215,87  L235,85  C236,92,236,92,230,100  L203,140  C186,165,190,159,225,164  L273,169  L320,190  L205,180  C165,175,160,175,185,135  z"
+                android:valueTo   =  "M115,95  L135,95  C135,97,135,97,132,100  L86, 140  C70, 155,70, 155,90, 165  L160,192  L180,217  L70, 172  C51, 160,55, 150,65, 140  z"
+                android:duration="1000"
+                android:valueType="pathType" />
+        </aapt:attr>
+    </target>
+
+
+    <target android:name="back">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="pathData"
+                android:valueFrom =  "M212,126  L223,110  C280,140,276,145,320,190  L273,169  C245,143,240,140,212,126  z"
+                android:valueTo   =  "M91, 135  L103,122  C160,145,170,170,180,217  L160,192  C144,165,140,150,91, 135  z"
+                android:duration="1000"
+                android:valueType="pathType" />
+        </aapt:attr>
+    </target>
+
+
+    <target android:name="left_thigh">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="pathData"
+                android:valueFrom =  "M175,185  L227,133  L244,143  L196,190  z"
+                android:valueTo   =  "M100,200  L100,130  L115,130  L115,200  z"
+                android:duration="1000"
+                android:valueType="pathType" />
+        </aapt:attr>
+    </target>
+
+
+    <target android:name="left_shank">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="pathData"
+                android:valueFrom =  "M175,185  L196,190  L220,245  L200,245 z"
+                android:valueTo   =  "M100,200  L115,200  L115,285  L100,285 z"
+                android:duration="1000"
+                android:valueType="pathType" />
+        </aapt:attr>
+    </target>
+
+
+    <target android:name="right_thigh">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="pathData"
+                android:valueFrom =  "M225,182  L244,183  L240,195  L220,200  z"
+                android:valueTo   =  "M100,184  L115,190  L115,200  L100,200  z"
+                android:duration="1000"
+                android:valueType="pathType" />
+        </aapt:attr>
+    </target>
+
+
+    <target android:name="right_shank">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="pathData"
+                android:valueFrom =  "M220,200  L240,195  L290,230  L280,245  z"
+                android:valueTo   =  "M100,200  L115,200  L115,285  L100,285  z"
+                android:duration="1000"
+                android:valueType="pathType" />
+        </aapt:attr>
+    </target>
+
+
+    <target android:name="background">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="pathData"
+                android:valueFrom =  "M100,160  a20, 20, 0,0,1, 40,0  v0   a20, 20, 0,0,1,-40, 0  v-0   z  M0,0  v320  h240  v-320  h-240  z"
+                android:valueTo   =  "M20, 120  a100,100,0,0,1,200,0  v80  a100,100,0,0,1,-200,0  v-80  z  M0,0  v320  h240  v-320  h-240  z"
+                android:duration="1000"
+                android:valueType="pathType" />
+        </aapt:attr>
+    </target>
+
+    <target android:name="border">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="pathData"
+                android:valueFrom =  "M120,160  a0, 0, 0,0,1,0,  0  v0   a0, 0, 0,0,1,-0,  0  v-0   z M100,160  v0   a20, 20, 0,0,0,40, 0  v-0   a20, 20, 0,0,0,-40, 0  z"
+                android:valueTo   =  "M35, 120  a85,85,0,0,1,170,0  v80  a85,85,0,0,1,-170,0  v-80  z M20, 120  v80  a100,100,0,0,0,200,0  v-80  a100,100,0,0,0,-200,0  z"
+                android:duration="1000"
+                android:valueType="pathType" />
+        </aapt:attr>
+    </target>
+</animated-vector>

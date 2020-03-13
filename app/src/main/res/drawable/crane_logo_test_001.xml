@@ -1,0 +1,144 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="44dp"
+        android:height="32dp"
+        android:viewportWidth="440"
+        android:viewportHeight="320">
+
+
+
+
+    <path
+        android:name="mouth"
+        android:fillColor="#FFFFFFFF"
+        android:pathData="
+            M165,125
+            L185,85
+            L195,90
+            L170,130
+            z
+"/>
+
+
+    <path
+        android:name="head"
+        android:fillColor="#FFE91E63"
+        android:pathData="
+            M185,85
+            C200,60,225,60,235,85
+            L235,85
+            L195,90
+            z
+"/>
+
+    <path
+        android:name="chest"
+        android:fillColor="#FFFFFFFF"
+        android:pathData="
+            M215,87
+            L235,85
+            C236,92,236,92,230,100
+            L203,140
+            C186,165,190,159,225,164
+            L273,169
+            L320,190
+            L205,180
+            C165,175,160,175,185,135
+            z
+"/>
+
+    <path
+        android:name="back"
+        android:fillColor="#FFFFFFFF"
+        android:pathData="
+            M212,126
+            L223,110
+            C280,140,276,145,320,190
+            L273,169
+            C245,143,240,140,212,126
+            z
+"/>
+
+    <path
+        android:name="left_thigh"
+        android:fillColor="#FFFFFFFF"
+        android:pathData="
+            M175,185
+            L227,133
+            L244,143
+            L196,190
+            z
+
+"/>
+
+    <path
+        android:name="left_shank"
+        android:fillColor="#FFFFFFFF"
+        android:pathData="
+            M175,185
+            L196,190
+            L220,245
+            L200,245
+            z
+
+"/>
+
+    <path
+        android:name="right_thigh"
+        android:fillColor="#FFFFFFFF"
+        android:pathData="
+            M225,182
+            L244,183
+            L240,195
+            L220,200
+            z
+
+"/>
+
+    <path
+        android:name="right_shank"
+        android:fillColor="#FFFFFFFF"
+        android:pathData="
+            M220,200
+            L240,195
+            L290,230
+            L280,245
+            z
+
+"/>
+    <path
+        android:name="background"
+        android:fillColor="#FF880D4E"
+        android:pathData="
+           M20,120
+           a100,100,0,0,1,200,0
+           v80
+           a100,100,0,0,1,-200,0
+           v-80
+           z
+           M0,0
+           v320
+           h240
+           v-320
+           h-240
+           z
+    "/>
+
+    <path
+        android:name="border"
+        android:fillColor="#FFFFFFFF"
+        android:pathData="
+           M40,120
+           a80,80,0,0,1,160,0
+           v80
+           a80,80,0,0,1,-160,0
+           v-80
+           z
+
+           M20,120
+           v80
+           a100,100,0,0,0,200,0
+           v-80
+           a100,100,0,0,0,-200,0
+    "/>
+
+</vector>

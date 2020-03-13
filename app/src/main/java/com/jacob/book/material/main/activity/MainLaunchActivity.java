@@ -18,6 +18,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
+import androidx.navigation.ActivityNavigator;
 import androidx.vectordrawable.graphics.drawable.Animatable2Compat;
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat;
 
@@ -38,12 +39,12 @@ public class MainLaunchActivity extends AppCompatActivity {
 
 
         if (Build.VERSION.SDK_INT >= 24) {
-            AnimatedVectorDrawable logoDrawable = (AnimatedVectorDrawable) getResources().getDrawable(R.drawable.logo_ani, getTheme());
+            AnimatedVectorDrawable logoDrawable = (AnimatedVectorDrawable) getResources().getDrawable(R.drawable.main_logo_ani, getTheme());
             binding.logoImageView.setImageDrawable(logoDrawable);
             logoAni = ((Animatable)logoDrawable);
             AnimatedVectorDrawableCompat.registerAnimationCallback(logoDrawable, new AniVectorCallback());
         }else{
-            AnimatedVectorDrawableCompat logoCompatDrawable = AnimatedVectorDrawableCompat.create(this, R.drawable.logo_ani);
+            AnimatedVectorDrawableCompat logoCompatDrawable = AnimatedVectorDrawableCompat.create(this, R.drawable.main_logo_ani);
             binding.logoImageView.setImageDrawable(logoCompatDrawable);
             logoAni = ((Animatable)logoCompatDrawable);
             AnimatedVectorDrawableCompat.registerAnimationCallback(logoCompatDrawable, new AniVectorCallback());
@@ -57,6 +58,7 @@ public class MainLaunchActivity extends AppCompatActivity {
             Intent intent = new Intent();
             intent.setClass(MainLaunchActivity.this, MainNavigationActivity.class);
             startActivity(intent);
+            MainLaunchActivity.this.overridePendingTransition(R.anim.main_nav_activity_alpha_scale_enter, android.R.anim.fade_out);
             finish();
         }
     }
