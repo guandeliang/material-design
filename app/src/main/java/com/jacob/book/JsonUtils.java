@@ -15,6 +15,7 @@ import com.jacob.book.material.R;
 import com.jacob.book.material.example.model.Book;
 import com.jacob.book.material.example.model.Commodit;
 import com.jacob.book.material.example.model.ExampleImage;
+import com.jacob.book.material.example.model.GeneralData;
 import com.jacob.book.material.example.model.Grammy;
 import com.jacob.book.material.example.model.GrammySinger;
 import com.jacob.book.material.example.model.Mail;
@@ -97,6 +98,14 @@ public class JsonUtils {
         Type listType = new TypeToken<ArrayList<Commodit>>(){}.getType();
         return gson.fromJson(jsonString, listType);
     }
+
+    public static List<GeneralData> loadGeneralDatas(Resources resources) {
+        String jsonString = readJson(resources, R.raw.general_list);
+        Gson gson = new Gson();
+        Type listType = new TypeToken<ArrayList<GeneralData>>(){}.getType();
+        return gson.fromJson(jsonString, listType);
+    }
+
 
     public static String readJson(Resources resources, int rawResId) {
         String result = null;

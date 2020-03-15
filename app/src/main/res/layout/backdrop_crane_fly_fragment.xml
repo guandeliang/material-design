@@ -10,14 +10,18 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+        <variable name="fragement" type="com.jacob.book.material.example.backdrop.BackdropCraneFlyFragment" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:theme="@style/Theme.MaterialBook.SingleColor.Dark"
         android:background="@color/colored_color_primary">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:theme="@style/Theme.MaterialBook.SingleColor.Dark"
             android:id="@+id/back_constrain_layout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -179,5 +183,88 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.jacob.book.material.widgets.EventHostFrameLayout
+            android:id="@+id/drop_event_host_frame_layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/drop_constraint_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="8dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/drop_title_card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Backdrop.RoundTop"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/category_title_text_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="16dp"
+                            android:textAppearance="?attr/textAppearanceSubtitle2"
+                            android:textColor="@color/transparent_black_80"
+                            android:gravity="center_vertical"
+                            android:text="符合行程安排的航班"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+
+                        <ImageView
+                            android:id="@+id/switch_image_view"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:padding="6dp"
+                            android:layout_marginRight="4dp"
+                            android:src="@drawable/icon_keyboard_arrow_down"
+                            android:tint="@color/transparent_black_30"
+                            android:clickable="true"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:onClick="@{() -> fragement.onDropButtonClick()}"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:id="@+id/drop_content_linear_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="?android:attr/colorBackground"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/drop_title_card_view"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="24dp"
+                        android:paddingRight="24dp"/>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.jacob.book.material.widgets.EventHostFrameLayout>
+
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

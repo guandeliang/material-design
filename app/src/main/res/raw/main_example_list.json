@@ -230,18 +230,15 @@
         "id":10601030,
         "title":"Material样板项目Crane",
         "path":"com.jacob.book.material.example.backdrop.BackdropCraneLaunchActivity"
-      },
-      {
-        "id":10601010,
-        "title":"各种出场方式,使用MotionLayout,见Material关于Backdrop的介绍",
-        "path":"com.jacob.book.material.example.drawer.DrawerDayNightDefaultActivity"
-      },
-      {
-        "id":10601010,
-        "title":"使用Motion动画",
-        "path":"com.jacob.book.material.example.drawer.DrawerDayNightDefaultActivity"
       }
     ]
+  },
+
+  {
+    "id":10700000,
+    "iconName":"icon_add_circle",
+    "title":"Floating Action Button ",
+    "itemList":[]
   },
 
   {
@@ -252,12 +249,6 @@
   },
 
 
-  {
-    "id":10700000,
-    "iconName":"icon_example_appbar_top",
-    "title":"小导航Floating Action Button",
-    "itemList":[]
-  },
 
   {
     "id":11500000,
