@@ -50,7 +50,7 @@
                 android:pathData="M220,200 L240,195 L290,230 L280,245 z"/>
             <path
                 android:name="background"
-                android:fillColor="#FF880D4E"
+                android:fillColor="?attr/colorPrimaryDark"
                 android:pathData="M100,160 a20,20,0,0,1,40,0 v0 a20,20,0,0,1,-40,0 v-0 z M0,0 v320 h240 v-320 h-240 z"/>
             <path
                 android:name="border"
@@ -175,4 +175,6 @@
                 android:valueType="pathType" />
         </aapt:attr>
     </target>
+
+
 </animated-vector>

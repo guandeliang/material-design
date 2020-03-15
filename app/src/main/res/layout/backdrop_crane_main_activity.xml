@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-25 下午6:36
+  ~
+  -->
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorPrimary"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            style="@style/Widget.MaterialBook.AppBarLayout.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="24dp">
+
+                <ImageView
+                    android:id="@+id/logo_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="84dp"
+                    android:src="@drawable/crane_logo_no_border"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:clickable="true"
+                    android:background="@drawable/click_ripple_round"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:elevation="0dp"
+                    android:layout_marginLeft="12dp"
+                    app:tabIndicator="@drawable/shape_white_round_border_transparent_back"
+                    app:tabIndicatorColor="@color/white"
+                    app:tabUnboundedRipple="true"
+                    app:tabTextAppearance="?attr/textAppearanceHeadline6"
+                    app:tabIndicatorFullWidth="true"
+                    app:tabIndicatorHeight="36dp"
+                    app:layout_constraintLeft_toRightOf="@id/logo_image_view"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:translationY="600dp"
+            android:elevation="8dp">
+
+        </androidx.viewpager2.widget.ViewPager2>
+
+    </LinearLayout>
+</layout>

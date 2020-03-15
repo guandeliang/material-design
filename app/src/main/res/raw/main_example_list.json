@@ -227,9 +227,9 @@
         "path":"com.jacob.book.material.example.backdrop.BackdropMultiBackActivity"
       },
       {
-        "id":10601010,
-        "title":"完成样板项目CRANE",
-        "path":"https://material.io/design/material-studies/crane.html#motion"
+        "id":10601030,
+        "title":"Material样板项目Crane",
+        "path":"com.jacob.book.material.example.backdrop.BackdropCraneLaunchActivity"
       },
       {
         "id":10601010,

@@ -1,0 +1,27 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="24dp"
+        android:height="32dp"
+        android:viewportWidth="240"
+        android:viewportHeight="320">
+    <path
+        android:name="mouth"
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M52,117 L87,87 L95,95 L57,124 z"/>
+    <path
+        android:name="head"
+        android:fillColor="#FFE91E63"
+        android:pathData="M87,87 C120,58,125,60,135,95 L95,95 L87,87 z "/>
+
+    <path
+        android:name="chest"
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M115,95 L135,95 C135,97,135,97,132,100 L86,140 C70,155,70,155,90,165 L160,192 L180,217 L70,172 C51,160,55,150,65,140 z"/>
+    <path
+        android:name="back"
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M91,135 L103,122 C160,145,170,170,180,217 L160,192 C144,165,140,150,91,135 z"/>
+    <path
+        android:name="left_thigh"
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M100,290 L100,130 L115,130 L115,290 z "/>
+</vector>

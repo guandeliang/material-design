@@ -3,6 +3,12 @@
     android:height="24dp"
     android:viewportWidth="160"
     android:viewportHeight="240">
+<!--
+    <path
+        android:name="left_thigh"
+        android:fillColor="#FF999999"
+        android:pathData=" M0,0 h160 v240 h-160 v-240 z"/>
+-->
     <group
         android:translateX="-35"
         android:translateY="-55">
@@ -25,6 +31,6 @@
         <path
             android:name="left_thigh"
             android:fillColor="#FFFFFFFF"
-            android:pathData=" M100,135 h15 v150 h-15 v-150 z"/>
+            android:pathData=" M100,135 h15 v160 h-15 v-160 z"/>
     </group>
 </vector>

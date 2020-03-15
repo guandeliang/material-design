@@ -141,6 +141,7 @@
     <!--BEGIN: 基础风格-->
     <!--DayNight主题基础风格-->
     <style name="Theme.MaterialBook.DayNight.Base" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item  name="android:windowActivityTransitions">true</item>
         <item name="textAppearanceHeadline1">@style/TextAppearance.MaterialBook.Headline1</item>
         <item name="textAppearanceHeadline2">@style/TextAppearance.MaterialBook.Headline2</item>
         <item name="textAppearanceHeadline3">@style/TextAppearance.MaterialBook.Headline3</item>
@@ -158,6 +159,7 @@
 
     <!--单色主题基础风格-->
     <style name="Theme.MaterialBook.SingleColor.Base" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item  name="android:windowActivityTransitions">true</item>
         <item name="textAppearanceHeadline1">@style/TextAppearance.MaterialBook.Headline1</item>
         <item name="textAppearanceHeadline2">@style/TextAppearance.MaterialBook.Headline2</item>
         <item name="textAppearanceHeadline3">@style/TextAppearance.MaterialBook.Headline3</item>

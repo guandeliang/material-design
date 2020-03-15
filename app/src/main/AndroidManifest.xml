@@ -203,6 +203,15 @@
             android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
             android:screenOrientation="portrait"/>
 
+        <activity
+            android:name=".example.backdrop.BackdropCraneLaunchActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".example.backdrop.BackdropCraneMainActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
+            android:screenOrientation="portrait">
+        </activity>
 
 
 
