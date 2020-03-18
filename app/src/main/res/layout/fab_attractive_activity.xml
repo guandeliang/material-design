@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-1-31 下午9:31
+  ~
+  -->
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_favorite"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/cart_text_view"/>
+
+
+        <ImageView
+            android:id="@+id/main_image_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/loreal_000"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/detail_text_view"/>
+
+        <TextView
+            android:id="@+id/price_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginBottom="8dp"
+            android:text="￥9.99"
+            android:textStyle="bold"
+            android:textAppearance="?attr/textAppearanceSubtitle2"
+            android:textColor="?attr/colorPrimary"
+            app:layout_constraintLeft_toLeftOf="@id/main_image_view"
+            app:layout_constraintBottom_toTopOf="@id/titile_text_view"/>
+
+        <TextView
+            android:id="@+id/titile_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginBottom="24dp"
+            android:text="这个好像是指甲油"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:textColor="?attr/colorOnPrimary"
+            app:layout_constraintLeft_toLeftOf="@id/main_image_view"
+            app:layout_constraintBottom_toBottomOf="@id/main_image_view"/>
+
+
+        <TextView
+            android:id="@+id/detail_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="商品详情"
+            android:textColor="@color/gray_1000"
+            android:background="@color/gray_200"
+            android:gravity="center"
+            android:padding="12dp"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintBottom_toTopOf="@id/more_text_view"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/cart_text_view"/>
+
+        <TextView
+            android:id="@+id/cart_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="加入购物车"
+            android:textColor="@color/gray_200"
+            android:background="@color/gray_1000"
+            android:gravity="center"
+            android:padding="12dp"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintBottom_toTopOf="@id/more_text_view"
+            app:layout_constraintLeft_toRightOf="@id/detail_text_view"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/more_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="您也许还喜欢以下商品"
+            android:textColor="@color/gray_300"
+            android:background="?attr/colorPrimaryVariant"
+            android:gravity="start"
+            android:paddingLeft="24dp"
+            android:paddingTop="24dp"
+            android:textAppearance="?attr/textAppearanceCaption"
+            app:layout_constraintBottom_toTopOf="@id/more_scroll_view"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+        <HorizontalScrollView
+            android:id="@+id/more_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimaryVariant"
+                android:padding="24dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/many_image_view_001"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/loreal_001"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/many_image_view_002"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/many_image_view_002"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/loreal_002"
+                    android:layout_marginLeft="24dp"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
+                    app:layout_constraintLeft_toRightOf="@id/many_image_view_001"
+                    app:layout_constraintRight_toLeftOf="@id/many_image_view_003"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/many_image_view_003"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/loreal_003"
+                    android:layout_marginLeft="24dp"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
+                    app:layout_constraintLeft_toRightOf="@id/many_image_view_002"
+                    app:layout_constraintRight_toLeftOf="@id/many_image_view_004"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/many_image_view_004"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/loreal_004"
+                    android:layout_marginLeft="24dp"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
+                    app:layout_constraintLeft_toRightOf="@id/many_image_view_003"
+                    app:layout_constraintRight_toLeftOf="@id/many_image_view_005"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/many_image_view_005"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/loreal_005"
+                    android:layout_marginLeft="24dp"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
+                    app:layout_constraintLeft_toRightOf="@id/many_image_view_004"
+                    app:layout_constraintRight_toLeftOf="@id/many_image_view_006"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/many_image_view_006"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/loreal_006"
+                    android:layout_marginLeft="24dp"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
+                    app:layout_constraintLeft_toRightOf="@id/many_image_view_005"
+                    app:layout_constraintRight_toLeftOf="@id/many_image_view_007"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/many_image_view_007"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/loreal_007"
+                    android:layout_marginLeft="24dp"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
+                    app:layout_constraintLeft_toRightOf="@id/many_image_view_006"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

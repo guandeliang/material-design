@@ -238,7 +238,56 @@
     "id":10700000,
     "iconName":"icon_add_circle",
     "title":"Floating Action Button ",
-    "itemList":[]
+    "itemList":[
+      {
+        "id":10701010,
+        "title":"默认DayNight主题FAB",
+        "path":"com.jacob.book.material.example.fab.FabDayNightDefaultActivity"
+      },
+      {
+        "id":10701020,
+        "title":"自定义DayNight主题FAB",
+        "path":"com.jacob.book.material.example.fab.FabDayNightCustomActivity"
+      },
+      {
+        "id":10701030,
+        "title":"突出Fab的作用",
+        "path":"com.jacob.book.material.example.fab.FabAttractiveActivity"
+      },
+      {
+        "id":10701040,
+        "title":"在Profile可伸缩工具栏中使用FAB",
+        "path":"com.jacob.book.material.example.fab.FabProfileActivity"
+      },
+
+      {
+        "id":10701020,
+        "title":"通过FAB叫车，锚定功能",
+        "path":"com.jacob.book.material.example.fab.FabDayNightCustomActivity"
+      },
+
+      {
+        "id":10701020,
+        "title":"通过FAB展开个人详情",
+        "path":"com.jacob.book.material.example.fab.FabDayNightCustomActivity"
+      },
+      {
+        "id":10701020,
+        "title":"通过FAB拨打电话，TAB切换",
+        "path":"com.jacob.book.material.example.fab.FabDayNightCustomActivity"
+      },
+      {
+        "id":10701020,
+        "title":"通过FAB发邮件（全屏）MOTION变化",
+        "path":"com.jacob.book.material.example.fab.FabDayNightCustomActivity"
+      },
+      {
+        "id":10701020,
+        "title":"通过FAB显示更多小按钮，分享功能",
+        "path":"com.jacob.book.material.example.fab.FabDayNightCustomActivity"
+      }
+
+    ]
   },
 
   {

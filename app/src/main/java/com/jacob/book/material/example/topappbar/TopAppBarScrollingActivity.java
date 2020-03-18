@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowInsets;
 
 import androidx.appcompat.app.ActionBar;
@@ -52,9 +53,17 @@ public class TopAppBarScrollingActivity extends AppCompatActivity {
         public WindowInsets onApplyWindowInsets(View view, WindowInsets windowInsets) {
             int statusBarHeight = windowInsets.getSystemWindowInsetTop();
             binding.statusBarBackgroundView.setLayoutParams(new CoordinatorLayout.LayoutParams(CoordinatorLayout.LayoutParams.MATCH_PARENT, statusBarHeight));
-            AppBarLayout.LayoutParams params = new AppBarLayout.LayoutParams(AppBarLayout.LayoutParams.MATCH_PARENT, AppBarLayout.LayoutParams.WRAP_CONTENT);
-            params.setMargins(0,statusBarHeight,0,0);
-            binding.toolbar.setLayoutParams(params);
+            //默认情况下，新创建的AppBarLayout.LayoutParams中，ScrollFlag标记位，SCROLL_FLAG_SCROLL
+            //因为这个问题，排查了很久的BUG，一直搞明白，为什么Layout布局文件中的设置没有效果
+            //AppBarLayout.LayoutParams params = new AppBarLayout.LayoutParams(AppBarLayout.LayoutParams.MATCH_PARENT, AppBarLayout.LayoutParams.WRAP_CONTENT);
+
+            //下面的方法麻烦点，但是可以把布局文件中关于ScrollFlag的设置带过来。
+            ViewGroup.LayoutParams vgParams = binding.toolbar.getLayoutParams();
+            if(vgParams instanceof  AppBarLayout.LayoutParams){
+                AppBarLayout.LayoutParams ablParams = (AppBarLayout.LayoutParams)vgParams;
+                ablParams.setMargins(0,statusBarHeight,0,0);
+                binding.toolbar.setLayoutParams(ablParams);
+            }
             return windowInsets;
         }
     }

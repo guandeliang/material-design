@@ -79,11 +79,16 @@
         <item name="cornerSize">4dp</item>
     </style>
 
-
     <style name="ShapeAppearanceOverlay.MaterialBook.Diamond" parent="">
         <item name="cornerFamily">cut</item>
         <item name="cornerSize">50%</item>
     </style>
+
+    <style name="ShapeAppearanceOverlay.MaterialBook.Rectangle" parent="">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">0dp</item>
+    </style>
+
 
     <style name="ShapeAppearanceOverlay.MaterialBook.Backdrop.RoundTop" parent="">
         <item name="cornerFamilyTopLeft">rounded</item>
@@ -106,6 +111,8 @@
         <item name="iconPadding">0dp</item>
     </style>
 
+
+    <!--Round button-->
     <style name="ShapeAppearance.MaterialBook.Round" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
@@ -119,7 +126,6 @@
         <item name="shapeAppearance">@style/ShapeAppearance.MaterialBook.Round</item>
         <item name="strokeColor">?attr/colorPrimary</item>
     </style>
-
 
     <style name="Widget.MaterialBook.AppBarLayout.Primary" parent="Widget.MaterialComponents.AppBarLayout.Primary">
     </style>
@@ -313,6 +319,7 @@
 
     <!--BEGIN：彩色主题-->
     <style name="Theme.MaterialBook.SingleColor.Colored" parent="Theme.MaterialBook.SingleColor.Base">
+        <item name="android:navigationBarColor">@color/colored_color_primary_variant</item>
         <item name="colorPrimary">@color/colored_color_primary</item>
         <item name="colorPrimaryVariant">@color/colored_color_primary_variant</item>
         <item name="colorPrimaryDark">@color/colored_color_primary_dark</item>
@@ -333,6 +340,8 @@
         <item name="toolbarStyle">@style/Widget.MaterialBook.SingleColor.Colored.Toolbar</item>
         <item name="bottomNavigationStyle">@style/Widget.MaterialBook.SingleColor.Colored.BottomNavigationView</item>
         <item name="tabStyle">@style/Widget.MaterialBook.SingleColor.Colored.TabLayout</item>
+        <item name="floatingActionButtonStyle">@style/Widget.MaterialBook.SingleColor.Colored.FloatingActionButton</item>
+
     </style>
     <!--单色主题AppBarLayout风格-->
     <style name="Widget.MaterialBook.SingleColor.Colored.AppBarLayout" parent="Widget.MaterialComponents.AppBarLayout.Primary">
@@ -357,6 +366,10 @@
     </style>
     <style name="Widget.MaterialBook.SingleColor.Colored.TabLayout" parent="Widget.MaterialComponents.TabLayout.Colored">
         <item name="tabIndicatorColor">?attr/colorSecondary</item>
+    </style>
+    <style name="Widget.MaterialBook.SingleColor.Colored.FloatingActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="backgroundTint">@color/fab_bg_color_selector</item>
+        <item name="tint">@color/fab_icon_text_color_selector</item>
     </style>
 
 
@@ -418,6 +431,7 @@
 
     <style name="Widget.MaterialBook.SingleColor.Light.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
     </style>
+
 
     <!--沉浸式状态栏单色主题风格，解决占用状态栏问题-->
     <style name="Theme.MaterialBook.SingleColor.Light.TranslucentStatus" parent="Theme.MaterialBook.SingleColor.Light">

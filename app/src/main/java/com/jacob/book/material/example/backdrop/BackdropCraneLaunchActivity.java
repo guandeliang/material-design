@@ -73,9 +73,7 @@ public class BackdropCraneLaunchActivity extends AppCompatActivity implements Li
             intent.setClass(BackdropCraneLaunchActivity.this, BackdropCraneMainActivity.class);
             binding.logoImageView.setImageResource(R.drawable.crane_logo_no_background);
             ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(BackdropCraneLaunchActivity.this, binding.logoImageView, "logoImageView");
-            Log.d(TempConstant.LOG_TAG, "---------------------------------------------");
             startActivity(intent, options.toBundle());
-            Log.d(TempConstant.LOG_TAG, "============================================");
             //finishAfterTransition();//无法监听到share element 动画结束，只能通过Lifecycle控制
         }
     }

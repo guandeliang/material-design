@@ -42,13 +42,13 @@ public class TopAppBarCollapseActivity extends AppCompatActivity {
         binding.appBarLayout.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
+                binding.appBarLayout.getViewTreeObserver().removeOnGlobalLayoutListener(this);
                 int titleLayoutHeight = binding.titleLinearLayout.getHeight();
                 int left = binding.toolbar.getPaddingLeft();
                 int top = binding.toolbar.getPaddingTop();
                 int right = binding.toolbar.getPaddingRight();
                 int bottom = titleLayoutHeight;
                 binding.toolbar.setPadding(left, top, right, bottom);
-                binding.appBarLayout.getViewTreeObserver().removeOnGlobalLayoutListener(this);
             }
         });
 

@@ -213,6 +213,27 @@
             android:screenOrientation="portrait">
         </activity>
 
+        <!-- FAB -->
+        <activity
+            android:name=".example.fab.FabDayNightDefaultActivity"
+            android:theme="@style/Theme.MaterialBook.DayNight.Default"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".example.fab.FabDayNightCustomActivity"
+            android:theme="@style/Theme.MaterialBook.DayNight.Custom"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".example.fab.FabAttractiveActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Light.TranslucentStatus"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".example.fab.FabProfileActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Light.TranslucentStatus"
+            android:screenOrientation="portrait">
+        </activity>
 
 
         <activity
