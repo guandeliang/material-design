@@ -32,6 +32,9 @@ public class TopAppBarCollapseActivity extends AppCompatActivity {
 
     private TopAppBarCollapseActivityBinding binding;
 
+
+    //没有使用CollapsingToolbarLayout控制Title文字
+    //是为了让文字位于Toolbar下方
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +42,9 @@ public class TopAppBarCollapseActivity extends AppCompatActivity {
         binding.appBarLayout.setOnApplyWindowInsetsListener(new ApplyWindowInsetsListener());
         binding.appBarLayout.addOnOffsetChangedListener(new AppBarLayoutOnOffsetChangedListener());
 
+        //将Title LinearLayout高度作为toolbar Bottom Padding
+        //因为CollapsingToolbarLayout中，可收缩内容收缩会与Pin内容底部对齐
+        //如果不在Pin内容中保留足够的空白，会导致收缩内容与Pin内容重叠
         binding.appBarLayout.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
@@ -52,6 +58,7 @@ public class TopAppBarCollapseActivity extends AppCompatActivity {
             }
         });
 
+
         setSupportActionBar(binding.toolbar);
         ActionBar ab = getSupportActionBar();
         ab.setHomeAsUpIndicator(R.drawable.icon_arrow_back);
@@ -64,6 +71,8 @@ public class TopAppBarCollapseActivity extends AppCompatActivity {
 
     }
 
+    //将Status Bar Height设置为toolbar top padding
+    //否则toolbar会向上移动到Status Bar区域
     private class ApplyWindowInsetsListener implements View.OnApplyWindowInsetsListener {
         @Override
         public WindowInsets onApplyWindowInsets(View view, WindowInsets windowInsets) {

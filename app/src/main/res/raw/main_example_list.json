@@ -259,6 +259,12 @@
         "title":"在Profile可伸缩工具栏中使用FAB",
         "path":"com.jacob.book.material.example.fab.FabProfileActivity"
       },
+      {
+        "id":10701050,
+        "title":"FAB Behavior",
+        "path":"com.jacob.book.material.example.fab.FabBehaviorActivity"
+      },
+
 
       {
         "id":10701020,

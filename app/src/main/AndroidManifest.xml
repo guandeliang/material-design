@@ -234,6 +234,11 @@
             android:theme="@style/Theme.MaterialBook.SingleColor.Light.TranslucentStatus"
             android:screenOrientation="portrait">
         </activity>
+        <activity
+            android:name=".example.fab.FabBehaviorActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Light.TranslucentStatus"
+            android:screenOrientation="portrait">
+        </activity>
 
 
         <activity

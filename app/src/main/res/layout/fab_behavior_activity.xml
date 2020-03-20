@@ -1,0 +1,708 @@
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-1-13 下午4:57
+  ~
+  -->
+
+
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.graphics.Color"/>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentScrim="@color/transparent_black_60"
+                app:collapsedTitleTextAppearance="?attr/textAppearanceSubtitle1"
+                app:expandedTitleTextAppearance="?attr/textAppearanceHeadline6"
+                app:expandedTitleGravity="bottom|center_horizontal"
+                app:expandedTitleMarginBottom="64dp"
+                app:expandedTitleTextColor="@{Color.WHITE}"
+                app:collapsedTitleGravity="left"
+                app:collapsedTitleTextColor="@{Color.WHITE}"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+                <ImageView
+                    android:id="@+id/toolbar_image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/homestay_000"/>
+
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="112dp"
+                    android:paddingTop="28dp"
+                    android:paddingBottom="28dp"
+                    android:backgroundTint="@color/transparent"
+                    app:title="黑太阳餐厅"
+                    app:titleMarginStart="72dp"
+                    app:layout_collapseMode="pin"/>
+
+                <ImageView
+                    android:id="@+id/logo_image_view"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:layout_marginBottom="88dp"
+                    android:src="@drawable/logo_004"/>
+
+
+                <TextView
+                    android:id="@+id/sub_title_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40dp"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:textColor="@color/gray_300"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:text="河北黑木崖日月神教总部"/>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <!--放在最后，用来欺骗布局计算，解决FAB隐藏和显示BUG和EFAB伸缩BUG问题-->
+            <!--详见AppBarLayout#getMinimumHeightForVisibleOverlappingContent计算方式-->
+            <!--其实最好的解决方式是让FAB锚定在下面的VIEW上，问题就彻底解决了-->
+            <View
+                android:id="@+id/hacker_line"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"/>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+            <!--在底部保留足够的内边白，否则无法显示全部内容，这也是CollapsingToolbarLayout的一个BUG-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="48dp"
+                android:paddingBottom="136dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/button_card_view_001"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="?attr/colorPrimary"
+                    app:cardBackgroundColor="?android:attr/colorBackground"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/button_card_view_002">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/homestay_btn_001"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="8dp"
+                            android:text="日月神功"
+                            android:textColor="?attr/colorPrimary"
+                            android:textAppearance="?attr/textAppearanceSubtitle1"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/button_card_view_002"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="?attr/colorPrimary"
+                    app:cardBackgroundColor="?android:attr/colorBackground"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/button_card_view_001"
+                    app:layout_constraintRight_toLeftOf="@id/button_card_view_003">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/homestay_btn_002"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="8dp"
+                            android:text="五毒大餐"
+                            android:textColor="?attr/colorPrimary"
+                            android:textAppearance="?attr/textAppearanceSubtitle1"/>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/button_card_view_003"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="24dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="?attr/colorPrimary"
+                    app:cardBackgroundColor="?android:attr/colorBackground"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/button_card_view_002"
+                    app:layout_constraintRight_toRightOf="parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/homestay_btn_003"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="8dp"
+                            android:text="除夕明月"
+                            android:textColor="?attr/colorPrimary"
+                            android:textAppearance="?attr/textAppearanceSubtitle1"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/button_card_view_004"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="?attr/colorPrimary"
+                    app:cardBackgroundColor="?android:attr/colorBackground"
+                    app:layout_constraintTop_toBottomOf="@id/button_card_view_001"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/button_card_view_005">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/homestay_btn_004"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="8dp"
+                            android:text="教主感言"
+                            android:textColor="?attr/colorPrimary"
+                            android:textAppearance="?attr/textAppearanceSubtitle1"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/button_card_view_005"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="?attr/colorPrimary"
+                    app:cardBackgroundColor="?android:attr/colorBackground"
+                    app:layout_constraintTop_toBottomOf="@id/button_card_view_002"
+                    app:layout_constraintLeft_toRightOf="@id/button_card_view_004"
+                    app:layout_constraintRight_toLeftOf="@id/button_card_view_006">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/homestay_btn_005"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="8dp"
+                            android:text="夫人表演"
+                            android:textColor="?attr/colorPrimary"
+                            android:textAppearance="?attr/textAppearanceSubtitle1"/>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/button_card_view_006"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="24dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="?attr/colorPrimary"
+                    app:cardBackgroundColor="?android:attr/colorBackground"
+                    app:layout_constraintTop_toBottomOf="@id/button_card_view_003"
+                    app:layout_constraintLeft_toRightOf="@id/button_card_view_005"
+                    app:layout_constraintRight_toRightOf="parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/homestay_btn_006"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="8dp"
+                            android:text="长生秘方"
+                            android:textColor="?attr/colorPrimary"
+                            android:textAppearance="?attr/textAppearanceSubtitle1"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/content_title_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="黑太阳餐厅"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:textAppearance="?attr/textAppearanceHeadline5"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/button_card_view_004"/>
+
+                <LinearLayout
+                    android:id="@+id/star_linear_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:background="@drawable/shape_primary_color_circle_fill"
+                    android:layout_marginRight="24dp"
+                    android:padding="4dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/content_title_text_view"
+                    app:layout_constraintBottom_toBottomOf="@id/content_title_text_view"
+                    app:layout_constraintDimensionRatio="H,1:1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:textAppearance="?attr/textAppearanceCaption"
+                        android:textColor="@color/white"/>
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/icon_star"
+                        android:tint="@color/white"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/content_desc_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/content_title_text_view"/>
+
+
+
+                <Button
+                    android:id="@+id/map_button"
+                    style="@style/Widget.MaterialBook.Button.RoundCorner.Outlined"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="12dp"
+                    android:text="行车路线"
+                    app:layout_constraintTop_toBottomOf="@id/content_desc_text_view"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/mobile_button"/>
+
+                <Button
+                    android:id="@+id/mobile_button"
+                    style="@style/Widget.MaterialBook.Button.RoundCorner.Outlined"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="24dp"
+                    android:text="WX:13718661536"
+                    app:layout_constraintTop_toBottomOf="@id/content_desc_text_view"
+                    app:layout_constraintLeft_toRightOf="@id/map_button"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <HorizontalScrollView
+                    android:id="@+id/picture_scroll_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintTop_toBottomOf="@id/map_button"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:scrollbars="none">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="24dp"
+                        android:paddingRight="24dp">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="144dp"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/homestay_share_001"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="144dp"
+                            android:layout_marginLeft="24dp"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/homestay_share_002"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="144dp"
+                            android:layout_marginLeft="24dp"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/homestay_share_003"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="144dp"
+                            android:layout_marginLeft="24dp"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/homestay_share_004"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="144dp"
+                            android:layout_marginLeft="24dp"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/homestay_share_005"/>
+
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+
+                <TextView
+                    android:id="@+id/score_title_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="您的评价"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="24dp"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/picture_scroll_view"/>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/star_button_001"
+                    style="@style/Widget.MaterialBook.Button.RoundCorner.Outlined"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="4dp"
+                    android:text="1"
+                    android:padding="0dp"
+                    app:icon="@drawable/icon_star"
+                    app:iconSize="16dp"
+                    app:iconGravity="textEnd"
+                    app:iconPadding="0dp"
+                    app:layout_constraintTop_toBottomOf="@id/score_title_text_view"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/star_button_002"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/star_button_002"
+                    style="@style/Widget.MaterialBook.Button.RoundCorner.Outlined"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:text="2"
+                    android:padding="0dp"
+                    app:icon="@drawable/icon_star"
+                    app:iconSize="16dp"
+                    app:iconGravity="textEnd"
+                    app:iconPadding="0dp"
+                    app:layout_constraintTop_toTopOf="@id/star_button_001"
+                    app:layout_constraintBottom_toBottomOf="@id/star_button_001"
+                    app:layout_constraintLeft_toRightOf="@id/star_button_001"
+                    app:layout_constraintRight_toLeftOf="@id/star_button_003"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/star_button_003"
+                    style="@style/Widget.MaterialBook.Button.RoundCorner.Outlined"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:text="3"
+                    android:padding="0dp"
+                    app:icon="@drawable/icon_star"
+                    app:iconSize="16dp"
+                    app:iconGravity="textEnd"
+                    app:iconPadding="0dp"
+                    app:layout_constraintTop_toTopOf="@id/star_button_001"
+                    app:layout_constraintBottom_toBottomOf="@id/star_button_001"
+                    app:layout_constraintLeft_toRightOf="@id/star_button_002"
+                    app:layout_constraintRight_toLeftOf="@id/star_button_004"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/star_button_004"
+                    style="@style/Widget.MaterialBook.Button.RoundCorner.Outlined"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:text="4"
+                    android:padding="0dp"
+                    app:icon="@drawable/icon_star"
+                    app:iconSize="16dp"
+                    app:iconGravity="textEnd"
+                    app:iconPadding="0dp"
+                    app:layout_constraintTop_toTopOf="@id/star_button_001"
+                    app:layout_constraintBottom_toBottomOf="@id/star_button_001"
+                    app:layout_constraintLeft_toRightOf="@id/star_button_003"
+                    app:layout_constraintRight_toLeftOf="@id/star_button_005"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/star_button_005"
+                    style="@style/Widget.MaterialBook.Button.RoundCorner.Outlined"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="24dp"
+                    android:text="5"
+                    android:padding="0dp"
+                    app:icon="@drawable/icon_star"
+                    app:iconSize="16dp"
+                    app:iconGravity="textEnd"
+                    app:iconPadding="0dp"
+                    app:layout_constraintTop_toTopOf="@id/star_button_001"
+                    app:layout_constraintBottom_toBottomOf="@id/star_button_001"
+                    app:layout_constraintLeft_toRightOf="@id/star_button_004"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <TextView
+                    android:id="@+id/review_note_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:text="我们非常希望能够收到您的点评和回顾，无论是赞扬还是批评，都是对我们有益的帮助。一句赞扬会让我们更加努力，一句批评能够帮助我们发现不足"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/star_button_001"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/review_button"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:text="发表您的评价"
+                    android:padding="0dp"
+                    app:layout_constraintTop_toBottomOf="@id/review_note_text_view"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <View
+                    android:id="@+id/line_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_300"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintTop_toBottomOf="@id/review_button"
+                    app:layout_constraintRight_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+
+                <TextView
+                    android:id="@+id/review_title_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="顾客点评"
+                    android:layout_marginLeft="24dp"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/all_review_button"
+                    app:layout_constraintBottom_toBottomOf="@id/all_review_button"/>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/all_review_button"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="16dp"
+                    android:text="查看全部点评(250条)"
+                    android:padding="0dp"
+                    app:layout_constraintTop_toBottomOf="@id/line_view"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/review_header_image_view"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="24dp"
+                    android:src="@drawable/header_001"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
+                    app:layout_constraintTop_toTopOf="@id/review_star_button"
+                    app:layout_constraintBottom_toBottomOf="@id/review_star_button"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <TextView
+                    android:id="@+id/review_user_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="五毒童子"
+                    android:layout_marginLeft="12dp"
+                    android:textAppearance="?attr/textAppearanceSubtitle2"
+                    app:layout_constraintTop_toTopOf="@id/review_header_image_view"
+                    app:layout_constraintLeft_toRightOf="@id/review_header_image_view"/>
+
+                <TextView
+                    android:id="@+id/review_user_desc_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="45条点评，200万粉丝"
+                    android:layout_marginLeft="12dp"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    app:layout_constraintBottom_toBottomOf="@id/review_header_image_view"
+                    app:layout_constraintLeft_toRightOf="@id/review_header_image_view"/>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/review_star_button"
+                    style="@style/Widget.MaterialBook.Button.RoundCorner.Solid"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="24dp"
+                    android:text="5"
+                    android:padding="0dp"
+                    app:icon="@drawable/icon_star"
+                    app:iconSize="16dp"
+                    app:iconGravity="textEnd"
+                    app:iconPadding="0dp"
+                    app:layout_constraintTop_toBottomOf="@id/review_title_text_view"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <TextView
+                    android:id="@+id/review_content_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:text="神教纪念日特惠活动期间跟几个朋友一起来的，吃住玩都非常好，老板和服务员也都非常热情，特别是老板娘一曲高粱地之歌，倾倒无数顾客。没等离开饭店就赶紧发了这条点评，为了我的安全，发点评时候厨师、服务员一直拿刀站在身后保护我。"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/review_star_button"/>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/extended_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关注"
+            android:layout_marginRight="24dp"
+            app:icon="@drawable/icon_favorite"
+            app:layout_anchor="@id/hacker_line"
+            app:layout_anchorGravity="bottom|right|end"/>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</layout>
+
+
+
