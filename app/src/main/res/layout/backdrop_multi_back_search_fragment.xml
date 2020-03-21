@@ -11,8 +11,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <variable name="fragment" type="com.jacob.book.material.example.backdrop.BackdropMultiBackSearchFragment" />
-        <variable name="viewModel" type="com.jacob.book.material.example.backdrop.BackdropMulitBackViewModel" />
+        <variable name="fragment" type="com.jacob.material.example.backdrop.BackdropMultiBackSearchFragment" />
+        <variable name="viewModel" type="com.jacob.material.example.backdrop.BackdropMulitBackViewModel" />
 
     </data>
 

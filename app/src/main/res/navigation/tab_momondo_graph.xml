@@ -14,7 +14,7 @@
 
     <fragment
         android:id="@+id/search"
-        android:name="com.jacob.book.material.example.tab.TabMomondoSearchFragment"
+        android:name="com.jacob.material.example.tab.TabMomondoSearchFragment"
         android:label="search"
         tools:layout="@layout/tab_momondo_search_fragment" >
     </fragment>

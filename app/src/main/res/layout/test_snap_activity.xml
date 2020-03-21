@@ -15,32 +15,32 @@
     </data>
 
 
-    <com.jacob.book.material.widgets.EventHostFrameLayout
+    <com.jacob.material.widgets.EventHostFrameLayout
         android:id="@+id/root_layout"
         android:tag="root_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
 
-        <com.jacob.book.material.widgets.EventHostFrameLayout
+        <com.jacob.material.widgets.EventHostFrameLayout
             android:id="@+id/left_layout"
             android:tag="left_layout"
             android:layout_width="100dp"
             android:layout_height="match_parent"
             android:layout_gravity="left"
             android:background="#FF0000">
-        </com.jacob.book.material.widgets.EventHostFrameLayout>
+        </com.jacob.material.widgets.EventHostFrameLayout>
 
-        <com.jacob.book.material.widgets.EventHostFrameLayout
+        <com.jacob.material.widgets.EventHostFrameLayout
             android:id="@+id/right_layout"
             android:tag="left_layout"
             android:layout_width="100dp"
             android:layout_height="match_parent"
             android:layout_gravity="right"
             android:background="#00FF00">
-        </com.jacob.book.material.widgets.EventHostFrameLayout>
+        </com.jacob.material.widgets.EventHostFrameLayout>
 
-        <com.jacob.book.material.widgets.EventHostFrameLayout
+        <com.jacob.material.widgets.EventHostFrameLayout
             android:id="@+id/center_layout"
             android:tag="center_layout"
             android:layout_width="match_parent"
@@ -48,7 +48,7 @@
             android:layout_gravity="center_vertical"
             android:background="#0000FF">
 
-            <com.jacob.book.material.widgets.EventHostFrameLayout
+            <com.jacob.material.widgets.EventHostFrameLayout
                 android:id="@+id/center_child_layout"
                 android:tag="center_child_layout"
                 android:layout_width="match_parent"
@@ -57,11 +57,11 @@
                 android:layout_gravity="center_vertical"
                 android:background="#FF0000">
 
-            </com.jacob.book.material.widgets.EventHostFrameLayout>
+            </com.jacob.material.widgets.EventHostFrameLayout>
 
-        </com.jacob.book.material.widgets.EventHostFrameLayout>
+        </com.jacob.material.widgets.EventHostFrameLayout>
 
 
-    </com.jacob.book.material.widgets.EventHostFrameLayout>
+    </com.jacob.material.widgets.EventHostFrameLayout>
 
 </layout>

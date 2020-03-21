@@ -7,54 +7,54 @@
       {
         "id":10101010,
         "title":"默认DayNight主题工具栏",
-        "path":"com.jacob.book.material.example.topappbar.TopAppBarDayNightDefaultActivity"
+        "path":"com.jacob.material.example.topappbar.TopAppBarDayNightDefaultActivity"
       },
       {
         "id":10101020,
         "title":"自定义DayNight主题工具栏",
-        "path":"com.jacob.book.material.example.topappbar.TopAppBarDayNightCustomActivity"
+        "path":"com.jacob.material.example.topappbar.TopAppBarDayNightCustomActivity"
       },
 
       {
         "id":10101030,
         "title":"采用自定义布局的工具栏",
-        "path":"com.jacob.book.material.example.topappbar.TopAppBarCustomLayoutActivity"
+        "path":"com.jacob.material.example.topappbar.TopAppBarCustomLayoutActivity"
       },
       {
         "id":10101040,
         "title":"工具栏基本功能介绍",
-        "path":"com.jacob.book.material.example.topappbar.TopAppBarBaseFuncActivity"
+        "path":"com.jacob.material.example.topappbar.TopAppBarBaseFuncActivity"
       },
       {
         "id":10101050,
         "title":"与内容上下文互动工具栏",
-        "path":"com.jacob.book.material.example.topappbar.TopAppBarContextualActivity"
+        "path":"com.jacob.material.example.topappbar.TopAppBarContextualActivity"
       },
       {
         "id":10101060,
         "title":"大尺寸突出工具栏",
-        "path":"com.jacob.book.material.example.topappbar.TopAppBarBigActivity"
+        "path":"com.jacob.material.example.topappbar.TopAppBarBigActivity"
       },
       {
         "id":10101070,
         "title":"工具栏与内容一起滚动",
-        "path":"com.jacob.book.material.example.topappbar.TopAppBarScrollingActivity"
+        "path":"com.jacob.material.example.topappbar.TopAppBarScrollingActivity"
       },
       {
         "id":10101080,
         "title":"可伸缩工具栏",
-        "path":"com.jacob.book.material.example.topappbar.TopAppBarCollapseActivity"
+        "path":"com.jacob.material.example.topappbar.TopAppBarCollapseActivity"
       },
 
       {
         "id":10101090,
         "title":"Light样式",
-        "path":"com.jacob.book.material.example.topappbar.TopAppBarLightActivity"
+        "path":"com.jacob.material.example.topappbar.TopAppBarLightActivity"
       },
       {
         "id":10101100,
         "title":"Dark样式",
-        "path":"com.jacob.book.material.example.topappbar.TopAppBarDarkActivity"
+        "path":"com.jacob.material.example.topappbar.TopAppBarDarkActivity"
       }
     ]
   },
@@ -67,27 +67,27 @@
       {
         "id":10201010,
         "title":"底部工具栏基本介绍",
-        "path":"com.jacob.book.material.example.bottomappbar.BottomAppBarBaseActivity"
+        "path":"com.jacob.material.example.bottomappbar.BottomAppBarBaseActivity"
       },
       {
         "id":10201020,
         "title":"默认DayNight主题底部工具栏",
-        "path":"com.jacob.book.material.example.bottomappbar.BottomAppBarDayNightDefaultActivity"
+        "path":"com.jacob.material.example.bottomappbar.BottomAppBarDayNightDefaultActivity"
       },
       {
         "id":10201030,
         "title":"自定义DayNight主题底部工具栏",
-        "path":"com.jacob.book.material.example.bottomappbar.BottomAppBarDayNightCustomActivity"
+        "path":"com.jacob.material.example.bottomappbar.BottomAppBarDayNightCustomActivity"
       },
       {
         "id":10201040,
         "title":"菱形浮动按钮",
-        "path":"com.jacob.book.material.example.bottomappbar.BottomAppBarDiamondActivity"
+        "path":"com.jacob.material.example.bottomappbar.BottomAppBarDiamondActivity"
       },
       {
         "id":10201050,
         "title":"底部工具栏功能演示",
-        "path":"com.jacob.book.material.example.bottomappbar.BottomAppBarDemoActivity"
+        "path":"com.jacob.material.example.bottomappbar.BottomAppBarDemoActivity"
       }
     ]
   },
@@ -100,52 +100,52 @@
       {
         "id":10301010,
         "title":"默认DayNight主题底部导航栏",
-        "path":"com.jacob.book.material.example.bottomnavigation.BottomNavigationDayNightDefaultActivity"
+        "path":"com.jacob.material.example.bottomnavigation.BottomNavigationDayNightDefaultActivity"
       },
       {
         "id":10301020,
         "title":"自定义DayNight主题底部导航栏",
-        "path":"com.jacob.book.material.example.bottomnavigation.BottomNavigationDayNightCustomActivity"
+        "path":"com.jacob.material.example.bottomnavigation.BottomNavigationDayNightCustomActivity"
       },
       {
         "id":10301030,
         "title":"基本功能演示 ：Labeled",
-        "path":"com.jacob.book.material.example.bottomnavigation.BottomNavigationBaseActivity"
+        "path":"com.jacob.material.example.bottomnavigation.BottomNavigationBaseActivity"
       },
       {
         "id":10301040,
         "title":"基本功能演示 ：Labeled Auto",
-        "path":"com.jacob.book.material.example.bottomnavigation.BottomNavigationBaseShiftActivity"
+        "path":"com.jacob.material.example.bottomnavigation.BottomNavigationBaseShiftActivity"
       },
       {
         "id":10301050,
         "title":"基本功能演示 ：Un Labeled",
-        "path":"com.jacob.book.material.example.bottomnavigation.BottomNavigationBaseIconActivity"
+        "path":"com.jacob.material.example.bottomnavigation.BottomNavigationBaseIconActivity"
       },
       {
         "id":10301060,
         "title":"基本功能演示 ：增加其他元件",
-        "path":"com.jacob.book.material.example.bottomnavigation.BottomNavigationBasePrimaryActivity"
+        "path":"com.jacob.material.example.bottomnavigation.BottomNavigationBasePrimaryActivity"
       },
       {
         "id":10301070,
         "title":"自定义布局",
-        "path":"com.jacob.book.material.example.bottomnavigation.BottomNavigationCustomActivity"
+        "path":"com.jacob.material.example.bottomnavigation.BottomNavigationCustomActivity"
       },
       {
         "id":10301080,
         "title":"为部导航栏添加FAB按钮",
-        "path":"com.jacob.book.material.example.bottomnavigation.BottomNavigationFabActivity"
+        "path":"com.jacob.material.example.bottomnavigation.BottomNavigationFabActivity"
       },
       {
         "id":10301090,
         "title":"Dark样式",
-        "path":"com.jacob.book.material.example.bottomnavigation.BottomNavigationDarkActivity"
+        "path":"com.jacob.material.example.bottomnavigation.BottomNavigationDarkActivity"
       },
       {
         "id":10301100,
         "title":"底部导航栏功能演示",
-        "path":"com.jacob.book.material.example.bottomnavigation.BottomNavigationDemoActivity"
+        "path":"com.jacob.material.example.bottomnavigation.BottomNavigationDemoActivity"
       }
     ]
   },
@@ -158,23 +158,23 @@
       {
         "id":10401010,
         "title":"默认DayNight主题Tab",
-        "path":"com.jacob.book.material.example.tab.TabDayNightDefaultActivity"
+        "path":"com.jacob.material.example.tab.TabDayNightDefaultActivity"
       },
       {
         "id":10401020,
         "title":"自定义DayNight主题Tab",
-        "path":"com.jacob.book.material.example.tab.TabDayNightCustomActivity"
+        "path":"com.jacob.material.example.tab.TabDayNightCustomActivity"
       },
       {
         "id":10401030,
         "title":"Tab基本功能演示",
-        "path":"com.jacob.book.material.example.tab.TabBaseActivity"
+        "path":"com.jacob.material.example.tab.TabBaseActivity"
 
       },
       {
         "id":10401040,
         "title":"模仿谷歌设计大奖作品Momondo",
-        "path":"com.jacob.book.material.example.tab.TabMomondoActivity"
+        "path":"com.jacob.material.example.tab.TabMomondoActivity"
 
       }
     ]
@@ -188,23 +188,23 @@
       {
         "id":10501010,
         "title":"默认DayNight主题Drawer",
-        "path":"com.jacob.book.material.example.drawer.DrawerDayNightDefaultActivity"
+        "path":"com.jacob.material.example.drawer.DrawerDayNightDefaultActivity"
       },
       {
         "id":10501020,
         "title":"自定义DayNight主题Drawer",
-        "path":"com.jacob.book.material.example.drawer.DrawerDayNightCustomActivity"
+        "path":"com.jacob.material.example.drawer.DrawerDayNightCustomActivity"
       },
       {
         "id":10501030,
         "title":"Drawer和Top App Bar",
-        "path":"com.jacob.book.material.example.drawer.DrawerTopAppBarActivity"
+        "path":"com.jacob.material.example.drawer.DrawerTopAppBarActivity"
       },
 
       {
         "id":10501040,
         "title":"Shop Category Drawer",
-        "path":"com.jacob.book.material.example.drawer.DrawerShopActivity"
+        "path":"com.jacob.material.example.drawer.DrawerShopActivity"
       }
 
 
@@ -219,17 +219,17 @@
       {
         "id":10601010,
         "title":"Backdrop基本介绍",
-        "path":"com.jacob.book.material.example.backdrop.BackdropIntroActivity"
+        "path":"com.jacob.material.example.backdrop.BackdropIntroActivity"
       },
       {
         "id":10601020,
         "title":"带有复杂背景层的Backdrop",
-        "path":"com.jacob.book.material.example.backdrop.BackdropMultiBackActivity"
+        "path":"com.jacob.material.example.backdrop.BackdropMultiBackActivity"
       },
       {
         "id":10601030,
         "title":"Material样板项目Crane",
-        "path":"com.jacob.book.material.example.backdrop.BackdropCraneLaunchActivity"
+        "path":"com.jacob.material.example.backdrop.BackdropCraneLaunchActivity"
       }
     ]
   },
@@ -242,55 +242,53 @@
       {
         "id":10701010,
         "title":"默认DayNight主题FAB",
-        "path":"com.jacob.book.material.example.fab.FabDayNightDefaultActivity"
+        "path":"com.jacob.material.example.fab.FabDayNightDefaultActivity"
       },
       {
         "id":10701020,
         "title":"自定义DayNight主题FAB",
-        "path":"com.jacob.book.material.example.fab.FabDayNightCustomActivity"
+        "path":"com.jacob.material.example.fab.FabDayNightCustomActivity"
       },
       {
         "id":10701030,
         "title":"突出Fab的作用",
-        "path":"com.jacob.book.material.example.fab.FabAttractiveActivity"
+        "path":"com.jacob.material.example.fab.FabAttractiveActivity"
       },
       {
         "id":10701040,
         "title":"在Profile可伸缩工具栏中使用FAB",
-        "path":"com.jacob.book.material.example.fab.FabProfileActivity"
+        "path":"com.jacob.material.example.fab.FabProfileActivity"
       },
       {
         "id":10701050,
         "title":"FAB Behavior",
-        "path":"com.jacob.book.material.example.fab.FabBehaviorActivity"
+        "path":"com.jacob.material.example.fab.FabBehaviorActivity"
       },
-
-
+      {
+        "id":10701060,
+        "title":"在一个FAB后面隐藏多个小按钮",
+        "path":"com.jacob.material.example.fab.FabRelateActionActivity"
+      },
       {
         "id":10701020,
-        "title":"通过FAB叫车，锚定功能",
-        "path":"com.jacob.book.material.example.fab.FabDayNightCustomActivity"
+        "title":"FAB Motion",
+        "path":"com.jacob.material.example.fab.FabMotionActivity"
       },
 
       {
         "id":10701020,
         "title":"通过FAB展开个人详情",
-        "path":"com.jacob.book.material.example.fab.FabDayNightCustomActivity"
+        "path":"com.jacob.material.example.fab.FabDayNightCustomActivity"
       },
       {
         "id":10701020,
         "title":"通过FAB拨打电话，TAB切换",
-        "path":"com.jacob.book.material.example.fab.FabDayNightCustomActivity"
+        "path":"com.jacob.material.example.fab.FabDayNightCustomActivity"
       },
       {
         "id":10701020,
         "title":"通过FAB发邮件（全屏）MOTION变化",
-        "path":"com.jacob.book.material.example.fab.FabDayNightCustomActivity"
-      },
-      {
-        "id":10701020,
-        "title":"通过FAB显示更多小按钮，分享功能",
-        "path":"com.jacob.book.material.example.fab.FabDayNightCustomActivity"
+        "path":"com.jacob.material.example.fab.FabDayNightCustomActivity"
       }
 
     ]
@@ -329,28 +327,28 @@
       {
         "id":10401010,
         "title":"Snap测试",
-        "path":"com.jacob.book.material.test.TestSnapActivity"
+        "path":"com.jacob.material.test.TestSnapActivity"
       },
       {
         "id":10401020,
         "title":"Motion测试",
-        "path":"com.jacob.book.material.test.TestMotionActivity"
+        "path":"com.jacob.material.test.TestMotionActivity"
       },
       {
         "id":10401030,
         "title":"共享元素测试",
-        "path":"com.jacob.book.material.test.TestShareElementActivity"
+        "path":"com.jacob.material.test.TestShareElementActivity"
       },
       {
         "id":10401040,
         "title":"Shape测试",
-        "path":"com.jacob.book.material.test.TestShapeActivity"
+        "path":"com.jacob.material.test.TestShapeActivity"
       },
 
       {
         "id":10401010,
         "title":"CoordinatorLayout和DrawerLayout都支持设置状态栏颜色，应该回头修改有一下侵入方式了",
-        "path":"com.jacob.book.material.example.drawer.DrawerDayNightDefaultActivity"
+        "path":"com.jacob.material.example.drawer.DrawerDayNightDefaultActivity"
       }
 
 
@@ -365,12 +363,12 @@
       {
         "id":10501010,
         "title":"头条",
-        "path":"com.jacob.book.material.imitate.toutiao.TouTiaoMainActivity"
+        "path":"com.jacob.material.imitate.toutiao.TouTiaoMainActivity"
       },
       {
         "id":10501010,
         "title":"知乎",
-        "path":"com.jacob.book.material.imitate.zhihu.ZhihuMainActivity"
+        "path":"com.jacob.material.imitate.zhihu.ZhihuMainActivity"
       }
     ]
   },

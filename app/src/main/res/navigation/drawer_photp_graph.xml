@@ -14,35 +14,35 @@
 
     <fragment
         android:id="@+id/all"
-        android:name="com.jacob.book.material.example.drawer.DrawerTopAppBarOneFragment"
+        android:name="com.jacob.material.example.drawer.DrawerTopAppBarOneFragment"
         android:label="all"
         tools:layout="@layout/drawer_top_app_bar_one_fragment">
     </fragment>
 
     <fragment
         android:id="@+id/share_me"
-        android:name="com.jacob.book.material.example.drawer.DrawerTopAppBarTwoFragment"
+        android:name="com.jacob.material.example.drawer.DrawerTopAppBarTwoFragment"
         android:label="share_me"
         tools:layout="@layout/drawer_top_app_bar_two_fragment">
     </fragment>
 
     <fragment
         android:id="@+id/star"
-        android:name="com.jacob.book.material.example.drawer.DrawerTopAppBarThreeFragment"
+        android:name="com.jacob.material.example.drawer.DrawerTopAppBarThreeFragment"
         android:label="star"
         tools:layout="@layout/drawer_top_app_bar_three_fragment">
     </fragment>
 
     <fragment
         android:id="@+id/recent"
-        android:name="com.jacob.book.material.example.drawer.DrawerTopAppBarFourFragment"
+        android:name="com.jacob.material.example.drawer.DrawerTopAppBarFourFragment"
         android:label="star"
         tools:layout="@layout/drawer_top_app_bar_four_fragment">
     </fragment>
 
     <fragment
         android:id="@+id/random"
-        android:name="com.jacob.book.material.example.drawer.DrawerTopAppBarRandomFragment"
+        android:name="com.jacob.material.example.drawer.DrawerTopAppBarRandomFragment"
         android:label="star"
         tools:layout="@layout/drawer_top_app_bar_random_fragment">
     </fragment>

@@ -11,9 +11,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <variable name="s" type="com.jacob.book.material.base.RandomImagePresenter.ImageViewCategory" />
-        <variable name="h" type="com.jacob.book.material.base.RandomImagePresenter.ImageViewCategory" />
-        <variable name="v" type="com.jacob.book.material.base.RandomImagePresenter.ImageViewCategory" />
+        <variable name="s" type="com.jacob.material.base.RandomImagePresenter.ImageViewCategory" />
+        <variable name="h" type="com.jacob.material.base.RandomImagePresenter.ImageViewCategory" />
+        <variable name="v" type="com.jacob.material.base.RandomImagePresenter.ImageViewCategory" />
     </data>
 
 <androidx.constraintlayout.widget.ConstraintLayout

@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <com.jacob.book.material.widgets.ThemeSwitchAppBarLayout
+        <com.jacob.material.widgets.ThemeSwitchAppBarLayout
             style="@style/Widget.MaterialComponents.AppBarLayout.PrimarySurface"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

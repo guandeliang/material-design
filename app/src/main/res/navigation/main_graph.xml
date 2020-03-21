@@ -14,7 +14,7 @@
 
     <fragment
         android:id="@+id/list"
-        android:name="com.jacob.book.material.main.activity.MainExampleListFragment"
+        android:name="com.jacob.material.main.activity.MainExampleListFragment"
         android:label="list"
         tools:layout="@layout/main_example_list_fragment" >
     </fragment>

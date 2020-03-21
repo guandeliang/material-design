@@ -33,7 +33,7 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent">
 
-                <com.jacob.book.material.widgets.sliderbanner.CardViewSlider
+                <com.jacob.material.widgets.sliderbanner.CardViewSlider
                     android:id="@+id/card_view_slider"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>

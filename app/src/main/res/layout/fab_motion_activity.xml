@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-3 下午8:55
+  ~
+  -->
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="activity" type="com.jacob.material.example.fab.FabMotionActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/material_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="图片"/>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <include layout="@layout/include_girl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"/>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+        <com.jacob.material.widgets.EventHostFrameLayout
+            android:id="@+id/event_host_frame_layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:elevation="6dp"
+            android:background="@color/transparent_white_60"
+            android:visibility="gone"
+            android:alpha="0"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/share_card_view"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/line_view_000"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/transparent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <androidx.constraintlayout.helper.widget.Layer
+                    android:id="@+id/layer_001"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/line_view_001"
+                    app:constraint_referenced_ids="line_view_000, header_image_view_001,text_view_001,line_view_001"
+                    android:onClick="@{(view) -> activity.onShareCardViewItemClick(view, textView001.getText())}"/>
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/header_image_view_001"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/header_001"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+
+                <TextView
+                    android:id="@+id/text_view_001"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:text="想吃可爱熊的竹子"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    app:layout_constraintTop_toTopOf="@id/header_image_view_001"
+                    app:layout_constraintBottom_toBottomOf="@id/header_image_view_001"
+                    app:layout_constraintLeft_toRightOf="@id/header_image_view_001"/>
+
+
+                <View
+                    android:id="@+id/line_view_001"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/gray_200"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/header_image_view_001"/>
+
+                <androidx.constraintlayout.helper.widget.Layer
+                    android:id="@+id/layer_002"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/line_view_002"
+                    app:layout_constraintBottom_toTopOf="@id/line_view_003"
+                    app:constraint_referenced_ids="line_view_001,header_image_view_002,text_view_002,line_view_002"
+                    android:onClick="@{(view) -> activity.onShareCardViewItemClick(view, textView002.getText())}"/>
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/header_image_view_002"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/header_002"
+                    app:layout_constraintTop_toBottomOf="@id/line_view_001"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <TextView
+                    android:id="@+id/text_view_002"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:text="牛奶煮萝莉"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    app:layout_constraintTop_toTopOf="@id/header_image_view_002"
+                    app:layout_constraintBottom_toBottomOf="@id/header_image_view_002"
+                    app:layout_constraintLeft_toRightOf="@id/header_image_view_002"/>
+
+                <View
+                    android:id="@+id/line_view_002"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/gray_200"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/header_image_view_002"/>
+
+                <androidx.constraintlayout.helper.widget.Layer
+                    android:id="@+id/layer_003"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/line_view_002"
+                    app:layout_constraintBottom_toTopOf="@id/line_view_003"
+                    app:constraint_referenced_ids="line_view_002,header_image_view_003,text_view_003,line_view_003"
+                    android:onClick="@{(view) -> activity.onShareCardViewItemClick(view, textView003.getText())}"/>
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/header_image_view_003"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/header_003"
+                    app:layout_constraintTop_toBottomOf="@id/line_view_002"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <TextView
+                    android:id="@+id/text_view_003"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:text="猫腻仙女抱"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    app:layout_constraintTop_toTopOf="@id/header_image_view_003"
+                    app:layout_constraintBottom_toBottomOf="@id/header_image_view_003"
+                    app:layout_constraintLeft_toRightOf="@id/header_image_view_003"/>
+
+                <View
+                    android:id="@+id/line_view_003"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/gray_200"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/header_image_view_003"/>
+
+                <androidx.constraintlayout.helper.widget.Layer
+                    android:id="@+id/layer_004"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/line_view_003"
+                    app:layout_constraintBottom_toTopOf="@id/line_view_004"
+                    app:constraint_referenced_ids="line_view_003,header_image_view_004,text_view_004,line_view_004"
+                    android:onClick="@{(view) -> activity.onShareCardViewItemClick(view, textView004.getText())}"/>
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/header_image_view_004"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/header_004"
+                    app:layout_constraintTop_toBottomOf="@id/line_view_003"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <TextView
+                    android:id="@+id/text_view_004"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:text="油炸小可爱"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    app:layout_constraintTop_toTopOf="@id/header_image_view_004"
+                    app:layout_constraintBottom_toBottomOf="@id/header_image_view_004"
+                    app:layout_constraintLeft_toRightOf="@id/header_image_view_004"/>
+
+
+                <View
+                    android:id="@+id/line_view_004"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="?attr/colorPrimaryVariant"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/header_image_view_004"/>
+
+                <androidx.constraintlayout.helper.widget.Layer
+                    android:id="@+id/layer_005"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/colorPrimaryVariant"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/line_view_004"
+                    app:layout_constraintBottom_toTopOf="@id/line_view_005"
+                    app:constraint_referenced_ids="line_view_004,header_image_view_005,text_view_005,line_view_005"
+                    android:onClick="@{(view) -> activity.onShareCardViewItemClick(view, textView005.getText())}"/>
+
+
+                <ImageView
+                    android:id="@+id/header_image_view_005"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/icon_add"
+                    android:tint="@color/gray_300"
+                    app:layout_constraintTop_toBottomOf="@id/line_view_004"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <TextView
+                    android:id="@+id/text_view_005"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:text="添加新的联系人"
+                    android:textColor="@color/gray_300"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    app:layout_constraintTop_toTopOf="@id/header_image_view_005"
+                    app:layout_constraintBottom_toBottomOf="@id/header_image_view_005"
+                    app:layout_constraintLeft_toRightOf="@id/header_image_view_005"/>
+
+
+                <View
+                    android:id="@+id/line_view_005"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="?attr/colorPrimaryVariant"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/header_image_view_005"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center"
+            app:elevation="8dp"
+            app:srcCompat="@drawable/icon_share"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:onClick="@{(view) -> activity.onMainFabClick(view)}"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

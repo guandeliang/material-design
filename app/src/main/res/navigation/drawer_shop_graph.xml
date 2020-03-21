@@ -14,7 +14,7 @@
 
     <fragment
         android:id="@+id/commodit"
-        android:name="com.jacob.book.material.example.drawer.DrawerShopCommonditFragment"
+        android:name="com.jacob.material.example.drawer.DrawerShopCommonditFragment"
         android:label="commodit"
         tools:layout="@layout/drawer_shop_commondit_fragment">
     </fragment>

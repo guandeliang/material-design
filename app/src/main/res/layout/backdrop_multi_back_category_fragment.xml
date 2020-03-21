@@ -11,7 +11,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <variable name="fragment" type="com.jacob.book.material.example.backdrop.BackdropMultiBackCategoryFragment"/>
+        <variable name="fragment" type="com.jacob.material.example.backdrop.BackdropMultiBackCategoryFragment"/>
     </data>
 
     <androidx.core.widget.NestedScrollView

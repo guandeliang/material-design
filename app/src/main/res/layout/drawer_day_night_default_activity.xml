@@ -13,7 +13,7 @@
     <data>
         <import type="android.view.View"/>
         <import type="android.view.Gravity"/>
-        <variable name="activity" type="com.jacob.book.material.example.drawer.DrawerDayNightDefaultActivity"/>
+        <variable name="activity" type="com.jacob.material.example.drawer.DrawerDayNightDefaultActivity"/>
         <variable name="isGravityLeft" type="Boolean"/>
         <variable name="isShowCloseButton" type="Boolean"/>
     </data>
@@ -26,7 +26,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <com.jacob.book.material.widgets.ThemeSwitchAppBarLayout
+            <com.jacob.material.widgets.ThemeSwitchAppBarLayout
                 android:id="@+id/theme_switch_app_bar_layout"
                 style="@style/Widget.MaterialComponents.AppBarLayout.PrimarySurface"
                 android:layout_width="match_parent"

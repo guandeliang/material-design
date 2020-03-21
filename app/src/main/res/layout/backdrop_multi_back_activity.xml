@@ -11,7 +11,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <variable name="activity" type="com.jacob.book.material.example.backdrop.BackdropMultiBackActivity" />
+        <variable name="activity" type="com.jacob.material.example.backdrop.BackdropMultiBackActivity" />
     </data>
 
 
@@ -106,7 +106,7 @@
             android:layout_marginTop="56dp"/>
 
 
-        <com.jacob.book.material.widgets.FabBottomNavigationView
+        <com.jacob.material.widgets.FabBottomNavigationView
             app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
             android:id="@+id/bottom_navigation_view"
             android:layout_width="match_parent"

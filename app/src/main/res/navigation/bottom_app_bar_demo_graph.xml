@@ -14,7 +14,7 @@
 
     <fragment
         android:id="@+id/in_box"
-        android:name="com.jacob.book.material.example.bottomappbar.BottomAppBarDemoInBoxFragment"
+        android:name="com.jacob.material.example.bottomappbar.BottomAppBarDemoInBoxFragment"
         android:label="in_box"
         tools:layout="@layout/bottom_app_bar_demo_in_box_fragment">
         <action
@@ -28,7 +28,7 @@
 
     <fragment
         android:id="@+id/mail_content"
-        android:name="com.jacob.book.material.example.bottomappbar.BottomAppBarDemoMailContentFragment"
+        android:name="com.jacob.material.example.bottomappbar.BottomAppBarDemoMailContentFragment"
         android:label="mail_content"
         tools:layout="@layout/bottom_app_bar_demo_mail_content_fragment">
     </fragment>

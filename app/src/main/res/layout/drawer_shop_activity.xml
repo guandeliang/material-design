@@ -11,9 +11,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <import type="com.jacob.book.material.base.LivelyShopViewModel"/>
-        <variable name="viewModel" type="com.jacob.book.material.base.LivelyShopViewModel" />
-        <variable name="activity" type="com.jacob.book.material.example.drawer.DrawerShopActivity" />
+        <import type="com.jacob.material.base.LivelyShopViewModel"/>
+        <variable name="viewModel" type="com.jacob.material.base.LivelyShopViewModel" />
+        <variable name="activity" type="com.jacob.material.example.drawer.DrawerShopActivity" />
     </data>
 
 <androidx.drawerlayout.widget.DrawerLayout

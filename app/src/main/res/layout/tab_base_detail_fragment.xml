@@ -291,14 +291,14 @@
                             app:layout_constraintLeft_toLeftOf="@id/rating_rating_bar"
                             app:layout_constraintRight_toRightOf="@id/rating_rating_bar"/>
 
-                        <com.jacob.book.material.widgets.MaterialRatingBar
+                        <com.jacob.material.widgets.MaterialRatingBar
                             android:id="@+id/rating_rating_bar"
                             android:layout_width="80dp"
                             android:layout_height="16dp"
                             app:layout_constraintBottom_toBottomOf="@id/rating_douban_rating"
                             app:layout_constraintLeft_toLeftOf="parent"/>
 
-                        <com.jacob.book.material.widgets.DouBanRating
+                        <com.jacob.material.widgets.DouBanRating
                             android:id="@+id/rating_douban_rating"
                             android:layout_width="0dp"
                             android:layout_height="56dp"

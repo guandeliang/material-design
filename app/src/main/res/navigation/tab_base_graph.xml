@@ -14,7 +14,7 @@
 
     <fragment
         android:id="@+id/main"
-        android:name="com.jacob.book.material.example.tab.TabBaseMainFragment"
+        android:name="com.jacob.material.example.tab.TabBaseMainFragment"
         android:label="main"
         tools:layout="@layout/tab_base_main_fragment">
 
@@ -31,7 +31,7 @@
 
     <fragment
         android:id="@+id/detail"
-        android:name="com.jacob.book.material.example.tab.TabBaseDetailFragment"
+        android:name="com.jacob.material.example.tab.TabBaseDetailFragment"
         android:label="detail"
         tools:layout="@layout/tab_base_detail_fragment" >
     </fragment>

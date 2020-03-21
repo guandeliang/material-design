@@ -18,14 +18,14 @@
 
     <fragment
         android:id="@+id/one"
-        android:name="com.jacob.book.material.test.TestShareElementOneFragment"
+        android:name="com.jacob.material.test.TestShareElementOneFragment"
         android:label="one"
         tools:layout="@layout/test_share_element_one_fragment">
     </fragment>
 
     <fragment
         android:id="@+id/two"
-        android:name="com.jacob.book.material.test.TestShareElementTwoFragment"
+        android:name="com.jacob.material.test.TestShareElementTwoFragment"
         android:label="two"
         tools:layout="@layout/test_share_element_two_fragment">
     </fragment>

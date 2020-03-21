@@ -14,7 +14,7 @@
 
     <fragment
         android:id="@+id/drop"
-        android:name="com.jacob.book.material.example.backdrop.BackdropMulitBackDropFragment"
+        android:name="com.jacob.material.example.backdrop.BackdropMulitBackDropFragment"
         android:label="category"
         tools:layout="@layout/backdrop_mulit_back_drop_fragment">
     </fragment>

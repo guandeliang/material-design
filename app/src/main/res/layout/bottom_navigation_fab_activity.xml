@@ -18,7 +18,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <com.jacob.book.material.widgets.ThemeSwitchAppBarLayout
+        <com.jacob.material.widgets.ThemeSwitchAppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:title_text="带FAB按钮的底部导航栏"/>
@@ -54,7 +54,7 @@
         </androidx.core.widget.NestedScrollView>
 
 
-        <com.jacob.book.material.widgets.FabBottomNavigationView
+        <com.jacob.material.widgets.FabBottomNavigationView
             app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
             android:id="@+id/bottom_navigation_view"
             android:layout_width="match_parent"

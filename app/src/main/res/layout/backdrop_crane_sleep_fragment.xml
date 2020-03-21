@@ -11,7 +11,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <variable name="fragement" type="com.jacob.book.material.example.backdrop.BackdropCraneSleepFragment" />
+        <variable name="fragement" type="com.jacob.material.example.backdrop.BackdropCraneSleepFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -151,7 +151,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        <com.jacob.book.material.widgets.EventHostFrameLayout
+        <com.jacob.material.widgets.EventHostFrameLayout
             android:id="@+id/drop_event_host_frame_layout"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -229,7 +229,7 @@
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </com.jacob.book.material.widgets.EventHostFrameLayout>
+        </com.jacob.material.widgets.EventHostFrameLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

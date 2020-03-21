@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-3 下午8:55
+  ~
+  -->
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="activity" type="com.jacob.material.example.fab.FabRelateActionActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/material_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="图片"/>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <include layout="@layout/include_movie"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"/>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/sub_action_button_003"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:alpha="0"
+                app:srcCompat="@drawable/icon_reply"
+                app:fabCustomSize="40dp"
+                app:backgroundTint="@color/material_color_green"
+                app:layout_constraintTop_toTopOf="@id/main_action_button"
+                app:layout_constraintBottom_toBottomOf="@id/main_action_button"
+                app:layout_constraintLeft_toLeftOf="@id/main_action_button"
+                app:layout_constraintRight_toRightOf="@id/main_action_button"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/sub_action_button_002"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:alpha="0"
+                app:srcCompat="@drawable/icon_group"
+                app:fabCustomSize="40dp"
+                app:backgroundTint="@color/material_color_deep_orange"
+                app:layout_constraintTop_toTopOf="@id/main_action_button"
+                app:layout_constraintBottom_toBottomOf="@id/main_action_button"
+                app:layout_constraintLeft_toLeftOf="@id/main_action_button"
+                app:layout_constraintRight_toRightOf="@id/main_action_button"/>
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/sub_action_button_001"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:alpha="0"
+                app:srcCompat="@drawable/icon_my_location"
+                app:fabCustomSize="40dp"
+                app:backgroundTint="@color/material_color_cyan"
+                app:layout_constraintTop_toTopOf="@id/main_action_button"
+                app:layout_constraintBottom_toBottomOf="@id/main_action_button"
+                app:layout_constraintLeft_toLeftOf="@id/main_action_button"
+                app:layout_constraintRight_toRightOf="@id/main_action_button"/>
+
+
+        <TextView
+            android:id="@+id/sub_action_text_003"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginRight="8dp"
+            android:text="你的家乡在哪里？哦！"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:gravity="center"
+            android:alpha="0"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_round_corner_36"
+            android:backgroundTint="@color/material_color_green"
+            app:layout_constraintTop_toTopOf="@id/main_action_button"
+            app:layout_constraintBottom_toBottomOf="@id/main_action_button"
+            app:layout_constraintRight_toLeftOf="@id/main_action_button"/>
+
+        <TextView
+            android:id="@+id/sub_action_text_002"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginRight="8dp"
+            android:text="我问你，啥？"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:gravity="center"
+            android:alpha="0"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_round_corner_36"
+            android:backgroundTint="@color/material_color_deep_orange"
+            app:layout_constraintTop_toTopOf="@id/main_action_button"
+            app:layout_constraintBottom_toBottomOf="@id/main_action_button"
+            app:layout_constraintRight_toLeftOf="@id/main_action_button"/>
+
+
+        <TextView
+            android:id="@+id/sub_action_text_001"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginRight="8dp"
+            android:text="张老三，哎！"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:gravity="center"
+            android:alpha="0"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_round_corner_36"
+            android:backgroundTint="@color/material_color_cyan"
+            app:layout_constraintTop_toTopOf="@id/main_action_button"
+            app:layout_constraintBottom_toBottomOf="@id/main_action_button"
+            app:layout_constraintRight_toLeftOf="@id/main_action_button"/>
+
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/main_action_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/icon_share"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:onClick="@{(view) -> activity.onMainFabClick(view)}"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

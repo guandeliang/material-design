@@ -18,7 +18,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <com.jacob.book.material.widgets.ThemeSwitchAppBarLayout
+        <com.jacob.material.widgets.ThemeSwitchAppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:title_text="自定义DayNight主题"/>

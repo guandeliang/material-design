@@ -11,9 +11,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <import type="com.jacob.book.material.base.LivelyShopViewModel"/>
-        <variable name="viewModel" type="com.jacob.book.material.base.LivelyShopViewModel" />
-        <variable name="activity" type="com.jacob.book.material.example.backdrop.BackdropIntroActivity" />
+        <import type="com.jacob.material.base.LivelyShopViewModel"/>
+        <variable name="viewModel" type="com.jacob.material.base.LivelyShopViewModel" />
+        <variable name="activity" type="com.jacob.material.example.backdrop.BackdropIntroActivity" />
     </data>
 
 
@@ -535,7 +535,7 @@
 
 
         <!--Block event to back view-->
-        <com.jacob.book.material.widgets.EventHostFrameLayout
+        <com.jacob.material.widgets.EventHostFrameLayout
             android:id="@+id/drop_event_host_frame_layout"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -610,7 +610,7 @@
                         android:layout_height="match_parent"/>
                 </LinearLayout>
 
-                <com.jacob.book.material.widgets.EventHostFrameLayout
+                <com.jacob.material.widgets.EventHostFrameLayout
                     android:id="@+id/drop_content_event_host_frame_layout"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -625,7 +625,7 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </com.jacob.book.material.widgets.EventHostFrameLayout>
+        </com.jacob.material.widgets.EventHostFrameLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
