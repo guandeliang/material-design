@@ -193,4 +193,9 @@ public class TopAppBarDarkTwoFragment extends TabViewPagerBaseFragment {
     }
 
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
 }

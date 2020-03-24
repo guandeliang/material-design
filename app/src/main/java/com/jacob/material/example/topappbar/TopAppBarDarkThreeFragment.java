@@ -42,5 +42,10 @@ public class TopAppBarDarkThreeFragment extends TabViewPagerBaseFragment {
     }
 
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
 
 }

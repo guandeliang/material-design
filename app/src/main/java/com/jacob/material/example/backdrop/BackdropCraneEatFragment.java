@@ -99,4 +99,9 @@ public class BackdropCraneEatFragment extends TabViewPagerBaseFragment implement
     }
 
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
 }

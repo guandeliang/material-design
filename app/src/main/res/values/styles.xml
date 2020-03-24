@@ -144,6 +144,9 @@
 
     <style name="Widget.MaterialBook.AppBarLayout.Primary" parent="Widget.MaterialComponents.AppBarLayout.Primary">
     </style>
+    <style name="Widget.MaterialBook.AppBarLayout.Background" parent="Widget.MaterialComponents.AppBarLayout.Surface">
+        <item name="android:background">?android:attr/colorBackground</item>
+    </style>
 
     <!--Drawer item style-->
     <style name="ShapeAppearanceOverlay.MaterialBook.NavigationView" parent="">
@@ -348,7 +351,7 @@
         <item name="colorOnBackground">@color/colored_color_on_background</item>
         <item name="colorOnSurface">@color/colored_color_on_surface</item>
         <item name="colorOnError">@color/colored_color_on_error</item>
-        <item name="scrimBackground">@color/mtrl_scrim_color</item>
+        <item name="scrimBackground">@color/colored_color_scrim_nackground</item>
 
         <!--元件风格-->
         <item name="appBarLayoutStyle">@style/Widget.MaterialBook.SingleColor.Colored.AppBarLayout</item>

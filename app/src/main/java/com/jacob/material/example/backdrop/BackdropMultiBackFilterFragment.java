@@ -63,4 +63,10 @@ public class BackdropMultiBackFilterFragment extends Fragment implements Lifecyc
             viewModel.setBackAction(BackdropMulitBackViewModel.BackAction.FILTER_CLEAR);
         }
     }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
 }

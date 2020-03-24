@@ -35,5 +35,10 @@ public class TabMomondoSearchHotelFragment extends TabViewPagerBaseFragment impl
         return binding.getRoot();
     }
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
 
 }

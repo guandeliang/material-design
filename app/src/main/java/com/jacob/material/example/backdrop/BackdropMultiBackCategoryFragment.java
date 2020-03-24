@@ -59,4 +59,9 @@ public class BackdropMultiBackCategoryFragment extends Fragment implements Lifec
         }
     }
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
 }

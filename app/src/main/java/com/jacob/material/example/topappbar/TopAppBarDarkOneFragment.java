@@ -119,5 +119,10 @@ public class TopAppBarDarkOneFragment extends TabViewPagerBaseFragment {
 
     }
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
 
 }

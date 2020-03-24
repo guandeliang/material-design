@@ -249,6 +249,11 @@
             android:theme="@style/Theme.MaterialBook.SingleColor.Light"
             android:screenOrientation="portrait">
         </activity>
+        <activity
+            android:name=".example.fab.FabPhoneActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
+            android:screenOrientation="portrait">
+        </activity>
 
 
         <activity

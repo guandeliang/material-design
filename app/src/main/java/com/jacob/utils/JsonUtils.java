@@ -12,6 +12,7 @@ import android.content.res.Resources;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.jacob.material.R;
+import com.jacob.material.example.model.AddressBook;
 import com.jacob.material.example.model.Book;
 import com.jacob.material.example.model.Commodit;
 import com.jacob.material.example.model.ExampleImage;
@@ -103,6 +104,13 @@ public class JsonUtils {
         String jsonString = readJson(resources, R.raw.general_list);
         Gson gson = new Gson();
         Type listType = new TypeToken<ArrayList<GeneralData>>(){}.getType();
+        return gson.fromJson(jsonString, listType);
+    }
+
+    public static List<AddressBook> loadAddressBooks(Resources resources) {
+        String jsonString = readJson(resources, R.raw.address_book);
+        Gson gson = new Gson();
+        Type listType = new TypeToken<ArrayList<AddressBook>>(){}.getType();
         return gson.fromJson(jsonString, listType);
     }
 

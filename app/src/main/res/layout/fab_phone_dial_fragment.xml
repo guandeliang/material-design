@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-15 下午5:37
+  ~
+  -->
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="fragment" type="com.jacob.material.example.fab.FabPhoneDialFragment"/>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.material.appbar.AppBarLayout
+            style="@style/Widget.MaterialBook.AppBarLayout.Background"
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/number_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="24dp">
+                <LinearLayout
+                    android:id="@+id/linear_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="4dp"
+                    android:gravity="center_vertical">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/number_edit_text"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="电话"
+                        android:singleLine="true"
+                        android:textSize="24dp"
+                        android:onTextChanged="@{(text, start, before, count) -> fragment.onNumberTextChanged(text)}"/>
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="48dp"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"
+                        android:paddingLeft="6dp"
+                        android:paddingRight="6dp"
+                        android:clickable="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/icon_more_vert"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadingEdge="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+            android:id="@+id/key_constraint_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/colorBackground"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <LinearLayout
+                android:id="@+id/n_1_linear_layout"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/n_2_linear_layout"
+                android:onClick='@{(view) -> fragment.onKeyButtonClick(view, "1")}'>
+                <TextView
+                    android:id="@+id/n_1_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="24dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/n_2_linear_layout"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/n_1_linear_layout"
+                app:layout_constraintRight_toLeftOf="@id/n_3_linear_layout"
+                android:onClick='@{(view) -> fragment.onKeyButtonClick(view, "2")}'>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:textSize="24dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/n_3_linear_layout"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/n_2_linear_layout"
+                app:layout_constraintRight_toRightOf="parent"
+                android:onClick='@{(view) -> fragment.onKeyButtonClick(view, "3")}'>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:textSize="24dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/n_4_linear_layout"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintTop_toBottomOf="@id/n_1_linear_layout"
+                app:layout_constraintLeft_toLeftOf="@id/n_1_linear_layout"
+                app:layout_constraintRight_toRightOf="@id/n_1_linear_layout"
+                android:onClick='@{(view) -> fragment.onKeyButtonClick(view, "4")}'>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+                    android:textSize="24dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/n_5_linear_layout"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintTop_toBottomOf="@id/n_2_linear_layout"
+                app:layout_constraintLeft_toLeftOf="@id/n_2_linear_layout"
+                app:layout_constraintRight_toRightOf="@id/n_2_linear_layout"
+                android:onClick='@{(view) -> fragment.onKeyButtonClick(view, "5")}'>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:textSize="24dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/n_6_linear_layout"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintTop_toBottomOf="@id/n_3_linear_layout"
+                app:layout_constraintLeft_toLeftOf="@id/n_3_linear_layout"
+                app:layout_constraintRight_toRightOf="@id/n_3_linear_layout"
+                android:onClick='@{(view) -> fragment.onKeyButtonClick(view, "6")}'>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6"
+                    android:textSize="24dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/n_7_linear_layout"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintTop_toBottomOf="@id/n_4_linear_layout"
+                app:layout_constraintLeft_toLeftOf="@id/n_4_linear_layout"
+                app:layout_constraintRight_toRightOf="@id/n_4_linear_layout"
+                android:onClick='@{(view) -> fragment.onKeyButtonClick(view, "7")}'>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7"
+                    android:textSize="24dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/n_8_linear_layout"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintTop_toBottomOf="@id/n_5_linear_layout"
+                app:layout_constraintLeft_toLeftOf="@id/n_5_linear_layout"
+                app:layout_constraintRight_toRightOf="@id/n_5_linear_layout"
+                android:onClick='@{(view) -> fragment.onKeyButtonClick(view, "8")}'>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8"
+                    android:textSize="24dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/n_9_linear_layout"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintTop_toBottomOf="@id/n_6_linear_layout"
+                app:layout_constraintLeft_toLeftOf="@id/n_6_linear_layout"
+                app:layout_constraintRight_toRightOf="@id/n_6_linear_layout"
+                android:onClick='@{(view) -> fragment.onKeyButtonClick(view, "9")}'>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9"
+                    android:textSize="24dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/n_asterisk_linear_layout"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:paddingTop="8dp"
+                android:layout_marginBottom="96dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintTop_toBottomOf="@id/n_7_linear_layout"
+                app:layout_constraintLeft_toLeftOf="@id/n_7_linear_layout"
+                app:layout_constraintRight_toRightOf="@id/n_7_linear_layout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:onClick='@{(view) -> fragment.onKeyButtonClick(view, "*")}'>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*"
+                    android:textSize="32dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/n_0_linear_layout"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginBottom="96dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintTop_toBottomOf="@id/n_8_linear_layout"
+                app:layout_constraintLeft_toLeftOf="@id/n_8_linear_layout"
+                app:layout_constraintRight_toRightOf="@id/n_8_linear_layout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:onClick='@{(view) -> fragment.onKeyButtonClick(view, "0")}'>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="24dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/n_pound_linear_layout"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginBottom="96dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintTop_toBottomOf="@id/n_9_linear_layout"
+                app:layout_constraintLeft_toLeftOf="@id/n_9_linear_layout"
+                app:layout_constraintRight_toRightOf="@id/n_9_linear_layout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:onClick='@{(view) -> fragment.onKeyButtonClick(view, "#")}'>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#"
+                    android:textSize="24dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/n_back_linear_layout"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginBottom="24dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintLeft_toLeftOf="@id/n_9_linear_layout"
+                app:layout_constraintRight_toRightOf="@id/n_9_linear_layout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:onClick='@{(view) -> fragment.onKeyButtonClick(view, "-")}'>
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="12dp"
+                    android:src="@drawable/icon_backspace_black"
+                    app:layout_constraintTop_toBottomOf="@id/n_pound_linear_layout"
+                    app:layout_constraintLeft_toLeftOf="@id/n_pound_linear_layout"
+                    app:layout_constraintRight_toRightOf="@id/n_pound_linear_layout"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:layout_gravity="bottom|center_horizontal"
+            app:backgroundTint="@color/material_color_green"
+            app:srcCompat="@drawable/icon_call"
+            android:onClick="@{(view) -> fragment.onDialButtonClick(view)}"/>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+</layout>

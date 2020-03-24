@@ -56,7 +56,7 @@ public class BottomNavigationDemoSearchFragment extends Fragment implements Life
 
 
     @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
-    private void onLifecycleDistory(){
+    private void onLifecycleResume(){
         if(binding.searchEditText.requestFocus()){
             InputMethodManager imm =(InputMethodManager)this.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.showSoftInput(binding.searchEditText, InputMethodManager.SHOW_IMPLICIT);

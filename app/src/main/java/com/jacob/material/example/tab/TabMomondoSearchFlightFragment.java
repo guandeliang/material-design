@@ -69,4 +69,9 @@ public class TabMomondoSearchFlightFragment extends TabViewPagerBaseFragment imp
         public void onTabReselected(TabLayout.Tab tab) {}
     }
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
 }

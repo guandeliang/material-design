@@ -67,4 +67,10 @@ public class BackdropMultiBackSearchFragment extends Fragment implements Lifecyc
         }
     }
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
+
 }

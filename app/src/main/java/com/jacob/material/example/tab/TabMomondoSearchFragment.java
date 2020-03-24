@@ -130,5 +130,10 @@ public class TabMomondoSearchFragment extends Fragment implements LifecycleObser
     }
 
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
 
 }

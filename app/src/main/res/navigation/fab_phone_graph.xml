@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-19 上午9:41
+  ~
+  -->
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fab_phone_graph"
+    app:startDestination="@id/address">
+
+    <action android:id="@+id/show_call" app:destination="@id/call"/>
+
+    <fragment
+        android:id="@+id/address"
+        android:name="com.jacob.material.example.fab.FabPhoneAddressFragment"
+        android:label="address"
+        tools:layout="@layout/fab_phone_address_fragment">
+        <action android:id="@+id/show_search" app:destination="@id/search"/>
+        <action android:id="@+id/show_dial" app:destination="@id/dial"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/search"
+        android:name="com.jacob.material.example.fab.FabPhoneSearchFragment"
+        android:label="search"
+        tools:layout="@layout/fab_phone_search_fragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/dial"
+        android:name="com.jacob.material.example.fab.FabPhoneDialFragment"
+        android:label="dial"
+        tools:layout="@layout/fab_phone_dial_fragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/call"
+        android:name="com.jacob.material.example.fab.FabPhoneCallFragment"
+        android:label="call"
+        tools:layout="@layout/fab_phone_call_fragment">
+    </fragment>
+
+</navigation>

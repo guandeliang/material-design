@@ -270,27 +270,15 @@
         "path":"com.jacob.material.example.fab.FabRelateActionActivity"
       },
       {
-        "id":10701020,
-        "title":"FAB Motion",
+        "id":10701070,
+        "title":"FAB Motion ：FAB to View",
         "path":"com.jacob.material.example.fab.FabMotionActivity"
       },
-
       {
-        "id":10701020,
-        "title":"通过FAB展开个人详情",
-        "path":"com.jacob.material.example.fab.FabDayNightCustomActivity"
-      },
-      {
-        "id":10701020,
-        "title":"通过FAB拨打电话，TAB切换",
-        "path":"com.jacob.material.example.fab.FabDayNightCustomActivity"
-      },
-      {
-        "id":10701020,
-        "title":"通过FAB发邮件（全屏）MOTION变化",
-        "path":"com.jacob.material.example.fab.FabDayNightCustomActivity"
+        "id":10701080,
+        "title":"FAB Motion ：FAB to Fragment",
+        "path":"com.jacob.material.example.fab.FabPhoneActivity"
       }
-
     ]
   },
 
@@ -300,7 +288,6 @@
     "title":"大导航Side Sheets",
     "itemList":[]
   },
-
 
 
   {
@@ -316,7 +303,6 @@
     "title":"小导航Bottom Sheets",
     "itemList":[]
   },
-
 
 
   {

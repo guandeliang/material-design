@@ -98,4 +98,9 @@ public class BackdropCraneSleepFragment extends TabViewPagerBaseFragment impleme
     }
 
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
 }

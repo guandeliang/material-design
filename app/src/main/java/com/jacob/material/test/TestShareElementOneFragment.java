@@ -48,6 +48,11 @@ public class TestShareElementOneFragment extends Fragment implements LifecycleOb
         }
     }
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
 
 
 }

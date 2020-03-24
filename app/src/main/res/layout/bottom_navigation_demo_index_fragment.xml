@@ -57,7 +57,7 @@
                     android:padding="12dp"
                     android:clickable="true"
                     android:background="?attr/selectableItemBackgroundBorderless"
-                    android:src="@drawable/icon_mic_none"/>
+                    android:src="@drawable/icon_mic"/>
             </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>

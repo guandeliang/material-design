@@ -84,5 +84,10 @@ public class MainExampleListFragment extends Fragment{
         }
     }
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
 
 }

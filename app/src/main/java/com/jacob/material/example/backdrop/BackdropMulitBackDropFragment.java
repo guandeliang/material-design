@@ -81,4 +81,9 @@ public class BackdropMulitBackDropFragment extends Fragment implements Lifecycle
     }
 
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
 }
