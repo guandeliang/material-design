@@ -7,9 +7,12 @@
 
 package com.jacob.material.example.adapter;
 
+import android.widget.ImageView;
+
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.viewholder.BaseViewHolder;
 import com.jacob.material.R;
+import com.jacob.material.example.fab.FabPhoneViewModel;
 import com.jacob.material.example.model.AddressBook;
 import com.jacob.material.example.model.ExampleImage;
 
@@ -23,8 +26,10 @@ public class AddressBookAdapter extends BaseQuickAdapter<AddressBook, BaseViewHo
 
     @Override
     protected void convert(BaseViewHolder holder, AddressBook data) {
+        ImageView headerImageView = holder.getView(R.id.image_view);
         int imageResId = getContext().getResources().getIdentifier(data.getFileName(), "drawable", getContext().getPackageName());
-        holder.setImageResource(R.id.image_view, imageResId);
+        headerImageView.setImageResource(imageResId);
+        headerImageView.setTransitionName(FabPhoneViewModel.TRANSITION_IMAGE_TO_IMAGE + "_" + data.getId());
     }
 
 

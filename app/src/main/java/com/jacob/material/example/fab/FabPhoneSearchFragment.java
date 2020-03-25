@@ -16,6 +16,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
+import android.view.WindowInsets;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 
 import androidx.annotation.Nullable;
@@ -62,17 +65,24 @@ public class FabPhoneSearchFragment extends Fragment implements LifecycleObserve
         this.getLifecycle().addObserver(this);
     }
 
-
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        this.startPostponedEnterTransition();
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fab_phone_search_fragment, container, false);
+        this.postponeEnterTransition();
+        binding.recyclerView.getViewTreeObserver().addOnPreDrawListener(
+                new ViewTreeObserver.OnPreDrawListener(){
+                    @Override
+                    public boolean onPreDraw() {
+                        binding.recyclerView.getViewTreeObserver().removeOnPreDrawListener(this);
+                        startPostponedEnterTransition();//没有这个行代码就没有动画效果
+                        return false;
+                    }
+                }
+        );
+
         viewModel = new ViewModelProvider(this.getActivity()).get(FabPhoneViewModel.class);
         binding.setFragment(this);
-
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         binding.recyclerView.setLayoutManager(layoutManager);
@@ -94,19 +104,25 @@ public class FabPhoneSearchFragment extends Fragment implements LifecycleObserve
         @Override
         public void onItemClick(SortableAddressBookAdapter.AddressBookViewHolder holder, AddressBook addressBook) {
             //需要实现从ITEM 到全屏，同时共享图片的转换
+            //键盘的现实状态会影响动画效果
+            //无论是否显示，都关闭键盘，并且返回执行关闭操作之间，键盘是否处于显示状态
+            //如果关闭之前，键盘处于显示状态，则返回true，这种情况下不执行过渡动画
+            boolean isKeyboardVisibile = dismissKeyboard();
+
 
             Bundle bundle = new Bundle();
             bundle.putSerializable(FabPhoneCallFragment.PARAM_ADDRESS_BOOK, addressBook);
-            bundle.putString(FabPhoneCallFragment.PARAM_TRANSITION_TO_FULL, FabPhoneViewModel.TRANSITION_FAB_TO_FULL);
+            bundle.putString(FabPhoneCallFragment.PARAM_TRANSITION_TO_IMAGE, holder.getHeaderImageView().getTransitionName());
+            bundle.putString(FabPhoneCallFragment.PARAM_TRANSITION_TO_FULL, holder.getRoot().getTransitionName());
 
-            binding.searchCardView.setTransitionName(FabPhoneViewModel.TRANSITION_FAB_TO_FULL);
-            FragmentNavigator.Extras extras = new FragmentNavigator.Extras.Builder()
-                    .addSharedElement(binding.searchCardView, FabPhoneViewModel.TRANSITION_FAB_TO_FULL)
-                    .build();
+            FragmentNavigator.Extras extras = null;
+            if(!isKeyboardVisibile){//如果不是刚刚关闭键盘
+                extras = new FragmentNavigator.Extras.Builder()
+                        .addSharedElement(holder.getHeaderImageView(), holder.getHeaderImageView().getTransitionName())
+                        .addSharedElement(holder.getRoot(), holder.getRoot().getTransitionName()).build();
 
-            viewModel.getNavController().navigate(R.id.show_call, bundle, null, extras);
-
-
+            }
+            viewModel.getNavController().navigate(R.id.show_call, bundle, null,extras);
         }
     }
 
@@ -135,14 +151,10 @@ public class FabPhoneSearchFragment extends Fragment implements LifecycleObserve
         viewModel.setAction(FabPhoneViewModel.Action.BACK);
     }
 
-
-
-    @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
-    private void onLifecycleResume(){
-        if(binding.searchEditText.requestFocus()){
-            InputMethodManager imm =(InputMethodManager)this.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
-            imm.showSoftInput(binding.searchEditText, InputMethodManager.SHOW_IMPLICIT);
-        }
+    public boolean dismissKeyboard(){
+        InputMethodManager inputMethodManager =(InputMethodManager)this.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+        return inputMethodManager.hideSoftInputFromWindow(binding.searchEditText.getWindowToken(), 0);
     }
+
 
 }

@@ -11,9 +11,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
+import android.widget.ImageView;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleObserver;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.fragment.FragmentNavigator;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -35,6 +39,7 @@ import java.util.List;
 
 public class FabPhoneAddressContactsFragment extends TabViewPagerBaseFragment implements LifecycleObserver {
     private FabPhoneAddressContactsFragmentBinding binding;
+    private FabPhoneViewModel viewModel;
 
     public FabPhoneAddressContactsFragment(){
         super(new TabItemContent("联系人", -1));
@@ -44,6 +49,21 @@ public class FabPhoneAddressContactsFragment extends TabViewPagerBaseFragment im
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fab_phone_address_contacts_fragment, container, false);
+        this.postponeEnterTransition();
+        binding.recyclerView.getViewTreeObserver().addOnPreDrawListener(
+                new ViewTreeObserver.OnPreDrawListener(){
+                    @Override
+                    public boolean onPreDraw() {
+                        binding.recyclerView.getViewTreeObserver().removeOnPreDrawListener(this);
+                        startPostponedEnterTransition();//没有这个行代码就没有动画效果
+                        return false;
+                    }
+                }
+        );
+
+        viewModel = new ViewModelProvider(this.getActivity()).get(FabPhoneViewModel.class);
+
+
         List<AddressBook> list = getRecentAddressBooks();
 
         GridLayoutManager layoutManager = new GridLayoutManager(getContext(), 2, RecyclerView.VERTICAL, false);
@@ -77,7 +97,17 @@ public class FabPhoneAddressContactsFragment extends TabViewPagerBaseFragment im
     private class OnAddressBookItemClickListener implements OnItemClickListener {
         @Override
         public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+            AddressBookAdapter addressBookAdapter = (AddressBookAdapter)adapter;
+            ImageView imageView = view.findViewById(R.id.image_view);
 
+            Bundle bundle = new Bundle();
+            bundle.putSerializable(FabPhoneCallFragment.PARAM_ADDRESS_BOOK, addressBookAdapter.getData().get(position));
+            bundle.putString(FabPhoneCallFragment.PARAM_TRANSITION_TO_IMAGE, imageView.getTransitionName());
+
+            FragmentNavigator.Extras extras =  new FragmentNavigator.Extras.Builder()
+                        .addSharedElement(imageView, imageView.getTransitionName()).build();
+
+            viewModel.getNavController().navigate(R.id.show_call, bundle, null,extras);
         }
     }
 }

@@ -8,6 +8,7 @@
 package com.jacob.material.example.fab;
 
 import android.os.Bundle;
+import android.transition.ArcMotion;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,11 +57,15 @@ public class FabPhoneCallFragment extends Fragment implements LifecycleObserver 
         }
 
         String toFullTransitionName = getArguments().getString(PARAM_TRANSITION_TO_FULL);
-        if(toFullTransitionName != null){
-            binding.coordinatorLayout.setTransitionName(toFullTransitionName);
+        binding.coordinatorLayout.setTransitionName(toFullTransitionName);
+        String toImageTransitionName = getArguments().getString(PARAM_TRANSITION_TO_IMAGE);
+        binding.headerImageView.setTransitionName(toImageTransitionName);
+
+        if(toFullTransitionName != null | toImageTransitionName != null){
             MaterialContainerTransform transform = new MaterialContainerTransform(getContext());
             //transform.addTarget(binding.coordinatorLayout);//这句不能加，加了就出问题，
-            transform.setDuration(300);
+            transform.setDuration(500);
+            transform.setPathMotion(new ArcMotion());
             transform.setScrimColor(WidgetsUtils.getColorValue(getContext(), R.attr.scrimBackground));
             this.setSharedElementEnterTransition(transform);
             this.setSharedElementReturnTransition(transform);

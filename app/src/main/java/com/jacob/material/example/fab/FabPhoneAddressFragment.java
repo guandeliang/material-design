@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
@@ -43,7 +44,23 @@ public class FabPhoneAddressFragment extends Fragment implements LifecycleObserv
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fab_phone_address_fragment, container, false);
         binding.fabButton.setTransitionName(FabPhoneViewModel.TRANSITION_FAB_TO_VIEW);
-        this.startPostponedEnterTransition();
+        this.startPostponedEnterTransition();//处理FAB返回动画
+
+        //处理RecycleView返回动画
+        //下面的代码是为了把共享传递到子Fragment中
+        this.postponeEnterTransition();
+        binding.viewPager.getViewTreeObserver().addOnPreDrawListener(
+                new ViewTreeObserver.OnPreDrawListener(){
+                    @Override
+                    public boolean onPreDraw() {
+                        binding.viewPager.getViewTreeObserver().removeOnPreDrawListener(this);
+                        startPostponedEnterTransition();
+                        return false;
+                    }
+                }
+        );
+
+
 
         viewModel = new ViewModelProvider(this.getActivity()).get(FabPhoneViewModel.class);
         binding.setFragment(this);
