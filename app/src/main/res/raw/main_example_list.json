@@ -283,6 +283,20 @@
   },
 
   {
+    "id":10800000,
+    "iconName":"icon_menu",
+    "title":"菜单Menu",
+    "itemList":[
+      {
+        "id":10701010,
+        "title":"默认DayNight主题Menu",
+        "path":"com.jacob.material.example.menu.MenuDayNightDefaultActivity"
+      }
+    ]
+  },
+
+
+  {
     "id":12100000,
     "iconName":"icon_example_appbar_top",
     "title":"大导航Side Sheets",
@@ -290,12 +304,6 @@
   },
 
 
-  {
-    "id":11500000,
-    "iconName":"icon_example_appbar_top",
-    "title":"小导航Menus",
-    "itemList":[]
-  },
 
   {
     "id":12000000,

@@ -8,20 +8,18 @@
 package com.jacob.material.example.topappbar;
 
 import android.annotation.SuppressLint;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.view.menu.MenuBuilder;
 import androidx.databinding.DataBindingUtil;
 
 import com.google.android.material.snackbar.Snackbar;
-import com.jacob.utils.WidgetsUtils;
 import com.jacob.material.R;
 import com.jacob.material.databinding.TopAppBarDayNightCustomActivityBinding;
+import com.jacob.utils.WidgetsUtils;
 
 public class TopAppBarDayNightCustomActivity extends AppCompatActivity {
     private TopAppBarDayNightCustomActivityBinding binding;
@@ -42,23 +40,6 @@ public class TopAppBarDayNightCustomActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.regular_menu, menu);
-
-        if(menu instanceof MenuBuilder){
-            MenuBuilder menuBuilder = (MenuBuilder) menu;
-            menuBuilder.setOptionalIconsVisible(true);
-        }
-
-        for(int i = 0; i < menu.size(); i++){
-            MenuItem menuItem = menu.getItem(i);
-            Drawable drawable = menuItem.getIcon();
-            if(drawable != null) {
-                if(menuItem.getOrder() < 200){
-                    WidgetsUtils.setDrawableColor(this, drawable, R.color.white);
-                }else{
-                    WidgetsUtils.setDrawableColor(this, drawable, android.R.attr.colorPrimary);
-                }
-            }
-        }
         return true;
     }
 

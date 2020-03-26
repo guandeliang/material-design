@@ -17,6 +17,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.databinding.DataBindingUtil;
 import androidx.vectordrawable.graphics.drawable.Animatable2Compat;
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat;
@@ -32,9 +33,9 @@ public class MainLaunchActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.main_launch_activity);
-        initStyle(null);
 
 
         if (Build.VERSION.SDK_INT >= 24) {
@@ -61,31 +62,4 @@ public class MainLaunchActivity extends AppCompatActivity {
             finish();
         }
     }
-
-    private void initStyle(Configuration configuration){
-        if(configuration == null){
-            configuration = getResources().getConfiguration();
-        }
-        if (configuration == null){
-            return;
-        }
-
-        int currentNightMode = configuration.uiMode & Configuration.UI_MODE_NIGHT_MASK;
-        if(currentNightMode == Configuration.UI_MODE_NIGHT_YES){//夜间模式
-
-        }else if(currentNightMode == Configuration.UI_MODE_NIGHT_NO){//日间模式
-            WidgetsUtils.setSystemBarLight(this);
-        }else if(currentNightMode == Configuration.UI_MODE_NIGHT_UNDEFINED){//不知道什么模式
-
-        }
-    }
-
-
-    @Override
-    public void onConfigurationChanged(@NonNull Configuration configuration) {
-        super.onConfigurationChanged(configuration);
-        initStyle(configuration);
-    }
-
-
 }

@@ -39,7 +39,7 @@ public class FabPhoneActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.fab_phone_activity);
         viewModel = new ViewModelProvider(this).get(FabPhoneViewModel.class);
         viewModel.addOnPropertyChangedCallback(new ViewModelPropertyChangedCallback());
-        lastPressBackTime = System.currentTimeMillis();
+        lastPressBackTime = 0;
 
         this.getOnBackPressedDispatcher().addCallback(new BackPressedCallback());
 

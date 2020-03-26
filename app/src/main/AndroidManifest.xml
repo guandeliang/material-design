@@ -256,6 +256,17 @@
         </activity>
 
 
+        <!-- MENU -->
+        <activity
+            android:name=".example.menu.MenuDayNightDefaultActivity"
+            android:theme="@style/Theme.MaterialBook.DayNight.Default"
+            android:screenOrientation="portrait">
+        </activity>
+
+
+
+
+
         <activity
             android:name=".test.TestSnapActivity"
             android:theme="@style/Theme.MaterialBook.SingleColor.Colored"

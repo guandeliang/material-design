@@ -7,11 +7,13 @@
 
 package com.jacob.material.widgets;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -22,6 +24,7 @@ import androidx.appcompat.app.AppCompatDelegate;
 
 import com.google.android.material.appbar.AppBarLayout;
 import com.jacob.material.R;
+import com.jacob.temp.TempConstant;
 
 public class ThemeSwitchAppBarLayout extends AppBarLayout {
     private String titleText;
@@ -53,7 +56,7 @@ public class ThemeSwitchAppBarLayout extends AppBarLayout {
         titleTextView.setText(titleText);
 
         menuImageView.setOnClickListener(new OnMenuClickListener());
-        themeImageView.setOnClickListener(new OnThemeImageViewCliclLintener());
+        themeImageView.setOnClickListener(new OnThemeImageViewClickListener());
 
         initView();
     }
@@ -93,11 +96,16 @@ public class ThemeSwitchAppBarLayout extends AppBarLayout {
         public void onClick(View v) {
             if(onMenuClickListener != null){
                 onMenuClickListener.onClick(v);
+            }else{
+                if(getContext() instanceof Activity){
+                    Activity activity = (Activity)getContext();
+                    activity.finish();
+                }
             }
         }
     }
 
-    private class OnThemeImageViewCliclLintener implements View.OnClickListener{
+    private class OnThemeImageViewClickListener implements View.OnClickListener{
         @Override
         public void onClick(View view) {
             Configuration configuration = getResources().getConfiguration();
@@ -113,7 +121,7 @@ public class ThemeSwitchAppBarLayout extends AppBarLayout {
             }else if(uiMode == Configuration.UI_MODE_NIGHT_NO){//如果是日间模式，则切换的夜间模式
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
             }else if(uiMode == Configuration.UI_MODE_NIGHT_UNDEFINED){//不知道什么模式
-                themeImageView.setVisibility(View.GONE);
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
             }
         }
     }

@@ -46,7 +46,7 @@ public class TopAppBarBaseFuncActivity extends AppCompatActivity {
         ab.setHomeAsUpIndicator(R.drawable.icon_menu);
         ab.setDisplayHomeAsUpEnabled(true);
         //这个图标的颜色很折磨人
-        binding.materialToolbar.getNavigationIcon().setTint(WidgetsUtils.getColorValue(this, android.R.attr.textColorPrimaryInverse));
+        //binding.materialToolbar.getNavigationIcon().setTint(WidgetsUtils.getColorValue(this, android.R.attr.textColorPrimaryInverse));
 
         StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         binding.recyclerView.setLayoutManager(layoutManager);
@@ -87,7 +87,7 @@ public class TopAppBarBaseFuncActivity extends AppCompatActivity {
             MenuBuilder menuBuilder = (MenuBuilder) menu;
             menuBuilder.setOptionalIconsVisible(true);
         }
-
+/*
         for(int i = 0; i < menu.size(); i++){
             MenuItem menuItem = menu.getItem(i);
             Drawable drawable = menuItem.getIcon();
@@ -99,6 +99,8 @@ public class TopAppBarBaseFuncActivity extends AppCompatActivity {
                 }
             }
         }
+
+ */
         return true;
     }
 
