@@ -85,7 +85,6 @@ public class BottomNavigationDemoPlayListFragment extends Fragment implements Li
                 binding.bottomsheetUpImageView.setVisibility(View.VISIBLE);
                 binding.bottomsheetDownImageView.setVisibility(View.GONE);
             }
-
         }
 
         @Override

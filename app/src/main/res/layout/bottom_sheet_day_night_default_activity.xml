@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-3 下午8:55
+  ~
+  -->
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            style="@style/Widget.MaterialBook.AppBarLayout.PrimarySurface"
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/material_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="默认DayNight"/>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            android:id="@+id/nested_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <include layout="@layout/include_ring"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"/>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottom_sheet_constraint_layout"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:background="?attr/colorSurface">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/v_guideline_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="24dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/v_guideline_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="24dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/v_guideline_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="80dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guideline_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="24dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guideline_content_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="56dp" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guideline_content_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="104dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guideline_content_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="152dp" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guideline_content_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="200dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guideline_content_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                app:layout_constraintGuide_begin="248dp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceCaption"
+                android:text="请选择要进行的操作"
+                app:layout_constraintStart_toStartOf="@id/v_guideline_left"
+                app:layout_constraintTop_toTopOf="@id/h_guideline_top" />
+
+            <ImageView
+                android:id="@+id/share_image_view"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:tint="?attr/colorPrimary"
+                app:layout_constraintBottom_toTopOf="@id/h_guideline_content_1"
+                app:layout_constraintStart_toEndOf="@id/v_guideline_left"
+                app:layout_constraintTop_toBottomOf="@id/h_guideline_content_0"
+                app:srcCompat="@drawable/icon_share" />
+
+
+            <TextView
+                android:id="@+id/share_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceBody1"
+                app:layout_constraintTop_toBottomOf="@id/h_guideline_content_0"
+                app:layout_constraintBottom_toTopOf="@id/h_guideline_content_1"
+                app:layout_constraintStart_toEndOf="@id/v_guideline_text"
+                android:text="分享给微信好友"/>
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/share_group"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintLeft_toRightOf="@id/v_guideline_left"
+                app:layout_constraintRight_toLeftOf="@id/v_guideline_right"
+                app:layout_constraintTop_toBottomOf="@id/h_guideline_content_0"
+                app:layout_constraintBottom_toTopOf="@id/h_guideline_content_1"
+                app:constraint_referenced_ids="share_image_view,share_text_view"/>
+
+
+
+            <ImageView
+                android:id="@+id/favorite_image_view"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:tint="?attr/colorPrimary"
+                app:layout_constraintBottom_toTopOf="@id/h_guideline_content_2"
+                app:layout_constraintStart_toEndOf="@id/v_guideline_left"
+                app:layout_constraintTop_toBottomOf="@id/h_guideline_content_1"
+                app:srcCompat="@drawable/icon_favorite" />
+
+            <TextView
+                android:id="@+id/favorite_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceBody1"
+                app:layout_constraintTop_toBottomOf="@id/h_guideline_content_1"
+                app:layout_constraintBottom_toTopOf="@id/h_guideline_content_2"
+                app:layout_constraintStart_toEndOf="@id/v_guideline_text"
+                android:text="为TA点赞"/>
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/favorite_group"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintLeft_toRightOf="@id/v_guideline_left"
+                app:layout_constraintRight_toLeftOf="@id/v_guideline_right"
+                app:layout_constraintTop_toBottomOf="@id/h_guideline_content_1"
+                app:layout_constraintBottom_toTopOf="@id/h_guideline_content_2"
+                app:constraint_referenced_ids="favorite_image_view,favorite_text_view"/>
+
+            <ImageView
+                android:id="@+id/search_image_view"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:tint="?attr/colorPrimary"
+                app:layout_constraintBottom_toTopOf="@id/h_guideline_content_3"
+                app:layout_constraintStart_toEndOf="@id/v_guideline_left"
+                app:layout_constraintTop_toBottomOf="@id/h_guideline_content_2"
+                app:srcCompat="@drawable/icon_search" />
+
+            <TextView
+                android:id="@+id/search_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceBody1"
+                app:layout_constraintTop_toBottomOf="@id/h_guideline_content_2"
+                app:layout_constraintBottom_toTopOf="@id/h_guideline_content_3"
+                app:layout_constraintStart_toEndOf="@id/v_guideline_text"
+                android:text="查一查，看看能不能找到"/>
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/search_group"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintLeft_toRightOf="@id/v_guideline_left"
+                app:layout_constraintRight_toLeftOf="@id/v_guideline_right"
+                app:layout_constraintTop_toBottomOf="@id/h_guideline_content_2"
+                app:layout_constraintBottom_toTopOf="@id/h_guideline_content_3"
+                app:constraint_referenced_ids="search_image_view,share_text_view"/>
+
+            <ImageView
+                android:id="@+id/user_image_view"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:tint="?attr/colorPrimary"
+                app:layout_constraintBottom_toTopOf="@id/h_guideline_content_4"
+                app:layout_constraintStart_toEndOf="@id/v_guideline_left"
+                app:layout_constraintTop_toBottomOf="@id/h_guideline_content_3"
+                app:srcCompat="@drawable/icon_person_outline" />
+
+            <TextView
+                android:id="@+id/user_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceBody1"
+                app:layout_constraintTop_toBottomOf="@id/h_guideline_content_3"
+                app:layout_constraintBottom_toTopOf="@id/h_guideline_content_4"
+                app:layout_constraintStart_toEndOf="@id/v_guideline_text"
+                android:text="我的账户信息"/>
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/user_group"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintLeft_toRightOf="@id/v_guideline_left"
+                app:layout_constraintRight_toLeftOf="@id/v_guideline_right"
+                app:layout_constraintTop_toBottomOf="@id/h_guideline_content_3"
+                app:layout_constraintBottom_toTopOf="@id/h_guideline_content_4"
+                app:constraint_referenced_ids="user_image_view,user_text_view"/>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

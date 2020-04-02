@@ -288,32 +288,67 @@
     "title":"菜单Menu",
     "itemList":[
       {
-        "id":10701010,
+        "id":10801010,
         "title":"默认DayNight主题Menu",
         "path":"com.jacob.material.example.menu.MenuDayNightDefaultActivity"
       },
       {
-        "id":10701020,
+        "id":10801020,
         "title":"自定义DayNight主题Menu",
         "path":"com.jacob.material.example.menu.MenuDayNightCustomActivity"
       },
       {
-        "id":10701030,
+        "id":10801030,
         "title":"在Toolbar中使用菜单",
         "path":"com.jacob.material.example.menu.MenuTopAppBarActivity"
       },
       {
-        "id":10701030,
+        "id":10801040,
         "title":"Menu Auto Complete",
         "path":"com.jacob.material.example.menu.MenuAutoCompleteActivity"
       },
       {
-        "id":10701030,
+        "id":10801050,
         "title":"上下文菜单",
         "path":"com.jacob.material.example.menu.MenuContextActivity"
       }
     ]
   },
+
+  {
+    "id":10900000,
+    "iconName":"icon_video_label",
+    "title":"Bottom Sheets",
+    "itemList":[
+      {
+        "id":10901010,
+        "title":"默认DayNight主题Bottom Sheet",
+        "path":"com.jacob.material.example.bottomsheet.BottomSheetDayNightDefaultActivity"
+      },
+      {
+        "id":10901020,
+        "title":"自定义DayNight主题Bottom Sheet",
+        "path":"com.jacob.material.example.bottomsheet.BottomSheetDayNightCustomActivity"
+      },
+
+      {
+        "id":10901020,
+        "title":"Full Screen Bottom Sheet(Map)",
+        "path":"com.jacob.material.example.bottomsheet.BottomSheetDayNightCustomActivity"
+      },
+      {
+        "id":10901020,
+        "title":"Bottom Sheet Dialog(Modal)主要是各种行为",
+        "path":"com.jacob.material.example.bottomsheet.BottomSheetDayNightCustomActivity"
+      },
+      {
+        "id":10901020,
+        "title":"Expanding bottom sheet And Motion",
+        "path":"com.jacob.material.example.bottomsheet.BottomSheetDayNightCustomActivity"
+      }
+    ]
+  },
+
 
 
   {
@@ -325,12 +360,6 @@
 
 
 
-  {
-    "id":12000000,
-    "iconName":"icon_example_appbar_top",
-    "title":"小导航Bottom Sheets",
-    "itemList":[]
-  },
 
 
   {

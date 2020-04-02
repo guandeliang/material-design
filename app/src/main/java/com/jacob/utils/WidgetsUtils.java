@@ -70,10 +70,11 @@ public class WidgetsUtils {
         }
     }
 
-    public static void setNavigationBarColor(Activity act, @ColorRes int color) {
+    public static void setNavigationBarColor(Activity act, int colorResId) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            int colorValue = getColorValue(act, colorResId);
             Window window = act.getWindow();
-            window.setNavigationBarColor(act.getResources().getColor(color));
+            window.setNavigationBarColor(colorValue);
         }
     }
 

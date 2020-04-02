@@ -91,8 +91,8 @@
             android:layout_height="wrap_content"
             android:textAppearance="?attr/textAppearanceHeadline6"
             android:text="请选择要进行的操作"
-            app:layout_constraintStart_toStartOf="@+id/v_guideline_left"
-            app:layout_constraintTop_toTopOf="@+id/h_guideline_top" />
+            app:layout_constraintStart_toStartOf="@id/v_guideline_left"
+            app:layout_constraintTop_toTopOf="@id/h_guideline_top" />
 
         <ImageView
             android:id="@+id/share_image_view"
@@ -101,9 +101,9 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:tint="?attr/colorPrimary"
-            app:layout_constraintBottom_toTopOf="@+id/h_guideline_content_1"
-            app:layout_constraintStart_toEndOf="@+id/v_guideline_left"
-            app:layout_constraintTop_toBottomOf="@+id/h_guideline_content_0"
+            app:layout_constraintBottom_toTopOf="@id/h_guideline_content_1"
+            app:layout_constraintStart_toEndOf="@id/v_guideline_left"
+            app:layout_constraintTop_toBottomOf="@id/h_guideline_content_0"
             app:srcCompat="@drawable/icon_share" />
 
 
@@ -112,9 +112,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?attr/textAppearanceBody1"
-            app:layout_constraintTop_toBottomOf="@+id/h_guideline_content_0"
-            app:layout_constraintBottom_toTopOf="@+id/h_guideline_content_1"
-            app:layout_constraintStart_toEndOf="@+id/v_guideline_text"
+            app:layout_constraintTop_toBottomOf="@id/h_guideline_content_0"
+            app:layout_constraintBottom_toTopOf="@id/h_guideline_content_1"
+            app:layout_constraintStart_toEndOf="@id/v_guideline_text"
             android:text="分享给微信好友"/>
 
         <androidx.constraintlayout.widget.Group
@@ -136,9 +136,9 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:tint="?attr/colorPrimary"
-            app:layout_constraintBottom_toTopOf="@+id/h_guideline_content_2"
-            app:layout_constraintStart_toEndOf="@+id/v_guideline_left"
-            app:layout_constraintTop_toBottomOf="@+id/h_guideline_content_1"
+            app:layout_constraintBottom_toTopOf="@id/h_guideline_content_2"
+            app:layout_constraintStart_toEndOf="@id/v_guideline_left"
+            app:layout_constraintTop_toBottomOf="@id/h_guideline_content_1"
             app:srcCompat="@drawable/icon_favorite" />
 
         <TextView
@@ -146,9 +146,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?attr/textAppearanceBody1"
-            app:layout_constraintTop_toBottomOf="@+id/h_guideline_content_1"
-            app:layout_constraintBottom_toTopOf="@+id/h_guideline_content_2"
-            app:layout_constraintStart_toEndOf="@+id/v_guideline_text"
+            app:layout_constraintTop_toBottomOf="@id/h_guideline_content_1"
+            app:layout_constraintBottom_toTopOf="@id/h_guideline_content_2"
+            app:layout_constraintStart_toEndOf="@id/v_guideline_text"
             android:text="为TA点赞"/>
 
         <androidx.constraintlayout.widget.Group
@@ -168,9 +168,9 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:tint="?attr/colorPrimary"
-            app:layout_constraintBottom_toTopOf="@+id/h_guideline_content_3"
-            app:layout_constraintStart_toEndOf="@+id/v_guideline_left"
-            app:layout_constraintTop_toBottomOf="@+id/h_guideline_content_2"
+            app:layout_constraintBottom_toTopOf="@id/h_guideline_content_3"
+            app:layout_constraintStart_toEndOf="@id/v_guideline_left"
+            app:layout_constraintTop_toBottomOf="@id/h_guideline_content_2"
             app:srcCompat="@drawable/icon_search" />
 
         <TextView
@@ -178,9 +178,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?attr/textAppearanceBody1"
-            app:layout_constraintTop_toBottomOf="@+id/h_guideline_content_2"
-            app:layout_constraintBottom_toTopOf="@+id/h_guideline_content_3"
-            app:layout_constraintStart_toEndOf="@+id/v_guideline_text"
+            app:layout_constraintTop_toBottomOf="@id/h_guideline_content_2"
+            app:layout_constraintBottom_toTopOf="@id/h_guideline_content_3"
+            app:layout_constraintStart_toEndOf="@id/v_guideline_text"
             android:text="查一查，看看能不能找到"/>
 
         <androidx.constraintlayout.widget.Group
@@ -200,9 +200,9 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:tint="?attr/colorPrimary"
-            app:layout_constraintBottom_toTopOf="@+id/h_guideline_content_4"
-            app:layout_constraintStart_toEndOf="@+id/v_guideline_left"
-            app:layout_constraintTop_toBottomOf="@+id/h_guideline_content_3"
+            app:layout_constraintBottom_toTopOf="@id/h_guideline_content_4"
+            app:layout_constraintStart_toEndOf="@id/v_guideline_left"
+            app:layout_constraintTop_toBottomOf="@id/h_guideline_content_3"
             app:srcCompat="@drawable/icon_person_outline" />
 
         <TextView
@@ -210,9 +210,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?attr/textAppearanceBody1"
-            app:layout_constraintTop_toBottomOf="@+id/h_guideline_content_3"
-            app:layout_constraintBottom_toTopOf="@+id/h_guideline_content_4"
-            app:layout_constraintStart_toEndOf="@+id/v_guideline_text"
+            app:layout_constraintTop_toBottomOf="@id/h_guideline_content_3"
+            app:layout_constraintBottom_toTopOf="@id/h_guideline_content_4"
+            app:layout_constraintStart_toEndOf="@id/v_guideline_text"
             android:text="我的账户信息"/>
 
         <androidx.constraintlayout.widget.Group

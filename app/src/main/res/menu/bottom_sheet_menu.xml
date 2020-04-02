@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-1-30 下午7:45
+  ~
+  -->
+
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <item
+            android:id="@+id/action_theme"
+            android:orderInCategory="001"
+            android:title="@null"
+            app:showAsAction="always"
+            app:actionLayout="@layout/theme_switch"/>
+        <item
+            android:id="@+id/action_sheet"
+            android:orderInCategory="002"
+            android:title="添加"
+            android:icon="@drawable/icon_more_vert"
+            app:showAsAction="always"/>
+</menu>

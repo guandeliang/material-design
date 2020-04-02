@@ -283,6 +283,17 @@
             android:screenOrientation="portrait">
         </activity>
 
+        <!-- BOTTOM SHEET -->
+        <activity
+            android:name=".example.bottomsheet.BottomSheetDayNightDefaultActivity"
+            android:theme="@style/Theme.MaterialBook.DayNight.Default"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".example.bottomsheet.BottomSheetDayNightCustomActivity"
+            android:theme="@style/Theme.MaterialBook.DayNight.Custom"
+            android:screenOrientation="portrait">
+        </activity>
 
 
 
