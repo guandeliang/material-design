@@ -18,8 +18,10 @@ import android.view.View;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.menu.MenuBuilder;
+import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.databinding.DataBindingUtil;
 
+import com.google.android.material.color.MaterialColors;
 import com.jacob.temp.TempConstant;
 import com.jacob.utils.WidgetsUtils;
 import com.jacob.material.R;
@@ -41,7 +43,6 @@ public class FabRelateActionActivity extends AppCompatActivity {
         ActionBar ab = getSupportActionBar();
         ab.setHomeAsUpIndicator(R.drawable.icon_menu);
         ab.setDisplayHomeAsUpEnabled(true);
-        binding.materialToolbar.getNavigationIcon().setTint(WidgetsUtils.getColorValue(this, android.R.attr.textColorPrimaryInverse));
 
     }
 
@@ -49,23 +50,11 @@ public class FabRelateActionActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.regular_menu, menu);
-
         if(menu instanceof MenuBuilder){
             MenuBuilder menuBuilder = (MenuBuilder) menu;
             menuBuilder.setOptionalIconsVisible(true);
         }
 
-        for(int i = 0; i < menu.size(); i++){
-            MenuItem menuItem = menu.getItem(i);
-            Drawable drawable = menuItem.getIcon();
-            if(drawable != null) {
-                if(menuItem.getOrder() < 200){
-                    WidgetsUtils.setDrawableColor(FabRelateActionActivity.this, drawable, android.R.attr.textColorPrimaryInverse);
-                }else{
-                    WidgetsUtils.setDrawableColor(FabRelateActionActivity.this, drawable, android.R.attr.textColorPrimary);
-                }
-            }
-        }
         return true;
     }
 

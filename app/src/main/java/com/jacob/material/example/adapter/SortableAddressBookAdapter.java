@@ -111,7 +111,9 @@ public class SortableAddressBookAdapter extends RecyclerView.Adapter<SortableAdd
                 root.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        listener.onItemClick(AddressBookViewHolder.this, data);
+                        if(listener != null){
+                            listener.onItemClick(AddressBookViewHolder.this, data);
+                        }
                     }
                 });
             }

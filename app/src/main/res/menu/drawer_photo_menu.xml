@@ -13,14 +13,14 @@
         android:id="@+id/search"
         android:orderInCategory="101"
         android:title="@null"
-        app:actionLayout="@layout/menu_action_layout_search"/>
+        app:actionLayout="@layout/drawer_menu_search"/>
 
     <item
         android:id="@+id/camera"
         android:orderInCategory="200"
         android:title="@null"
         android:enabled="false"
-        app:actionLayout="@layout/menu_action_layout_group_title"/>
+        app:actionLayout="@layout/drawer_menu_group_title"/>
     <item
         android:id="@+id/all"
         android:orderInCategory="201"
@@ -33,7 +33,7 @@
         android:title="好友分享"
         android:checkable="true"
         android:icon="@drawable/icon_group"
-        app:actionLayout="@layout/menu_action_layout_badge"/>
+        app:actionLayout="@layout/drawer_menu_badge"/>
     <item
         android:id="@+id/star"
         android:orderInCategory="203"
@@ -46,11 +46,11 @@
         android:title="最近拍摄"
         android:checkable="true"
         android:icon="@drawable/icon_access_time"
-        app:actionLayout="@layout/menu_action_layout_badge"/>
+        app:actionLayout="@layout/drawer_menu_badge"/>
 
     <item
         android:id="@+id/collection"
         android:orderInCategory="300"
         android:title="@null"
-        app:actionLayout="@layout/menu_action_layout_group_title"/>
+        app:actionLayout="@layout/drawer_menu_group_title"/>
 </menu>

@@ -120,6 +120,7 @@
     <color name="colored_color_on_background">#000000</color>
     <color name="colored_color_on_surface">#000000</color>
     <color name="colored_color_on_error">#FFFFFF</color>
+    <color name="colored_color_control_normal">#424242</color>
     <color name="colored_color_scrim_nackground">#80344955</color>
 
     <!--浅色主题-->

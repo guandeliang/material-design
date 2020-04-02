@@ -291,6 +291,26 @@
         "id":10701010,
         "title":"默认DayNight主题Menu",
         "path":"com.jacob.material.example.menu.MenuDayNightDefaultActivity"
+      },
+      {
+        "id":10701020,
+        "title":"自定义DayNight主题Menu",
+        "path":"com.jacob.material.example.menu.MenuDayNightCustomActivity"
+      },
+      {
+        "id":10701030,
+        "title":"在Toolbar中使用菜单",
+        "path":"com.jacob.material.example.menu.MenuTopAppBarActivity"
+      },
+      {
+        "id":10701030,
+        "title":"Menu Auto Complete",
+        "path":"com.jacob.material.example.menu.MenuAutoCompleteActivity"
+      },
+      {
+        "id":10701030,
+        "title":"上下文菜单",
+        "path":"com.jacob.material.example.menu.MenuContextActivity"
       }
     ]
   },
@@ -320,8 +340,8 @@
     "itemList":[
       {
         "id":10401010,
-        "title":"Snap测试",
-        "path":"com.jacob.material.test.TestSnapActivity"
+        "title":"事件分发测试",
+        "path":"com.jacob.material.test.EventTestActivity"
       },
       {
         "id":10401020,

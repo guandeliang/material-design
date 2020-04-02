@@ -10,7 +10,6 @@
     <declare-styleable name="theme_switch_app_bar_layout">
         <attr name="title_text" format="string"/>
         <attr name="menu_icon" format="reference"/>
-
     </declare-styleable>
 
     <declare-styleable name="fab_bottom_navigation_view">
@@ -19,4 +18,9 @@
         <attr name="fab_cradle_vertical_offset" format="dimension"/>
         <attr name="fab_size" format="dimension"/>
     </declare-styleable>
+
+
+    <attr name="appBarLayoutPrimaryStyle" format="reference"/>
+    <attr name="appBarLayoutSurfaceStyle" format="reference"/>
+
 </resources>

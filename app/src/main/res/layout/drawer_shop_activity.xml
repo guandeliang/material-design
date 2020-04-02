@@ -28,7 +28,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
             <com.google.android.material.appbar.AppBarLayout
-                style="@style/Widget.MaterialComponents.AppBarLayout.Primary"
+                style="?attr/appBarLayoutPrimaryStyle"
                 android:id="@+id/app_bar_layout"
                 android:layout_width="match_parent"
                 android:layout_height="56dp">
@@ -51,7 +51,6 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?attr/textAppearanceHeadline6"
                         android:layout_marginLeft="16dp"
-                        android:textColor="@color/gray_300"
                         android:text="标题"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -65,7 +64,6 @@
                         android:padding="12dp"
                         android:layout_marginRight="4dp"
                         android:src="@drawable/icon_filter_list"
-                        android:tint="@color/gray_300"
                         android:clickable="true"
                         android:background="@drawable/click_ripple_round"
                         app:layout_constraintTop_toTopOf="parent"

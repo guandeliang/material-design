@@ -37,7 +37,6 @@ public class TopAppBarDarkActivity extends AppCompatActivity {
         ActionBar ab = getSupportActionBar();
         ab.setHomeAsUpIndicator(R.drawable.icon_menu);
         ab.setDisplayHomeAsUpEnabled(true);
-        binding.toolbar.getNavigationIcon().setTint(WidgetsUtils.getColorValue(this, android.R.attr.textColorPrimaryInverse));
         WidgetsUtils.setSystemBarColor(this, R.color.dark_color_background);
 
         fragmentList = new ArrayList<>();

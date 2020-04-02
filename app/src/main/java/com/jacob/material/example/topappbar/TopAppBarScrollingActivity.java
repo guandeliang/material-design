@@ -81,12 +81,6 @@ public class TopAppBarScrollingActivity extends AppCompatActivity {
             MenuBuilder menuBuilder = (MenuBuilder) menu;
             menuBuilder.setOptionalIconsVisible(true);
         }
-
-        for(int i = 0; i < menu.size(); i++){
-            MenuItem menuItem = menu.getItem(i);
-            Drawable drawable = menuItem.getIcon();
-            WidgetsUtils.setDrawableColor(TopAppBarScrollingActivity.this, drawable, android.R.attr.textColorPrimaryInverse);
-        }
         return true;
     }
 

@@ -21,6 +21,7 @@
     <color name="dn_custom_color_on_background">#FFFFFF</color>
     <color name="dn_custom_color_on_surface">#FFFFFF</color>
     <color name="dn_custom_color_on_error">#000000</color>
+    <color name="dn_custom_color_control_normal">@color/gray_500</color>
 
     <!--默认DayNight主题颜色-->
     <color name="dn_default_color_primary">#CA5997</color>
@@ -36,5 +37,6 @@
     <color name="dn_default_color_on_background">#FFFFFF</color>
     <color name="dn_default_color_on_surface">#FFFFFF</color>
     <color name="dn_default_color_on_error">#000000</color>
+    <color name="dn_default_color_control_normal">@color/gray_500</color>
 
 </resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-1-29 下午7:29
+  ~
+  -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="32dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@drawable/theme_switch_background_selecter">
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/icon_brightness_1"
+        android:tint="@color/theme_switch_sun_color_selector"/>
+
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/theme_switch_arrow_selecter"
+        android:tint="@color/theme_switch_arrow_color_selector"/>
+
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/icon_brightness_2"
+        android:tint="@color/theme_switch_moon_color_selector"/>
+</LinearLayout>
+

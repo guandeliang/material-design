@@ -262,14 +262,34 @@
             android:theme="@style/Theme.MaterialBook.DayNight.Default"
             android:screenOrientation="portrait">
         </activity>
+        <activity
+            android:name=".example.menu.MenuDayNightCustomActivity"
+            android:theme="@style/Theme.MaterialBook.DayNight.Custom"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".example.menu.MenuTopAppBarActivity"
+            android:theme="@style/Theme.MaterialBook.DayNight.Custom"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".example.menu.MenuAutoCompleteActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".example.menu.MenuContextActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Dark"
+            android:screenOrientation="portrait">
+        </activity>
 
 
 
 
 
         <activity
-            android:name=".test.TestSnapActivity"
-            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
+            android:name=".test.EventTestActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Dark.TranslucentStatus"
             android:screenOrientation="portrait"/>
 
         <activity

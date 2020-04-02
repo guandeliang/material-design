@@ -169,7 +169,7 @@
                     android:id="@+id/drop_title_card_view"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Backdrop.RoundTop"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round.Top.16"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent">

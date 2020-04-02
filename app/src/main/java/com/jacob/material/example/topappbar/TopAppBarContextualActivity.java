@@ -26,11 +26,13 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.menu.MenuBuilder;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.selection.SelectionTracker;
 import androidx.recyclerview.selection.StorageStrategy;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
+import com.google.android.material.color.MaterialColors;
 import com.google.android.material.snackbar.Snackbar;
 import com.jacob.utils.JsonUtils;
 import com.jacob.utils.WidgetsUtils;
@@ -69,6 +71,7 @@ public class TopAppBarContextualActivity extends AppCompatActivity {
 
         drawableMenuToClear = WidgetsUtils.getColorDrawable(this, R.drawable.icon_toolbar_home_menu_to_clear_ani, android.R.attr.textColorPrimaryInverse);
         drawableClearToMenu = WidgetsUtils.getColorDrawable(this, R.drawable.icon_toolbar_home_clear_to_menu_ani, android.R.attr.textColorPrimaryInverse);
+
         aniMenuToClear = ((Animatable)drawableMenuToClear);
         aniClearToMenu = ((Animatable)drawableClearToMenu);
         state = STATE_NORMAL;
@@ -116,22 +119,9 @@ public class TopAppBarContextualActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.top_app_bar_contextual_menu, menu);
         actionMenu = menu;
-
         if(menu instanceof MenuBuilder){
             MenuBuilder menuBuilder = (MenuBuilder) menu;
             menuBuilder.setOptionalIconsVisible(true);
-        }
-
-        for(int i = 0; i < menu.size(); i++){
-            MenuItem menuItem = menu.getItem(i);
-            Drawable drawable = menuItem.getIcon();
-            if(drawable != null) {
-                if(menuItem.getOrder() < 200){
-                    WidgetsUtils.setDrawableColor(TopAppBarContextualActivity.this, drawable, android.R.attr.textColorPrimaryInverse);
-                }else{
-                    WidgetsUtils.setDrawableColor(TopAppBarContextualActivity.this, drawable, android.R.attr.textColorPrimary);
-                }
-            }
         }
 
         toolbarInit();

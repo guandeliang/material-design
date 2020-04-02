@@ -39,9 +39,7 @@ public class BottomAppBarDayNightCustomActivity extends AppCompatActivity {
             binding.bottomAppBar.getMenu().clear();
         }
         binding.bottomAppBar.setNavigationIcon(R.drawable.icon_menu);
-        binding.bottomAppBar.getNavigationIcon().setTint(WidgetsUtils.getColorValue(this, R.color.white));
         binding.fab.setImageResource(R.drawable.icon_add);
-        binding.fab.getDrawable().setTint(WidgetsUtils.getColorValue(this, R.color.white));
 
         binding.bottomAppBar.inflateMenu(R.menu.regular_menu);
         Menu menu = binding.bottomAppBar.getMenu();
@@ -51,16 +49,5 @@ public class BottomAppBarDayNightCustomActivity extends AppCompatActivity {
             menuBuilder.setOptionalIconsVisible(true);
         }
 
-        for (int i = 0; i < menu.size(); i++) {
-            MenuItem menuItem = menu.getItem(i);
-            Drawable drawable = menuItem.getIcon();
-            if (drawable != null) {
-                if(menuItem.getOrder() < 200){
-                    WidgetsUtils.setDrawableColor(this, drawable, R.color.white);
-                }else{
-                    WidgetsUtils.setDrawableColor(this, drawable, android.R.attr.colorPrimary);
-                }
-            }
-        }
     }
 }

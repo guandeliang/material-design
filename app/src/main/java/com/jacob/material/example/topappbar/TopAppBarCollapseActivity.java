@@ -64,8 +64,6 @@ public class TopAppBarCollapseActivity extends AppCompatActivity {
         ab.setDisplayHomeAsUpEnabled(true);
         ab.setDisplayShowTitleEnabled(true);
         ab.setTitle(null);
-        binding.toolbar.getNavigationIcon().setTint(WidgetsUtils.getColorValue(this, android.R.attr.textColorPrimaryInverse));
-        binding.floatingActionButton.getDrawable().setTint(WidgetsUtils.getColorValue(this, android.R.attr.textColorPrimaryInverse));
 
 
     }
@@ -133,12 +131,6 @@ public class TopAppBarCollapseActivity extends AppCompatActivity {
         if(menu instanceof MenuBuilder){
             MenuBuilder menuBuilder = (MenuBuilder) menu;
             menuBuilder.setOptionalIconsVisible(true);
-        }
-
-        for(int i = 0; i < menu.size(); i++){
-            MenuItem menuItem = menu.getItem(i);
-            Drawable drawable = menuItem.getIcon();
-            WidgetsUtils.setDrawableColor(TopAppBarCollapseActivity.this, drawable, android.R.attr.textColorPrimaryInverse);
         }
         return true;
     }

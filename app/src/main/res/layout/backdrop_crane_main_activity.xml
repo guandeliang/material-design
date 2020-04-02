@@ -22,7 +22,7 @@
         android:orientation="vertical">
 
         <com.google.android.material.appbar.AppBarLayout
-            android:theme="@style/ThemeOverlay.MaterialBook.AppBarLayout.Primary"
+            style="?attr/appBarLayoutPrimaryStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:elevation="0dp">

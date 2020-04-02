@@ -21,6 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <com.google.android.material.appbar.AppBarLayout
+            style="?attr/appBarLayoutPrimaryStyle"
             android:id="@+id/app_bar_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -35,9 +36,7 @@
                 app:expandedTitleTextAppearance="?attr/textAppearanceHeadline6"
                 app:expandedTitleGravity="bottom|center_horizontal"
                 app:expandedTitleMarginBottom="64dp"
-                app:expandedTitleTextColor="@{Color.WHITE}"
                 app:collapsedTitleGravity="left"
-                app:collapsedTitleTextColor="@{Color.WHITE}"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
                 <ImageView
                     android:id="@+id/toolbar_image_view"
@@ -74,7 +73,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="40dp"
                     android:textAppearance="?attr/textAppearanceCaption"
-                    android:textColor="@color/gray_300"
                     android:layout_gravity="center_horizontal|bottom"
                     android:text="河北黑木崖日月神教总部"/>
 
@@ -377,7 +375,7 @@
 
                 <Button
                     android:id="@+id/map_button"
-                    style="@style/Widget.MaterialBook.Button.RoundCorner.Outlined"
+                    style="@style/Widget.MaterialBook.Button.Round.8.Outlined"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
@@ -390,7 +388,7 @@
 
                 <Button
                     android:id="@+id/mobile_button"
-                    style="@style/Widget.MaterialBook.Button.RoundCorner.Outlined"
+                    style="@style/Widget.MaterialBook.Button.Round.8.Outlined"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
@@ -474,7 +472,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/star_button_001"
-                    style="@style/Widget.MaterialBook.Button.RoundCorner.Outlined"
+                    style="@style/Widget.MaterialBook.Button.Round.8.Outlined"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
@@ -492,7 +490,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/star_button_002"
-                    style="@style/Widget.MaterialBook.Button.RoundCorner.Outlined"
+                    style="@style/Widget.MaterialBook.Button.Round.8.Outlined"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -510,7 +508,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/star_button_003"
-                    style="@style/Widget.MaterialBook.Button.RoundCorner.Outlined"
+                    style="@style/Widget.MaterialBook.Button.Round.8.Outlined"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -528,7 +526,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/star_button_004"
-                    style="@style/Widget.MaterialBook.Button.RoundCorner.Outlined"
+                    style="@style/Widget.MaterialBook.Button.Round.8.Outlined"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -546,7 +544,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/star_button_005"
-                    style="@style/Widget.MaterialBook.Button.RoundCorner.Outlined"
+                    style="@style/Widget.MaterialBook.Button.Round.8.Outlined"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
@@ -656,7 +654,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/review_star_button"
-                    style="@style/Widget.MaterialBook.Button.RoundCorner.Solid"
+                    style="@style/Widget.MaterialBook.Button.Round.8.Solid"
                     android:layout_width="48dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"

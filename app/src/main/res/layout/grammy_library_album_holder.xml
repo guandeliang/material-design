@@ -28,7 +28,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:scaleType="centerCrop"
-            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round.Small"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round.4"
             app:srcCompat="@drawable/grammy_003_001"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"

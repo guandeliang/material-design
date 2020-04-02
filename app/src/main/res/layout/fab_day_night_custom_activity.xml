@@ -24,7 +24,7 @@
             style="@style/Widget.MaterialComponents.AppBarLayout.PrimarySurface"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:title_text="默认DayNight主题"
+            app:title_text="自定义DayNight主题"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"/>

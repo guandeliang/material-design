@@ -16,9 +16,11 @@ import android.widget.RadioGroup;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.menu.MenuBuilder;
+import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.databinding.DataBindingUtil;
 
 import com.google.android.material.bottomappbar.BottomAppBar;
+import com.google.android.material.color.MaterialColors;
 import com.google.android.material.slider.Slider;
 import com.jacob.utils.WidgetsUtils;
 import com.jacob.material.R;
@@ -32,7 +34,6 @@ public class BottomAppBarBaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.bottom_app_bar_base_activity);
 
-        binding.materialToolbar.getNavigationIcon().setTint(WidgetsUtils.getColorValue(this, android.R.attr.textColorPrimaryInverse));
         binding.bottomAppBar.getNavigationIcon().setTint(WidgetsUtils.getColorValue(this, android.R.attr.textColorPrimaryInverse));
         binding.fab.getDrawable().setTint(WidgetsUtils.getColorValue(this, R.color.white));
 
@@ -56,22 +57,9 @@ public class BottomAppBarBaseActivity extends AppCompatActivity {
         }
         binding.materialToolbar.inflateMenu(R.menu.bottom_app_bar_menu_one);
         Menu menu = binding.materialToolbar.getMenu();
-
         if(menu instanceof MenuBuilder){
             MenuBuilder menuBuilder = (MenuBuilder) menu;
             menuBuilder.setOptionalIconsVisible(true);
-        }
-
-        for(int i = 0; i < menu.size(); i++){
-            MenuItem menuItem = menu.getItem(i);
-            Drawable drawable = menuItem.getIcon();
-            if(drawable != null) {
-                if(menuItem.getOrder() < 200){
-                    WidgetsUtils.setDrawableColor(this, drawable, R.color.white);
-                }else{
-                    WidgetsUtils.setDrawableColor(this, drawable, android.R.attr.colorPrimary);
-                }
-            }
         }
     }
 
@@ -81,24 +69,6 @@ public class BottomAppBarBaseActivity extends AppCompatActivity {
             binding.bottomAppBar.getMenu().clear();
         }
         binding.bottomAppBar.inflateMenu(R.menu.bottom_app_bar_menu_two);
-        Menu menu = binding.bottomAppBar.getMenu();
-
-        if(menu instanceof MenuBuilder){
-            MenuBuilder menuBuilder = (MenuBuilder) menu;
-            menuBuilder.setOptionalIconsVisible(true);
-        }
-
-        for(int i = 0; i < menu.size(); i++){
-            MenuItem menuItem = menu.getItem(i);
-            Drawable drawable = menuItem.getIcon();
-            if(drawable != null) {
-                if(menuItem.getOrder() < 200){
-                    WidgetsUtils.setDrawableColor(this, drawable, R.color.white);
-                }else{
-                    WidgetsUtils.setDrawableColor(this, drawable, android.R.attr.colorPrimary);
-                }
-            }
-        }
     }
 
 

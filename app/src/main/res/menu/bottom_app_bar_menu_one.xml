@@ -13,7 +13,7 @@
             android:id="@+id/action_favorite"
             android:orderInCategory="101"
             android:title="点赞"
-            android:icon="@drawable/icon_favorite"
+            android:icon="@drawable/icon_favorite_border"
             app:showAsAction="always"/>
         <item
             android:id="@+id/action_search"

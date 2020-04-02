@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-3 下午8:55
+  ~
+  -->
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            style="@style/Widget.MaterialBook.AppBarLayout.PrimarySurface"
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/header_image_view">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/material_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:popupTheme="@null"
+                app:title="增加联系人"
+                app:navigationIcon="@drawable/icon_arrow_back"
+                app:menu="@menu/menu_ok"/>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ImageView
+            android:id="@+id/header_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:src="@drawable/header_006"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
+            app:layout_constraintBottom_toTopOf="@id/name_text_input_layout"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            app:fabCustomSize="56dp"
+            android:src="@drawable/icon_camera"
+            app:layout_constraintTop_toBottomOf="@id/header_image_view"
+            app:layout_constraintBottom_toBottomOf="@id/header_image_view"
+            app:layout_constraintRight_toRightOf="@id/header_image_view"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/v_guide_line_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="56dp"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/v_guide_line_right"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp"/>
+
+        <ImageView
+            android:id="@+id/name_image_view"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icon_person"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/v_guide_line_left"
+            app:layout_constraintTop_toTopOf="@id/name_text_input_layout"
+            app:layout_constraintBottom_toBottomOf="@id/name_text_input_layout"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:id="@+id/name_text_input_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:hint="姓名"
+            app:layout_constraintTop_toBottomOf="@id/header_image_view"
+            app:layout_constraintBottom_toTopOf="@id/phone_text_input_layout"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line_left"
+            app:layout_constraintRight_toLeftOf="@id/v_guide_line_right">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/phone_image_view"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icon_call"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/v_guide_line_left"
+            app:layout_constraintTop_toTopOf="@id/phone_text_input_layout"
+            app:layout_constraintBottom_toBottomOf="@id/phone_text_input_layout"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:id="@+id/phone_text_input_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="12dp"
+            android:hint="电话号码"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintTop_toBottomOf="@id/name_text_input_layout"
+            app:layout_constraintBottom_toTopOf="@id/state_text_input_layout"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line_left"
+            app:layout_constraintRight_toLeftOf="@id/label_text_input_layout"
+            app:layout_constraintHorizontal_weight="0.55">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:id="@+id/label_text_input_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:hint="类别"
+            app:layout_constraintTop_toTopOf="@id/phone_text_input_layout"
+            app:layout_constraintBottom_toBottomOf="@+id/phone_text_input_layout"
+            app:layout_constraintLeft_toRightOf="@id/phone_text_input_layout"
+            app:layout_constraintRight_toLeftOf="@id/v_guide_line_right"
+            app:layout_constraintHorizontal_weight="0.45">
+            <AutoCompleteTextView
+                android:id="@+id/label_complete_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <ImageView
+            android:id="@+id/address_image_view"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icon_location_on"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/v_guide_line_left"
+            app:layout_constraintTop_toTopOf="@id/state_text_input_layout"
+            app:layout_constraintBottom_toBottomOf="@id/state_text_input_layout"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:id="@+id/state_text_input_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="12dp"
+            android:hint="省"
+            android:background="@null"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintTop_toBottomOf="@id/phone_text_input_layout"
+            app:layout_constraintBottom_toTopOf="@id/dist_text_input_layout"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line_left"
+            app:layout_constraintRight_toLeftOf="@id/city_text_input_layout"
+            app:layout_constraintHorizontal_weight="0.5">
+            <AutoCompleteTextView
+                android:id="@+id/state_complete_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:dropDownWidth="160dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:id="@+id/city_text_input_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:hint="市"
+            app:layout_constraintTop_toTopOf="@id/state_text_input_layout"
+            app:layout_constraintBottom_toBottomOf="@+id/state_text_input_layout"
+            app:layout_constraintLeft_toRightOf="@id/state_text_input_layout"
+            app:layout_constraintRight_toLeftOf="@id/v_guide_line_right"
+            app:layout_constraintHorizontal_weight="0.5">
+            <AutoCompleteTextView
+                android:id="@+id/city_complete_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:dropDownWidth="240dp"
+                android:dropDownHeight="360dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:id="@+id/dist_text_input_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="区县街道"
+            app:layout_constraintTop_toBottomOf="@id/state_text_input_layout"
+            app:layout_constraintBottom_toTopOf="@id/address_text_input_layout"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line_left"
+            app:layout_constraintRight_toLeftOf="@id/v_guide_line_right">
+            <AutoCompleteTextView
+                android:id="@+id/dist_complete_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:id="@+id/address_text_input_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="24dp"
+                    android:hint="详细地址"
+                    app:layout_constraintTop_toBottomOf="@id/dist_text_input_layout"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/v_guide_line_left"
+                    app:layout_constraintRight_toLeftOf="@id/v_guide_line_right">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </com.google.android.material.textfield.TextInputLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

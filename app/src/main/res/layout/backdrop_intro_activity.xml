@@ -24,7 +24,7 @@
         android:background="?attr/colorPrimary">
 
         <com.google.android.material.appbar.AppBarLayout
-            style="@style/Widget.MaterialComponents.AppBarLayout.Primary"
+            style="?attr/appBarLayoutPrimaryStyle"
             android:id="@+id/app_bar_layout"
             android:layout_width="match_parent"
             android:layout_height="56dp"
@@ -46,7 +46,6 @@
                     android:src="@drawable/backdrop_branded_menu"
                     android:scaleType="fitXY"
                     android:adjustViewBounds="true"
-                    android:tint="@color/gray_300"
                     android:clickable="true"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     app:layout_constraintTop_toTopOf="parent"
@@ -72,7 +71,6 @@
                     android:layout_height="48dp"
                     android:padding="12dp"
                     android:src="@drawable/icon_search"
-                    android:tint="@color/gray_300"
                     android:clickable="true"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     app:layout_constraintTop_toTopOf="parent"
@@ -85,7 +83,6 @@
                     android:layout_height="48dp"
                     android:padding="16dp"
                     android:src="@drawable/icon_filter"
-                    android:tint="@color/gray_300"
                     android:clickable="true"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     app:layout_constraintTop_toTopOf="parent"
@@ -553,7 +550,7 @@
                     android:id="@+id/drop_title_card_view"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Backdrop.RoundTop"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round.Top.16"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent">

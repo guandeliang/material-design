@@ -15,6 +15,7 @@ import com.jacob.material.R;
 import com.jacob.material.example.model.AddressBook;
 import com.jacob.material.example.model.Book;
 import com.jacob.material.example.model.Commodit;
+import com.jacob.material.example.model.District;
 import com.jacob.material.example.model.ExampleImage;
 import com.jacob.material.example.model.GeneralData;
 import com.jacob.material.example.model.Grammy;
@@ -111,6 +112,13 @@ public class JsonUtils {
         String jsonString = readJson(resources, R.raw.address_book);
         Gson gson = new Gson();
         Type listType = new TypeToken<ArrayList<AddressBook>>(){}.getType();
+        return gson.fromJson(jsonString, listType);
+    }
+
+    public static List<District> loadDistricts(Resources resources) {
+        String jsonString = readJson(resources, R.raw.district);
+        Gson gson = new Gson();
+        Type listType = new TypeToken<ArrayList<District>>(){}.getType();
         return gson.fromJson(jsonString, listType);
     }
 

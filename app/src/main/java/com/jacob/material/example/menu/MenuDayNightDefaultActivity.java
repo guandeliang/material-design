@@ -56,7 +56,6 @@ public class MenuDayNightDefaultActivity extends AppCompatActivity {
         intiToolBarMenu();
         binding.bottomAppBar.setNavigationOnClickListener(new OnBottomNavigationClickListener());
 
-
         binding.popupMenuButton.setOnClickListener(new OnPopupButtonClickListener());
         binding.popupIconMenuButton.setOnClickListener(new OnPopupWithIconButtonButtonClickListener());
 
@@ -65,15 +64,13 @@ public class MenuDayNightDefaultActivity extends AppCompatActivity {
 
         initAutoCompleteTextView();
 
-        registerForContextMenu(binding.contextTextView);
+        this.registerForContextMenu(binding.contextTextView);
 
     }
 
 
     @SuppressLint("RestrictedApi")
     private void intiToolBarMenu(){
-        //binding.toolBar.setTitleTextColor(WidgetsUtils.getColorValue(this, R.color.gray_200));
-        //WidgetsUtils.setDrawableColor(this, binding.toolBar.getNavigationIcon(), R.color.gray_200);
         binding.toolBar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -103,23 +100,6 @@ public class MenuDayNightDefaultActivity extends AppCompatActivity {
 
         for(int i = 0; i < menu.size(); i++){
             MenuItem menuItem = menu.getItem(i);
-            /*
-            //Menu Icon is share in more then one menu
-            //if set it color, wei effect it in other menus in save activity
-            Drawable drawable = menuItem.getIcon();
-            if(drawable != null) {
-                if(menuItem.getOrder() < 200){
-                    WidgetsUtils.setDrawableColor(this, drawable, R.color.gray_200);
-                }else{
-                    if(uiMode == Configuration.UI_MODE_NIGHT_YES){//夜间模式
-                        WidgetsUtils.setDrawableColor(this, drawable, R.color.gray_200);
-                    }else{//日间模式
-                        WidgetsUtils.setDrawableColor(this, drawable, R.color.gray_1000);
-                    }
-                }
-
-            }
-             */
             if(uiMode == Configuration.UI_MODE_NIGHT_YES && menuItem.getItemId() == R.id.action_night){//夜间模式
                 menuItem.setChecked(true);
 
@@ -203,9 +183,6 @@ public class MenuDayNightDefaultActivity extends AppCompatActivity {
                 }
 
             }
-
-
-
             popup.show();
         }
     }

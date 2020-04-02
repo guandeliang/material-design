@@ -22,6 +22,7 @@
         android:background="?attr/colorPrimary">
 
         <com.google.android.material.appbar.AppBarLayout
+            style="?attr/appBarLayoutPrimaryStyle"
             android:id="@+id/app_bar_layout"
             android:layout_width="match_parent"
             android:layout_height="56dp"
@@ -43,7 +44,6 @@
                     android:src="@drawable/backdrop_branded_menu"
                     android:scaleType="fitXY"
                     android:adjustViewBounds="true"
-                    android:tint="@color/gray_300"
                     android:clickable="true"
                     android:background="@drawable/click_ripple_round"
                     app:layout_constraintTop_toTopOf="parent"
@@ -56,7 +56,6 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceHeadline6"
-                    android:textColor="@color/gray_300"
                     android:text="杉杉奥特莱斯"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -69,7 +68,6 @@
                     android:layout_height="48dp"
                     android:padding="16dp"
                     android:src="@drawable/icon_filter"
-                    android:tint="@color/gray_300"
                     android:clickable="true"
                     android:background="@drawable/click_ripple_round"
                     app:layout_constraintTop_toTopOf="parent"
@@ -83,7 +81,6 @@
                     android:layout_height="48dp"
                     android:padding="12dp"
                     android:src="@drawable/icon_search"
-                    android:tint="@color/gray_300"
                     android:clickable="true"
                     android:background="@drawable/click_ripple_round"
                     app:layout_constraintTop_toTopOf="parent"

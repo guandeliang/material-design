@@ -34,7 +34,6 @@ public class BottomAppBarDiamondActivity extends AppCompatActivity {
 
         WidgetsUtils.setSystemBarColor(this, R.color.gray_300);
         WidgetsUtils.setSystemBarLight(this);
-        binding.fab.getDrawable().setTint(WidgetsUtils.getColorValue(this, R.color.white));
 
         BottomAppBarTopEdgeTreatment topEdge = new BottomAppBarCutCornersTopEdge(
                 binding.bottomAppBar.getFabCradleMargin(),
@@ -60,23 +59,7 @@ public class BottomAppBarDiamondActivity extends AppCompatActivity {
             binding.bottomAppBar.getMenu().clear();
         }
         binding.bottomAppBar.setNavigationIcon(R.drawable.icon_menu);
-        binding.bottomAppBar.getNavigationIcon().setTint(WidgetsUtils.getColorValue(this, android.R.attr.textColorPrimary));
-
         binding.bottomAppBar.inflateMenu(R.menu.bottom_app_bar_diamond_menu);
-        Menu menu = binding.bottomAppBar.getMenu();
-
-        if(menu instanceof MenuBuilder){
-            MenuBuilder menuBuilder = (MenuBuilder) menu;
-            menuBuilder.setOptionalIconsVisible(true);
-        }
-
-        for(int i = 0; i < menu.size(); i++){
-            MenuItem menuItem = menu.getItem(i);
-            Drawable drawable = menuItem.getIcon();
-            if(drawable != null) {
-                WidgetsUtils.setDrawableColor(this, drawable, android.R.attr.textColorPrimary);
-            }
-        }
     }
 
 

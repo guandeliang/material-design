@@ -21,6 +21,7 @@
         android:background="?android:attr/colorBackground">
 
         <com.google.android.material.appbar.AppBarLayout
+            style="?attr/appBarLayoutPrimaryStyle"
             android:id="@+id/app_bar_layout"
             android:layout_width="match_parent"
             android:layout_height="56dp"
@@ -29,7 +30,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:liftOnScroll="true"
             app:liftOnScrollTargetViewId="@id/nested_scroll_view">
-            <androidx.constraintlayout.motion.widget.MotionLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/motion_layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -52,7 +53,6 @@
                     android:layout_marginLeft="4dp"
                     android:clickable="true"
                     android:background="?attr/selectableItemBackgroundBorderless"
-                    android:tint="@color/gray_300"
                     android:src="@drawable/icon_arrow_back"
                     app:layout_constraintTop_toBottomOf="@id/status_bar_background_view"
                     app:layout_constraintLeft_toLeftOf="parent"/>
@@ -66,7 +66,6 @@
                     android:layout_marginRight="4dp"
                     android:clickable="true"
                     android:background="?attr/selectableItemBackgroundBorderless"
-                    android:tint="@color/gray_300"
                     android:src="@drawable/icon_more_vert"
                     app:layout_constraintTop_toBottomOf="@id/status_bar_background_view"
                     app:layout_constraintRight_toRightOf="parent"/>
@@ -75,7 +74,6 @@
                     android:id="@+id/bar_gen_title_text_view"
                     android:layout_width="0dp"
                     android:layout_height="56dp"
-                    android:textColor="@color/gray_300"
                     android:gravity="center"
                     android:textAppearance="?attr/textAppearanceHeadline6"
                     android:text="图书"
@@ -89,7 +87,6 @@
                     android:layout_width="0dp"
                     android:layout_height="56dp"
                     android:layout_marginLeft="4dp"
-                    android:textColor="@color/gray_300"
                     android:gravity="left|center_vertical"
                     android:textAppearance="?attr/textAppearanceHeadline6"
                     android:text="这个附加的标题"
@@ -100,7 +97,7 @@
 
 
 
-            </androidx.constraintlayout.motion.widget.MotionLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
         </com.google.android.material.appbar.AppBarLayout>
@@ -390,7 +387,7 @@
                     android:scaleType="centerCrop"
                     android:adjustViewBounds="true"
                     android:layout_marginTop="12dp"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round.Small"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round.4"
                     app:srcCompat="@drawable/news_2_004"
                     app:layout_constraintTop_toBottomOf="@id/author_title_text_view"
                     app:layout_constraintLeft_toLeftOf="parent"/>

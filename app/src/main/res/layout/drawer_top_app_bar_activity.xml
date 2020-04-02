@@ -26,6 +26,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
             <com.google.android.material.appbar.AppBarLayout
+                style="?attr/appBarLayoutPrimaryStyle"
                 android:id="@+id/app_bar_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -45,8 +46,8 @@
         </LinearLayout>
 
         <com.google.android.material.navigation.NavigationView
-            android:theme="@style/ThemeOverlay.MaterialBook.NavigationView.TransparentBackground"
-            app:itemShapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.NavigationView"
+            android:theme="@style/ThemeOverlay.MaterialBook.HighlightControl.Transparent"
+            app:itemShapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round.Right.16"
             app:itemShapeFillColor="@color/drawer_top_app_bar_item_color"
             android:id="@+id/navigation_view"
             android:layout_width="wrap_content"

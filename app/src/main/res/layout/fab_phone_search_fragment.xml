@@ -21,6 +21,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
         <com.google.android.material.appbar.AppBarLayout
+            style="?attr/appBarLayoutPrimaryStyle"
             android:id="@+id/app_bar_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -50,6 +51,7 @@
                         android:clickable="true"
                         android:background="?attr/selectableItemBackgroundBorderless"
                         android:src="@drawable/icon_arrow_back"
+                        android:tint="@color/gray_1000"
                         android:onClick="@{(view) -> fragment.onBackClick(view)}"/>
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -73,6 +75,7 @@
                         android:paddingRight="6dp"
                         android:clickable="true"
                         android:background="?attr/selectableItemBackgroundBorderless"
+                        android:tint="@color/gray_1000"
                         android:src="@drawable/icon_mic"/>
 
                     <ImageView
@@ -84,6 +87,7 @@
                         android:paddingRight="6dp"
                         android:clickable="true"
                         android:background="?attr/selectableItemBackgroundBorderless"
+                        android:tint="@color/gray_1000"
                         android:src="@drawable/icon_more_vert"/>
                 </LinearLayout>
 

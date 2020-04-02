@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-18 下午5:45
+  ~
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:startColor="#FF151F2B"
+        android:endColor="#00FFFFFF"
+        android:angle="0"
+        android:type="linear"/>
+</shape>
