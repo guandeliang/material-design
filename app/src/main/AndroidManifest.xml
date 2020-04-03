@@ -294,6 +294,16 @@
             android:theme="@style/Theme.MaterialBook.DayNight.Custom"
             android:screenOrientation="portrait">
         </activity>
+        <activity
+            android:name=".example.bottomsheet.BottomSheetFullActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".example.bottomsheet.BottomSheetDialogActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Light"
+            android:screenOrientation="portrait">
+        </activity>
 
 
 

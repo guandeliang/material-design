@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/end" />
+
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/back_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="?attr/colorPrimary"/>
+
+        <Constraint
+            android:id="@+id/collapse_sheet_image_view"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="12dp"
+            android:layout_marginLeft="12dp"
+            android:visibility="gone"
+            android:src="@drawable/icon_keyboard_arrow_down"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <Constraint
+            android:id="@+id/title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:text="老韩杀猪菜总店"
+            android:textColor="@color/gray_200"
+            app:layout_goneMarginLeft="24dp"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/sub_title_text_view"
+            app:layout_constraintLeft_toRightOf="@id/collapse_sheet_image_view">
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="@color/gray_200"/>
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/sub_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="4dp"
+            android:textAppearance="?attr/textAppearanceCaption"
+            android:textColor="@color/gray_300"
+            android:text="哈尔滨市阿城区延川大街"
+            app:layout_goneMarginLeft="24dp"
+            app:layout_constraintTop_toBottomOf="@id/title_text_view"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/collapse_sheet_image_view">
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="@color/gray_300"/>
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/v_guide_line_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="52dp"/>
+
+        <Constraint
+            android:id="@+id/time_distance_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="24dp"
+            android:textAppearance="?attr/textAppearanceCaption"
+            android:text="25分钟"
+            android:textColor="@color/gray_300"
+            app:layout_constraintBaseline_toBaselineOf="@id/sub_title_text_view"
+            app:layout_constraintLeft_toLeftOf="@id/v_guide_line_fab"
+            app:layout_constraintRight_toRightOf="@id/v_guide_line_fab">
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="@color/gray_300"/>
+        </Constraint>
+
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/back_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="?attr/colorPrimary"/>
+
+        <Constraint
+            android:id="@+id/collapse_sheet_image_view"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="12dp"
+            android:layout_marginLeft="12dp"
+            android:visibility="visible"
+            android:src="@drawable/icon_keyboard_arrow_down"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <Constraint
+            android:id="@+id/title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:text="老韩杀猪菜总店"
+            android:textColor="@color/gray_200"
+            app:layout_goneMarginLeft="24dp"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/collapse_sheet_image_view">
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="@color/gray_1000"/>
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/sub_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="4dp"
+            android:textAppearance="?attr/textAppearanceCaption"
+            android:textColor="@color/gray_300"
+            android:text="哈尔滨市阿城区延川大街"
+            app:layout_goneMarginLeft="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/collapse_sheet_image_view">
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="@color/transparent"/>
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/v_guide_line_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="52dp"/>
+
+        <Constraint
+            android:id="@+id/time_distance_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="24dp"
+            android:textAppearance="?attr/textAppearanceCaption"
+            android:text="25分钟"
+            android:textColor="@color/gray_300"
+            app:layout_constraintBaseline_toBaselineOf="@id/sub_title_text_view"
+            app:layout_constraintLeft_toLeftOf="@id/v_guide_line_fab"
+            app:layout_constraintRight_toRightOf="@id/v_guide_line_fab">
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="@color/transparent"/>
+        </Constraint>
+
+    </ConstraintSet>
+
+</MotionScene>

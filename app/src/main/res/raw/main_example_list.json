@@ -332,14 +332,14 @@
       },
 
       {
-        "id":10901020,
-        "title":"Full Screen Bottom Sheet(Map)",
-        "path":"com.jacob.material.example.bottomsheet.BottomSheetDayNightCustomActivity"
+        "id":10901030,
+        "title":"Full Height Bottom Sheet",
+        "path":"com.jacob.material.example.bottomsheet.BottomSheetFullActivity"
       },
       {
-        "id":10901020,
-        "title":"Bottom Sheet Dialog(Modal)主要是各种行为",
-        "path":"com.jacob.material.example.bottomsheet.BottomSheetDayNightCustomActivity"
+        "id":10901040,
+        "title":"Modal Bottom Sheet (Dialog)",
+        "path":"com.jacob.material.example.bottomsheet.BottomSheetDialogActivity"
       },
       {
         "id":10901020,
