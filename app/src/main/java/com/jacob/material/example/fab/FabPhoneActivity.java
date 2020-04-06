@@ -76,8 +76,6 @@ public class FabPhoneActivity extends AppCompatActivity {
                     }else{
                         viewModel.getNavController().popBackStack();
                     }
-
-                    return;
                 }
             }
         }

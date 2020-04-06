@@ -76,29 +76,12 @@ public class BackdropCraneLaunchActivity extends AppCompatActivity implements Li
     }
 
 
-    @OnLifecycleEvent(Lifecycle.Event.ON_ANY)
-    public void onAnyEvent() {
-        //Log.d(TempConstant.LOG_TAG, "BackdropCraneMainActivity ON_ANY");
-    }
-
-    @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
-    public void onCreateEvent() {
-    }
-    @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
-    public void onDestroyEvent() {
-    }
-    @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
-    public void onPauseEvent() {
-    }
     @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
     public void onResumeEvent() {
         //如果启动Main Activity到一半，被中断返回
         if(hasStartMainActivity){
             finish();
         }
-    }
-    @OnLifecycleEvent(Lifecycle.Event.ON_START)
-    public void onStartEvent() {
     }
     @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
     public void onStopEvent() {

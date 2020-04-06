@@ -8,14 +8,21 @@
 package com.jacob.material.example.bottomsheet;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
+import androidx.databinding.Observable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleObserver;
+import androidx.lifecycle.OnLifecycleEvent;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.FragmentNavigator;
 import androidx.recyclerview.selection.SelectionTracker;
@@ -23,11 +30,14 @@ import androidx.recyclerview.selection.StorageStrategy;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.snackbar.Snackbar;
+import com.jacob.material.BR;
 import com.jacob.material.R;
 import com.jacob.material.databinding.BottomSheetMotionSelectFragmentBinding;
 import com.jacob.material.example.adapter.GrammyArtistTrackerAdapter;
 import com.jacob.material.example.model.GrammySinger;
 import com.jacob.material.widgets.GridLayoutVertialItemDecoration;
+import com.jacob.temp.TempConstant;
 import com.jacob.utils.JsonUtils;
 import com.jacob.utils.WidgetsUtils;
 
@@ -43,6 +53,7 @@ public class BottomSheetMotionSelectFragment extends Fragment implements Lifecyc
     private SelectionTracker<Long> tracker;
     private GrammyArtistTrackerAdapter adapter;
     private int selectedCardViewState;
+    private String info;
 
     public BottomSheetMotionSelectFragment(){
         this.getLifecycle().addObserver(this);
@@ -55,12 +66,9 @@ public class BottomSheetMotionSelectFragment extends Fragment implements Lifecyc
         viewModel = new ViewModelProvider(this.getActivity()).get(BottomSheetMotionViewModel.class);
 
         this.startPostponedEnterTransition();
+
         binding.selectedCardViewWrapper.setTransitionName(BottomSheetMotionViewModel.TRANSITION_WRAPPER_TO_FRAGMENT);
         binding.selectedCardView.setTransitionName(BottomSheetMotionViewModel.TRANSITION_CARD_TO_TOOLBAR);
-        if(viewModel.getSelectedList().size() > 0){
-            binding.selectedCardViewWrapper.setTranslationX(0);
-        }
-
 
 
         WidgetsUtils.setSystemBarColor(this.getActivity(), R.color.gray_300);
@@ -91,12 +99,57 @@ public class BottomSheetMotionSelectFragment extends Fragment implements Lifecyc
         List<GrammySinger> grammySingerList = JsonUtils.loadGrammySinger(getResources());
         adapter.setItems(grammySingerList);
         binding.recyclerView.addOnScrollListener(new RecyclerViewScrollListener());
-
-        adapter.initTracker(viewModel.getSelectedList());
-
         binding.selectedCardView.setOnClickListener(new OnSelectedCardViewClickListener());
 
+        viewModel.addOnPropertyChangedCallback(new ViewModelPropertyChangedCallback());
+
+        setInfo();
+        if(viewModel.getSelectedList().size() > 0){
+            binding.selectedCardViewWrapper.setTranslationX(0);
+        }
+
+
         return binding.getRoot();
+    }
+
+    private void setInfo(){
+        //主动判断Action，不能等ViewModel Call Back
+        //否则时间可能延后，无法获取到正确的信息
+        info = null;
+        BottomSheetMotionViewModel.Action action = viewModel.getAction();
+        if(action == BottomSheetMotionViewModel.Action.BACK) {
+            adapter.initTracker(viewModel.getSelectedList());
+        }else {
+            int imageCount = viewModel.getSelectedList().size();
+            viewModel.clearSelectedList();
+            if(action == BottomSheetMotionViewModel.Action.SAVE){
+                info = "已经把" + imageCount + "张图片保存到手机";
+            }else if(action == BottomSheetMotionViewModel.Action.ALBUM){
+                info = "已经把" + imageCount + "张图片添加到相册";
+            }else if(action == BottomSheetMotionViewModel.Action.SHARE){
+                info = "已经把" + imageCount + "张图片分享给朋友";
+            }
+        }
+    }
+
+
+    private class ViewModelPropertyChangedCallback extends Observable.OnPropertyChangedCallback {
+        @Override
+        public void onPropertyChanged(Observable sender, int propertyId) {
+        }
+    }
+
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
+    public void onResumeEvent() {
+        //把显示提示信息时间延后，确保布局已经加载完成
+        if(info != null){
+            Snackbar.make(binding.constraintLayout, info, Snackbar.LENGTH_LONG)
+                    .setAction("取消", (view -> {}))
+                    .show();
+
+
+        }
     }
 
 
@@ -105,7 +158,6 @@ public class BottomSheetMotionSelectFragment extends Fragment implements Lifecyc
         @Override
         public void onItemStateChanged(@NonNull Long key, boolean selected) {
             GrammySinger data = adapter.getGrammySinger(key.intValue());
-
             if(selected){
                 viewModel.addSelected(data);
             }else{

@@ -68,11 +68,18 @@ public class BottomSheetMotionSettingFragment extends Fragment implements Lifecy
         GrammyArtistItemAdapter adapter = new GrammyArtistItemAdapter(viewModel.getSelectedList());
         binding.recyclerView.setAdapter(adapter);
 
-        binding.toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                viewModel.getNavController().popBackStack();
-            }
+
+        binding.toolbar.setNavigationOnClickListener((view) ->{
+            viewModel.setAction(BottomSheetMotionViewModel.Action.BACK);
+        });
+        binding.saveButton.setOnClickListener((view) ->{
+            viewModel.setAction(BottomSheetMotionViewModel.Action.SAVE);
+        });
+        binding.albumButton.setOnClickListener((view) ->{
+            viewModel.setAction(BottomSheetMotionViewModel.Action.ALBUM);
+        });
+        binding.shareButton.setOnClickListener((view) ->{
+            viewModel.setAction(BottomSheetMotionViewModel.Action.SHARE);
         });
 
 
