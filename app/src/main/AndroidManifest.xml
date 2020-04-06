@@ -304,6 +304,11 @@
             android:theme="@style/Theme.MaterialBook.SingleColor.Light"
             android:screenOrientation="portrait">
         </activity>
+        <activity
+            android:name=".example.bottomsheet.BottomSheetMotionActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Light"
+            android:screenOrientation="portrait">
+        </activity>
 
 
 

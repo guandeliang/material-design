@@ -65,7 +65,7 @@
                         android:layout_marginRight="4dp"
                         android:src="@drawable/icon_filter_list"
                         android:clickable="true"
-                        android:background="@drawable/click_ripple_round"
+                        android:background="@drawable/click_ripple_round_white"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintRight_toRightOf="parent"

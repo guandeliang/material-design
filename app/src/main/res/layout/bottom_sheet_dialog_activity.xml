@@ -189,6 +189,7 @@
         </androidx.core.widget.NestedScrollView>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottom_bar"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_gravity="bottom"
@@ -199,7 +200,7 @@
                 android:layout_marginLeft="16dp"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
-                android:background="@drawable/shape_round_corner_36"
+                android:background="@drawable/shape_round_corner_18"
                 android:backgroundTint="@color/gray_300"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"

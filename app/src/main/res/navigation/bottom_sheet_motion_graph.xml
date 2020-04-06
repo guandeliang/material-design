@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-16 下午6:51
+  ~
+  -->
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet_motion_graph"
+    app:startDestination="@id/select">
+
+    <fragment
+        android:id="@+id/select"
+        android:name="com.jacob.material.example.bottomsheet.BottomSheetMotionSelectFragment"
+        android:label="select"
+        tools:layout="@layout/bottom_sheet_motion_select_fragment">
+        <action android:id="@+id/show_setting" app:destination="@id/setting"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/setting"
+        android:name="com.jacob.material.example.bottomsheet.BottomSheetMotionSettingFragment"
+        android:label="select"
+        tools:layout="@layout/bottom_sheet_motion_setting_fragment">
+    </fragment>
+
+
+</navigation>

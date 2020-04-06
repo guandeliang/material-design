@@ -7,6 +7,8 @@
 
 package com.jacob.material.example.model;
 
+import androidx.annotation.Nullable;
+
 public class GrammySinger {
     private int id;
     private String fileName;
@@ -52,5 +54,27 @@ public class GrammySinger {
 
     public void setSummary(String summary) {
         this.summary = summary;
+    }
+
+    @Override
+    public int hashCode() {
+        return this.getId();
+    }
+
+    @Override
+    public boolean equals(@Nullable Object obj) {
+        if(obj == null){
+            return false;
+        }
+        if(!(obj instanceof GrammySinger)){
+            return false;
+        }
+
+        GrammySinger o = (GrammySinger)obj;
+        if(o.getId() == this.getId()){
+            return true;
+        }else{
+            return false;
+        }
     }
 }

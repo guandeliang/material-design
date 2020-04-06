@@ -38,6 +38,8 @@ public class BottomSheetDialogActivity extends AppCompatActivity {
 
         binding.nestedScrollView.setOnScrollChangeListener(new OnContentScrollChangeListener());
 
+        binding.moreImageView.setOnClickListener(new OnMoreClickListener());
+
 
     }
 
@@ -52,8 +54,6 @@ public class BottomSheetDialogActivity extends AppCompatActivity {
             binding.authorHeaderImageView.getLocationOnScreen(headerLocationOnScreen);
 
             int headerTop = headerLocationOnScreen[1] - statusBarHeight;
-
-            Log.d(TempConstant.LOG_TAG, "authorHeaderTop = " + headerTop);
 
             int appBarHeight = binding.appBarLayout.getHeight();
             int headerHeight = binding.authorHeaderImageView.getHeight();
@@ -84,6 +84,14 @@ public class BottomSheetDialogActivity extends AppCompatActivity {
                 binding.backImageView.setTranslationY(0);
                 binding.appTitleTextView.setTranslationY(0);
             }
+        }
+    }
+
+    private class OnMoreClickListener implements View.OnClickListener{
+        @Override
+        public void onClick(View view) {
+            BottomSheetDialog dialog = BottomSheetDialog.getInstance();
+            dialog.show(getSupportFragmentManager(), "BottomSheetDialog");
         }
     }
 

@@ -29,11 +29,14 @@ public class StaggeredGridSpaceItemDecoration extends RecyclerView.ItemDecoratio
         outRect.top = space;
         StaggeredGridLayoutManager.LayoutParams params = (StaggeredGridLayoutManager.LayoutParams) view.getLayoutParams();
 
-        if (params.getSpanIndex() % 2 == 0) {
+        if(params.isFullSpan()){
             outRect.left = space;
-            outRect.right = space / 2;
+            outRect.right = space;
+        }else if (params.getSpanIndex() % columnCount == 0) {
+            outRect.left = space;
+            outRect.right = space / columnCount;
         } else {
-            outRect.left = space / 2;
+            outRect.left = space / columnCount;
             outRect.right = space;
         }
     }

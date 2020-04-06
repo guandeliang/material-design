@@ -121,7 +121,7 @@
                     android:layout_marginRight="16dp"
                     android:layout_marginTop="24dp"
                     android:clickable="true"
-                    android:background="@drawable/click_ripple_round"
+                    android:background="@drawable/click_ripple_round_white"
                     app:cardElevation="0dp"
                     app:cardBackgroundColor="@color/transparent_white_15_16">
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -166,7 +166,7 @@
                     android:layout_marginRight="16dp"
                     android:layout_marginTop="8dp"
                     android:clickable="true"
-                    android:background="@drawable/click_ripple_round"
+                    android:background="@drawable/click_ripple_round_white"
                     app:cardElevation="0dp"
                     app:cardBackgroundColor="@color/transparent_white_15_16">
                     <androidx.constraintlayout.widget.ConstraintLayout

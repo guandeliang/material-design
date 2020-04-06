@@ -8,12 +8,12 @@
 package com.jacob.material.example.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,40 +21,24 @@ import androidx.recyclerview.selection.ItemDetailsLookup;
 import androidx.recyclerview.selection.ItemKeyProvider;
 import androidx.recyclerview.selection.SelectionTracker;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.jacob.material.R;
 import com.jacob.material.example.model.ExampleImage;
+import com.jacob.material.example.model.GrammySinger;
+import com.jacob.temp.TempConstant;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExampleTrackerImageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-    private static int ITEM_TYPE_HEADER = -1;
-    private static int ITEM_TYPE_ITEM = 0;
-    private static int ITEM_TYPE_FOOTER = 1;
+public class GrammyArtistTrackerAdapter extends RecyclerView.Adapter<GrammyArtistTrackerAdapter.ItemViewHolder> {
 
-    private List<ExampleImage> items;
+    private List<GrammySinger> items;
     private Context context;
     private SelectionTracker<Long> tracker;
 
-    public ExampleTrackerImageAdapter(Context context){
+    public GrammyArtistTrackerAdapter(Context context){
         this.context = context;
         this.items = new ArrayList<>();
-    }
-
-    public void setItems(List<ExampleImage> items){
-        if(items != null){
-            this.items = items;
-        }
-    }
-
-    public ExampleImage getExampleImage(int position){
-        if(position <=0 || position >= this.getItemCount()){
-            return null;
-        }else{
-            return items.get(position);
-        }
     }
 
     public void setTracker(SelectionTracker<Long> tracker){
@@ -62,74 +46,50 @@ public class ExampleTrackerImageAdapter extends RecyclerView.Adapter<RecyclerVie
     }
 
     @Override
-    public int getItemViewType(int position) {
-        if(position == 0){
-            return ITEM_TYPE_HEADER;
-        }else if(position == items.size() + 1){
-            return ITEM_TYPE_FOOTER;
-        }else{
-            return ITEM_TYPE_ITEM;
+    public int getItemCount() {
+        return items.size();
+    }
+
+    public void setItems(List<GrammySinger> items){
+        if(items != null){
+            this.items = items;
         }
     }
 
-    @Override
-    public int getItemCount() {
-        return items.size() + 2;
+    public GrammySinger getGrammySinger(int position){
+        if(position <0 || position >= this.getItemCount()){
+            return null;
+        }else{
+            return items.get(position);
+        }
     }
+
+    public void initTracker(List<GrammySinger> selectedList){
+        Log.d(TempConstant.LOG_TAG, "items = " + items.size());
+        Log.d(TempConstant.LOG_TAG, "selectedList = " + selectedList.size());
+        for(GrammySinger data:selectedList){
+            Log.d(TempConstant.LOG_TAG, "data = " + data.getId());
+            int position = items.indexOf(data);
+            boolean result = tracker.select(Long.valueOf(position));
+            Log.d(TempConstant.LOG_TAG, "result = " + result + " position = " + position);
+        }
+    }
+
+
+
 
     @NonNull
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public GrammyArtistTrackerAdapter.ItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        RecyclerView.ViewHolder holder = null;
-        if(viewType == ITEM_TYPE_HEADER){
-            View view = inflater.inflate(R.layout.example_image_header, parent, false);
-            holder = new HeaderViewHolder(view);
-        }else if(viewType == ITEM_TYPE_FOOTER){
-            View view = inflater.inflate(R.layout.example_image_footer, parent, false);
-            holder = new FooterViewHolder(view);
-        }else{
-            View view = inflater.inflate(R.layout.example_image_selection_holder, parent, false);
-            holder = new ItemViewHolder(view);
-        }
-
+        View view = inflater.inflate(R.layout.grammy_artist_selection_holder, parent, false);
+        GrammyArtistTrackerAdapter.ItemViewHolder holder = new ItemViewHolder(view);
         return holder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        StaggeredGridLayoutManager.LayoutParams layoutParams = (StaggeredGridLayoutManager.LayoutParams) holder.itemView.getLayoutParams();
-        if(holder instanceof ItemViewHolder){
-            layoutParams.setFullSpan(false);
-            ItemViewHolder itemViewHolder = (ItemViewHolder)holder;
-            ExampleImage item = items.get(position - 1);
-            itemViewHolder.bind(item, position);
-        }else{
-            layoutParams.setFullSpan(true);
-            if(holder instanceof HeaderViewHolder){
-                HeaderViewHolder headerViewHolder = (HeaderViewHolder)holder;
-                headerViewHolder.bind(getItemCount() - 2);
-            }
-        }
-    }
-
-    public class HeaderViewHolder extends RecyclerView.ViewHolder{
-        private TextView textView;
-        public HeaderViewHolder(View view){
-            super(view);
-            this.textView = view.findViewById(R.id.text_view);
-        }
-
-        private void bind(int itemCount) {
-            textView.setText("共" + itemCount + "张图片");
-        }
-
-    }
-
-    public class FooterViewHolder extends RecyclerView.ViewHolder{
-        public FooterViewHolder(View view){
-            super(view);
-        }
+    public void onBindViewHolder(@NonNull GrammyArtistTrackerAdapter.ItemViewHolder holder, int position) {
+        holder.bind(position);
     }
 
     public class ItemViewHolder extends RecyclerView.ViewHolder{
@@ -149,7 +109,8 @@ public class ExampleTrackerImageAdapter extends RecyclerView.Adapter<RecyclerVie
             details = new ItemDetails();
         }
 
-        private void bind(ExampleImage item, int position) {
+        private void bind(int position) {
+            GrammySinger item  = getGrammySinger(position);
             details.position = position;
             String fileName = item.getFileName();
             int iconResId = context.getResources().getIdentifier(fileName, "drawable", context.getPackageName());
@@ -179,14 +140,14 @@ public class ExampleTrackerImageAdapter extends RecyclerView.Adapter<RecyclerVie
     }
 
     public static class SelectionPredicate extends SelectionTracker.SelectionPredicate<Long> {
-        private ExampleTrackerImageAdapter adapter;
-        public SelectionPredicate(ExampleTrackerImageAdapter adapter){
+        private GrammyArtistTrackerAdapter adapter;
+        public SelectionPredicate(GrammyArtistTrackerAdapter adapter){
             this.adapter = adapter;
         }
 
         @Override
         public boolean canSetStateForKey(@NonNull Long key, boolean nextState) {
-            if(key <= 0 || key >= adapter.getItemCount()){
+            if(key < 0 || key >= adapter.getItemCount()){
                 return false;
             }else{
                 return true;
@@ -195,7 +156,7 @@ public class ExampleTrackerImageAdapter extends RecyclerView.Adapter<RecyclerVie
 
         @Override
         public boolean canSetStateAtPosition(int position, boolean nextState) {
-            if(position <= 0 || position >= adapter.getItemCount()){
+            if(position < 0 || position >= adapter.getItemCount()){
                 return false;
             }else{
                 return true;
@@ -232,7 +193,7 @@ public class ExampleTrackerImageAdapter extends RecyclerView.Adapter<RecyclerVie
 
     public static class KeyProvider extends ItemKeyProvider<Long> {
 
-        public KeyProvider(ExampleTrackerImageAdapter adapter) {
+        public KeyProvider(GrammyArtistTrackerAdapter adapter) {
             super(ItemKeyProvider.SCOPE_MAPPED);
         }
 

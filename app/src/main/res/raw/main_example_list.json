@@ -343,6 +343,11 @@
       },
       {
         "id":10901020,
+        "title":"Full Hight Bottom Sheet And Motion",
+        "path":"com.jacob.material.example.bottomsheet.BottomSheetMotionActivity"
+      },
+      {
+        "id":10901020,
         "title":"Expanding bottom sheet And Motion",
         "path":"com.jacob.material.example.bottomsheet.BottomSheetDayNightCustomActivity"
       }

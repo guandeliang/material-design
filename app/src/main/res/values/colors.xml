@@ -137,6 +137,7 @@
     <color name="light_color_on_background">#000000</color>
     <color name="light_color_on_surface">#000000</color>
     <color name="light_color_on_error">#FFFFFF</color>
+    <color name="light_color_scrim">#4D880D4E</color>
 
     <!--深色主题-->
     <!--因为会使用到很多颜色，所以先提供一组按照名字命名的颜色-->

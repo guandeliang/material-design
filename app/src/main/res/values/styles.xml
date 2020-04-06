@@ -175,6 +175,15 @@
         <item name="cornerSizeBottomRight">0dp</item>
     </style>
 
+
+    <style name="ShapeAppearanceOverlay.MaterialBook.Round.LeftTop.24" parent="">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerSizeTopLeft">24dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
     <!--Shape Appearance Overlay End-->
 
 
@@ -418,7 +427,7 @@
         <item name="colorOnBackground">@color/light_color_on_background</item>
         <item name="colorOnSurface">@color/light_color_on_surface</item>
         <item name="colorOnError">@color/light_color_on_error</item>
-        <item name="scrimBackground">@color/mtrl_scrim_color</item>
+        <item name="scrimBackground">@color/light_color_scrim</item>
         <!--元件风格-->
         <item name="tabStyle">@style/Widget.MaterialBook.SingleColor.Light.TabLayout</item>
         <item name="bottomAppBarStyle">@style/Widget.MaterialBook.SingleColor.Light.BottomAppBar</item>
