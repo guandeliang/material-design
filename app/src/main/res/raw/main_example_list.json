@@ -357,10 +357,41 @@
 
 
   {
-    "id":12100000,
-    "iconName":"icon_example_appbar_top",
-    "title":"大导航Side Sheets",
-    "itemList":[]
+    "id":11000000,
+    "iconName":"icon_crop_16_9",
+    "title":"Button",
+    "itemList":[
+      {
+        "id":11001010,
+        "title":"默认DayNight主题Button",
+        "path":"com.jacob.material.example.button.ButtonDayNightDefaultActivity"
+      },
+      {
+        "id":11001020,
+        "title":"自定义DayNight主题Button",
+        "path":"com.jacob.material.example.button.ButtonDayNightCustomActivity"
+      },
+      {
+        "id":11001030,
+        "title":"突出显示最重要的Button",
+        "path":"com.jacob.material.example.button.ButtonHighEmphasisActivity"
+      },
+      {
+        "id":11001030,
+        "title":"首要和次要的Button",
+        "path":"com.jacob.material.example.button.ButtonMiddleEmphasisActivity"
+      },
+      {
+        "id":11001040,
+        "title":"各种重要程度Button组合",
+        "path":"com.jacob.material.example.button.ButtonLowEmphasisActivity"
+      },
+      {
+        "id":11001040,
+        "title":"Toggle Button",
+        "path":"com.jacob.material.example.button.ButtonToggleActivity"
+      }
+    ]
   },
 
 

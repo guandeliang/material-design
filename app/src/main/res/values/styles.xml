@@ -156,6 +156,11 @@
         <item name="cornerSize">4dp</item>
     </style>
 
+    <style name="ShapeAppearanceOverlay.MaterialBook.Round.16" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
     <style name="ShapeAppearanceOverlay.MaterialBook.Round.24" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">24dp</item>
@@ -198,6 +203,11 @@
         <item name="cornerSize">8dp</item>
     </style>
 
+    <style name="ShapeAppearance.MaterialBook.Round.16" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
     <style name="Widget.MaterialBook.Button.Round.Solid" parent="Widget.MaterialComponents.Button">
         <item name="shapeAppearance">@style/ShapeAppearance.MaterialBook.Round</item>
     </style>
@@ -221,6 +231,55 @@
         <item name="android:paddingRight">4dp</item>
         <item name="iconPadding">0dp</item>
     </style>
+
+    <style name="Widget.MaterialBook.Button.UnelevatedButton.IconTop" parent="Widget.MaterialComponents.Button.UnelevatedButton.Icon">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="iconPadding">8dp</item>
+    </style>
+
+    <style name="Widget.MaterialBook.Button.OutlinedButton.IconTop" parent="Widget.MaterialComponents.Button.OutlinedButton.Icon">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="iconPadding">8dp</item>
+    </style>
+
+
+    <style name="Widget.MaterialBook.Button.OutlinedButton.IconOnly" parent="Widget.MaterialComponents.Button.OutlinedButton.Icon">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+    <style name="Widget.MaterialBook.Button.UnelevatedButton.IconOnly" parent="Widget.MaterialComponents.Button.UnelevatedButton.Icon">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">6dp</item>
+        <item name="android:paddingRight">6dp</item>
+        <item name="android:minWidth">36dp</item>
+        <item name="android:minHeight">36dp</item>
+    </style>
+
+    <style name="Widget.MaterialBook.Button.TextButton.IconOnly" parent="Widget.MaterialComponents.Button.TextButton.Icon">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">6dp</item>
+        <item name="android:paddingRight">6dp</item>
+        <item name="android:minWidth">36dp</item>
+        <item name="android:minHeight">36dp</item>
+    </style>
+
+
     <!--Buttons End -->
 
 

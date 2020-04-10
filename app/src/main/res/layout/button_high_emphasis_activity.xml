@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-2 下午1:57
+  ~
+  -->
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/header_image_view"
+            android:layout_width="108dp"
+            android:layout_height="108dp"
+            android:layout_marginTop="72dp"
+            android:src="@drawable/header_009"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round.16"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialBook.Button.UnelevatedButton.IconOnly"
+            android:id="@+id/header_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="84dp"
+            android:layout_marginLeft="84dp"
+            app:icon="@drawable/icon_photo_camera"
+            app:strokeColor="@color/gray_200"
+            app:strokeWidth="2dp"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round.16"
+            app:layout_constraintBottom_toBottomOf="@id/header_image_view"
+            app:layout_constraintLeft_toLeftOf="@id/header_image_view"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/v_guide_line_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.10"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/v_guide_line_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.90"/>
+
+
+        <TextView
+            android:id="@+id/title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="账号注册"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            app:layout_constraintTop_toBottomOf="@id/header_image_view"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+        
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/user_name_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:hint="邮箱或手机号码"
+            android:background="@drawable/shape_round_corner_primary_border_16"
+            app:layout_constraintTop_toBottomOf="@id/title_text_view"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line_left"
+            app:layout_constraintRight_toLeftOf="@id/v_guide_line_right"/>
+
+
+        <LinearLayout
+            android:id="@+id/pwd_linear_layout"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/shape_round_corner_primary_border_16"
+            app:layout_constraintTop_toBottomOf="@id/user_name_edit_text"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line_left"
+            app:layout_constraintRight_toLeftOf="@id/v_guide_line_right">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pwd_edit_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:hint="账号密码"
+                android:inputType="textVisiblePassword"
+                android:background="@null"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/pwd_visiable_button"
+                style="@style/Widget.MaterialBook.Button.TextButton.IconOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:checkable="true"
+                app:icon="@drawable/icon_remove_red_eye"
+                app:iconTint="@color/secondary_checked_color_selector"/>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:id="@+id/register_button"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="42dp"
+            android:text="注册新账号"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialBook.Round.16"
+            app:layout_constraintTop_toBottomOf="@id/pwd_linear_layout"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line_left"
+            app:layout_constraintRight_toLeftOf="@id/v_guide_line_right"/>
+
+
+        <TextView
+            android:id="@+id/note_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="已有账号用户请直接登陆"
+            android:textAlignment="center"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            app:layout_constraintTop_toBottomOf="@id/register_button"
+            app:layout_constraintLeft_toRightOf="@id/v_guide_line_left"
+            app:layout_constraintRight_toLeftOf="@id/v_guide_line_right"/>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-2 下午1:57
+  ~
+  -->
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="activity" type="com.jacob.material.example.button.ButtonLowEmphasisActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="92dp"
+            android:text="选择绘制工具"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tools_button_001"
+            style="@style/Widget.MaterialBook.Button.OutlinedButton.IconTop"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialBook.Round.8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="12dp"
+            android:text="铅笔"
+            android:checkable="true"
+            android:drawableTop="@drawable/icon_draw_tools_pencils"
+            android:drawableTint="@color/secondary_checked_color_selector"
+            app:strokeColor="@color/secondary_checked_color_selector"
+            android:textColor="@color/secondary_checked_color_selector"
+            app:layout_constraintTop_toBottomOf="@id/title_text_view"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tools_button_002"
+            android:onClick="@{(view) -> activity.onToolsButtonClick(view)}"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tools_button_002"
+            style="@style/Widget.MaterialBook.Button.OutlinedButton.IconTop"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialBook.Round.8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:text="钢笔"
+            android:checkable="true"
+            android:drawableTop="@drawable/icon_draw_tools_pen"
+            android:drawableTint="@color/secondary_checked_color_selector"
+            app:strokeColor="@color/secondary_checked_color_selector"
+            android:textColor="@color/secondary_checked_color_selector"
+            app:layout_constraintTop_toBottomOf="@id/title_text_view"
+            app:layout_constraintLeft_toRightOf="@id/tools_button_001"
+            app:layout_constraintRight_toLeftOf="@id/tools_button_003"
+            android:onClick="@{(view) -> activity.onToolsButtonClick(view)}"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tools_button_003"
+            style="@style/Widget.MaterialBook.Button.OutlinedButton.IconTop"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialBook.Round.8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="24dp"
+            android:text="毛笔"
+            android:checkable="true"
+            android:drawableTop="@drawable/icon_draw_tools_felt_pen"
+            android:drawableTint="@color/secondary_checked_color_selector"
+            app:strokeColor="@color/secondary_checked_color_selector"
+            android:textColor="@color/secondary_checked_color_selector"
+            app:layout_constraintTop_toBottomOf="@id/title_text_view"
+            app:layout_constraintLeft_toRightOf="@id/tools_button_002"
+            app:layout_constraintRight_toRightOf="parent"
+            android:onClick="@{(view) -> activity.onToolsButtonClick(view)}"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tools_button_004"
+            style="@style/Widget.MaterialBook.Button.OutlinedButton.IconTop"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialBook.Round.8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="水粉"
+            android:checkable="true"
+            android:drawableTop="@drawable/icon_draw_tools_gouache"
+            android:drawableTint="@color/secondary_checked_color_selector"
+            app:strokeColor="@color/secondary_checked_color_selector"
+            android:textColor="@color/secondary_checked_color_selector"
+            app:layout_constraintTop_toBottomOf="@id/tools_button_001"
+            app:layout_constraintLeft_toLeftOf="@id/tools_button_001"
+            app:layout_constraintRight_toRightOf="@id/tools_button_001"
+            android:onClick="@{(view) -> activity.onToolsButtonClick(view)}"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tools_button_005"
+            style="@style/Widget.MaterialBook.Button.OutlinedButton.IconTop"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialBook.Round.8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="水彩"
+            android:checkable="true"
+            android:drawableTop="@drawable/icon_draw_tools_watercolor"
+            android:drawableTint="@color/secondary_checked_color_selector"
+            app:strokeColor="@color/secondary_checked_color_selector"
+            android:textColor="@color/secondary_checked_color_selector"
+            app:layout_constraintTop_toBottomOf="@id/tools_button_002"
+            app:layout_constraintLeft_toLeftOf="@id/tools_button_002"
+            app:layout_constraintRight_toRightOf="@id/tools_button_002"
+            android:onClick="@{(view) -> activity.onToolsButtonClick(view)}"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tools_button_006"
+            style="@style/Widget.MaterialBook.Button.OutlinedButton.IconTop"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialBook.Round.8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="油彩"
+            android:checkable="true"
+            android:drawableTop="@drawable/icon_draw_tools_oil_paints"
+            android:drawableTint="@color/secondary_checked_color_selector"
+            app:strokeColor="@color/secondary_checked_color_selector"
+            android:textColor="@color/secondary_checked_color_selector"
+            app:layout_constraintTop_toBottomOf="@id/tools_button_003"
+            app:layout_constraintLeft_toLeftOf="@id/tools_button_003"
+            app:layout_constraintRight_toRightOf="@id/tools_button_003"
+            android:onClick="@{(view) -> activity.onToolsButtonClick(view)}"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tools_button_007"
+            style="@style/Widget.MaterialBook.Button.OutlinedButton.IconTop"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialBook.Round.8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="树脂漆"
+            android:checkable="true"
+            android:drawableTop="@drawable/icon_draw_tools_acrylic"
+            android:drawableTint="@color/secondary_checked_color_selector"
+            app:strokeColor="@color/secondary_checked_color_selector"
+            android:textColor="@color/secondary_checked_color_selector"
+            app:layout_constraintTop_toBottomOf="@id/tools_button_004"
+            app:layout_constraintLeft_toLeftOf="@id/tools_button_004"
+            app:layout_constraintRight_toRightOf="@id/tools_button_004"
+            android:onClick="@{(view) -> activity.onToolsButtonClick(view)}"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tools_button_008"
+            style="@style/Widget.MaterialBook.Button.OutlinedButton.IconTop"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialBook.Round.8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="彩色铅笔"
+            android:checkable="true"
+            android:drawableTop="@drawable/icon_draw_tools_color_pencils"
+            android:drawableTint="@color/secondary_checked_color_selector"
+            app:strokeColor="@color/secondary_checked_color_selector"
+            android:textColor="@color/secondary_checked_color_selector"
+            app:layout_constraintTop_toBottomOf="@id/tools_button_005"
+            app:layout_constraintLeft_toLeftOf="@id/tools_button_005"
+            app:layout_constraintRight_toRightOf="@id/tools_button_005"
+            android:onClick="@{(view) -> activity.onToolsButtonClick(view)}"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:layout_marginLeft="24dp"
+            android:text="返回"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:drawableLeft="@drawable/icon_arrow_back"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialBook.Round"
+            app:layout_constraintTop_toBottomOf="@id/tools_button_008"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:id="@+id/continue_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:layout_marginRight="24dp"
+            android:text="继续"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialBook.Round"
+            app:layout_constraintTop_toBottomOf="@id/tools_button_008"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

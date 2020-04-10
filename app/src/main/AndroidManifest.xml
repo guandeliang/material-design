@@ -310,6 +310,37 @@
             android:screenOrientation="portrait">
         </activity>
 
+        <!-- BUTTON -->
+        <activity
+            android:name=".example.button.ButtonDayNightDefaultActivity"
+            android:theme="@style/Theme.MaterialBook.DayNight.Default"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".example.button.ButtonDayNightCustomActivity"
+            android:theme="@style/Theme.MaterialBook.DayNight.Custom"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".example.button.ButtonHighEmphasisActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".example.button.ButtonMiddleEmphasisActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored.TranslucentStatus"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".example.button.ButtonLowEmphasisActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored.TranslucentStatus"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".example.button.ButtonToggleActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
+            android:screenOrientation="portrait">
+        </activity>
 
 
 

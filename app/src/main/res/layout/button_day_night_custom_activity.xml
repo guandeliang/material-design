@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-2 下午1:57
+  ~
+  -->
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.jacob.material.widgets.ThemeSwitchAppBarLayout
+            style="@style/Widget.MaterialComponents.AppBarLayout.PrimarySurface"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title_text="默认DayNight主题"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:id="@+id/title_text_view_001"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:text="1、Unelevated Button Shape"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    android:id="@+id/shape_4dp_unelevated_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="4dp"
+                    app:layout_constraintTop_toBottomOf="@id/title_text_view_001"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    android:id="@+id/shape_8dp_unelevated_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="24dp"
+                    android:text="8dp"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialBook.Round.8"
+                    app:layout_constraintTop_toBottomOf="@id/title_text_view_001"
+                    app:layout_constraintLeft_toRightOf="@id/shape_4dp_unelevated_button"/>
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    android:id="@+id/shape_round_unelevated_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="24dp"
+                    android:text="Round"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialBook.Round"
+                    app:layout_constraintTop_toBottomOf="@id/title_text_view_001"
+                    app:layout_constraintLeft_toRightOf="@id/shape_8dp_unelevated_button"/>
+
+                <TextView
+                    android:id="@+id/title_text_view_002"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:text="2、Border Button Shape"
+                    app:layout_constraintTop_toBottomOf="@id/shape_4dp_unelevated_button"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:id="@+id/shape_4dp_outline_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="4dp"
+                    app:strokeColor="@color/primary_button_outline_color_selector"
+                    app:layout_constraintTop_toBottomOf="@id/title_text_view_002"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:id="@+id/shape_8dp_outline_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="24dp"
+                    android:text="8dp"
+                    app:strokeColor="@color/primary_button_outline_color_selector"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialBook.Round.8"
+                    app:layout_constraintTop_toBottomOf="@id/title_text_view_002"
+                    app:layout_constraintLeft_toRightOf="@id/shape_4dp_outline_button"/>
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:id="@+id/shape_round_outline_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="24dp"
+                    android:text="Round"
+                    app:strokeColor="@color/primary_button_outline_color_selector"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialBook.Round"
+                    app:layout_constraintTop_toBottomOf="@id/title_text_view_002"
+                    app:layout_constraintLeft_toRightOf="@id/shape_8dp_outline_button"/>
+
+
+                <TextView
+                    android:id="@+id/title_text_view_003"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:text="3、Icon Position"
+                    app:layout_constraintTop_toBottomOf="@id/shape_4dp_outline_button"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_icon_left"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Button"
+                    app:icon="@drawable/icon_add"
+                    app:layout_constraintTop_toBottomOf="@id/title_text_view_003"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_icon_right"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="24dp"
+                    android:text="Button"
+                    app:icon="@drawable/icon_add"
+                    app:iconGravity="textEnd"
+                    app:layout_constraintTop_toBottomOf="@id/title_text_view_003"
+                    app:layout_constraintLeft_toRightOf="@id/button_icon_left"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_icon_only"
+                    style="@style/Widget.MaterialBook.Button.UnelevatedButton.IconOnly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:icon="@drawable/icon_add"
+                    app:layout_constraintTop_toBottomOf="@id/button_icon_left"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/enabled_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enabled"
+                    android:layout_marginTop="16dp"
+                    android:checked="true"
+                    app:switchPadding="8dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/button_icon_only"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+
+
+    </LinearLayout>
+</layout>
