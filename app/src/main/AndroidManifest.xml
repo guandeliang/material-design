@@ -343,6 +343,19 @@
         </activity>
 
 
+        <!-- CHIP -->
+        <activity
+            android:name=".example.chip.ChipDayNightDefaultActivity"
+            android:theme="@style/Theme.MaterialBook.DayNight.Default"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".example.chip.ChipDayNightCustomActivity"
+            android:theme="@style/Theme.MaterialBook.DayNight.Custom"
+            android:screenOrientation="portrait">
+        </activity>
+
+
 
         <activity
             android:name=".test.EventTestActivity"

@@ -377,23 +377,40 @@
         "path":"com.jacob.material.example.button.ButtonHighEmphasisActivity"
       },
       {
-        "id":11001030,
+        "id":11001040,
         "title":"首要和次要的Button",
         "path":"com.jacob.material.example.button.ButtonMiddleEmphasisActivity"
       },
       {
-        "id":11001040,
+        "id":11001050,
         "title":"各种重要程度Button组合",
         "path":"com.jacob.material.example.button.ButtonLowEmphasisActivity"
       },
       {
-        "id":11001040,
+        "id":11001060,
         "title":"Toggle Button",
         "path":"com.jacob.material.example.button.ButtonToggleActivity"
       }
     ]
   },
 
+  {
+    "id":12000000,
+    "iconName":"icon_settings",
+    "title":"Chips",
+    "itemList":[
+      {
+        "id":13001010,
+        "title":"默认DayNight主题Chip",
+        "path":"com.jacob.material.example.chip.ChipDayNightDefaultActivity"
+      },
+      {
+        "id":13001010,
+        "title":"自定义DayNight主题Chip",
+        "path":"com.jacob.material.example.chip.ChipDayNightCustomActivity"
+      }
+    ]
+  },
 
 
 
@@ -470,12 +487,6 @@
   },
 
 
-  {
-    "id":10900000,
-    "iconName":"icon_example_appbar_top",
-    "title":"Chips",
-    "itemList":[]
-  },
 
   {
     "id":11000000,

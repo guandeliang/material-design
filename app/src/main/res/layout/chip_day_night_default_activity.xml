@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-2 下午1:57
+  ~
+  -->
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.jacob.material.widgets.ThemeSwitchAppBarLayout
+            style="@style/Widget.MaterialComponents.AppBarLayout.PrimarySurface"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title_text="默认DayNight主题"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:id="@+id/title_text_view_001"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:text="1、Entry(Input) Chip"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/entry_chip_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/title_text_view_001"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                </com.google.android.material.chip.ChipGroup>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/entry_chip_edit_text"
+                    android:background="@drawable/shape_round_corner_primary_border_16"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:layout_marginTop="16dp"
+                    android:imeOptions="actionDone"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    app:layout_constraintTop_toBottomOf="@+id/entry_chip_group"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+                <TextView
+                    android:id="@+id/title_text_view_002"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:text="2、Filter Chip"
+                    app:layout_constraintTop_toBottomOf="@id/entry_chip_edit_text"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/filter_chip_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:singleSelection="false"
+                    app:selectionRequired="false"
+                    app:layout_constraintTop_toBottomOf="@id/title_text_view_002"
+                    app:layout_constraintLeft_toLeftOf="parent">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/filter_chip_001"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:checked="false"
+                        app:checkedIcon="@drawable/icon_check_circle_outline"
+                        android:text="韩版"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/filter_chip_002"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:checked="false"
+                        app:checkedIcon="@drawable/icon_check_circle_outline"
+                        android:text="休闲风"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/filter_chip_003"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:checked="false"
+                        app:checkedIcon="@drawable/icon_check_circle_outline"
+                        android:text="简约"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/filter_chip_004"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:checked="false"
+                        app:checkedIcon="@drawable/icon_check_circle_outline"
+                        android:text="百搭"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/filter_chip_005"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:checked="false"
+                        app:checkedIcon="@drawable/icon_check_circle_outline"
+                        android:text="优雅"/>
+
+                </com.google.android.material.chip.ChipGroup>
+
+
+                <TextView
+                    android:id="@+id/title_text_view_003"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:text="3、Choice Chip"
+                    app:layout_constraintTop_toBottomOf="@id/filter_chip_group"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/choice_chip_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:singleSelection="true"
+                    app:selectionRequired="true"
+                    app:layout_constraintTop_toBottomOf="@id/title_text_view_003"
+                    app:layout_constraintLeft_toLeftOf="parent">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/choice_chip_001"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:checked="false"
+                        android:text="北京"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/choice_chip_002"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:checked="false"
+                        android:text="长三角"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/choice_chip_003"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:checked="false"
+                        android:text="珠三角"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/choice_chip_004"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:checked="false"
+                        android:text="东北"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/choice_chip_005"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:checked="false"
+                        android:text="西北"/>
+
+
+                </com.google.android.material.chip.ChipGroup>
+
+                <TextView
+                    android:id="@+id/title_text_view_004"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:text="4、Action Chip"
+                    app:layout_constraintTop_toBottomOf="@id/choice_chip_group"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/action_chip_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/title_text_view_004"
+                    app:layout_constraintLeft_toLeftOf="parent">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/anction_chip_001"
+                        style="@style/Widget.MaterialComponents.Chip.Action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:chipIcon="@drawable/icon_close"
+                        android:text="删除"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/anction_chip_002"
+                        style="@style/Widget.MaterialComponents.Chip.Action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:chipIcon="@drawable/icon_arrow_back"
+                        android:text="返回"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/anction_chip_003"
+                        style="@style/Widget.MaterialComponents.Chip.Action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:chipIcon="@drawable/icon_file_download"
+                        android:text="下载"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/anction_chip_004"
+                        style="@style/Widget.MaterialComponents.Chip.Action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:chipIcon="@drawable/icon_favorite_border"
+                        android:text="关注"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/anction_chip_005"
+                        style="@style/Widget.MaterialComponents.Chip.Action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:chipIcon="@drawable/icon_keyboard_voice"
+                        android:text="录音"/>
+
+                </com.google.android.material.chip.ChipGroup>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+
+
+    </LinearLayout>
+</layout>
