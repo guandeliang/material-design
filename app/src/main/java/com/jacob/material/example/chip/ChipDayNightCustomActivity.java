@@ -50,13 +50,6 @@ public class ChipDayNightCustomActivity extends AppCompatActivity {
         setCheckedIconColor(binding.filterChip003);
         setCheckedIconColor(binding.filterChip002);
         setCheckedIconColor(binding.filterChip001);
-/*
-        OnFilterChipCheckChangeListener chipCheckChangeListener = new OnFilterChipCheckChangeListener();
-        binding.filterChip001.setOnCheckedChangeListener(chipCheckChangeListener);
-        binding.filterChip002.setOnCheckedChangeListener(chipCheckChangeListener);
-        binding.filterChip003.setOnCheckedChangeListener(chipCheckChangeListener);
-
- */
     }
 
     private void setEntryChipIcon(Chip chip, int resId) {
@@ -73,12 +66,6 @@ public class ChipDayNightCustomActivity extends AppCompatActivity {
         chip.setCheckedIcon(drawable);
     }
 
-
-    private class OnFilterChipCheckChangeListener implements CompoundButton.OnCheckedChangeListener{
-        @Override
-        public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-        }
-    }
 
 
 }

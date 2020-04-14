@@ -7,6 +7,7 @@ public class AddressBook implements Serializable {
     private String title;
     private String mobile;
     private String fileName;
+    private String mail;
 
     public int getId() {
         return id;
@@ -38,5 +39,13 @@ public class AddressBook implements Serializable {
 
     public void setFileName(String fileName) {
         this.fileName = fileName;
+    }
+
+    public String getMail() {
+        return mail;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
     }
 }

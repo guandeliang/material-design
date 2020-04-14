@@ -405,9 +405,19 @@
         "path":"com.jacob.material.example.chip.ChipDayNightDefaultActivity"
       },
       {
-        "id":13001010,
+        "id":13001020,
         "title":"自定义DayNight主题Chip",
         "path":"com.jacob.material.example.chip.ChipDayNightCustomActivity"
+      },
+      {
+        "id":13001030,
+        "title":"Chip Input",
+        "path":"com.jacob.material.example.chip.ChipInputActivity"
+      },
+      {
+        "id":13001040,
+        "title":"Chip Choice",
+        "path":"com.jacob.material.example.chip.ChipChoiceActivity"
       }
     ]
   },

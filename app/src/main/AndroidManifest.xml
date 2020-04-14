@@ -354,6 +354,16 @@
             android:theme="@style/Theme.MaterialBook.DayNight.Custom"
             android:screenOrientation="portrait">
         </activity>
+        <activity
+            android:name=".example.chip.ChipInputActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".example.chip.ChipChoiceActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
+            android:screenOrientation="portrait">
+        </activity>
 
 
 
