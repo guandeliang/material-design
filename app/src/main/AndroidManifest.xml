@@ -364,6 +364,11 @@
             android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
             android:screenOrientation="portrait">
         </activity>
+        <activity
+            android:name=".example.chip.ChipFilterActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
+            android:screenOrientation="portrait">
+        </activity>
 
 
 
