@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-19 上午9:41
+  ~
+  -->
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tab_base_graph"
+    app:startDestination="@id/launch">
+
+    <fragment
+        android:id="@+id/launch"
+        android:name="com.jacob.material.example.banner.BannerOfflineLaunchFragment"
+        android:label="launch"
+        tools:layout="@layout/banner_offline_launch_fragment">
+        <action android:id="@+id/show_main" app:destination="@id/main"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/main"
+        android:name="com.jacob.material.example.banner.BannerOfflineMainFragment"
+        android:label="main"
+        tools:layout="@layout/banner_offline_main_fragment" >
+    </fragment>
+
+</navigation>

@@ -420,7 +420,7 @@
         "path":"com.jacob.material.example.chip.ChipChoiceActivity"
       },
       {
-        "id":13001040,
+        "id":13001050,
         "title":"Chip Filter",
         "path":"com.jacob.material.example.chip.ChipFilterActivity"
       }
@@ -428,6 +428,23 @@
   },
 
 
+  {
+    "id":14000000,
+    "iconName":"icon_credit_card",
+    "title":"Banner",
+    "itemList":[
+      {
+        "id":14001010,
+        "title":"Base Banner",
+        "path":"com.jacob.material.example.banner.BannerBaseActivity"
+      },
+      {
+        "id":14001020,
+        "title":"Offline Banner",
+        "path":"com.jacob.material.example.banner.BannerOfflineActivity"
+      }
+    ]
+  },
 
 
   {
@@ -485,12 +502,6 @@
   },
 
 
-  {
-    "id":10600000,
-    "iconName":"icon_example_appbar_top",
-    "title":"Buttons",
-    "itemList":[]
-  },
 
 
 

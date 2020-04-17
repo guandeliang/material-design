@@ -4,6 +4,9 @@
     package="com.jacob.material">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -369,6 +372,19 @@
             android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
             android:screenOrientation="portrait">
         </activity>
+
+        <!-- BANNER -->
+        <activity
+            android:name=".example.banner.BannerBaseActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Light"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".example.banner.BannerOfflineActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
+            android:screenOrientation="portrait">
+        </activity>
+
 
 
 
