@@ -7,15 +7,11 @@
 
 package com.jacob.material.example.banner;
 
-import android.content.ActivityNotFoundException;
-import android.content.Intent;
 import android.graphics.drawable.Animatable;
 import android.graphics.drawable.AnimatedVectorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.Settings;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,18 +23,8 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.vectordrawable.graphics.drawable.Animatable2Compat;
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat;
 
-import com.jacob.http.MdRetrofitFactory;
 import com.jacob.material.R;
 import com.jacob.material.databinding.BannerNetworkLaunchFragmentBinding;
-import com.jacob.material.example.httploader.HttpLoader;
-import com.jacob.material.example.model.Thrones;
-import com.jacob.temp.TempConstant;
-
-import java.util.List;
-
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.schedulers.Schedulers;
 
 public class BannerNetworkLaunchFragment extends Fragment implements LifecycleObserver {
     private BannerNetworkLaunchFragmentBinding binding;

@@ -12,17 +12,18 @@
     android:id="@+id/tab_base_graph"
     app:startDestination="@id/launch">
 
+    <action
+        android:id="@+id/show_online"
+        app:destination="@id/online"/>
+    <action
+        android:id="@+id/show_offline"
+        app:destination="@id/offline"/>
+
     <fragment
         android:id="@+id/launch"
         android:name="com.jacob.material.example.banner.BannerNetworkLaunchFragment"
         android:label="launch"
         tools:layout="@layout/banner_network_launch_fragment">
-        <action
-            android:id="@+id/show_online"
-            app:destination="@id/online"/>
-        <action
-            android:id="@+id/show_offline"
-            app:destination="@id/offline"/>
     </fragment>
 
     <fragment

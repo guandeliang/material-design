@@ -15,9 +15,11 @@
     </data>
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@id/motion_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/banner_network_offline_motion_scene">
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/search_card_view"
             android:layout_width="match_parent"
@@ -106,7 +108,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:layout_marginLeft="16dp"
-                    android:text="您的设备处于离线状态，请检查网络连接情况"
+                    android:text="您的设备处于离线状态，请调整网络设置之后重新进入首页。"
                     android:textAlignment="textStart"
                     android:textAppearance="?attr/textAppearanceBody2"
                     app:layout_constraintTop_toBottomOf="@id/offline_title_text_view"
@@ -114,25 +116,25 @@
                     app:layout_constraintRight_toRightOf="parent"/>
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/feedback_button"
+                    android:id="@+id/index_button"
                     style="@style/Widget.MaterialComponents.Button.TextButton.Dialog"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="问题反馈"
+                    android:text="进入首页"
                     app:layout_constraintTop_toBottomOf="@id/offline_text_view"
                     app:layout_constraintRight_toRightOf="parent"/>
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/retry_button"
+                    android:id="@+id/setting_button"
                     style="@style/Widget.MaterialComponents.Button.TextButton.Dialog"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:layout_marginRight="16dp"
-                    android:text="重新连接"
+                    android:text="网络设置"
                     app:layout_constraintTop_toBottomOf="@id/offline_text_view"
-                    app:layout_constraintRight_toLeftOf="@id/feedback_button"/>
+                    app:layout_constraintRight_toLeftOf="@id/index_button"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -194,9 +196,6 @@
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.motion.widget.MotionLayout>
 
 </layout>
