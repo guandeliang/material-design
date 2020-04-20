@@ -56,7 +56,7 @@ public class FabPhoneDialFragment extends Fragment implements LifecycleObserver 
         binding.keyConstraintLayout.setTransitionName(FabPhoneViewModel.TRANSITION_FAB_TO_VIEW);
         binding.fabButton.setTransitionName(FabPhoneViewModel.TRANSITION_FAB_TO_FULL);
 
-        MaterialContainerTransform transform = new MaterialContainerTransform(getContext());
+        MaterialContainerTransform transform = new MaterialContainerTransform();
         //transform.addTarget(binding.keyConstraintLayout);//这句不能加，加了就出问题，
         transform.setDuration(500);
         transform.setScrimColor(WidgetsUtils.getColorValue(getContext(), R.attr.scrimBackground));

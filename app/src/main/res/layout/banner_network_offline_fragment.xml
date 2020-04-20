@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-1-31 下午12:22
+  ~
+  -->
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/search_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:padding="4dp"
+                android:layout_marginTop="0dp"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/icon_search"/>
+
+                <TextView
+                    android:id="@+id/search_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="查找"
+                    android:textSize="18dp"
+                    android:textColor="@color/gray_500"/>
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/icon_mic_none"/>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/banner_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintTop_toBottomOf="@id/search_card_view"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/banner_constraint_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="8dp">
+                <ImageView
+                    android:id="@+id/offline_image_view"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/icon_cloud_off"
+                    android:tint="?attr/colorPrimary"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <TextView
+                    android:id="@+id/offline_title_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="未连接网络"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/offline_image_view"/>
+
+                <TextView
+                    android:id="@+id/offline_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="您的设备处于离线状态，请检查网络连接情况"
+                    android:textAlignment="textStart"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    app:layout_constraintTop_toBottomOf="@id/offline_title_text_view"
+                    app:layout_constraintLeft_toRightOf="@id/offline_image_view"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/feedback_button"
+                    style="@style/Widget.MaterialComponents.Button.TextButton.Dialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="问题反馈"
+                    app:layout_constraintTop_toBottomOf="@id/offline_text_view"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/retry_button"
+                    style="@style/Widget.MaterialComponents.Button.TextButton.Dialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="重新连接"
+                    app:layout_constraintTop_toBottomOf="@id/offline_text_view"
+                    app:layout_constraintRight_toLeftOf="@id/feedback_button"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/more_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintTop_toBottomOf="@id/banner_card_view"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:paddingLeft="16dp"
+                    android:gravity="center_vertical|left"
+                    android:text="可以尝试以下操作："
+                    android:textAppearance="?attr/textAppearanceCaption"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:paddingLeft="16dp"
+                    android:gravity="center_vertical|left"
+                    android:text="退出应用"
+                    android:textAppearance="?attr/textAppearanceBody2"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:paddingLeft="16dp"
+                    android:gravity="center_vertical|left"
+                    android:text="播放本地存储的音乐或视频"
+                    android:textAppearance="?attr/textAppearanceBody2"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:paddingLeft="16dp"
+                    android:gravity="center_vertical|left"
+                    android:text="看看您以前保存过的内容"
+                    android:textAppearance="?attr/textAppearanceBody2"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:paddingLeft="16dp"
+                    android:gravity="center_vertical|left"
+                    android:text="打开并查看网络设置"
+                    android:textAppearance="?attr/textAppearanceBody2"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

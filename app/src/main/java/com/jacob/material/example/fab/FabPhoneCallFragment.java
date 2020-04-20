@@ -62,7 +62,7 @@ public class FabPhoneCallFragment extends Fragment implements LifecycleObserver 
         binding.headerImageView.setTransitionName(toImageTransitionName);
 
         if(toFullTransitionName != null | toImageTransitionName != null){
-            MaterialContainerTransform transform = new MaterialContainerTransform(getContext());
+            MaterialContainerTransform transform = new MaterialContainerTransform();
             //transform.addTarget(binding.coordinatorLayout);//这句不能加，加了就出问题，
             transform.setDuration(500);
             transform.setPathMotion(new ArcMotion());

@@ -21,3 +21,5 @@ public class A{
     * b
     * c
 
+ContentLoadingProgressBar
+com.facebook.shimmer:shimmer

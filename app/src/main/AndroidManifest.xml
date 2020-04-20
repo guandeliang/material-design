@@ -380,7 +380,7 @@
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".example.banner.BannerOfflineActivity"
+            android:name=".example.banner.BannerNetworkActivity"
             android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
             android:screenOrientation="portrait">
         </activity>

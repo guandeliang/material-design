@@ -51,7 +51,7 @@ public class BackdropCraneMainActivity extends AppCompatActivity implements Life
         viewModel = new ViewModelProvider(this).get(BackdropCraneModel.class);
 
         binding.logoImageView.setTransitionName("logoImageView");
-        MaterialContainerTransform transform = new MaterialContainerTransform(this);
+        MaterialContainerTransform transform = new MaterialContainerTransform();
         transform.addTarget(binding.logoImageView);
         transform.setDuration(500);
         transform.setPathMotion(new MaterialArcMotion());

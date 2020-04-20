@@ -11,7 +11,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MdRetrofitFactory {
-    private static String BASE_URL = "https://guandeliang.github.io/material-design/web/json/";
+    public static String BASE_URL = "https://guandeliang.github.io/material-design/web/";
     private static Retrofit createRetrofit(){
 
         OkHttpClient okHttpClient = MdOkHttpClientService.getOkHttpClient();

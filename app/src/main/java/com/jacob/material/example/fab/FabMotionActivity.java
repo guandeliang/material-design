@@ -79,7 +79,7 @@ public class FabMotionActivity extends AppCompatActivity {
 
         if(!isShowShareCardView){
             isShowShareCardView = true;
-            MaterialContainerTransform transform = new MaterialContainerTransform(this);
+            MaterialContainerTransform transform = new MaterialContainerTransform();
             transform.setStartView(binding.fabButton);
             transform.setEndView(binding.shareCardView);
             transform.setPathMotion(new MaterialArcMotion());
@@ -91,7 +91,7 @@ public class FabMotionActivity extends AppCompatActivity {
             binding.eventHostFrameLayout.setVisibility(View.VISIBLE);
         }else{
             isShowShareCardView = false;
-            MaterialContainerTransform transform = new MaterialContainerTransform(this);
+            MaterialContainerTransform transform = new MaterialContainerTransform();
             transform.setStartView(binding.shareCardView);
             transform.setEndView(binding.fabButton);
             transform.setPathMotion(new MaterialArcMotion());

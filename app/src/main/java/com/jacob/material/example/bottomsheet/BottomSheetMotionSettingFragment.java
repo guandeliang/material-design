@@ -48,7 +48,7 @@ public class BottomSheetMotionSettingFragment extends Fragment implements Lifecy
 
         binding.constraintLayout.setTransitionName(BottomSheetMotionViewModel.TRANSITION_WRAPPER_TO_FRAGMENT);
         binding.appBarLayout.setTransitionName(BottomSheetMotionViewModel.TRANSITION_CARD_TO_TOOLBAR);
-        MaterialContainerTransform transform = new MaterialContainerTransform(getContext());
+        MaterialContainerTransform transform = new MaterialContainerTransform();
         //transform.setDuration(300);
         //transform.setPathMotion(new ArcMotion());
         transform.setScrimColor(WidgetsUtils.getColorValue(getContext(), R.color.transparent));

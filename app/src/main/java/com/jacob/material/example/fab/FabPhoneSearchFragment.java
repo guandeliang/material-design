@@ -9,46 +9,24 @@ package com.jacob.material.example.fab;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.transition.Fade;
-import android.transition.TransitionManager;
-import android.transition.Visibility;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
-import android.view.WindowInsets;
-import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 
-import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleObserver;
-import androidx.lifecycle.OnLifecycleEvent;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.FragmentNavigator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.google.android.material.tabs.TabLayoutMediator;
-import com.google.android.material.transition.FadeThrough;
-import com.google.android.material.transition.MaterialArcMotion;
-import com.google.android.material.transition.MaterialContainerTransform;
-import com.google.android.material.transition.MaterialFade;
-import com.google.android.material.transition.MaterialFadeThrough;
 import com.jacob.material.R;
-import com.jacob.material.base.TabViewPagerAdapter;
-import com.jacob.material.base.TabViewPagerBaseFragment;
-import com.jacob.material.databinding.FabPhoneAddressFragmentBinding;
 import com.jacob.material.databinding.FabPhoneSearchFragmentBinding;
-import com.jacob.material.example.adapter.AddressBookAdapter;
-import com.jacob.material.example.adapter.GeneralAdapterOne;
 import com.jacob.material.example.adapter.SortableAddressBookAdapter;
-import com.jacob.material.example.backdrop.BackdropCraneMainActivity;
 import com.jacob.material.example.model.AddressBook;
 import com.jacob.material.widgets.LinearLayoutVertialItemDecoration;
-import com.jacob.temp.TempConstant;
 import com.jacob.utils.JsonUtils;
 import com.jacob.utils.WidgetsUtils;
 

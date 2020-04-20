@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-19 上午9:41
+  ~
+  -->
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tab_base_graph"
+    app:startDestination="@id/launch">
+
+    <fragment
+        android:id="@+id/launch"
+        android:name="com.jacob.material.example.banner.BannerNetworkLaunchFragment"
+        android:label="launch"
+        tools:layout="@layout/banner_network_launch_fragment">
+        <action
+            android:id="@+id/show_online"
+            app:destination="@id/online"/>
+        <action
+            android:id="@+id/show_offline"
+            app:destination="@id/offline"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/online"
+        android:name="com.jacob.material.example.banner.BannerNetworkOnlineFragment"
+        android:label="online"
+        tools:layout="@layout/banner_network_online_fragment" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/offline"
+        android:name="com.jacob.material.example.banner.BannerNetworkOfflineFragment"
+        android:label="offline"
+        tools:layout="@layout/banner_network_offline_fragment" >
+    </fragment>
+</navigation>

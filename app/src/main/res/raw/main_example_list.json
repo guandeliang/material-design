@@ -440,8 +440,8 @@
       },
       {
         "id":14001020,
-        "title":"Offline Banner",
-        "path":"com.jacob.material.example.banner.BannerOfflineActivity"
+        "title":"Network Banner",
+        "path":"com.jacob.material.example.banner.BannerNetworkActivity"
       }
     ]
   },
