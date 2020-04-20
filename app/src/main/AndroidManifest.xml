@@ -385,6 +385,12 @@
             android:screenOrientation="portrait">
         </activity>
 
+        <!-- CARD -->
+        <activity
+            android:name=".example.card.CardDayNightDefaultActivity"
+            android:theme="@style/Theme.MaterialBook.DayNight.Default"
+            android:screenOrientation="portrait">
+        </activity>
 
 
 

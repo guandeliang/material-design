@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-2 下午1:57
+  ~
+  -->
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.jacob.material.widgets.ThemeSwitchAppBarLayout
+            style="@style/Widget.MaterialComponents.AppBarLayout.PrimarySurface"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title_text="默认DayNight主题"
+            app:liftOnScroll="true"/>
+
+
+        <androidx.core.widget.NestedScrollView
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:orientation="vertical">
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="16dp">
+                        <TextView
+                            android:id="@+id/title_text_view_001"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:text="卡片标题"
+                            android:textAppearance="?attr/textAppearanceSubtitle1"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+                        <TextView
+                            android:id="@+id/secondary_text_view_001"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:text="卡片副标题或者描述性文字，根据设计要求，可以占用一行或者多行位置。"
+                            android:lineHeight="22dp"
+                            android:maxLines="2"
+                            android:lines="2"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            app:layout_constraintTop_toBottomOf="@id/title_text_view_001"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="16dp">
+                        <TextView
+                            android:id="@+id/title_text_view_002"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:text="卡片标题"
+                            android:textAppearance="?attr/textAppearanceSubtitle1"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+                        <TextView
+                            android:id="@+id/secondary_text_view_002"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:text="卡片副标题或者描述性文字，根据设计要求，可以占用一行或者多行位置。"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:lineHeight="22dp"
+                            android:maxLines="2"
+                            android:lines="2"
+                            app:layout_constraintTop_toBottomOf="@id/title_text_view_002"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@id/image_view_002"/>
+                        <ImageView
+                            android:id="@+id/image_view_002"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginRight="16dp"
+                            android:src="@drawable/header_006"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="4dp">
+                        <TextView
+                            android:id="@+id/title_text_view_003"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:text="卡片标题"
+                            android:textAppearance="?attr/textAppearanceSubtitle1"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+                        <TextView
+                            android:id="@+id/secondary_text_view_003"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:text="卡片副标题或者描述性文字，根据设计要求，可以占用一行或者多行位置。"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:lineHeight="22dp"
+                            android:maxLines="2"
+                            android:lines="2"
+                            app:layout_constraintTop_toBottomOf="@id/title_text_view_003"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@id/image_view_003"/>
+                        <ImageView
+                            android:id="@+id/image_view_003"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginRight="16dp"
+                            android:src="@drawable/header_006"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button_0031"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginLeft="2dp"
+                            android:text="这个按钮"
+                            app:layout_constraintTop_toBottomOf="@id/image_view_003"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button_0032"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginLeft="2dp"
+                            android:text="那个按钮"
+                            app:layout_constraintTop_toBottomOf="@id/image_view_003"
+                            app:layout_constraintLeft_toRightOf="@id/button_0031"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="4dp">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/header_image_view_004"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:src="@drawable/header_006"
+                            android:scaleType="centerCrop"
+                            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+                        <TextView
+                            android:id="@+id/title_text_view_004"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:text="卡片标题"
+                            android:textAppearance="?attr/textAppearanceSubtitle1"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toRightOf="@id/header_image_view_004"/>
+
+                        <TextView
+                            android:id="@+id/sub_title_text_view_004"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginLeft="16dp"
+                            android:text="卡片副标题"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            app:layout_constraintTop_toBottomOf="@id/title_text_view_004"
+                            app:layout_constraintLeft_toRightOf="@id/header_image_view_004"/>
+
+                        <ImageView
+                            android:id="@+id/image_view_004"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="16dp"
+                            android:src="@drawable/img_480_270_02"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintTop_toBottomOf="@id/header_image_view_004"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintDimensionRatio="H,16:9"/>
+
+
+                        <TextView
+                            android:id="@+id/secondary_text_view_004"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:text="描述性文字，根据设计要求，可以占用一行或一行以上位置。但是不要太多，如果有很多内容，可以通过点击按钮差康详细内容"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:lineHeight="22dp"
+                            android:maxLines="3"
+                            android:lines="3"
+                            app:layout_constraintTop_toBottomOf="@id/image_view_004"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button_0041"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginLeft="2dp"
+                            android:text="这个按钮"
+                            app:layout_constraintTop_toBottomOf="@id/secondary_text_view_004"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button_0042"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginLeft="2dp"
+                            android:text="那个按钮"
+                            app:layout_constraintTop_toBottomOf="@id/secondary_text_view_004"
+                            app:layout_constraintLeft_toRightOf="@id/button_0041"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="4dp">
+                        <ImageView
+                            android:id="@+id/image_view_005"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:src="@drawable/img_480_270_02"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintDimensionRatio="H,16:9"/>
+
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/header_image_view_005"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:src="@drawable/header_006"
+                            android:scaleType="centerCrop"
+                            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
+                            app:layout_constraintTop_toBottomOf="@id/image_view_005"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+                        <TextView
+                            android:id="@+id/title_text_view_005"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:text="卡片标题"
+                            android:textAppearance="?attr/textAppearanceSubtitle1"
+                            app:layout_constraintTop_toBottomOf="@id/image_view_005"
+                            app:layout_constraintLeft_toRightOf="@id/header_image_view_005"/>
+
+                        <com.jacob.material.widgets.MaterialRatingBar
+                            android:id="@+id/rating_rating_bar_005"
+                            android:layout_width="80dp"
+                            android:layout_height="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="4dp"
+                            app:layout_constraintLeft_toRightOf="@id/header_image_view_005"
+                            app:layout_constraintTop_toBottomOf="@id/title_text_view_005"/>
+
+                        <TextView
+                            android:id="@+id/rating_text_view_005"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:text="4.5(657)"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            app:layout_constraintTop_toTopOf="@id/rating_rating_bar_005"
+                            app:layout_constraintBottom_toBottomOf="@id/rating_rating_bar_005"
+                            app:layout_constraintLeft_toRightOf="@id/rating_rating_bar_005"/>
+
+
+                        <TextView
+                            android:id="@+id/secondary_text_view_005"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:text="描述性文字，根据设计要求，可以占用一行或一行以上位置。但是不要太多，如果有很多内容，可以通过点击按钮差康详细内容"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:lineHeight="22dp"
+                            android:maxLines="3"
+                            android:lines="3"
+                            app:layout_constraintTop_toBottomOf="@id/header_image_view_005"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button_0051"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginLeft="2dp"
+                            android:text="这个按钮"
+                            app:layout_constraintTop_toBottomOf="@id/secondary_text_view_005"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button_0052"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginLeft="2dp"
+                            android:text="那个按钮"
+                            app:layout_constraintTop_toBottomOf="@id/secondary_text_view_005"
+                            app:layout_constraintLeft_toRightOf="@id/button_0051"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>
