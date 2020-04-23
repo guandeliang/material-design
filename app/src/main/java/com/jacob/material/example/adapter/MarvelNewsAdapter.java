@@ -15,9 +15,8 @@ import com.jacob.material.example.model.MarvelNews;
 import java.util.List;
 
 public class MarvelNewsAdapter extends BaseQuickAdapter<MarvelNews, BaseViewHolder> {
-    public MarvelNewsAdapter(List<MarvelNews> data){
-        super(R.layout.marvel_news_holder, data);
-
+    public MarvelNewsAdapter(List<MarvelNews> data, int holderResId){
+        super(holderResId, data);
     }
 
     @Override

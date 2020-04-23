@@ -38,7 +38,7 @@ public class TopAppBarBigActivity extends AppCompatActivity {
         binding.recyclerView.setLayoutManager(layoutManager);
 
         List<MarvelNews> newList = JsonUtils.loadMarvelNews(getResources());
-        MarvelNewsAdapter adapter = new MarvelNewsAdapter(newList);
+        MarvelNewsAdapter adapter = new MarvelNewsAdapter(newList, R.layout.marvel_news_card_holder);
 
         binding.recyclerView.setAdapter(adapter);
 

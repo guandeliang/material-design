@@ -452,9 +452,19 @@
     "title":"Cards",
     "itemList":[
       {
-        "id":13001010,
+        "id":15001010,
         "title":"默认DayNight主题Card",
         "path":"com.jacob.material.example.card.CardDayNightDefaultActivity"
+      },
+      {
+        "id":15001020,
+        "title":"自定义DayNight主题Card",
+        "path":"com.jacob.material.example.card.CardDayNightCustomActivity"
+      },
+      {
+        "id":15001020,
+        "title":"Expandable Card",
+        "path":"com.jacob.material.example.card.CardExpandActivity"
       }
     ]
   },

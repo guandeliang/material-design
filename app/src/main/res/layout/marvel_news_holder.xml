@@ -6,118 +6,112 @@
   ~
   -->
 
-<com.google.android.material.card.MaterialCardView
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="4dp"
-    android:clickable="true"
-    android:background="?attr/selectableItemBackground">
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v_guide_line"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.60"/>
+
+
+    <ImageView
+        android:id="@+id/logo_group_image_view"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/logo_001"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/media_group_text_view"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingBottom="16dp">
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/v_guide_line"
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.6"/>
+        android:textAppearance="?attr/textAppearanceCaption"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toRightOf="@id/logo_group_image_view"
+        app:layout_constraintTop_toTopOf="@id/logo_group_image_view"
+        app:layout_constraintBottom_toBottomOf="@id/logo_group_image_view"
+        android:text="地下娱乐报道"/>
+
+    <TextView
+        android:id="@+id/line_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?attr/textAppearanceCaption"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toRightOf="@id/media_group_text_view"
+        app:layout_constraintTop_toTopOf="@id/logo_group_image_view"
+        app:layout_constraintBottom_toBottomOf="@id/logo_group_image_view"
+        android:text="-"/>
+
+    <TextView
+        android:id="@+id/time_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:textAppearance="?attr/textAppearanceCaption"
+        app:layout_constraintLeft_toRightOf="@id/line_text_view"
+        app:layout_constraintTop_toTopOf="@id/logo_group_image_view"
+        app:layout_constraintBottom_toBottomOf="@id/logo_group_image_view"
+        android:text="刚刚"/>
 
 
-        <ImageView
-            android:id="@+id/logo_group_image_view"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/logo_001"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/title_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAppearance="?attr/textAppearanceSubtitle1"
+        android:layout_marginRight="8dp"
+        android:maxLines="1"
+        android:lines="1"
+        app:layout_constraintLeft_toLeftOf="@id/logo_group_image_view"
+        app:layout_constraintRight_toLeftOf="@id/v_guide_line"
+        app:layout_constraintTop_toBottomOf="@id/logo_group_image_view"
+        android:text="三体星因为环境污染人口剧降或十年内灭种"/>
 
-        <TextView
-            android:id="@+id/media_group_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?attr/textAppearanceCaption"
-            android:layout_marginLeft="8dp"
-            app:layout_constraintLeft_toRightOf="@id/logo_group_image_view"
-            app:layout_constraintTop_toTopOf="@id/logo_group_image_view"
-            app:layout_constraintBottom_toBottomOf="@id/logo_group_image_view"
-            android:text="地下娱乐报道"/>
+    <TextView
+        android:id="@+id/desc_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?attr/textAppearanceBody2"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:maxLines="3"
+        android:lines="4"
+        app:layout_constraintLeft_toLeftOf="@id/logo_group_image_view"
+        app:layout_constraintRight_toLeftOf="@id/v_guide_line"
+        app:layout_constraintTop_toBottomOf="@id/title_text_view"
+        android:text="奥比戴尔为了取得动力服的供应能源而伏击在家的托尼，抢走他身上的反应堆心脏。奄奄一息的托尼跑回地下室，将自己的原始反应堆心脏换回去。罗德斯赶到他家中后，按照托尼的指示回去基地，避免军方战斗机前来干扰。"/>
 
-        <TextView
-            android:id="@+id/line_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?attr/textAppearanceCaption"
-            android:layout_marginLeft="8dp"
-            app:layout_constraintLeft_toRightOf="@id/media_group_text_view"
-            app:layout_constraintTop_toTopOf="@id/logo_group_image_view"
-            app:layout_constraintBottom_toBottomOf="@id/logo_group_image_view"
-            android:text="-"/>
 
-        <TextView
-            android:id="@+id/time_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:textAppearance="?attr/textAppearanceCaption"
-            app:layout_constraintLeft_toRightOf="@id/line_text_view"
-            app:layout_constraintTop_toTopOf="@id/logo_group_image_view"
-            app:layout_constraintBottom_toBottomOf="@id/logo_group_image_view"
-            android:text="刚刚"/>
+    <ImageView
+        android:id="@+id/content_image_view"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="@id/title_text_view"
+        app:layout_constraintBottom_toBottomOf="@id/desc_text_view"
+        app:layout_constraintLeft_toRightOf="@id/v_guide_line"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@drawable/mv001"/>
 
-        <ImageView
-            android:id="@+id/content_image_view"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:scaleType="centerCrop"
-            android:layout_marginTop="16dp"
-            android:layout_marginRight="16dp"
-            app:layout_constraintDimensionRatio="H,3:2"
-            app:layout_constraintTop_toBottomOf="@id/logo_group_image_view"
-            app:layout_constraintLeft_toRightOf="@id/v_guide_line"
-            app:layout_constraintRight_toRightOf="parent"
-            android:src="@drawable/mv001"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/gray_400"
+        app:layout_constraintTop_toBottomOf="@id/desc_text_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 
-        <TextView
-            android:id="@+id/title_text_view"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textAppearance="?attr/textAppearanceBody1"
-            android:layout_marginRight="8dp"
-            android:maxLines="1"
-            app:layout_constraintLeft_toLeftOf="@id/logo_group_image_view"
-            app:layout_constraintRight_toLeftOf="@id/v_guide_line"
-            app:layout_constraintTop_toTopOf="@id/content_image_view"
-            android:text="三体星因为环境污染人口剧降或十年内灭种"/>
-
-        <TextView
-            android:id="@+id/desc_text_view"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textAppearance="?attr/textAppearanceBody2"
-            android:layout_marginRight="8dp"
-            android:layout_marginTop="8dp"
-            android:maxLines="4"
-            app:layout_constraintLeft_toLeftOf="@id/logo_group_image_view"
-            app:layout_constraintRight_toLeftOf="@id/v_guide_line"
-            app:layout_constraintTop_toBottomOf="@id/title_text_view"
-            android:text="奥比戴尔为了取得动力服的供应能源而伏击在家的托尼，抢走他身上的反应堆心脏。奄奄一息的托尼跑回地下室，将自己的原始反应堆心脏换回去。罗德斯赶到他家中后，按照托尼的指示回去基地，避免军方战斗机前来干扰。"/>
-
-        <androidx.constraintlayout.widget.Barrier
-            android:id="@+id/bottom_barrier"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:constraint_referenced_ids="content_image_view,desc_text_view"
-            app:barrierDirection="bottom"
-            app:layout_constraintRight_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="parent"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
 

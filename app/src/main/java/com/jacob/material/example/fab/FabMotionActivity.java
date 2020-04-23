@@ -47,7 +47,6 @@ public class FabMotionActivity extends AppCompatActivity {
         ActionBar ab = getSupportActionBar();
         ab.setHomeAsUpIndicator(R.drawable.icon_menu);
         ab.setDisplayHomeAsUpEnabled(true);
-        binding.materialToolbar.getNavigationIcon().setTint(WidgetsUtils.getColorValue(this, android.R.attr.textColorPrimary));
         binding.eventHostFrameLayout.setOnMotionEventListener(new OnEventHostMotionListener());
 
     }
@@ -62,13 +61,6 @@ public class FabMotionActivity extends AppCompatActivity {
             menuBuilder.setOptionalIconsVisible(true);
         }
 
-        for(int i = 0; i < menu.size(); i++){
-            MenuItem menuItem = menu.getItem(i);
-            Drawable drawable = menuItem.getIcon();
-            if(drawable != null) {
-                WidgetsUtils.setDrawableColor(FabMotionActivity.this, drawable, android.R.attr.textColorPrimary);
-            }
-        }
         return true;
     }
 

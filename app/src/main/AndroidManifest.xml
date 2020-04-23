@@ -391,6 +391,16 @@
             android:theme="@style/Theme.MaterialBook.DayNight.Default"
             android:screenOrientation="portrait">
         </activity>
+        <activity
+            android:name=".example.card.CardDayNightCustomActivity"
+            android:theme="@style/Theme.MaterialBook.DayNight.Custom"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".example.card.CardExpandActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
+            android:screenOrientation="portrait">
+        </activity>
 
 
 

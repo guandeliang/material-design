@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-2 下午1:57
+  ~
+  -->
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.jacob.material.widgets.ThemeSwitchAppBarLayout
+            style="@style/Widget.MaterialComponents.AppBarLayout.PrimarySurface"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title_text="默认DayNight主题"
+            app:liftOnScroll="true"/>
+
+
+        <androidx.core.widget.NestedScrollView
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/stroke_selector">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="4dp">
+                        <TextView
+                            android:id="@+id/title_text_view_001"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:text="边框卡片"
+                            android:textAppearance="?attr/textAppearanceSubtitle1"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+                        <TextView
+                            android:id="@+id/secondary_text_view_001"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:text="边框卡片的高度为0dp，可以根据设计需要，设定不同的边框宽度和颜色。"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:lineHeight="22dp"
+                            android:maxLines="2"
+                            android:lines="2"
+                            app:layout_constraintTop_toBottomOf="@id/title_text_view_001"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@id/image_view_001"/>
+                        <ImageView
+                            android:id="@+id/image_view_001"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginRight="16dp"
+                            android:src="@drawable/header_001"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button_0011"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginLeft="2dp"
+                            android:text="这个按钮"
+                            app:layout_constraintTop_toBottomOf="@id/image_view_001"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button_0012"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginLeft="2dp"
+                            android:text="那个按钮"
+                            app:layout_constraintTop_toBottomOf="@id/image_view_001"
+                            app:layout_constraintLeft_toRightOf="@id/button_0011"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="4dp">
+                        <TextView
+                            android:id="@+id/title_text_view_002"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:text="默认高度卡片"
+                            android:textAppearance="?attr/textAppearanceSubtitle1"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+                        <TextView
+                            android:id="@+id/secondary_text_view_002"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:text="卡片的默认高度为1dp，因此阴影看起来并不明显。为了区分卡片与背景，需要未其设定不同的颜色。"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:lineHeight="22dp"
+                            android:maxLines="2"
+                            android:lines="2"
+                            app:layout_constraintTop_toBottomOf="@id/title_text_view_002"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@id/image_view_002"/>
+                        <ImageView
+                            android:id="@+id/image_view_002"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginRight="16dp"
+                            android:src="@drawable/header_002"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button_0021"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginLeft="2dp"
+                            android:text="这个按钮"
+                            app:layout_constraintTop_toBottomOf="@id/image_view_002"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button_0022"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginLeft="2dp"
+                            android:text="那个按钮"
+                            app:layout_constraintTop_toBottomOf="@id/image_view_002"
+                            app:layout_constraintLeft_toRightOf="@id/button_0021"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    app:cardElevation="8dp">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="4dp">
+                        <TextView
+                            android:id="@+id/title_text_view_003"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:text="8dp高度卡片"
+                            android:textAppearance="?attr/textAppearanceSubtitle1"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+                        <TextView
+                            android:id="@+id/secondary_text_view_003"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:text="亮色主题通过阴影区分卡片高度，深色主题通过背景区分卡片高度。"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:lineHeight="22dp"
+                            android:maxLines="2"
+                            android:lines="2"
+                            app:layout_constraintTop_toBottomOf="@id/title_text_view_003"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@id/image_view_003"/>
+                        <ImageView
+                            android:id="@+id/image_view_003"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginRight="16dp"
+                            android:src="@drawable/header_003"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button_0031"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginLeft="2dp"
+                            android:text="这个按钮"
+                            app:layout_constraintTop_toBottomOf="@id/image_view_003"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button_0032"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginLeft="2dp"
+                            android:text="那个按钮"
+                            app:layout_constraintTop_toBottomOf="@id/image_view_003"
+                            app:layout_constraintLeft_toRightOf="@id/button_0031"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    app:cardElevation="16dp">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="4dp">
+                        <TextView
+                            android:id="@+id/title_text_view_004"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:text="8dp高度卡片"
+                            android:textAppearance="?attr/textAppearanceSubtitle1"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+                        <TextView
+                            android:id="@+id/secondary_text_view_004"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:text="在亮色背景下，卡片的高度值约大，阴影的范围也越大。"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:lineHeight="22dp"
+                            android:maxLines="2"
+                            android:lines="2"
+                            app:layout_constraintTop_toBottomOf="@id/title_text_view_004"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@id/image_view_004"/>
+                        <ImageView
+                            android:id="@+id/image_view_004"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginRight="16dp"
+                            android:src="@drawable/header_004"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button_0041"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginLeft="2dp"
+                            android:text="这个按钮"
+                            app:layout_constraintTop_toBottomOf="@id/image_view_004"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button_0042"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginLeft="2dp"
+                            android:text="那个按钮"
+                            app:layout_constraintTop_toBottomOf="@id/image_view_004"
+                            app:layout_constraintLeft_toRightOf="@id/button_0041"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    app:cardElevation="24dp">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="4dp">
+                        <TextView
+                            android:id="@+id/title_text_view_005"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:text="24dp高度卡片"
+                            android:textAppearance="?attr/textAppearanceSubtitle1"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+                        <TextView
+                            android:id="@+id/secondary_text_view_005"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:text="在深色主题下，卡片的高度值越大，背景颜色的透明度也越低。"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:lineHeight="22dp"
+                            android:maxLines="2"
+                            android:lines="2"
+                            app:layout_constraintTop_toBottomOf="@id/title_text_view_005"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@id/image_view_005"/>
+                        <ImageView
+                            android:id="@+id/image_view_005"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginRight="16dp"
+                            android:src="@drawable/header_005"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button_0051"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginLeft="2dp"
+                            android:text="这个按钮"
+                            app:layout_constraintTop_toBottomOf="@id/image_view_005"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button_0052"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginLeft="2dp"
+                            android:text="那个按钮"
+                            app:layout_constraintTop_toBottomOf="@id/image_view_005"
+                            app:layout_constraintLeft_toRightOf="@id/button_0051"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!--使用Margin是为了保证阴影能够完整显示-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="16dp"/>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>
