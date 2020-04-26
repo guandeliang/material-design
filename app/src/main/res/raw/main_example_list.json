@@ -462,9 +462,14 @@
         "path":"com.jacob.material.example.card.CardDayNightCustomActivity"
       },
       {
-        "id":15001020,
+        "id":15001030,
         "title":"Expandable Card",
         "path":"com.jacob.material.example.card.CardExpandActivity"
+      },
+      {
+        "id":15001040,
+        "title":"Card Swipe",
+        "path":"com.jacob.material.example.card.CardSwipeActivity"
       }
     ]
   },

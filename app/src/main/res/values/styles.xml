@@ -166,10 +166,6 @@
         <item name="cornerSize">24dp</item>
     </style>
 
-    <style name="ShapeAppearanceOverlay.MaterialBook.Diamond" parent="">
-        <item name="cornerFamily">cut</item>
-        <item name="cornerSize">50%</item>
-    </style>
 
     <style name="ShapeAppearanceOverlay.MaterialBook.Round.Top.16" parent="">
         <item name="cornerFamilyTopLeft">rounded</item>
@@ -180,13 +176,22 @@
         <item name="cornerSizeBottomRight">0dp</item>
     </style>
 
-
     <style name="ShapeAppearanceOverlay.MaterialBook.Round.LeftTop.24" parent="">
         <item name="cornerFamilyTopLeft">rounded</item>
         <item name="cornerSizeTopLeft">24dp</item>
         <item name="cornerSizeTopRight">0dp</item>
         <item name="cornerSizeBottomLeft">0dp</item>
         <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MaterialBook.Diamond" parent="">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MaterialBook.Cut.LeftTop.24" parent="">
+        <item name="cornerFamilyTopLeft">cut</item>
+        <item name="cornerSizeTopLeft">24dp</item>
     </style>
 
     <!--Shape Appearance Overlay End-->
@@ -248,6 +253,10 @@
         <item name="iconPadding">8dp</item>
     </style>
 
+    <style name="Widget.MaterialBook.Button.OutlinedButton.IconTop.Small">
+        <item name="android:padding">4dp</item>
+        <item name="iconPadding">2dp</item>
+    </style>
 
     <style name="Widget.MaterialBook.Button.OutlinedButton.IconOnly" parent="Widget.MaterialComponents.Button.OutlinedButton.Icon">
         <item name="iconPadding">0dp</item>
