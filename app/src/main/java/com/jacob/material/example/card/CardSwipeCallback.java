@@ -2,9 +2,6 @@ package com.jacob.material.example.card;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.Paint;
-import android.graphics.RectF;
-import android.util.Log;
 import android.view.View;
 
 import androidx.annotation.IdRes;
@@ -14,29 +11,34 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.chad.library.adapter.base.viewholder.BaseViewHolder;
-import com.jacob.material.R;
-import com.jacob.temp.TempConstant;
-import com.jacob.utils.WidgetsUtils;
 
-import java.util.ArrayList;
-import java.util.List;
-
-/*
-    https://stackoverflow.com/questions/44965278/recyclerview-itemtouchhelper-buttons-on-swipe
-    https://medium.com/@shubham_nikam/recyclerview-swipe-right-left-e420856d688e
-    https://codeburst.io/android-swipe-menu-with-recyclerview-8f28a235ff28
-    https://github.com/FanFataL/swipe-controller-demo/blob/master/app/src/main/java/pl/fanfatal/swipecontrollerdemo/MainActivity.java
-    https://github.com/FanFataL/swipe-controller-demo/blob/master/app/src/main/java/pl/fanfatal/swipecontrollerdemo/SwipeController.java
-    https://www.jianshu.com/p/c769f4ed298f
-    https://blog.csdn.net/u014133119/article/details/80942932
-    https://blog.csdn.net/qqqq245425070/article/details/80587271
-    https://www.cnblogs.com/yc211/p/12307292.html
-    https://www.sohu.com/a/138934237_675634，实现头条的办法
-    https://www.ctolib.com/mip/itemtouchhelper-extension.html 不知道设么玩意
-*/
+import java.util.HashSet;
+import java.util.Objects;
+import java.util.Set;
 
 
-public class CardSwipeCallback extends ItemTouchHelper.Callback {
+public class CardSwipeCallback extends ItemTouchHelper.Callback{
+    private class SwipeInfo{
+        public long itemId;
+        public float translationX;
+
+        public SwipeInfo(long itemId) {
+            this.itemId = itemId;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            SwipeInfo swipeInfo = (SwipeInfo) o;
+            return itemId == swipeInfo.itemId;
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(itemId);
+        }
+    }
 
     private Context context;
     private int swipeViewId;
@@ -46,8 +48,7 @@ public class CardSwipeCallback extends ItemTouchHelper.Callback {
     private boolean isSwipeBack;
     private float backDistance;
 
-    private List<RecyclerView.ViewHolder> swipeHolderList;
-    private RecyclerViewScrollListener scrollListener;
+    private Set<SwipeInfo> swipeSet;
 
     public CardSwipeCallback(@NonNull Context context, @NonNull @IdRes int swipeViewId, int leftBackWidth, int rightBackWidth){
         this.context = context;
@@ -57,9 +58,8 @@ public class CardSwipeCallback extends ItemTouchHelper.Callback {
 
         this.isSwipeBack = false;
         this.backDistance = 0f;
-        this.swipeHolderList = new ArrayList<>();
+        this.swipeSet = new HashSet<>();
     }
-
 
     @Override
     public int getMovementFlags(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder) {
@@ -104,29 +104,28 @@ public class CardSwipeCallback extends ItemTouchHelper.Callback {
                             float dX, float dY,
                             int actionState,
                             boolean isCurrentlyActive) {
-
-
         float newDx = dX;
         boolean isShowLeftBack = backDistance < 0 && leftBackWidth > 0 && Math.abs(backDistance) >  leftBackWidth;
         boolean isShowRightBack = backDistance > 0 && rightBackWidth > 0 && backDistance >  leftBackWidth;
 
+        SwipeInfo swipeInfo = new SwipeInfo(viewHolder.getItemId());
+
         if(isSwipeBack && (isShowLeftBack || isShowRightBack)){
+            boolean isShowBack = false;
             if(isShowLeftBack && newDx < leftBackWidth){
                 newDx = leftBackWidth;
+                isShowBack = true;
             }
             if(isShowRightBack && Math.abs(newDx) < rightBackWidth){
                 newDx = 0 - rightBackWidth;
+                isShowBack = true;
             }
-            if(!swipeHolderList.contains(viewHolder)){
-                swipeHolderList.add(viewHolder);
+            if(isShowBack){
+                swipeInfo.translationX = newDx;
+                swipeSet.add(swipeInfo);
             }
         }else{
-            swipeHolderList.remove(viewHolder);
-        }
-
-        if(this.scrollListener == null){
-            this.scrollListener = new RecyclerViewScrollListener();
-            recyclerView.addOnScrollListener(this.scrollListener);
+            swipeSet.remove(swipeInfo);
         }
 
         CardSwipeUIUtilImpl.INSTANCE.onDraw(c, recyclerView, getSwipeView(viewHolder), newDx, dY, actionState, isCurrentlyActive);
@@ -145,6 +144,7 @@ public class CardSwipeCallback extends ItemTouchHelper.Callback {
     @Override
     public void clearView(@NonNull RecyclerView recyclerView,
                           @NonNull RecyclerView.ViewHolder viewHolder) {
+
         CardSwipeUIUtilImpl.INSTANCE.clearView(getSwipeView(viewHolder));
     }
 
@@ -163,18 +163,32 @@ public class CardSwipeCallback extends ItemTouchHelper.Callback {
         return cardView;
     }
 
-    private class RecyclerViewScrollListener extends RecyclerView.OnScrollListener{
-        @Override
-        public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
-            super.onScrollStateChanged(recyclerView, newState);
-            if(newState != RecyclerView.SCROLL_STATE_IDLE){
-                for(RecyclerView.ViewHolder holder : swipeHolderList){
-                    View cardView = getSwipeView(holder);
-                    cardView.animate().translationX(0);
-                }
-                swipeHolderList.clear();
+    public void onBindViewHolder(BaseViewHolder holder) {
+        SwipeInfo swipeInfo = null;
+        for(SwipeInfo si:swipeSet){
+            if(holder.getItemId() ==  si.itemId){
+                swipeInfo = si;
+                break;
             }
+        }
+        if(swipeInfo != null){
+            getSwipeView(holder).setTranslationX(swipeInfo.translationX);
+
+        }else{
+            getSwipeView(holder).setTranslationX(0);
         }
     }
 
+    public void onItemRemove(long itemId) {
+        SwipeInfo swipeInfo = null;
+        for(SwipeInfo si:swipeSet){
+            if(si.itemId == itemId){
+                swipeInfo = si;
+                break;
+            }
+        }
+        if(swipeInfo != null){
+            swipeSet.remove(swipeInfo);
+        }
+    }
 }

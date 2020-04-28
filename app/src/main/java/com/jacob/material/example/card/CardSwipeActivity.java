@@ -8,12 +8,15 @@
 package com.jacob.material.example.card;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.listener.OnItemChildClickListener;
 import com.jacob.material.R;
 import com.jacob.material.databinding.CardSwipeActivityBinding;
 import com.jacob.material.example.adapter.CardSwipeAdapter;
@@ -28,7 +31,7 @@ public class CardSwipeActivity extends AppCompatActivity {
     private CardSwipeActivityBinding binding;
     private List<Thrones> thronesList;
     private CardSwipeAdapter adapter;
-    private int px_8;
+    private CardSwipeCallback callback;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,18 +43,30 @@ public class CardSwipeActivity extends AppCompatActivity {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         binding.recyclerView.setLayoutManager(layoutManager);
 
-        px_8 = WidgetsUtils.dpToPx(this, 8);
-
+        int px_8 = WidgetsUtils.dpToPx(this, 8);
         LinearLayoutVertialItemDecoration decoration = new LinearLayoutVertialItemDecoration(px_8*3, px_8*3, px_8*2);
         binding.recyclerView.addItemDecoration(decoration);
 
         adapter = new CardSwipeAdapter(thronesList);
-
         binding.recyclerView.setAdapter(adapter);
 
-        CardSwipeCallback callback = new CardSwipeCallback(this, R.id.card_view, px_8*10, px_8*10);
+        callback = new CardSwipeCallback(this, R.id.card_view, px_8*10, px_8*10);
         ItemTouchHelper touchHelper = new ItemTouchHelper(callback);
         touchHelper.attachToRecyclerView(binding.recyclerView);
+        adapter.setSwipeCallback(callback);
+        adapter.setOnItemChildClickListener(new CardButtonClickListener());
+
+    }
+
+    private class CardButtonClickListener implements OnItemChildClickListener{
+        @Override
+        public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
+            if(view.getId() == R.id.delete_card_view){
+                callback.onItemRemove(adapter.getItemId(position));
+                adapter.remove(position);
+
+            }
+        }
     }
 
 

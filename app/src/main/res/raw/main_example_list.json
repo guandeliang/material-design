@@ -496,6 +496,11 @@
         "path":"com.jacob.material.test.TestShareElementActivity"
       },
       {
+        "id":15001030,
+        "title":"Merge adapters实现多布局",
+        "path":"com.jacob.material.test.TestShareElementActivity"
+      },
+      {
         "id":15001040,
         "title":"ViewPager2",
         "path":"com.jacob.material.test.TestShapeActivity"
