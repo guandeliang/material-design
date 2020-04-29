@@ -402,7 +402,12 @@
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".example.card.CardSwipeActivity"
+            android:name=".example.card.CardRecycleViewSwipeActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".example.card.CardRecycleViewMoveActivity"
             android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
             android:screenOrientation="portrait">
         </activity>

@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.jacob.material.R;
 
-public class CardSwipeUIUtilImpl implements ItemTouchUIUtil {
-    static final ItemTouchUIUtil INSTANCE =  new CardSwipeUIUtilImpl();
+public class CardRecycleViewSwipeUIUtilImpl implements ItemTouchUIUtil {
+    static final ItemTouchUIUtil INSTANCE =  new CardRecycleViewSwipeUIUtilImpl();
 
     @Override
     public void onDraw(Canvas c, RecyclerView recyclerView, View view, float dX, float dY,

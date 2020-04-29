@@ -468,8 +468,13 @@
       },
       {
         "id":15001040,
-        "title":"Card Swipe",
-        "path":"com.jacob.material.example.card.CardSwipeActivity"
+        "title":"Card Swipe in RecycleView",
+        "path":"com.jacob.material.example.card.CardRecycleViewSwipeActivity"
+      },
+      {
+        "id":15001040,
+        "title":"Card Move in RecycleView",
+        "path":"com.jacob.material.example.card.CardRecycleViewMoveActivity"
       }
     ]
   },

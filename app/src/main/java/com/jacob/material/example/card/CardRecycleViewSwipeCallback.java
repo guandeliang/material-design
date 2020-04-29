@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Set;
 
 
-public class CardSwipeCallback extends ItemTouchHelper.Callback{
+public class CardRecycleViewSwipeCallback extends ItemTouchHelper.Callback{
     private class SwipeInfo{
         public long itemId;
         public float translationX;
@@ -50,7 +50,7 @@ public class CardSwipeCallback extends ItemTouchHelper.Callback{
 
     private Set<SwipeInfo> swipeSet;
 
-    public CardSwipeCallback(@NonNull Context context, @NonNull @IdRes int swipeViewId, int leftBackWidth, int rightBackWidth){
+    public CardRecycleViewSwipeCallback(@NonNull Context context, @NonNull @IdRes int swipeViewId, int leftBackWidth, int rightBackWidth){
         this.context = context;
         this.swipeViewId = swipeViewId;
         this.leftBackWidth = leftBackWidth;
@@ -128,7 +128,7 @@ public class CardSwipeCallback extends ItemTouchHelper.Callback{
             swipeSet.remove(swipeInfo);
         }
 
-        CardSwipeUIUtilImpl.INSTANCE.onDraw(c, recyclerView, getSwipeView(viewHolder), newDx, dY, actionState, isCurrentlyActive);
+        CardRecycleViewSwipeUIUtilImpl.INSTANCE.onDraw(c, recyclerView, getSwipeView(viewHolder), newDx, dY, actionState, isCurrentlyActive);
     }
 
     @Override
@@ -138,14 +138,14 @@ public class CardSwipeCallback extends ItemTouchHelper.Callback{
                                 float dX, float dY,
                                 int actionState,
                                 boolean isCurrentlyActive) {
-        CardSwipeUIUtilImpl.INSTANCE.onDrawOver(c, recyclerView, getSwipeView(viewHolder), dX, dY, actionState, isCurrentlyActive);
+        CardRecycleViewSwipeUIUtilImpl.INSTANCE.onDrawOver(c, recyclerView, getSwipeView(viewHolder), dX, dY, actionState, isCurrentlyActive);
     }
 
     @Override
     public void clearView(@NonNull RecyclerView recyclerView,
                           @NonNull RecyclerView.ViewHolder viewHolder) {
 
-        CardSwipeUIUtilImpl.INSTANCE.clearView(getSwipeView(viewHolder));
+        CardRecycleViewSwipeUIUtilImpl.INSTANCE.clearView(getSwipeView(viewHolder));
     }
 
     @Override
@@ -154,7 +154,7 @@ public class CardSwipeCallback extends ItemTouchHelper.Callback{
             isSwipeBack = true;
         }else{
             isSwipeBack = false;
-            CardSwipeUIUtilImpl.INSTANCE.onSelected(getSwipeView(viewHolder));
+            CardRecycleViewSwipeUIUtilImpl.INSTANCE.onSelected(getSwipeView(viewHolder));
         }
     }
 

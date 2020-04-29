@@ -18,8 +18,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.listener.OnItemChildClickListener;
 import com.jacob.material.R;
-import com.jacob.material.databinding.CardSwipeActivityBinding;
-import com.jacob.material.example.adapter.CardSwipeAdapter;
+import com.jacob.material.databinding.CardRecycleViewSwipeActivityBinding;
+import com.jacob.material.example.adapter.CardRecycleViewSwipeAdapter;
 import com.jacob.material.example.model.Thrones;
 import com.jacob.material.widgets.LinearLayoutVertialItemDecoration;
 import com.jacob.utils.JsonUtils;
@@ -27,16 +27,16 @@ import com.jacob.utils.WidgetsUtils;
 
 import java.util.List;
 
-public class CardSwipeActivity extends AppCompatActivity {
-    private CardSwipeActivityBinding binding;
+public class CardRecycleViewSwipeActivity extends AppCompatActivity {
+    private CardRecycleViewSwipeActivityBinding binding;
     private List<Thrones> thronesList;
-    private CardSwipeAdapter adapter;
-    private CardSwipeCallback callback;
+    private CardRecycleViewSwipeAdapter adapter;
+    private CardRecycleViewSwipeCallback callback;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.card_swipe_activity);
+        binding = DataBindingUtil.setContentView(this, R.layout.card_recycle_view_swipe_activity);
 
         thronesList = JsonUtils.loadThrones(getResources());
 
@@ -47,10 +47,10 @@ public class CardSwipeActivity extends AppCompatActivity {
         LinearLayoutVertialItemDecoration decoration = new LinearLayoutVertialItemDecoration(px_8*3, px_8*3, px_8*2);
         binding.recyclerView.addItemDecoration(decoration);
 
-        adapter = new CardSwipeAdapter(thronesList);
+        adapter = new CardRecycleViewSwipeAdapter(thronesList);
         binding.recyclerView.setAdapter(adapter);
 
-        callback = new CardSwipeCallback(this, R.id.card_view, px_8*10, px_8*10);
+        callback = new CardRecycleViewSwipeCallback(this, R.id.card_view, px_8*10, px_8*10);
         ItemTouchHelper touchHelper = new ItemTouchHelper(callback);
         touchHelper.attachToRecyclerView(binding.recyclerView);
         adapter.setSwipeCallback(callback);

@@ -12,22 +12,22 @@ import android.widget.ImageView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.viewholder.BaseViewHolder;
 import com.jacob.material.R;
-import com.jacob.material.example.card.CardSwipeCallback;
+import com.jacob.material.example.card.CardRecycleViewSwipeCallback;
 import com.jacob.material.example.model.Thrones;
 
 import java.util.List;
 
-public class CardSwipeAdapter extends BaseQuickAdapter<Thrones, BaseViewHolder> {
-    private CardSwipeCallback swipeCallback;
+public class CardRecycleViewSwipeAdapter extends BaseQuickAdapter<Thrones, BaseViewHolder> {
+    private CardRecycleViewSwipeCallback swipeCallback;
 
 
-    public CardSwipeAdapter(List<Thrones> data){
-        super(R.layout.card_swipe_holder, data);
+    public CardRecycleViewSwipeAdapter(List<Thrones> data){
+        super(R.layout.card_recycle_view_swipe_holder, data);
         this.addChildClickViewIds(R.id.delete_card_view, R.id.edit_card_view);
         this.setHasStableIds(true);//为每个Holder分配唯一ItemId
     }
 
-    public void setSwipeCallback(CardSwipeCallback swipeCallback) {
+    public void setSwipeCallback(CardRecycleViewSwipeCallback swipeCallback) {
         this.swipeCallback = swipeCallback;
     }
 
