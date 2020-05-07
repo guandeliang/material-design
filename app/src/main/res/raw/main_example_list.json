@@ -472,9 +472,14 @@
         "path":"com.jacob.material.example.card.CardRecycleViewSwipeActivity"
       },
       {
-        "id":15001040,
+        "id":15001050,
         "title":"Card Move in RecycleView",
         "path":"com.jacob.material.example.card.CardRecycleViewMoveActivity"
+      },
+      {
+        "id":15001060,
+        "title":"Card Drag Helper",
+        "path":"com.jacob.material.example.card.CardDragHelperActivity"
       }
     ]
   },
