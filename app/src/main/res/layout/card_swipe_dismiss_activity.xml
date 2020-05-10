@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-4 上午11:14
+  ~
+  -->
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="activity" type="com.jacob.material.example.card.CardSwipeDismissActivity" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorPrimary">
+
+        <com.google.android.material.appbar.AppBarLayout
+            style="?attr/appBarLayoutPrimaryStyle"
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/material_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="Card Swipe Dismiss"
+                app:titleTextAppearance="?attr/textAppearanceHeadline6"
+                app:navigationIcon="@drawable/icon_arrow_back"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@id/coordinator_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="24dp"
+                android:focusable="true"
+                android:minHeight="200dp">
+                <TextView
+                    android:id="@+id/card_context_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Swipe this card to dismiss it"
+                    android:textAppearance="?attr/textAppearanceBody1"/>
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/left_choice_chip"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="4dp"
+            android:checkable="true"
+            android:checked="false"
+            android:text="LEFT"
+            android:textAlignment="center"
+            android:textColor="@color/gray_200"
+            app:chipMinTouchTargetSize="0dp"
+            app:chipStrokeWidth="1dp"
+            app:chipStrokeColor="?attr/colorSecondary"
+            app:chipBackgroundColor="@color/chip_choice_checked_background_color_selector"
+            android:backgroundTint="@color/chip_choice_checked_background_color_selector"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintTop_toBottomOf="@id/coordinator_layout"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/any_choice_chip"
+            android:onCheckedChanged="@{(view, checked) -> activity.onSwipeDirection(view, checked)}"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/any_choice_chip"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:checkable="true"
+            android:checked="false"
+            android:text="ANY"
+            android:textAlignment="center"
+            android:textColor="@color/gray_200"
+            app:chipMinTouchTargetSize="0dp"
+            app:chipStrokeWidth="1dp"
+            app:chipStrokeColor="?attr/colorSecondary"
+            app:chipBackgroundColor="@color/chip_choice_checked_background_color_selector"
+            android:backgroundTint="@color/chip_choice_checked_background_color_selector"
+            app:layout_constraintTop_toBottomOf="@id/coordinator_layout"
+            app:layout_constraintLeft_toRightOf="@id/left_choice_chip"
+            app:layout_constraintRight_toLeftOf="@id/right_choice_chip"
+            android:onCheckedChanged="@{(view, checked) -> activity.onSwipeDirection(view, checked)}"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/right_choice_chip"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="24dp"
+            android:checkable="true"
+            android:checked="true"
+            android:text="RIGHT"
+            android:textAlignment="center"
+            android:textColor="@color/gray_200"
+            app:chipMinTouchTargetSize="0dp"
+            app:chipStrokeWidth="1dp"
+            app:chipStrokeColor="?attr/colorSecondary"
+            app:chipBackgroundColor="@color/chip_choice_checked_background_color_selector"
+            android:backgroundTint="@color/chip_choice_checked_background_color_selector"
+            app:layout_constraintTop_toBottomOf="@id/coordinator_layout"
+            app:layout_constraintLeft_toRightOf="@id/any_choice_chip"
+            app:layout_constraintRight_toRightOf="parent"
+            android:onCheckedChanged="@{(view, checked) -> activity.onSwipeDirection(view, checked)}"/>
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

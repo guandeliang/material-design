@@ -72,8 +72,11 @@ public class CardRecycleViewMoveCallback extends ItemTouchHelper.Callback{
             this.lastActionState = ItemTouchHelper.ACTION_STATE_IDLE;
             this.lastSelectedViewHolder.itemView.setSelected(false);
             this.lastSelectedViewHolder.itemView.animate().scaleX(1f).scaleY(1f);
-            this.lastTargetViewHolder.itemView.setActivated(false);
             this.lastSelectedViewHolder = null;
+
+            if(this.lastTargetViewHolder != null && this.lastTargetViewHolder.itemView != null){
+                this.lastTargetViewHolder.itemView.setActivated(false);
+            }
             this.lastTargetViewHolder = null;
         }else{
             lastActionState = actionState;

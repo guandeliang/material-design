@@ -397,7 +397,17 @@
             android:screenOrientation="portrait">
         </activity>
         <activity
+            android:name=".example.card.CardStateActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
             android:name=".example.card.CardExpandActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".example.card.CardSwipeDismissActivity"
             android:theme="@style/Theme.MaterialBook.SingleColor.Colored"
             android:screenOrientation="portrait">
         </activity>
