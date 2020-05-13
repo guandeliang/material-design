@@ -1,4 +1,18 @@
 [
+
+  {
+    "id":10000000,
+    "iconName":"icon_chrome_reader_mode",
+    "title":"Material Design Introduce",
+    "itemList":[
+      {
+        "id":10001010,
+        "title":"Blank Activity",
+        "path":"com.jacob.material.example.intro.IntroBlankActivity"
+      }
+    ]
+  },
+
   {
     "id":10100000,
     "iconName":"icon_example_appbar_top",
@@ -494,6 +508,24 @@
     ]
   },
 
+  {
+    "id":16000000,
+    "iconName":"icon_picture_in_picture_alt",
+    "title":"Dialogs",
+    "itemList":[
+      {
+        "id":15001010,
+        "title":"默认DayNight主题Card",
+        "path":"com.jacob.material.example.dialog.DialogDayNightDefaultActivity"
+      },
+      {
+        "id":15001010,
+        "title":"包括按钮在内的进一步定制化",
+        "path":"com.jacob.material.example.dialog.DialogDayNightDefaultActivity"
+      }
+    ]
+  },
+
 
   {
     "id":15000000,
@@ -587,28 +619,6 @@
 
 
 
-
-
-
-
-
-  {
-    "id":11100000,
-    "iconName":"icon_example_appbar_top",
-    "title":"Dialogs",
-    "itemList":[]
-  },
-
-  {
-    "id":11200000,
-    "iconName":"icon_example_appbar_top",
-    "title":"Dividers",
-    "itemList":[]
-  },
-
-
-
-
   {
     "id":11700000,
     "iconName":"icon_example_appbar_top",
@@ -629,7 +639,6 @@
     "title":"Selection controls",
     "itemList":[]
   },
-
 
   {
     "id":12200000,

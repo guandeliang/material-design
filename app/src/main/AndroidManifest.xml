@@ -23,13 +23,18 @@
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".main.activity.MainNavigationActivity"
             android:theme="@style/Theme.MaterialBook.DayNight.Custom"
+            android:screenOrientation="portrait"/>
+
+        <!-- Material Design Intro -->
+        <activity
+            android:name=".example.intro.IntroBlankActivity"
+            android:theme="@style/Theme.MaterialBook.Intro"
             android:screenOrientation="portrait"/>
 
 
@@ -426,6 +431,16 @@
             android:theme="@style/Theme.MaterialBook.SingleColor.Light"
             android:screenOrientation="portrait">
         </activity>
+
+        <!-- DIALOG -->
+        <activity
+            android:name=".example.dialog.DialogDayNightDefaultActivity"
+            android:theme="@style/Theme.MaterialBook.DayNight.Default"
+            android:screenOrientation="portrait">
+        </activity>
+
+
+
 
 
 

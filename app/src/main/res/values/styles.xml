@@ -308,6 +308,13 @@
     </style>
 
 
+    <!--BEGIN: Material Intro-->
+    <style name="Theme.MaterialBook.Intro" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:colorBackground">#37464F</item>
+    </style>
+    <!--BEGIN: Material End-->
+
+
     <!--BEGIN: 基础风格-->
     <!--DayNight主题基础风格-->
     <style name="Theme.MaterialBook.DayNight.Base" parent="Theme.MaterialComponents.DayNight.NoActionBar">
