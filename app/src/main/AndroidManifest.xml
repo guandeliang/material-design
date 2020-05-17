@@ -34,9 +34,13 @@
         <!-- Material Design Intro -->
         <activity
             android:name=".example.intro.IntroBlankActivity"
-            android:theme="@style/Theme.MaterialBook.Intro"
+            android:theme="@style/Theme.MaterialBook.Intro.Blank"
             android:screenOrientation="portrait"/>
 
+        <activity
+            android:name=".example.intro.IntroLayoutActivity"
+            android:theme="@style/Theme.MaterialBook.Intro.Layout"
+            android:screenOrientation="portrait"/>
 
         <!-- Top App Bar -->
         <activity

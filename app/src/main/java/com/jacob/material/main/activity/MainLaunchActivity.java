@@ -52,7 +52,6 @@ public class MainLaunchActivity extends AppCompatActivity {
         logoAni.start();
     }
 
-
     private class AniVectorCallback extends Animatable2Compat.AnimationCallback{
         public void onAnimationEnd(Drawable drawable) {
             Intent intent = new Intent();

@@ -309,10 +309,16 @@
 
 
     <!--BEGIN: Material Intro-->
-    <style name="Theme.MaterialBook.Intro" parent="Theme.MaterialComponents.NoActionBar">
-        <item name="android:colorBackground">#37464F</item>
+    <style name="Theme.MaterialBook.Intro.Blank" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:colorBackground">#FFF48226</item>
     </style>
-    <!--BEGIN: Material End-->
+
+    <style name="Theme.MaterialBook.Intro.Layout" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:colorBackground">#EEEEEE</item>
+        <item name="colorSurface">#FFFFFF</item>
+    </style>
+
+    <!--END: Material Intro-->
 
 
     <!--BEGIN: 基础风格-->

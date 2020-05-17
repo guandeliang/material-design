@@ -9,6 +9,11 @@
         "id":10001010,
         "title":"Blank Activity",
         "path":"com.jacob.material.example.intro.IntroBlankActivity"
+      },
+      {
+        "id":10001020,
+        "title":"Layout",
+        "path":"com.jacob.material.example.intro.IntroLayoutActivity"
       }
     ]
   },
@@ -630,7 +635,14 @@
     "id":11800000,
     "iconName":"icon_example_appbar_top",
     "title":"Progress indicators",
-    "itemList":[]
+    "itemList":[
+      {
+        "id":10501010,
+        "title":"知乎",
+        "path":"ContentLoadingProgressBar"
+      }
+
+    ]
   },
 
   {
@@ -668,7 +680,6 @@
     "title":"一定要做一个华为HMS的演示程序，这个有利于推广，必须的",
     "itemList":[]
   },
-
   {
     "id":260,
     "iconName":"icon_example_appbar_top",
