@@ -9,11 +9,7 @@
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <data>
-
-    </data>
-
+    <data></data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -36,15 +32,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?attr/textAppearanceHeadline5"
-            android:textColor="?attr/colorSecondary"
             app:layout_constraintVertical_bias="0.72"
             app:layout_constraintTop_toTopOf="@id/logo_image_view"
             app:layout_constraintBottom_toBottomOf="@id/logo_image_view"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             android:text="Material Design"/>
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

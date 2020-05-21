@@ -8,24 +8,19 @@
 package com.jacob.material.main.activity;
 
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.graphics.drawable.Animatable;
 import android.graphics.drawable.AnimatedVectorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.databinding.DataBindingUtil;
 import androidx.vectordrawable.graphics.drawable.Animatable2Compat;
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat;
 
-import com.jacob.utils.WidgetsUtils;
 import com.jacob.material.R;
 import com.jacob.material.databinding.MainLaunchActivityBinding;
-
 
 public class MainLaunchActivity extends AppCompatActivity {
     private MainLaunchActivityBinding binding;
@@ -36,7 +31,6 @@ public class MainLaunchActivity extends AppCompatActivity {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.main_launch_activity);
-
 
         if (Build.VERSION.SDK_INT >= 24) {
             AnimatedVectorDrawable logoDrawable = (AnimatedVectorDrawable) getResources().getDrawable(R.drawable.main_logo_ani, getTheme());

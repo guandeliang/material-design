@@ -128,7 +128,7 @@
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/icon_turned_in_not"
+                        app:srcCompat="@drawable/icon_turned_in_not"
                         app:layout_constraintTop_toBottomOf="@id/h_guide_line_000"
                         app:layout_constraintBottom_toTopOf="@id/h_guide_line_001"
                         app:layout_constraintLeft_toRightOf="@id/icon_guide_line"/>
@@ -138,7 +138,7 @@
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/icon_keyboard_arrow_right"
+                        app:srcCompat="@drawable/icon_keyboard_arrow_right"
                         app:layout_constraintTop_toBottomOf="@id/h_guide_line_000"
                         app:layout_constraintBottom_toTopOf="@id/h_guide_line_001"
                         app:layout_constraintRight_toLeftOf="@id/arrow_guide_line"/>
@@ -170,7 +170,7 @@
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/icon_access_time"
+                        app:srcCompat="@drawable/icon_access_time"
                         app:layout_constraintTop_toBottomOf="@id/h_guide_line_001"
                         app:layout_constraintBottom_toTopOf="@id/h_guide_line_002"
                         app:layout_constraintLeft_toRightOf="@id/icon_guide_line"/>
@@ -180,7 +180,7 @@
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/icon_keyboard_arrow_right"
+                        app:srcCompat="@drawable/icon_keyboard_arrow_right"
                         app:layout_constraintTop_toBottomOf="@id/h_guide_line_001"
                         app:layout_constraintBottom_toTopOf="@id/h_guide_line_002"
                         app:layout_constraintRight_toLeftOf="@id/arrow_guide_line"/>
@@ -212,7 +212,7 @@
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/icon_star_border"
+                        app:srcCompat="@drawable/icon_star_border"
                         app:layout_constraintTop_toBottomOf="@id/h_guide_line_002"
                         app:layout_constraintBottom_toTopOf="@id/h_guide_line_003"
                         app:layout_constraintLeft_toRightOf="@id/icon_guide_line"/>
@@ -222,7 +222,7 @@
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/icon_keyboard_arrow_right"
+                        app:srcCompat="@drawable/icon_keyboard_arrow_right"
                         app:layout_constraintTop_toBottomOf="@id/h_guide_line_002"
                         app:layout_constraintBottom_toTopOf="@id/h_guide_line_003"
                         app:layout_constraintRight_toLeftOf="@id/arrow_guide_line"/>
@@ -254,7 +254,7 @@
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/icon_folder_open"
+                        app:srcCompat="@drawable/icon_folder_open"
                         app:layout_constraintTop_toBottomOf="@id/h_guide_line_003"
                         app:layout_constraintBottom_toTopOf="@id/h_guide_line_004"
                         app:layout_constraintLeft_toRightOf="@id/icon_guide_line"/>
@@ -264,7 +264,7 @@
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/icon_keyboard_arrow_right"
+                        app:srcCompat="@drawable/icon_keyboard_arrow_right"
                         app:layout_constraintTop_toBottomOf="@id/h_guide_line_003"
                         app:layout_constraintBottom_toTopOf="@id/h_guide_line_004"
                         app:layout_constraintRight_toLeftOf="@id/arrow_guide_line"/>

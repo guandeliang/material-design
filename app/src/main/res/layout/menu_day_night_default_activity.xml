@@ -139,6 +139,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_anchor="@id/bottom_app_bar"
-        android:src="@drawable/icon_favorite_border"/>
+        app:srcCompat="@drawable/icon_favorite_border"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

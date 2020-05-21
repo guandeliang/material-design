@@ -71,12 +71,7 @@
                 android:valueType="floatType"/>
         </aapt:attr>
     </target>
-
-
-    <!--
-    valueType:colorType=3, floatType=0, intType=1, pathType=2
--->
-
+    <!-- valueType:colorType=3, floatType=0, intType=1, pathType=2 -->
 </animated-vector>
 
 

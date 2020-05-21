@@ -22,14 +22,14 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/map_ice_blue"
+            app:srcCompat="@drawable/map_ice_blue"
             android:scaleType="centerCrop"/>
 
         <ImageView
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginBottom="128dp"
-            android:src="@drawable/icon_location_on"
+            app:srcCompat="@drawable/icon_location_on"
             android:tint="?attr/colorSecondaryVariant"
             android:layout_gravity="center"/>
 
@@ -68,7 +68,7 @@
                     android:padding="12dp"
                     android:layout_marginLeft="12dp"
                     android:visibility="gone"
-                    android:src="@drawable/icon_keyboard_arrow_down"
+                    app:srcCompat="@drawable/icon_keyboard_arrow_down"
                     android:clickable="true"
                     android:background="?attr/selectableItemBackground"
                     app:layout_constraintLeft_toLeftOf="parent"
@@ -743,7 +743,7 @@
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/icon_directions_run"
+            app:srcCompat="@drawable/icon_directions_run"
             android:layout_marginRight="24dp"
             app:layout_anchor="@+id/bottom_sheet_linear_layout"
             app:layout_anchorGravity="top|end"/>

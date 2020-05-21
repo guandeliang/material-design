@@ -314,7 +314,7 @@
     </style>
 
     <style name="Theme.MaterialBook.Intro.Layout" parent="Theme.MaterialComponents.NoActionBar">
-        <item name="android:colorBackground">#EEEEEE</item>
+        <item name="android:colorBackground">#FF00FFFF</item>
         <item name="colorSurface">#FFFFFF</item>
     </style>
 

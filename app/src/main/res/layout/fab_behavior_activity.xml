@@ -44,7 +44,7 @@
                     android:layout_height="match_parent"
                     android:scaleType="fitXY"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/homestay_000"/>
+                    app:srcCompat="@drawable/homestay_000"/>
 
 
                 <com.google.android.material.appbar.MaterialToolbar
@@ -64,7 +64,7 @@
                     android:layout_height="64dp"
                     android:layout_gravity="center_horizontal|bottom"
                     android:layout_marginBottom="88dp"
-                    android:src="@drawable/logo_004"/>
+                    app:srcCompat="@drawable/logo_004"/>
 
 
                 <TextView
@@ -124,7 +124,7 @@
                             android:layout_height="wrap_content"
                             android:scaleType="fitXY"
                             android:adjustViewBounds="true"
-                            android:src="@drawable/homestay_btn_001"/>
+                            app:srcCompat="@drawable/homestay_btn_001"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -159,7 +159,7 @@
                             android:layout_height="wrap_content"
                             android:scaleType="fitXY"
                             android:adjustViewBounds="true"
-                            android:src="@drawable/homestay_btn_002"/>
+                            app:srcCompat="@drawable/homestay_btn_002"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -196,7 +196,7 @@
                             android:layout_height="wrap_content"
                             android:scaleType="fitXY"
                             android:adjustViewBounds="true"
-                            android:src="@drawable/homestay_btn_003"/>
+                            app:srcCompat="@drawable/homestay_btn_003"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -236,7 +236,7 @@
                             android:layout_height="wrap_content"
                             android:scaleType="fitXY"
                             android:adjustViewBounds="true"
-                            android:src="@drawable/homestay_btn_004"/>
+                            app:srcCompat="@drawable/homestay_btn_004"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -272,7 +272,7 @@
                             android:layout_height="wrap_content"
                             android:scaleType="fitXY"
                             android:adjustViewBounds="true"
-                            android:src="@drawable/homestay_btn_005"/>
+                            app:srcCompat="@drawable/homestay_btn_005"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -310,7 +310,7 @@
                             android:layout_height="wrap_content"
                             android:scaleType="fitXY"
                             android:adjustViewBounds="true"
-                            android:src="@drawable/homestay_btn_006"/>
+                            app:srcCompat="@drawable/homestay_btn_006"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -355,7 +355,7 @@
                     <ImageView
                         android:layout_width="12dp"
                         android:layout_height="12dp"
-                        android:src="@drawable/icon_star"
+                        app:srcCompat="@drawable/icon_star"
                         android:tint="@color/white"/>
                 </LinearLayout>
 
@@ -419,7 +419,7 @@
                             android:layout_height="144dp"
                             android:scaleType="fitXY"
                             android:adjustViewBounds="true"
-                            android:src="@drawable/homestay_share_001"/>
+                            app:srcCompat="@drawable/homestay_share_001"/>
 
                         <ImageView
                             android:layout_width="wrap_content"
@@ -427,7 +427,7 @@
                             android:layout_marginLeft="24dp"
                             android:scaleType="fitXY"
                             android:adjustViewBounds="true"
-                            android:src="@drawable/homestay_share_002"/>
+                            app:srcCompat="@drawable/homestay_share_002"/>
 
                         <ImageView
                             android:layout_width="wrap_content"
@@ -435,7 +435,7 @@
                             android:layout_marginLeft="24dp"
                             android:scaleType="fitXY"
                             android:adjustViewBounds="true"
-                            android:src="@drawable/homestay_share_003"/>
+                            app:srcCompat="@drawable/homestay_share_003"/>
 
                         <ImageView
                             android:layout_width="wrap_content"
@@ -443,7 +443,7 @@
                             android:layout_marginLeft="24dp"
                             android:scaleType="fitXY"
                             android:adjustViewBounds="true"
-                            android:src="@drawable/homestay_share_004"/>
+                            app:srcCompat="@drawable/homestay_share_004"/>
 
                         <ImageView
                             android:layout_width="wrap_content"
@@ -451,7 +451,7 @@
                             android:layout_marginLeft="24dp"
                             android:scaleType="fitXY"
                             android:adjustViewBounds="true"
-                            android:src="@drawable/homestay_share_005"/>
+                            app:srcCompat="@drawable/homestay_share_005"/>
 
 
                     </LinearLayout>
@@ -625,7 +625,7 @@
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:layout_marginLeft="24dp"
-                    android:src="@drawable/header_001"
+                    app:srcCompat="@drawable/header_001"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialBook.Round"
                     app:layout_constraintTop_toTopOf="@id/review_star_button"
                     app:layout_constraintBottom_toBottomOf="@id/review_star_button"

@@ -37,7 +37,7 @@
                     android:id="@+id/logo_image_view"
                     android:layout_width="wrap_content"
                     android:layout_height="84dp"
-                    android:src="@drawable/crane_logo_no_border"
+                    app:srcCompat="@drawable/crane_logo_no_border"
                     android:scaleType="fitXY"
                     android:adjustViewBounds="true"
                     android:clickable="true"

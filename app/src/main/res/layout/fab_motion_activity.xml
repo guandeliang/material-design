@@ -117,7 +117,7 @@
                     android:layout_marginTop="16dp"
                     android:scaleType="fitXY"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/header_001"
+                    app:srcCompat="@drawable/header_001"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"/>
 
@@ -167,7 +167,7 @@
                     android:layout_marginTop="16dp"
                     android:scaleType="fitXY"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/header_002"
+                    app:srcCompat="@drawable/header_002"
                     app:layout_constraintTop_toBottomOf="@id/line_view_001"
                     app:layout_constraintLeft_toLeftOf="parent"/>
 
@@ -214,7 +214,7 @@
                     android:layout_marginTop="16dp"
                     android:scaleType="fitXY"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/header_003"
+                    app:srcCompat="@drawable/header_003"
                     app:layout_constraintTop_toBottomOf="@id/line_view_002"
                     app:layout_constraintLeft_toLeftOf="parent"/>
 
@@ -261,7 +261,7 @@
                     android:layout_marginTop="16dp"
                     android:scaleType="fitXY"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/header_004"
+                    app:srcCompat="@drawable/header_004"
                     app:layout_constraintTop_toBottomOf="@id/line_view_003"
                     app:layout_constraintLeft_toLeftOf="parent"/>
 
@@ -309,7 +309,7 @@
                     android:layout_marginTop="16dp"
                     android:scaleType="fitXY"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/icon_add"
+                    app:srcCompat="@drawable/icon_add"
                     android:tint="@color/gray_300"
                     app:layout_constraintTop_toBottomOf="@id/line_view_004"
                     app:layout_constraintLeft_toLeftOf="parent"/>
