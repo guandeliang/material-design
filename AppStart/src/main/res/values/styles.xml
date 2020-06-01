@@ -5,9 +5,18 @@
         <item name="android:navigationBarColor">#22033F</item>
     </style>
 
+    <style name="Theme.Gray" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimaryDark">#607D8B</item>
+        <item name="android:colorBackground">#9E9E9E</item>
+        <item name="android:navigationBarColor">#607D8B</item>
+    </style>
+
     <style name="Theme.Orange" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <item name="colorPrimaryDark">#FF5722</item>
         <item name="android:colorBackground">#FF9800</item>
         <item name="android:navigationBarColor">#FF5722</item>
     </style>
+
+
+
 </resources>

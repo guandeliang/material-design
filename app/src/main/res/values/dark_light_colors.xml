@@ -5,7 +5,6 @@
   ~ Last modified 20-2-9 下午12:48
   ~
   -->
-
 <resources>
     <!--自定义DayNight主题颜色-->
     <color name="dn_custom_color_primary">#0C7E98</color>

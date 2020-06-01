@@ -55,7 +55,7 @@ public class BottomNavigationDemoPlayListFragment extends Fragment implements Li
         sheetBehavior = BottomSheetBehavior.from(binding.bottomsheetLinearLayout);
         sheetBehavior.setFitToContents(true);
         sheetBehavior.setHideable(false);
-        sheetBehavior.setPeekHeight(WidgetsUtils.dpToPx(this.getContext(), 112));
+        sheetBehavior.setPeekHeight(WidgetsUtils.dpToPx(this.getContext(), 64));
         sheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
         binding.bottomsheetDownImageView.setVisibility(View.GONE);
         sheetBehavior.addBottomSheetCallback(new SheetStateChangeCallback());

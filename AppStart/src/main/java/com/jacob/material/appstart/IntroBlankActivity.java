@@ -15,19 +15,15 @@ public class IntroBlankActivity extends AppCompatActivity {
         try {
             for(int i=0; i<10; i++){
                 Thread.sleep(500);
-                Log.d("App_Start_Time", "Activity onCreate is sleep");
+                Log.d("App_Start_Time", "Activity onCreate is sleep 1");
             }
         }catch (Exception e){
         }
-
-
-
 
         this.setTheme(R.style.Theme_Orange);
 
         View view = this.findViewById(android.R.id.content);
         View rootView  = view.getRootView();
-
         printViewTree(rootView, 0);
     }
 
@@ -50,5 +46,4 @@ public class IntroBlankActivity extends AppCompatActivity {
             }
         }
     }
-
 }

@@ -104,6 +104,9 @@ public class TopAppBarDarkTwoFragment extends TabViewPagerBaseFragment {
     }
 
     private void initData(){
+        if(binding == null || binding.lineChart == null){
+            return;
+        }
         if(binding.lineChart.getData() != null){
             binding.lineChart.getData().clearValues();
         }
