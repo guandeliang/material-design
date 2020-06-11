@@ -9,11 +9,9 @@ package com.jacob.material.example.fab;
 
 import android.annotation.SuppressLint;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.transition.TransitionManager;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,12 +22,11 @@ import androidx.appcompat.view.menu.MenuBuilder;
 import androidx.databinding.DataBindingUtil;
 
 import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.transition.MaterialArcMotion;
-import com.google.android.material.transition.MaterialContainerTransform;
+import com.google.android.material.transition.platform.MaterialArcMotion;
+import com.google.android.material.transition.platform.MaterialContainerTransform;
 import com.jacob.material.R;
 import com.jacob.material.databinding.FabMotionActivityBinding;
 import com.jacob.material.widgets.EventHostFrameLayout;
-import com.jacob.utils.WidgetsUtils;
 
 public class FabMotionActivity extends AppCompatActivity {
 

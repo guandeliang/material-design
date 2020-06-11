@@ -19,9 +19,9 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
-import com.google.android.material.transition.MaterialArcMotion;
-import com.google.android.material.transition.MaterialContainerTransform;
-import com.google.android.material.transition.MaterialContainerTransformSharedElementCallback;
+import com.google.android.material.transition.platform.MaterialArcMotion;
+import com.google.android.material.transition.platform.MaterialContainerTransform;
+import com.google.android.material.transition.platform.MaterialContainerTransformSharedElementCallback;
 import com.jacob.material.R;
 import com.jacob.material.base.TabViewPagerAdapter;
 import com.jacob.material.base.TabViewPagerBaseFragment;
@@ -56,6 +56,9 @@ public class BackdropCraneMainActivity extends AppCompatActivity implements Life
         transform.setDuration(500);
         transform.setPathMotion(new MaterialArcMotion());
         transform.addListener(new EnterTransitionListener());
+
+
+
         this.getWindow().setSharedElementEnterTransition(transform);
         //https://medium.com/@skydoves/building-a-beautiful-disney-android-application-1-material-motion-systems-34607eae2501
         //must behind main layout transition name

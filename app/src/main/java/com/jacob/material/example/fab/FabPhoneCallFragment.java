@@ -18,7 +18,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.LifecycleObserver;
 
-import com.google.android.material.transition.MaterialContainerTransform;
+import com.google.android.material.transition.platform.MaterialContainerTransform;
 import com.jacob.material.R;
 import com.jacob.material.databinding.FabPhoneCallFragmentBinding;
 import com.jacob.material.example.model.AddressBook;

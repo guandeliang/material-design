@@ -24,7 +24,7 @@ import androidx.lifecycle.OnLifecycleEvent;
 import androidx.vectordrawable.graphics.drawable.Animatable2Compat;
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat;
 
-import com.google.android.material.transition.MaterialContainerTransformSharedElementCallback;
+import com.google.android.material.transition.platform.MaterialContainerTransformSharedElementCallback;
 import com.jacob.material.R;
 import com.jacob.material.databinding.BackdropCraneLaunchActivityBinding;
 

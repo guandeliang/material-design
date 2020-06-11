@@ -24,12 +24,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.chad.library.adapter.base.entity.node.BaseNode;
 import com.jacob.utils.JsonUtils;
-import com.jacob.utils.StringUtils;
 import com.jacob.material.R;
 import com.jacob.material.databinding.MainExampleListFragmentBinding;
 import com.jacob.material.main.adapter.MainExampleNodeAdapter;
 import com.jacob.material.main.model.ExampleGroup;
 import com.jacob.material.main.model.ExampleItem;
+import com.jacob.utils.StringUtils;
 
 import java.util.ArrayList;
 import java.util.List;

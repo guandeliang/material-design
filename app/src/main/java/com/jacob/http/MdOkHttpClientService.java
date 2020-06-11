@@ -1,18 +1,10 @@
 package com.jacob.http;
 
-import android.util.Log;
-
-import com.jacob.temp.TempConstant;
-
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.ConnectionSpec;
-import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 import okhttp3.TlsVersion;
 import okhttp3.logging.HttpLoggingInterceptor;
 

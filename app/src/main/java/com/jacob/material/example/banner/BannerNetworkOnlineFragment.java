@@ -7,11 +7,7 @@
 
 package com.jacob.material.example.banner;
 
-import android.content.ActivityNotFoundException;
-import android.content.Intent;
 import android.os.Bundle;
-import android.provider.Settings;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,7 +26,6 @@ import com.jacob.material.example.adapter.BannnerNetworkItemAdapter;
 import com.jacob.material.example.httploader.HttpLoader;
 import com.jacob.material.example.model.Thrones;
 import com.jacob.material.widgets.LinearLayoutVertialItemDecoration;
-import com.jacob.temp.TempConstant;
 import com.jacob.utils.WidgetsUtils;
 
 import java.util.ArrayList;
