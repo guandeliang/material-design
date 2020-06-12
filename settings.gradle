@@ -1,5 +1,4 @@
 include ':app'
 include ':AppStart'
 include ':TerribleAppLaunch'
-include ':MaterialLibrary'
 rootProject.name='Material'

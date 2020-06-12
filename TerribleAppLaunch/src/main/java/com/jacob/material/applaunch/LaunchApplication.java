@@ -7,6 +7,6 @@ public class LaunchApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        SystemClock.sleep(5000);
+        SystemClock.sleep(100);
     }
 }

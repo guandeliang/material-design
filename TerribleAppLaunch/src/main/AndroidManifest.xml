@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jacob.material.applaunch">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,7 +15,6 @@
 
         <activity
             android:name=".LunchActivity"
-            android:configChanges="uiMode"
             android:theme="@style/AppTheme.Lunch"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -21,6 +22,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".MainActivity" android:screenOrientation="portrait"/>
 
     </application>
 
