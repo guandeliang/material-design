@@ -69,7 +69,6 @@ class LunchActivity : AppCompatActivity() {
                 tagList.add(tag)
             }
 
-            /*
             if(tagList.size == 4){
 
                 val animator = logoImageView.animate()
@@ -81,8 +80,6 @@ class LunchActivity : AppCompatActivity() {
                         .setListener(LogoAnimListener())
                 animator.start()
             }
-
-             */
 
         }
     }
