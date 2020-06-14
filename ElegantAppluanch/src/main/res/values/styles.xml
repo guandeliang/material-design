@@ -17,9 +17,8 @@
     </style>
 
     <style name="AppTheme.Lunch">
-        <item name="android:windowBackground">@drawable/logo_lunch</item>
-        <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowBackground">@drawable/launch_bg_001</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
         <item name="android:navigationBarColor">@color/color_background</item>
     </style>
 

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-2-15 下午7:31
+  ~
+  -->
+
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:shareInterpolator="false">
+    <alpha
+        android:fromAlpha="0"
+        android:toAlpha="1.0"
+        android:fillEnabled="true"
+        android:fillBefore="true"
+        android:fillAfter="true"
+        android:interpolator="@android:anim/linear_interpolator"
+        android:startOffset="35"
+        android:duration="1000"/>
+    <scale
+        android:fromXScale="0.50"
+        android:toXScale="1"
+        android:fromYScale="0.50"
+        android:toYScale="1"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:fillEnabled="true"
+        android:fillBefore="true"
+        android:fillAfter="true"
+        android:interpolator="@android:anim/fade_in"
+        android:duration="1000"
+        tools:targetApi="lollipop" />
+</set>
