@@ -2,13 +2,13 @@
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <data></data>
+    <data/>
 
     <androidx.constraintlayout.motion.widget.MotionLayout
         android:id="@+id/motion_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layoutDescription="@xml/launch_activity_xml_constraintlayout_scene">
+        app:layoutDescription="@xml/launch_activity_scene">
 
         <ImageView
             android:id="@+id/launch_bg_image_view"
