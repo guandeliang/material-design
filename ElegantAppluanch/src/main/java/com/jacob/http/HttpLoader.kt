@@ -1,6 +1,6 @@
 package com.jacob.http
 
-import com.jacob.material.applaunch.Thrones
+import com.jacob.material.elegantlaunch.Thrones
 import io.reactivex.Observable
 import retrofit2.http.GET
 

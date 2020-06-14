@@ -2,7 +2,7 @@ package com.jacob.http
 
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.GsonBuilder
-import com.jacob.material.applaunch.DateFormatMode
+import com.jacob.material.terriblelaunch.DateFormatMode
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory

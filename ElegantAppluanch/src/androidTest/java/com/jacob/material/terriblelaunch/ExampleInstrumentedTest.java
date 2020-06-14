@@ -1,4 +1,4 @@
-package com.jacob.material.applaunch;
+package com.jacob.material.terriblelaunch;
 
 import android.content.Context;
 

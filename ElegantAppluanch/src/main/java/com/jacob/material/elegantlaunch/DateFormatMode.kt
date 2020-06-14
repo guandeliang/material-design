@@ -1,4 +1,4 @@
-package com.jacob.material.applaunch
+package com.jacob.material.elegantlaunch
 
 enum class DateFormatMode(var mode: String) {
     ONLY_YM("yyyyMM"),

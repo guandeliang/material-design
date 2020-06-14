@@ -4,7 +4,7 @@
  * Last modified 20-2-20 下午9:41
  *
  */
-package com.jacob.material.applaunch
+package com.jacob.material.terriblelaunch
 
 import android.content.Context
 import android.view.LayoutInflater

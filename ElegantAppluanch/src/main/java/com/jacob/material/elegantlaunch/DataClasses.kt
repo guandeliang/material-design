@@ -1,4 +1,4 @@
-package com.jacob.material.applaunch
+package com.jacob.material.elegantlaunch
 
 import java.io.Serializable
 

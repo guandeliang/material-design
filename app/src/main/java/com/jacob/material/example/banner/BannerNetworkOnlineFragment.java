@@ -61,10 +61,10 @@ public class BannerNetworkOnlineFragment extends Fragment implements LifecycleOb
         binding.recyclerView.setAdapter(adapter);
 
         loadThrones();
+
         return binding.getRoot();
 
     }
-
 
 
     private void loadThrones(){
@@ -101,5 +101,4 @@ public class BannerNetworkOnlineFragment extends Fragment implements LifecycleOb
     public void onLifecyclePause() {
         binding.shimmerFrameLayout.stopShimmer();
     }
-
 }

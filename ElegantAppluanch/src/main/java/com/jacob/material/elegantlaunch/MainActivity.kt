@@ -1,4 +1,4 @@
-package com.jacob.material.applaunch
+package com.jacob.material.elegantlaunch
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

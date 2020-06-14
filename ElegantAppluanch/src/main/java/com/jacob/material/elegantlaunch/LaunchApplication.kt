@@ -1,4 +1,4 @@
-package com.jacob.material.applaunch
+package com.jacob.material.elegantlaunch
 
 import android.app.Application
 import android.os.SystemClock

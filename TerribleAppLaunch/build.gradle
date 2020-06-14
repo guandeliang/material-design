@@ -7,7 +7,7 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
-        applicationId "com.jacob.material.applaunch.terrible"
+        applicationId "com.jacob.material.terriblelaunch"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -17,6 +17,7 @@ android {
     }
 
     buildFeatures {
+        viewBinding true
         dataBinding true
     }
 
@@ -25,6 +26,11 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+
+    lintOptions {
+        disable 'GoogleAppIndexingWarning'
+        disable 'ContentDescription'
     }
 
     compileOptions {
