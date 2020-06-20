@@ -1,6 +1,6 @@
-include ':ElegantAppluanch'
 include ':app'
 include ':AppStart'
 include ':TerribleAppLaunch'
+include ':ElegantAppluanch'
 rootProject.name='Material'
 

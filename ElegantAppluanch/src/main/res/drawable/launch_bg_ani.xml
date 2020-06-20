@@ -2,61 +2,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aapt="http://schemas.android.com/aapt"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:ignore="newApi">
-    <aapt:attr name="android:drawable">
-        <vector
-            android:width="90dp"
-            android:height="160dp"
-            android:viewportWidth="900"
-            android:viewportHeight="1600">
-            <path
-                android:fillColor="#E0E0E0"
-                android:fillAlpha="1"
-                android:pathData="M0,0 l900,0 l0,1600 l-900,0 l0,-1600 Z"/>
-
-            <path
-                android:name="dark"
-                android:fillColor="?attr/colorPrimaryDark"
-                android:fillAlpha="1"
-                android:pathData="M0,0 L900,0 L900,800 L0,300 L0,0 Z"/>
-
-            <path
-                android:name="light"
-                android:fillColor="?android:attr/colorBackground"
-                android:fillAlpha="1"
-                android:pathData="M0,400 L900,1400 L900,1600 L0,1600 L0,1400 Z"/>
-
-            <path
-                android:name="one"
-                android:fillColor="#CDDC39"
-                android:fillAlpha="1"
-                android:pathData="M125,400 l50,0 l0,500 l-50,0 l0,-500 Z"/>
-
-            <path
-                android:name="two"
-                android:fillColor="#FFEB3B"
-                android:fillAlpha="1"
-                android:pathData="M275,500 l50,0 l0,300 l-50,0 l0,-300 Z"/>
-
-            <path
-                android:name="three"
-                android:fillColor="#FFC107"
-                android:fillAlpha="1"
-                android:pathData="M425,600 l50,0 l0,100 l-50,0 l0,-100 Z"/>
-
-            <path
-                android:name="four"
-                android:fillColor="#FF9800"
-                android:fillAlpha="1"
-                android:pathData="M575,500 l50,0 l0,300 l-50,0 l0,-300 Z"/>
-
-            <path
-                android:name="five"
-                android:fillColor="#FF5722"
-                android:fillAlpha="1"
-                android:pathData="M725,400 l50,0 l0,500 l-50,0 l0,-500 Z"/>
-        </vector>
-    </aapt:attr>
+    tools:ignore="newApi"
+    android:drawable="@drawable/launch_bg_001">
     <target android:name="dark">
         <aapt:attr name="android:animation">
             <objectAnimator
@@ -87,7 +34,6 @@
                 android:valueType="pathType"/>
         </aapt:attr>
     </target>
-
     <target android:name="two">
         <aapt:attr name="android:animation">
             <objectAnimator
@@ -98,7 +44,6 @@
                 android:valueType="pathType"/>
         </aapt:attr>
     </target>
-
     <target android:name="three">
         <aapt:attr name="android:animation">
             <objectAnimator
@@ -109,7 +54,6 @@
                 android:valueType="pathType"/>
         </aapt:attr>
     </target>
-
     <target android:name="four">
         <aapt:attr name="android:animation">
             <objectAnimator
@@ -120,7 +64,6 @@
                 android:valueType="pathType"/>
         </aapt:attr>
     </target>
-
     <target android:name="five">
         <aapt:attr name="android:animation">
             <objectAnimator

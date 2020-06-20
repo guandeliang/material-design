@@ -2,14 +2,15 @@ package com.jacob.material.elegantlaunch
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.jacob.http.HttpLoader
 import com.jacob.http.MdRetrofitFactory.getLoader
-import io.reactivex.Observer
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.Disposable
-import io.reactivex.schedulers.Schedulers
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
     private var adapter: ThronesAdapter? = null
@@ -27,22 +28,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun loadThrones() {
-        getLoader(HttpLoader::class.java).getThrones()
-                .subscribeOn(Schedulers.newThread())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(object : Observer<List<Thrones>> {
-                    override fun onSubscribe(d: Disposable) {}
+        lifecycleScope.launch {
+            var response: Response<List<Thrones>>
+            withContext(Dispatchers.IO){
+                response = getLoader(HttpLoader::class.java).getThrones();
+            }
+            if(response.isSuccessful){
+                adapter!!.setDataList(response.body());
 
-                    override fun onNext(list: List<Thrones>) {
-                        adapter!!.setDataList(list)
-                    }
-
-                    override fun onError(e: Throwable) {
-                        e.printStackTrace()
-                    }
-
-                    override fun onComplete() {
-                    }
-                })
+            }
+        }
     }
 }

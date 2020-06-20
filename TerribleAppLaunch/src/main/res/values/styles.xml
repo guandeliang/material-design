@@ -16,17 +16,9 @@
         <item name="colorOnError">@color/color_on_error</item>
     </style>
 
-
-    <style name="AppTheme.Lunch">
+    <style name="AppTheme.Launch">
         <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:colorBackground">@color/color_background</item>
+        <item name="android:windowBackground">@color/color_background</item>
         <item name="android:navigationBarColor">@color/color_background</item>
     </style>
-
-    <style name="AppTheme.Lunch.Preposition">
-        <item name="android:colorBackground">@color/color_secondary</item>
-        <item name="android:navigationBarColor">@color/color_secondary</item>
-    </style>
-
 </resources>

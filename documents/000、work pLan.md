@@ -13,25 +13,7 @@ step 3 加强人声
 step 4 声音均衡
 
 
-第二个视频
-First App
-
-Android Project 结构
-
-项目
-    编译设置
-    模块之间关系定义
-    moduleA
-        模块编译环境
-        资源文件
-        程序文件
-    moduleB
-
-用ppt把这个结果说清楚
-用一个APP把这个结构演示清楚
-
-https://developer.android.com/studio/intro 把这个里面有价值的东西抽取出来
-
-https://developer.android.com/studio/workflow 这个流程介绍
-https://developer.android.com/studio/projects/create-project 项目配置
-https://developer.android.com/training/basics/firstapp/creating-project 项目结构
+Androud Studio新功能介绍，以一个实例作为讲解
+https://www.youtube.com/watch?v=ns67AAuDs4s
+https://www.youtube.com/watch?v=NMFGuy6TRqk
+把糟糕和优雅的Launcher分成两个视频

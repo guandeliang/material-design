@@ -8,7 +8,7 @@
         android:id="@+id/motion_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layoutDescription="@xml/launch_activity_scene">
+        app:layoutDescription="@xml/elegant_launch_activity_scene">
 
         <ImageView
             android:id="@+id/launch_bg_image_view"

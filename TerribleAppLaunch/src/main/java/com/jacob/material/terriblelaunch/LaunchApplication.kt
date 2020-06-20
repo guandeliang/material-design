@@ -7,7 +7,7 @@ class LaunchApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         //Simulate time consuming task
-        SystemClock.sleep(100)
+        SystemClock.sleep(1000)
     }
 
 }

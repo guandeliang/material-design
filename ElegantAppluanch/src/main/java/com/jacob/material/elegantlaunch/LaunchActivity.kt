@@ -24,51 +24,59 @@ class LaunchActivity : AppCompatActivity() {
 
     private lateinit var binding: LaunchActivityBinding
     private var hasShowMainActivity:Boolean = false
+    private var hasFinishTask:Boolean = false
+    private var hasFinishAni:Boolean = false
 
-    private lateinit var logoAni: Animatable
-
+    private lateinit var logoAni: AnimatedVectorDrawable
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.launch_activity)
-        hideSystemUI()
-        binding.motionLayout.setTransitionListener(MotionListener())
-        SystemClock.sleep(500)
 
-        if (Build.VERSION.SDK_INT >= 24) {
-            val logoDrawable = resources.getDrawable(R.drawable.launch_bg_ani, theme) as AnimatedVectorDrawable
-            binding.launchBgImageView.setImageDrawable(logoDrawable)
-            logoAni = logoDrawable
-            AnimatedVectorDrawableCompat.registerAnimationCallback(logoDrawable, AniVectorCallback())
-        } else {
-            val logoCompatDrawable = AnimatedVectorDrawableCompat.create(this, R.drawable.launch_bg_ani)
-            binding.launchBgImageView.setImageDrawable(logoCompatDrawable)
-            logoAni = logoCompatDrawable as Animatable
-            AnimatedVectorDrawableCompat.registerAnimationCallback(logoCompatDrawable, AniVectorCallback())
-        }
+        window.decorView.systemUiVisibility = (
+            View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION or
+            View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+        )
+
+        binding.motionLayout.setTransitionListener(MotionListener())
+
+        logoAni = binding.launchBgImageView.drawable as AnimatedVectorDrawable
+        AnimatedVectorDrawableCompat.registerAnimationCallback(logoAni, AniVectorCallback())
+
+        anyTask()
+
         logoAni.start()
     }
 
+    //Simulate time consuming task
+    private fun anyTask(){
+        lifecycleScope.launch {
+            withContext(Dispatchers.Default){
+                delay(1000)
+            }
+            hasFinishTask = true
+            showMainActivity()
+        }
+    }
+
+
     private inner class AniVectorCallback : Animatable2Compat.AnimationCallback() {
         override fun onAnimationEnd(drawable: Drawable) {
-
             binding.motionLayout.transitionToEnd()
         }
     }
 
     private inner class MotionListener : MotionLayout.TransitionListener {
         override fun onTransitionTrigger(motionLayout: MotionLayout?, triggerId: Int, positive: Boolean, progress: Float) {}
-
         override fun onTransitionStarted(motionLayout: MotionLayout?, startId: Int, endId: Int) {}
-
         override fun onTransitionChange(motionLayout: MotionLayout?, startId: Int, endId: Int, progress: Float) {}
 
         override fun onTransitionCompleted(motionLayout: MotionLayout?, state: Int) {
-
             lifecycleScope.launch {
                 withContext(Dispatchers.Default){
-                    delay(500)
+                    delay(1000)
                 }
+                hasFinishAni = true
                 showMainActivity()
             }
         }
@@ -76,6 +84,10 @@ class LaunchActivity : AppCompatActivity() {
 
     @Synchronized
     private fun  showMainActivity() {
+        if(!hasFinishTask or !hasFinishAni){
+            return
+        }
+
         if(hasShowMainActivity){
             return
         }
@@ -88,10 +100,4 @@ class LaunchActivity : AppCompatActivity() {
         finish()
     }
 
-    private fun hideSystemUI() {
-        window.decorView.systemUiVisibility = (
-            View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-            or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-        )
-    }
 }
