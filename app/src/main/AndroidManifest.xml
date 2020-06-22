@@ -42,6 +42,11 @@
             android:theme="@style/Theme.MaterialBook.Intro.Layout"
             android:screenOrientation="portrait"/>
 
+        <activity
+            android:name=".example.motionlayout.MotionLayoutActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Light.TranslucentStatus"
+            android:screenOrientation="portrait"/>
+
         <!-- Top App Bar -->
         <activity
             android:name=".example.topappbar.TopAppBarDayNightDefaultActivity"

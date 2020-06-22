@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="fragment"
+            type="com.jacob.material.example.motionlayout.MotionLayoutIndexFragment" />
+    </data>
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/motion_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/motion_layout_index_fragment_scene">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.4" />
+
+        <ImageView
+            android:id="@+id/two_image_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/motion_zero_two"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/guide_line"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <ImageView
+            android:id="@+id/one_image_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/motion_zero_one"
+            app:layout_constraintBottom_toTopOf="@id/two_image_view"
+            app:layout_constraintLeft_toLeftOf="@id/guide_line"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+        <TextView
+            android:id="@+id/one_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:fontFamily="@font/archivo_black"
+            android:text="Android"
+            android:clickable="true"
+            android:background="?attr/selectableItemBackground"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="@{(view) -> fragment.onItemClick(view)}"/>
+
+        <TextView
+            android:id="@+id/two_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:fontFamily="@font/archivo_black"
+            android:text="Material Design"
+            android:clickable="true"
+            android:background="?attr/selectableItemBackground"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/one_title_text_view"
+            android:onClick="@{(view) -> fragment.onItemClick(view)}"/>
+
+        <TextView
+            android:id="@+id/three_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:fontFamily="@font/archivo_black"
+            android:text="Constrain Layout"
+            android:clickable="true"
+            android:background="?attr/selectableItemBackground"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/two_title_text_view"
+            android:onClick="@{(view) -> fragment.onItemClick(view)}"/>
+
+        <TextView
+            android:id="@+id/four_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:fontFamily="@font/archivo_black"
+            android:text="And"
+            android:clickable="true"
+            android:background="?attr/selectableItemBackground"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/three_title_text_view"
+            android:onClick="@{(view) -> fragment.onItemClick(view)}"/>
+
+        <TextView
+            android:id="@+id/five_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:fontFamily="@font/archivo_black"
+            android:text="Motion Layout"
+            android:clickable="true"
+            android:background="?attr/selectableItemBackground"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/four_title_text_view"
+            android:onClick="@{(view) -> fragment.onItemClick(view)}"/>
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+</layout>

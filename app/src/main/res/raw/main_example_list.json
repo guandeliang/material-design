@@ -14,6 +14,11 @@
         "id":10001020,
         "title":"Layout",
         "path":"com.jacob.material.example.intro.IntroLayoutActivity"
+      },
+      {
+        "id":10001030,
+        "title":"Motion Layout",
+        "path":"com.jacob.material.example.motionlayout.MotionLayoutActivity"
       }
     ]
   },

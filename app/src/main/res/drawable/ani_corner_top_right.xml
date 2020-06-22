@@ -1,0 +1,41 @@
+<!--
+  ~ Create by Jacob G(GuanDeLiang) on 2020.
+  ~ Copyright (c) 2020 . All rights reserved.
+  ~ Last modified 20-1-18 上午9:53
+  ~
+  -->
+
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="newApi">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:width="96dp"
+            android:height="96dp"
+            android:viewportWidth="96"
+            android:viewportHeight="96">
+            <path
+                android:name="line"
+                android:strokeLineCap="round"
+                android:strokeWidth="4"
+                android:strokeColor="#000000"
+                android:strokeAlpha="1"
+                android:pathData="M2,2 L94,2 L94,94"/>
+        </vector>
+    </aapt:attr>
+    <target android:name="line">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="trimPathEnd"
+                android:valueFrom =  "0"
+                android:valueTo   =  "1"
+                android:duration="500"
+                android:valueType="floatType"/>
+        </aapt:attr>
+    </target>
+</animated-vector>
+
+
+
