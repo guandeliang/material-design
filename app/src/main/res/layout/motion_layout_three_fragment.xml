@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<data/>
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/motion_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#4A6572"
+        app:layoutDescription="@xml/motion_layout_three_fragment_scene">
+
+        <ImageView
+            android:id="@+id/bg_image_view_0101"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/motion_spa_border"
+            android:tint="#F48226"
+            android:layout_marginBottom="48dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/bg_image_view_0201"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/bg_image_view_0102"/>
+        <ImageView
+            android:id="@+id/bg_image_view_0102"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/motion_circle_border"
+            android:tint="#F48226"
+            android:layout_marginRight="48dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/bg_image_view_0202"
+            app:layout_constraintLeft_toRightOf="@id/bg_image_view_0101"
+            app:layout_constraintRight_toLeftOf="@id/bg_image_view_0103"/>
+        <ImageView
+            android:id="@+id/bg_image_view_0103"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/motion_star_border"
+            android:tint="#F48226"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/bg_image_view_0203"
+            app:layout_constraintLeft_toRightOf="@id/bg_image_view_0102"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+        <ImageView
+            android:id="@+id/bg_image_view_0201"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/motion_star_border"
+            android:tint="#F48226"
+            app:layout_constraintTop_toBottomOf="@id/bg_image_view_0101"
+            app:layout_constraintBottom_toTopOf="@id/bg_image_view_0301"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/bg_image_view_0202"/>
+        <ImageView
+            android:id="@+id/bg_image_view_0202"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/motion_spa_border"
+            android:tint="#F48226"
+            app:layout_constraintTop_toBottomOf="@id/bg_image_view_0102"
+            app:layout_constraintBottom_toTopOf="@id/bg_image_view_0302"
+            app:layout_constraintLeft_toRightOf="@id/bg_image_view_0201"
+            app:layout_constraintRight_toLeftOf="@id/bg_image_view_0203"/>
+        <ImageView
+            android:id="@+id/bg_image_view_0203"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/motion_circle_border"
+            android:tint="#F48226"
+            android:layout_marginTop="26dp"
+            app:layout_constraintTop_toBottomOf="@id/bg_image_view_0103"
+            app:layout_constraintBottom_toTopOf="@id/bg_image_view_0303"
+            app:layout_constraintLeft_toRightOf="@id/bg_image_view_0202"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+        <ImageView
+            android:id="@+id/bg_image_view_0301"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/motion_spa_border"
+            android:tint="#F48226"
+            app:layout_constraintTop_toBottomOf="@id/bg_image_view_0201"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/bg_image_view_0302"/>
+        <ImageView
+            android:id="@+id/bg_image_view_0302"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/motion_heart_border"
+            android:tint="#F48226"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            app:layout_constraintTop_toBottomOf="@id/bg_image_view_0202"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/bg_image_view_0301"
+            app:layout_constraintRight_toLeftOf="@id/bg_image_view_0303"/>
+        <ImageView
+            android:id="@+id/bg_image_view_0303"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/motion_spa_border"
+            android:tint="#F48226"
+            app:layout_constraintTop_toBottomOf="@id/bg_image_view_0203"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/bg_image_view_0302"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <View
+            android:id="@+id/back_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="96dp"
+            android:layout_marginBottom="96dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:background="#FFFFFF"
+            android:alpha="0.5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <View
+            android:id="@+id/line_view"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:background="#000000"
+            android:alpha="0.9"
+            app:layout_constraintVertical_bias="0.4"
+            app:layout_constraintTop_toTopOf="@id/back_view"
+            app:layout_constraintLeft_toLeftOf="@id/back_view"
+            app:layout_constraintRight_toRightOf="@id/back_view"
+            app:layout_constraintBottom_toBottomOf="@id/back_view"/>
+
+
+        <TextView
+            android:id="@+id/title_text_view_g"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/crimson_text_bold"
+            android:text="G"
+            android:textAppearance="?attr/textAppearanceHeadline1"
+            app:layout_constraintBottom_toTopOf="@id/line_view"
+            app:layout_constraintLeft_toLeftOf="@id/back_view"
+            app:layout_constraintRight_toRightOf="@id/back_view"/>
+
+        <TextView
+            android:id="@+id/title_text_view_p"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/crimson_text_bold"
+            android:text="Android Programer"
+            android:layout_marginBottom="12dp"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintBottom_toTopOf="@id/line_view"
+            app:layout_constraintLeft_toLeftOf="@id/back_view"
+            app:layout_constraintRight_toRightOf="@id/back_view"/>
+
+
+        <TextView
+            android:id="@+id/title_text_view_001"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/crimson_text_bold"
+            android:text="Android Material Design"
+            android:layout_marginTop="48dp"
+            android:textAppearance="?attr/textAppearanceCaption"
+            app:layout_constraintTop_toBottomOf="@id/line_view"
+            app:layout_constraintLeft_toLeftOf="@id/back_view"
+            app:layout_constraintRight_toRightOf="@id/back_view"/>
+
+        <TextView
+            android:id="@+id/title_text_view_002"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/crimson_text_bold"
+            android:text="YouTube Video"
+            android:layout_marginTop="12dp"
+            android:textAppearance="?attr/textAppearanceCaption"
+            app:layout_constraintTop_toBottomOf="@id/title_text_view_001"
+            app:layout_constraintLeft_toLeftOf="@id/back_view"
+            app:layout_constraintRight_toRightOf="@id/back_view"/>
+
+        <TextView
+            android:id="@+id/title_text_view_003"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/crimson_text_bold"
+            android:text="GitHub Example Code"
+            android:layout_marginTop="12dp"
+            android:textAppearance="?attr/textAppearanceCaption"
+            app:layout_constraintTop_toBottomOf="@id/title_text_view_002"
+            app:layout_constraintLeft_toLeftOf="@id/back_view"
+            app:layout_constraintRight_toRightOf="@id/back_view"/>
+
+        <TextView
+            android:id="@+id/title_text_view_004"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/crimson_text_bold"
+            android:text="Walk With New Android Tech"
+            android:layout_marginTop="12dp"
+            android:textAppearance="?attr/textAppearanceCaption"
+            app:layout_constraintTop_toBottomOf="@id/title_text_view_003"
+            app:layout_constraintLeft_toLeftOf="@id/back_view"
+            app:layout_constraintRight_toRightOf="@id/back_view"/>
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+</layout>

@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/center_left">
+        <Constraint
+            android:id="@+id/view_x"
+            android:layout_width="16dp"
+            android:layout_height="0dp"
+            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
+            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
+            motion:transitionEasing="linear"/>
+
+        <Constraint
+            android:id="@+id/view_y"
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
+            motion:layout_constraintRight_toRightOf="@id/grid_image_view"
+            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
+            motion:transitionEasing="linear"/>
+
+        <Constraint
+            android:id="@+id/view"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
+            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
+            motion:transitionEasing="linear"/>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/center_right">
+        <Constraint
+            android:id="@+id/view_x"
+            android:layout_width="16dp"
+            android:layout_height="0dp"
+            motion:layout_constraintRight_toRightOf="@id/grid_image_view"
+            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"/>
+
+        <Constraint
+            android:id="@+id/view_y"
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
+            motion:layout_constraintRight_toRightOf="@id/grid_image_view"
+            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"/>
+
+        <Constraint
+            android:id="@+id/view"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            motion:layout_constraintRight_toRightOf="@id/grid_image_view"
+            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"/>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/bottom_left">
+        <Constraint
+            android:id="@+id/view_x"
+            android:layout_width="16dp"
+            android:layout_height="0dp"
+            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
+            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
+            motion:transitionEasing="linear"/>
+
+        <Constraint
+            android:id="@+id/view_y"
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
+            motion:layout_constraintRight_toRightOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
+            motion:transitionEasing="linear"/>
+
+        <Constraint
+            android:id="@+id/view"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
+            motion:transitionEasing="linear"/>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/top_right">
+        <Constraint
+            android:id="@+id/view_x"
+            android:layout_width="16dp"
+            android:layout_height="0dp"
+            motion:layout_constraintRight_toRightOf="@id/grid_image_view"
+            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"/>
+
+        <Constraint
+            android:id="@+id/view_y"
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
+            motion:layout_constraintRight_toRightOf="@id/grid_image_view"
+            motion:layout_constraintTop_toTopOf="@id/grid_image_view"/>
+
+        <Constraint
+            android:id="@+id/view"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
+            motion:layout_constraintRight_toRightOf="@id/grid_image_view"/>
+    </ConstraintSet>
+
+
+
+    <Transition
+        android:id="@+id/transition_linear"
+        motion:constraintSetStart="@id/bottom_left"
+        motion:constraintSetEnd="@+id/top_right"
+        motion:duration="10000">
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start_standard">
+        <Constraint
+            android:id="@+id/view_x"
+            android:layout_width="16dp"
+            android:layout_height="0dp"
+            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
+            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
+            motion:transitionEasing="linear"/>
+
+        <Constraint
+            android:id="@+id/view_y"
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
+            motion:layout_constraintRight_toRightOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
+            motion:transitionEasing="linear"/>
+
+        <Constraint
+            android:id="@+id/view"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
+            motion:transitionEasing="standard"/>
+    </ConstraintSet>
+
+    <Transition
+        android:id="@+id/transition_standard"
+        motion:constraintSetStart="@id/start_standard"
+        motion:constraintSetEnd="@+id/top_right"
+        motion:duration="10000">
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start_accelerate">
+        <Constraint
+            android:id="@+id/view_x"
+            android:layout_width="16dp"
+            android:layout_height="0dp"
+            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
+            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
+            motion:transitionEasing="linear"/>
+
+        <Constraint
+            android:id="@+id/view_y"
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
+            motion:layout_constraintRight_toRightOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
+            motion:transitionEasing="linear"/>
+
+        <Constraint
+            android:id="@+id/view"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
+            motion:transitionEasing="accelerate"/>
+    </ConstraintSet>
+
+    <Transition
+        android:id="@+id/transition_accelerate"
+        motion:constraintSetStart="@id/start_accelerate"
+        motion:constraintSetEnd="@+id/top_right"
+        motion:duration="10000">
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start_decelerate">
+        <Constraint
+            android:id="@+id/view_x"
+            android:layout_width="16dp"
+            android:layout_height="0dp"
+            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
+            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
+            motion:transitionEasing="linear"/>
+
+        <Constraint
+            android:id="@+id/view_y"
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
+            motion:layout_constraintRight_toRightOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
+            motion:transitionEasing="linear"/>
+
+        <Constraint
+            android:id="@+id/view"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
+            motion:transitionEasing="decelerate"/>
+    </ConstraintSet>
+
+    <Transition
+        android:id="@+id/transition_decelerate"
+        motion:constraintSetStart="@id/start_decelerate"
+        motion:constraintSetEnd="@+id/top_right"
+        motion:duration="10000">
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start_flip">
+        <Constraint
+            android:id="@+id/view_x"
+            android:layout_width="16dp"
+            android:layout_height="0dp"
+            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
+            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
+            motion:transitionEasing="linear"/>
+
+        <Constraint
+            android:id="@+id/view_y"
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
+            motion:layout_constraintRight_toRightOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
+            motion:transitionEasing="linear"/>
+
+        <Constraint
+            android:id="@+id/view"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
+            motion:transitionEasing="linear"
+            motion:pathMotionArc="flip">
+        </Constraint>
+    </ConstraintSet>
+
+    <Transition
+        android:id="@+id/transition_flip"
+        motion:constraintSetStart="@id/start_flip"
+        motion:constraintSetEnd="@+id/top_right"
+        motion:duration="10000">
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start_start_horizontal">
+        <Constraint
+            android:id="@+id/view_x"
+            android:layout_width="16dp"
+            android:layout_height="0dp"
+            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
+            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
+            motion:transitionEasing="linear"/>
+
+        <Constraint
+            android:id="@+id/view_y"
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
+            motion:layout_constraintRight_toRightOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
+            motion:transitionEasing="linear"/>
+
+        <Constraint
+            android:id="@+id/view"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
+            motion:transitionEasing="linear"
+            motion:pathMotionArc="startHorizontal"/>
+    </ConstraintSet>
+
+    <Transition
+        android:id="@+id/transition_start_horizontal"
+        motion:constraintSetStart="@id/start_start_horizontal"
+        motion:constraintSetEnd="@+id/top_right"
+        motion:duration="10000">
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start_start_vertical">
+        <Constraint
+            android:id="@+id/view_x"
+            android:layout_width="16dp"
+            android:layout_height="0dp"
+            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
+            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
+            motion:transitionEasing="linear"/>
+
+        <Constraint
+            android:id="@+id/view_y"
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
+            motion:layout_constraintRight_toRightOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
+            motion:transitionEasing="linear"/>
+
+        <Constraint
+            android:id="@+id/view"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
+            motion:transitionEasing="linear"
+            motion:pathMotionArc="startVertical"/>
+    </ConstraintSet>
+
+    <Transition
+        android:id="@+id/transition_start_vertical"
+        motion:constraintSetStart="@id/start_start_vertical"
+        motion:constraintSetEnd="@+id/top_right"
+        motion:duration="10000">
+    </Transition>
+
+    <Transition
+        android:id="@+id/transition_key_position_path"
+        motion:constraintSetStart="@id/bottom_left"
+        motion:constraintSetEnd="@+id/top_right"
+        motion:duration="10000">
+        <KeyFrameSet>
+            <KeyPosition
+                motion:motionTarget="@+id/view"
+                motion:framePosition="10"
+                motion:percentX="0.1"
+                motion:percentY="0"
+                motion:keyPositionType="pathRelative"/>
+            <KeyPosition
+                motion:motionTarget="@+id/view"
+                motion:framePosition="20"
+                motion:percentX="0.2"
+                motion:percentY="-0.2"
+                motion:keyPositionType="pathRelative"/>
+            <KeyPosition
+                motion:motionTarget="@+id/view"
+                motion:framePosition="30"
+                motion:percentX="0.3"
+                motion:percentY="0.3"
+                motion:keyPositionType="pathRelative"/>
+            <KeyPosition
+                motion:motionTarget="@+id/view"
+                motion:framePosition="40"
+                motion:percentX="0.4"
+                motion:percentY="-0.4"
+                motion:keyPositionType="pathRelative"/>
+            <KeyPosition
+                motion:motionTarget="@+id/view"
+                motion:framePosition="50"
+                motion:percentX="0.5"
+                motion:percentY="0.5"
+                motion:keyPositionType="pathRelative"/>
+            <KeyPosition
+                motion:motionTarget="@+id/view"
+                motion:framePosition="60"
+                motion:percentX="0.6"
+                motion:percentY="-0.4"
+                motion:keyPositionType="pathRelative"/>
+            <KeyPosition
+                motion:motionTarget="@+id/view"
+                motion:framePosition="70"
+                motion:percentX="0.7"
+                motion:percentY="0.3"
+                motion:keyPositionType="pathRelative"/>
+            <KeyPosition
+                motion:motionTarget="@+id/view"
+                motion:framePosition="80"
+                motion:percentX="0.8"
+                motion:percentY="-0.2"
+                motion:keyPositionType="pathRelative"/>
+            <KeyPosition
+                motion:motionTarget="@+id/view"
+                motion:framePosition="90"
+                motion:percentX="0.9"
+                motion:percentY="0"
+                motion:keyPositionType="pathRelative"/>
+        </KeyFrameSet>
+    </Transition>
+
+    <Transition
+        android:id="@+id/transition_key_position_delta"
+        motion:constraintSetStart="@id/bottom_left"
+        motion:constraintSetEnd="@+id/top_right"
+        motion:duration="10000">
+        <KeyFrameSet>
+            <KeyPosition
+                motion:motionTarget="@+id/view"
+                motion:framePosition="10"
+                motion:percentX="0.1"
+                motion:percentY="0"
+                motion:keyPositionType="deltaRelative"/>
+            <KeyPosition
+                motion:motionTarget="@+id/view"
+                motion:framePosition="20"
+                motion:percentX="0.2"
+                motion:percentY="-0.2"
+                motion:keyPositionType="deltaRelative"/>
+            <KeyPosition
+                motion:motionTarget="@+id/view"
+                motion:framePosition="30"
+                motion:percentX="0.3"
+                motion:percentY="0.3"
+                motion:keyPositionType="deltaRelative"/>
+            <KeyPosition
+                motion:motionTarget="@+id/view"
+                motion:framePosition="40"
+                motion:percentX="0.4"
+                motion:percentY="-0.4"
+                motion:keyPositionType="deltaRelative"/>
+            <KeyPosition
+                motion:motionTarget="@+id/view"
+                motion:framePosition="50"
+                motion:percentX="0.5"
+                motion:percentY="0.5"
+                motion:keyPositionType="deltaRelative"/>
+            <KeyPosition
+                motion:motionTarget="@+id/view"
+                motion:framePosition="60"
+                motion:percentX="0.6"
+                motion:percentY="-0.4"
+                motion:keyPositionType="deltaRelative"/>
+            <KeyPosition
+                motion:motionTarget="@+id/view"
+                motion:framePosition="70"
+                motion:percentX="0.7"
+                motion:percentY="0.4"
+                motion:keyPositionType="deltaRelative"/>
+            <KeyPosition
+                motion:motionTarget="@+id/view"
+                motion:framePosition="80"
+                motion:percentX="0.8"
+                motion:percentY="-0.2"
+                motion:keyPositionType="deltaRelative"/>
+            <KeyPosition
+                motion:motionTarget="@+id/view"
+                motion:framePosition="90"
+                motion:percentX="0.9"
+                motion:percentY="0"
+                motion:keyPositionType="deltaRelative"/>
+        </KeyFrameSet>
+    </Transition>
+
+    <Transition
+        android:id="@+id/transition_key_position_parent"
+        motion:constraintSetStart="@id/bottom_left"
+        motion:constraintSetEnd="@+id/top_right"
+        motion:duration="10000">
+        <KeyFrameSet>
+            <KeyPosition
+                motion:motionTarget="@+id/view"
+                motion:framePosition="10"
+                motion:percentX="0.1"
+                motion:percentY="0"
+                motion:keyPositionType="parentRelative"/>
+            <KeyPosition
+                motion:motionTarget="@+id/view"
+                motion:framePosition="20"
+                motion:percentX="0.2"
+                motion:percentY="0.4"
+                motion:keyPositionType="parentRelative"/>
+            <KeyPosition
+                motion:motionTarget="@+id/view"
+                motion:framePosition="30"
+                motion:percentX="0.3"
+                motion:percentY="0.8"
+                motion:keyPositionType="parentRelative"/>
+            <KeyPosition
+                motion:motionTarget="@+id/view"
+                motion:framePosition="40"
+                motion:percentX="0.4"
+                motion:percentY="1"
+                motion:keyPositionType="parentRelative"/>
+            <KeyPosition
+                motion:motionTarget="@+id/view"
+                motion:framePosition="50"
+                motion:percentX="0.5"
+                motion:percentY="0.3"
+                motion:keyPositionType="parentRelative"/>
+            <KeyPosition
+                motion:motionTarget="@+id/view"
+                motion:framePosition="60"
+                motion:percentX="0.6"
+                motion:percentY="1"
+                motion:keyPositionType="parentRelative"/>
+            <KeyPosition
+                motion:motionTarget="@+id/view"
+                motion:framePosition="70"
+                motion:percentX="0.7"
+                motion:percentY="0.8"
+                motion:keyPositionType="parentRelative"/>
+            <KeyPosition
+                motion:motionTarget="@+id/view"
+                motion:framePosition="80"
+                motion:percentX="0.8"
+                motion:percentY="0.4"
+                motion:keyPositionType="parentRelative"/>
+            <KeyPosition
+                motion:motionTarget="@+id/view"
+                motion:framePosition="90"
+                motion:percentX="0.9"
+                motion:percentY="0"
+                motion:keyPositionType="parentRelative"/>
+        </KeyFrameSet>
+    </Transition>
+
+
+    <ConstraintSet android:id="@+id/attribute_center_left">
+        <Constraint
+            android:id="@+id/view_x"
+            android:layout_width="16dp"
+            android:layout_height="0dp"
+            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
+            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
+            motion:transitionEasing="linear"/>
+
+        <Constraint
+            android:id="@+id/view_y"
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
+            motion:layout_constraintRight_toRightOf="@id/grid_image_view"
+            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
+            motion:transitionEasing="linear"/>
+
+        <Constraint
+            android:id="@+id/view"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
+            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
+            motion:transitionEasing="linear"
+            android:translationY="-48dp"
+            android:scaleY="0.5"
+            android:scaleX="2">
+            <CustomAttribute
+                motion:attributeName="backgroundColor"
+                motion:customColorValue="#000000"/>
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/attribute_center_right">
+        <Constraint
+            android:id="@+id/view_x"
+            android:layout_width="16dp"
+            android:layout_height="0dp"
+            motion:layout_constraintRight_toRightOf="@id/grid_image_view"
+            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"/>
+
+        <Constraint
+            android:id="@+id/view_y"
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
+            motion:layout_constraintRight_toRightOf="@id/grid_image_view"
+            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"/>
+
+        <Constraint
+            android:id="@+id/view"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            motion:layout_constraintRight_toRightOf="@id/grid_image_view"
+            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
+            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
+            android:translationY="48dp"
+            android:scaleY="2"
+            android:scaleX="0.5">
+            <CustomAttribute
+                motion:attributeName="backgroundColor"
+                motion:customColorValue="#FF00FF"/>
+        </Constraint>
+    </ConstraintSet>
+
+    <Transition
+        android:id="@+id/transition_constraint_attribute"
+        motion:constraintSetStart="@id/attribute_center_left"
+        motion:constraintSetEnd="@+id/attribute_center_right"
+        motion:duration="10000">
+    </Transition>
+
+    <Transition
+        android:id="@+id/transition_key_frame_set_attribute"
+        motion:constraintSetStart="@id/center_left"
+        motion:constraintSetEnd="@+id/center_right"
+        motion:duration="10000">
+        <KeyFrameSet>
+            <KeyAttribute
+                motion:motionTarget="@+id/view"
+                motion:framePosition="20"
+                android:scaleX="2"
+                android:scaleY="2"
+                android:rotation="45"
+                android:translationY="20dp">
+                <CustomAttribute
+                    motion:attributeName="backgroundColor"
+                    motion:customColorValue="#FF00FF"/>
+            </KeyAttribute>
+            <KeyAttribute
+                motion:motionTarget="@+id/view"
+                motion:framePosition="40"
+                android:scaleX="0.5"
+                android:scaleY="0.5"
+                android:rotation="-45"
+                android:translationY="30dp">
+                <CustomAttribute
+                    motion:attributeName="backgroundColor"
+                    motion:customColorValue="#000000"/>
+            </KeyAttribute>
+            <KeyAttribute
+                motion:motionTarget="@+id/view"
+                motion:framePosition="60"
+                android:scaleX="2"
+                android:scaleY="2"
+                android:rotation="45"
+                android:translationY="30dp">
+                <CustomAttribute
+                    motion:attributeName="backgroundColor"
+                    motion:customColorValue="#FF00FF"/>
+            </KeyAttribute>
+            <KeyAttribute
+                motion:motionTarget="@+id/view"
+                motion:framePosition="80"
+                android:scaleX="0.5"
+                android:scaleY="0.5"
+                android:rotation="-45"
+                android:translationY="20dp">
+                <CustomAttribute
+                    motion:attributeName="backgroundColor"
+                    motion:customColorValue="#000000"/>
+            </KeyAttribute>
+        </KeyFrameSet>
+    </Transition>
+
+    <Transition
+        android:id="@+id/transition_key_cycle"
+        motion:constraintSetStart="@id/center_left"
+        motion:constraintSetEnd="@+id/center_right"
+        motion:duration="10000">
+        <KeyFrameSet>
+            <KeyCycle
+                motion:motionTarget="@+id/view"
+                motion:framePosition="0"
+                motion:waveShape="sawtooth"
+                motion:wavePeriod="5"
+                android:rotation="180"/>
+
+            <KeyCycle
+                motion:motionTarget="@+id/view"
+                motion:framePosition="0"
+                motion:waveShape="sin"
+                motion:wavePeriod="5"
+                android:translationY="64dp"/>
+
+            <KeyCycle
+                motion:motionTarget="@+id/view"
+                motion:framePosition="0"
+                motion:waveShape="cos"
+                motion:wavePeriod="5"
+                android:scaleX="2"
+                android:scaleY="2"/>
+
+        </KeyFrameSet>
+    </Transition>
+
+</MotionScene>

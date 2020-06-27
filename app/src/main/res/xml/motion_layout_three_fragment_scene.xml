@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        android:id="@+id/transition_start"
+        motion:constraintSetStart="@id/start"
+        motion:constraintSetEnd="@+id/end"
+        motion:duration="10000"
+        motion:autoTransition="animateToEnd">
+        <KeyFrameSet >
+
+            <KeyPosition
+                motion:motionTarget="@+id/bg_image_view_0101"
+                motion:framePosition="25"
+                motion:keyPositionType="parentRelative"
+                motion:pathMotionArc="flip"
+                motion:percentX="0.2"
+                motion:percentY="0.05"/>
+            <KeyAttribute
+                motion:motionTarget="@+id/bg_image_view_0101"
+                motion:framePosition="25"
+                android:alpha="1"
+                android:rotationX="0"
+                android:rotationY="0"
+                android:scaleX="1"
+                android:scaleY="1"/>
+            <KeyPosition
+                motion:motionTarget="@+id/bg_image_view_0101"
+                motion:framePosition="50"
+                motion:keyPositionType="parentRelative"
+                motion:pathMotionArc="flip"
+                motion:percentX="0.3"
+                motion:percentY="0.3"/>
+            <KeyAttribute
+                motion:motionTarget="@+id/bg_image_view_0101"
+                motion:framePosition="50"
+                android:alpha="1"
+                android:rotationX="30"
+                android:rotationY="60"
+                android:scaleX="0.5"
+                android:scaleY="1.5"/>
+            <KeyPosition
+                motion:motionTarget="@+id/bg_image_view_0101"
+                motion:framePosition="75"
+                motion:keyPositionType="parentRelative"
+                motion:pathMotionArc="flip"
+                motion:percentX="0.05"
+                motion:percentY="0.2"/>
+            <KeyAttribute
+                motion:motionTarget="@+id/bg_image_view_0101"
+                motion:framePosition="75"
+                android:alpha="0.2"
+                android:rotationX="60"
+                android:rotationY="30"
+                android:scaleX="1.5"
+                android:scaleY="0.5"/>
+
+            <KeyPosition
+                motion:motionTarget="@+id/bg_image_view_0102"
+                motion:framePosition="25"
+                motion:keyPositionType="parentRelative"
+                motion:pathMotionArc="flip"
+                motion:percentX="0.4"
+                motion:percentY="0.2"/>
+            <KeyAttribute
+                motion:motionTarget="@+id/bg_image_view_0102"
+                motion:framePosition="25"
+                android:alpha="1"
+                android:scaleX="1"
+                android:scaleY="1"/>
+            <KeyPosition
+                motion:motionTarget="@+id/bg_image_view_0102"
+                motion:framePosition="50"
+                motion:keyPositionType="parentRelative"
+                motion:pathMotionArc="flip"
+                motion:percentX="0.5"
+                motion:percentY="0.3"/>
+            <KeyAttribute
+                motion:motionTarget="@+id/bg_image_view_0102"
+                motion:framePosition="50"
+                android:alpha="1"
+                android:scaleX="2"
+                android:scaleY="2"/>
+            <KeyPosition
+                motion:motionTarget="@+id/bg_image_view_0102"
+                motion:framePosition="75"
+                motion:keyPositionType="parentRelative"
+                motion:pathMotionArc="flip"
+                motion:percentX="0.6"
+                motion:percentY="0.2"/>
+            <KeyAttribute
+                motion:motionTarget="@+id/bg_image_view_0102"
+                motion:framePosition="75"
+                android:alpha="0.2"
+                android:scaleX="1.5"
+                android:scaleY="1.5"/>
+
+
+            <KeyPosition
+                motion:motionTarget="@+id/bg_image_view_0103"
+                motion:framePosition="25"
+                motion:keyPositionType="parentRelative"
+                motion:pathMotionArc="flip"
+                motion:percentX="0.9"
+                motion:percentY="0.2"/>
+            <KeyAttribute
+                motion:motionTarget="@+id/bg_image_view_0103"
+                motion:framePosition="25"
+                android:alpha="1"
+                android:scaleX="1"
+                android:scaleY="1"/>
+            <KeyPosition
+                motion:motionTarget="@+id/bg_image_view_0103"
+                motion:framePosition="50"
+                motion:keyPositionType="parentRelative"
+                motion:pathMotionArc="flip"
+                motion:percentX="0.8"
+                motion:percentY="0.4"/>
+            <KeyAttribute
+                motion:motionTarget="@+id/bg_image_view_0103"
+                motion:framePosition="50"
+                android:alpha="1"
+                android:scaleX="2"
+                android:scaleY="2"/>
+            <KeyPosition
+                motion:motionTarget="@+id/bg_image_view_0103"
+                motion:framePosition="75"
+                motion:keyPositionType="parentRelative"
+                motion:pathMotionArc="flip"
+                motion:percentX="0.7"
+                motion:percentY="0.2"/>
+            <KeyAttribute
+                motion:motionTarget="@+id/bg_image_view_0103"
+                motion:framePosition="75"
+                android:alpha="0.2"
+                android:scaleX="1.5"
+                android:scaleY="1.5"/>
+
+
+            <KeyAttribute
+                motion:motionTarget="@+id/bg_image_view_0201"
+                motion:framePosition="25"
+                android:alpha="0.5"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:translationX="48dp"
+                android:translationY="-48dp"/>
+            <KeyAttribute
+                motion:motionTarget="@+id/bg_image_view_0201"
+                motion:framePosition="50"
+                android:alpha="1"
+                android:scaleX="2"
+                android:scaleY="2"
+                android:rotation="45"
+                android:translationX="36dp"
+                android:translationY="0dp"/>
+            <KeyAttribute
+                motion:motionTarget="@+id/bg_image_view_0201"
+                motion:framePosition="75"
+                android:alpha="0.2"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:translationX="-24dp"
+                android:translationY="24dp"/>
+
+
+            <KeyAttribute
+                motion:motionTarget="@+id/bg_image_view_0202"
+                motion:framePosition="25"
+                android:alpha="1"
+                android:scaleX="2"
+                android:scaleY="2"
+                android:translationX="-24dp"
+                android:translationY="-36dp"/>
+            <KeyAttribute
+                motion:motionTarget="@+id/bg_image_view_0202"
+                motion:framePosition="50"
+                android:alpha="0.2"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:rotation="180"
+                android:translationX="24dp"
+                android:translationY="-12dp"/>
+            <KeyAttribute
+                motion:motionTarget="@+id/bg_image_view_0202"
+                motion:framePosition="75"
+                android:alpha="0.8"
+                android:scaleX="2"
+                android:scaleY="2"
+                android:translationX="24dp"
+                android:translationY="64dp"/>
+
+            <KeyAttribute
+                motion:motionTarget="@+id/bg_image_view_0203"
+                motion:framePosition="25"
+                android:alpha="1"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:rotationY="45"
+                android:translationX="24dp"
+                android:translationY="36dp"/>
+            <KeyAttribute
+                motion:motionTarget="@+id/bg_image_view_0203"
+                motion:framePosition="50"
+                android:alpha="0.2"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:rotation="120"
+                android:translationX="24dp"
+                android:translationY="64dp"/>
+            <KeyAttribute
+                motion:motionTarget="@+id/bg_image_view_0203"
+                motion:framePosition="75"
+                android:alpha="0.8"
+                android:scaleX="0.5"
+                android:scaleY="0.5"
+                android:translationX="-48dp"
+                android:translationY="-12dp"/>
+
+
+            <KeyCycle
+                motion:motionTarget="@+id/bg_image_view_0301"
+                motion:framePosition="0"
+                motion:waveShape="reverseSawtooth"
+                motion:wavePeriod="1"
+                android:translationY="48dp"
+                android:translationX="36dp"
+                android:rotationY="90"/>
+            <KeyAttribute
+                motion:motionTarget="@+id/bg_image_view_0301"
+                motion:framePosition="50"
+                android:alpha="0.3"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:translationX="-6dp"
+                android:translationY="-12dp"/>
+
+            <KeyCycle
+                motion:motionTarget="@+id/bg_image_view_0302"
+                motion:framePosition="0"
+                motion:waveShape="sin"
+                motion:wavePeriod="1"
+                android:translationY="48dp"/>
+            <KeyCycle
+                motion:motionTarget="@+id/bg_image_view_0302"
+                motion:framePosition="0"
+                motion:waveShape="cos"
+                motion:wavePeriod="1"
+                android:translationX="36dp"/>
+            <KeyAttribute
+                motion:motionTarget="@+id/bg_image_view_0302"
+                motion:framePosition="50"
+                android:alpha="0.3"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:translationX="6dp"
+                android:translationY="6dp"/>
+
+
+            <KeyCycle
+                motion:motionTarget="@+id/bg_image_view_0303"
+                motion:framePosition="0"
+                motion:waveShape="sawtooth"
+                motion:wavePeriod="1"
+                android:translationY="48dp"
+                android:translationX="36dp"
+                android:rotationY="90"/>
+            <KeyAttribute
+                motion:motionTarget="@+id/bg_image_view_0303"
+                motion:framePosition="50"
+                android:alpha="0.3"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:translationX="-6dp"
+                android:translationY="6dp"/>
+
+
+            <KeyAttribute
+                motion:motionTarget="@+id/back_view"
+                motion:framePosition="0"
+                android:scaleX="0"/>
+
+            <KeyAttribute
+                motion:motionTarget="@+id/back_view"
+                motion:framePosition="25"
+                android:scaleX="0"/>
+
+            <KeyAttribute
+                motion:motionTarget="@+id/back_view"
+                motion:framePosition="35"
+                android:scaleX="1"/>
+
+
+            <KeyAttribute
+                motion:motionTarget="@+id/line_view"
+                motion:framePosition="0"
+                android:scaleX="0"/>
+
+            <KeyAttribute
+                motion:motionTarget="@+id/line_view"
+                motion:framePosition="30"
+                android:scaleX="0"/>
+
+            <KeyAttribute
+                motion:motionTarget="@+id/line_view"
+                motion:framePosition="40"
+                android:scaleX="1"/>
+
+
+            <KeyAttribute
+                motion:motionTarget="@+id/title_text_view_g"
+                motion:framePosition="0"
+                android:alpha="0"
+                android:translationY="-150dp"/>
+
+            <KeyAttribute
+                motion:motionTarget="@+id/title_text_view_g"
+                motion:framePosition="40"
+                android:alpha="0"
+                android:translationY="-150dp"/>
+
+            <KeyCycle
+                motion:motionTarget="@+id/title_text_view_g"
+                motion:framePosition="40"
+                motion:waveShape="sin"
+                motion:wavePeriod="1"
+                android:translationY="-100dp"/>
+
+
+            <KeyAttribute
+                motion:motionTarget="@+id/title_text_view_p"
+                motion:framePosition="0"
+                android:alpha="0"
+                android:translationY="-100dp"/>
+
+            <KeyAttribute
+                motion:motionTarget="@+id/title_text_view_p"
+                motion:framePosition="40"
+                android:alpha="0"
+                android:translationY="-100dp"/>
+
+            <KeyCycle
+                motion:motionTarget="@+id/title_text_view_p"
+                motion:framePosition="40"
+                motion:waveShape="sin"
+                motion:wavePeriod="1"
+                android:translationY="-100dp"/>
+
+
+
+            <KeyAttribute
+                motion:motionTarget="@+id/title_text_view_001"
+                motion:framePosition="0"
+                android:alpha="0"
+                android:translationY="100dp"/>
+
+            <KeyAttribute
+                motion:motionTarget="@+id/title_text_view_001"
+                motion:framePosition="40"
+                android:alpha="0"
+                android:translationY="100dp"/>
+
+            <KeyAttribute
+                motion:motionTarget="@+id/title_text_view_002"
+                motion:framePosition="0"
+                android:alpha="0"
+                android:translationY="120dp"/>
+
+            <KeyAttribute
+                motion:motionTarget="@+id/title_text_view_002"
+                motion:framePosition="40"
+                android:alpha="0"
+                android:translationY="120dp"/>
+
+
+            <KeyAttribute
+                motion:motionTarget="@+id/title_text_view_003"
+                motion:framePosition="0"
+                android:alpha="0"
+                android:translationY="140dp"/>
+
+            <KeyAttribute
+                motion:motionTarget="@+id/title_text_view_003"
+                motion:framePosition="40"
+                android:alpha="0"
+                android:translationY="140dp"/>
+
+            <KeyAttribute
+                motion:motionTarget="@+id/title_text_view_004"
+                motion:framePosition="0"
+                android:alpha="0"
+                android:translationY="160dp"/>
+
+            <KeyAttribute
+                motion:motionTarget="@+id/title_text_view_004"
+                motion:framePosition="40"
+                android:alpha="0"
+                android:translationY="160dp"/>
+
+        </KeyFrameSet>
+    </Transition>
+
+
+
+    <ConstraintSet android:id="@+id/start">
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+    </ConstraintSet>
+</MotionScene>

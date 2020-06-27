@@ -105,6 +105,14 @@
                motion:framePosition="99"
                android:alpha="1" />
 
+           <KeyAttribute
+               motion:motionTarget="@+id/title_text_view"
+               motion:framePosition="0"
+               android:alpha="0.2" />
+           <KeyAttribute
+               motion:motionTarget="@+id/title_text_view"
+               motion:framePosition="15"
+               android:alpha="1" />
 
            <KeyAttribute
                motion:motionTarget="@+id/one_image_view"
@@ -131,8 +139,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             motion:layout_constraintLeft_toRightOf="parent"
-            motion:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="120dp" />
+            motion:layout_constraintTop_toBottomOf="@id/title_text_view"
+            android:layout_marginTop="48dp" />
         <Constraint
             android:id="@+id/two_title_text_view"
             android:layout_width="wrap_content"
@@ -169,8 +177,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             motion:layout_constraintLeft_toLeftOf="parent"
-            motion:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="120dp" />
+            motion:layout_constraintTop_toBottomOf="@id/title_text_view"
+            android:layout_marginTop="48dp" />
         <Constraint
             android:id="@+id/two_title_text_view"
             android:layout_width="match_parent"

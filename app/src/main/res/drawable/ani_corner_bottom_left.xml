@@ -28,9 +28,9 @@
     <target android:name="line">
         <aapt:attr name="android:animation">
             <objectAnimator
-                android:propertyName="trimPathEnd"
-                android:valueFrom =  "0"
-                android:valueTo   =  "1"
+                android:propertyName="trimPathStart"
+                android:valueFrom =  "1"
+                android:valueTo   =  "0"
                 android:duration="500"
                 android:valueType="floatType"/>
         </aapt:attr>

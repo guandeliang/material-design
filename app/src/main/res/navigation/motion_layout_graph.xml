@@ -18,6 +18,10 @@
         android:label="index"
         tools:layout="@layout/motion_layout_index_fragment">
         <action android:id="@+id/show_one" app:destination="@id/one"/>
+        <action android:id="@+id/show_two" app:destination="@id/two"/>
+        <action android:id="@+id/show_three" app:destination="@id/three"/>
+        <action android:id="@+id/show_four" app:destination="@id/four"/>
+        <action android:id="@+id/show_five" app:destination="@id/five"/>
     </fragment>
 
     <fragment
@@ -25,6 +29,34 @@
         android:name="com.jacob.material.example.motionlayout.MotionLayoutOneFragment"
         android:label="one"
         tools:layout="@layout/motion_layout_one_fragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/two"
+        android:name="com.jacob.material.example.motionlayout.MotionLayoutTwoFragment"
+        android:label="two"
+        tools:layout="@layout/motion_layout_two_fragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/three"
+        android:name="com.jacob.material.example.motionlayout.MotionLayoutThreeFragment"
+        android:label="three"
+        tools:layout="@layout/motion_layout_three_fragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/four"
+        android:name="com.jacob.material.example.motionlayout.MotionLayoutFourFragment"
+        android:label="four"
+        tools:layout="@layout/motion_layout_four_fragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/five"
+        android:name="com.jacob.material.example.motionlayout.MotionLayoutFiveFragment"
+        android:label="four"
+        tools:layout="@layout/motion_layout_five_fragment">
     </fragment>
 
 </navigation>
