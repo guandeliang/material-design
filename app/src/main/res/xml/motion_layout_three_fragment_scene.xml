@@ -10,7 +10,6 @@
         motion:duration="10000"
         motion:autoTransition="animateToEnd">
         <KeyFrameSet >
-
             <KeyPosition
                 motion:motionTarget="@+id/bg_image_view_0101"
                 motion:framePosition="25"
@@ -222,7 +221,7 @@
 
             <KeyCycle
                 motion:motionTarget="@+id/bg_image_view_0301"
-                motion:framePosition="0"
+                motion:framePosition="1"
                 motion:waveShape="reverseSawtooth"
                 motion:wavePeriod="1"
                 android:translationY="48dp"
@@ -239,13 +238,13 @@
 
             <KeyCycle
                 motion:motionTarget="@+id/bg_image_view_0302"
-                motion:framePosition="0"
+                motion:framePosition="1"
                 motion:waveShape="sin"
                 motion:wavePeriod="1"
                 android:translationY="48dp"/>
             <KeyCycle
                 motion:motionTarget="@+id/bg_image_view_0302"
-                motion:framePosition="0"
+                motion:framePosition="1"
                 motion:waveShape="cos"
                 motion:wavePeriod="1"
                 android:translationX="36dp"/>
@@ -261,7 +260,7 @@
 
             <KeyCycle
                 motion:motionTarget="@+id/bg_image_view_0303"
-                motion:framePosition="0"
+                motion:framePosition="1"
                 motion:waveShape="sawtooth"
                 motion:wavePeriod="1"
                 android:translationY="48dp"
@@ -279,7 +278,7 @@
 
             <KeyAttribute
                 motion:motionTarget="@+id/back_view"
-                motion:framePosition="0"
+                motion:framePosition="1"
                 android:scaleX="0"/>
 
             <KeyAttribute
@@ -295,7 +294,7 @@
 
             <KeyAttribute
                 motion:motionTarget="@+id/line_view"
-                motion:framePosition="0"
+                motion:framePosition="1"
                 android:scaleX="0"/>
 
             <KeyAttribute
@@ -311,7 +310,7 @@
 
             <KeyAttribute
                 motion:motionTarget="@+id/title_text_view_g"
-                motion:framePosition="0"
+                motion:framePosition="1"
                 android:alpha="0"
                 android:translationY="-150dp"/>
 
@@ -331,7 +330,7 @@
 
             <KeyAttribute
                 motion:motionTarget="@+id/title_text_view_p"
-                motion:framePosition="0"
+                motion:framePosition="1"
                 android:alpha="0"
                 android:translationY="-100dp"/>
 
@@ -352,7 +351,7 @@
 
             <KeyAttribute
                 motion:motionTarget="@+id/title_text_view_001"
-                motion:framePosition="0"
+                motion:framePosition="1"
                 android:alpha="0"
                 android:translationY="100dp"/>
 
@@ -364,7 +363,7 @@
 
             <KeyAttribute
                 motion:motionTarget="@+id/title_text_view_002"
-                motion:framePosition="0"
+                motion:framePosition="1"
                 android:alpha="0"
                 android:translationY="120dp"/>
 
@@ -377,7 +376,7 @@
 
             <KeyAttribute
                 motion:motionTarget="@+id/title_text_view_003"
-                motion:framePosition="0"
+                motion:framePosition="1"
                 android:alpha="0"
                 android:translationY="140dp"/>
 
@@ -389,7 +388,7 @@
 
             <KeyAttribute
                 motion:motionTarget="@+id/title_text_view_004"
-                motion:framePosition="0"
+                motion:framePosition="1"
                 android:alpha="0"
                 android:translationY="160dp"/>
 

@@ -42,13 +42,13 @@ class MotionLayoutOneFragment : Fragment(), LifecycleObserver {
         override fun onTransitionTrigger(motionLayout: MotionLayout?, triggerId: Int, positive: Boolean, progress: Float) {
             if(triggerId == R.id.motion_triger_top_right_image_view){
                 binding.topRightImageView.alpha = 1f
-                var aniImageView: AnimatedVectorDrawable = binding.topRightImageView.drawable as AnimatedVectorDrawable
+                val aniImageView: AnimatedVectorDrawable = binding.topRightImageView.drawable as AnimatedVectorDrawable
                 aniImageView.start()
 
             }
             if(triggerId == R.id.motion_triger_bottom_left_image_view){
                 binding.bottomLeftImageView.alpha = 1f
-                var aniImageView: AnimatedVectorDrawable = binding.bottomLeftImageView.drawable as AnimatedVectorDrawable
+                val aniImageView: AnimatedVectorDrawable = binding.bottomLeftImageView.drawable as AnimatedVectorDrawable
                 aniImageView.start()
             }
 

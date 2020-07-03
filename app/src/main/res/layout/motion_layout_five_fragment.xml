@@ -8,7 +8,7 @@
         android:layout_height="match_parent"
         android:paddingTop="36dp"
         app:layoutDescription="@xml/motion_layout_five_fragment_scene"
-        app:motionDebug="SHOW_ALL">
+        app:motionDebug="SHOW_PATH">
 
         <ImageView
             android:id="@+id/grid_image_view"

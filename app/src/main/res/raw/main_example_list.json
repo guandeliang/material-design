@@ -17,6 +17,11 @@
       },
       {
         "id":10001030,
+        "title":"Motion Layout Intro",
+        "path":"com.jacob.material.example.motionlayout.MotionLayoutIntroActivity"
+      },
+      {
+        "id":10001040,
         "title":"Motion Layout",
         "path":"com.jacob.material.example.motionlayout.MotionLayoutActivity"
       }

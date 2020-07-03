@@ -12,7 +12,7 @@
        <KeyFrameSet>
            <KeyAttribute
                motion:motionTarget="@+id/top_back_view"
-               motion:framePosition="0"
+               motion:framePosition="1"
                android:alpha="0"/>
            <KeyAttribute
                motion:motionTarget="@+id/top_back_view"
@@ -21,7 +21,7 @@
 
            <KeyAttribute
                motion:motionTarget="@+id/bottom_back_view"
-               motion:framePosition="0"
+               motion:framePosition="1"
                android:alpha="0"/>
            <KeyAttribute
                motion:motionTarget="@+id/bottom_back_view"
@@ -32,6 +32,7 @@
                motion:triggerId="@+id/trigger_001"
                motion:motionTarget="@+id/image_view_001"
                motion:framePosition="5"/>
+
            <KeyAttribute
                motion:motionTarget="@+id/title_text_view"
                motion:framePosition="0"

@@ -9,77 +9,112 @@
         motion:duration="2000"
         motion:autoTransition="animateToEnd">
        <KeyFrameSet>
+           <KeyAttribute
+               motion:motionTarget="@+id/title_text_view"
+               motion:framePosition="1"
+               android:alpha="0.2" />
+           <KeyAttribute
+               motion:motionTarget="@+id/title_text_view"
+               motion:framePosition="15"
+               android:alpha="1" />
+
+           <KeyAttribute
+               motion:motionTarget="@+id/one_image_view"
+               motion:framePosition="1"
+               android:alpha="0.2" />
+           <KeyAttribute
+               motion:motionTarget="@+id/one_image_view"
+               motion:framePosition="15"
+               android:alpha="1" />
+
+           <KeyAttribute
+               motion:motionTarget="@+id/two_image_view"
+               motion:framePosition="1"
+               android:alpha="0.2" />
+           <KeyAttribute
+               motion:motionTarget="@+id/two_image_view"
+               motion:framePosition="15"
+               android:alpha="1" />
+
+
            <KeyPosition
                motion:motionTarget="@+id/one_title_text_view"
                motion:framePosition="1"
                motion:percentX="0"
                motion:percentY="0" />
-           <KeyAttribute
-               motion:motionTarget="@+id/one_title_text_view"
-               motion:framePosition="0"
-               android:alpha="0.2" />
            <KeyPosition
                motion:motionTarget="@+id/one_title_text_view"
                motion:framePosition="33"
                motion:percentX="1"
                motion:percentY="1" />
+
+           <KeyAttribute
+               motion:motionTarget="@+id/one_title_text_view"
+               motion:framePosition="1"
+               android:alpha="0.2" />
            <KeyAttribute
                motion:motionTarget="@+id/one_title_text_view"
                motion:framePosition="33"
                android:alpha="1" />
+
 
            <KeyPosition
                motion:motionTarget="@+id/two_title_text_view"
                motion:framePosition="16"
                motion:percentX="0"
                motion:percentY="0" />
+           <KeyPosition
+               motion:motionTarget="@+id/two_title_text_view"
+               motion:framePosition="50"
+               motion:percentX="1"
+               motion:percentY="1" />
+
            <KeyAttribute
                motion:motionTarget="@+id/two_title_text_view"
                motion:framePosition="16"
                android:alpha="0.2" />
-           <KeyPosition
-               motion:motionTarget="@+id/two_title_text_view"
-               motion:framePosition="50"
-               motion:percentX="1"
-               motion:percentY="1" />
            <KeyAttribute
                motion:motionTarget="@+id/two_title_text_view"
                motion:framePosition="50"
                android:alpha="1" />
+
 
            <KeyPosition
                motion:motionTarget="@+id/three_title_text_view"
                motion:framePosition="33"
                motion:percentX="0"
                motion:percentY="0" />
+           <KeyPosition
+               motion:motionTarget="@+id/three_title_text_view"
+               motion:framePosition="66"
+               motion:percentX="1"
+               motion:percentY="1" />
+
            <KeyAttribute
                motion:motionTarget="@+id/three_title_text_view"
                motion:framePosition="33"
                android:alpha="0.2" />
-           <KeyPosition
-               motion:motionTarget="@+id/three_title_text_view"
-               motion:framePosition="66"
-               motion:percentX="1"
-               motion:percentY="1" />
            <KeyAttribute
                motion:motionTarget="@+id/three_title_text_view"
                motion:framePosition="66"
                android:alpha="1" />
+
 
            <KeyPosition
                motion:motionTarget="@+id/four_title_text_view"
                motion:framePosition="50"
                motion:percentX="0"
                motion:percentY="0" />
-           <KeyAttribute
-               motion:motionTarget="@+id/four_title_text_view"
-               motion:framePosition="50"
-               android:alpha="0.2" />
            <KeyPosition
                motion:motionTarget="@+id/four_title_text_view"
                motion:framePosition="83"
                motion:percentX="1"
                motion:percentY="1" />
+
+           <KeyAttribute
+               motion:motionTarget="@+id/four_title_text_view"
+               motion:framePosition="50"
+               android:alpha="0.2" />
            <KeyAttribute
                motion:motionTarget="@+id/four_title_text_view"
                motion:framePosition="83"
@@ -91,44 +126,19 @@
                motion:framePosition="66"
                motion:percentX="0"
                motion:percentY="0" />
-           <KeyAttribute
-               motion:motionTarget="@+id/five_title_text_view"
-               motion:framePosition="66"
-               android:alpha="0.2" />
            <KeyPosition
                motion:motionTarget="@+id/five_title_text_view"
                motion:framePosition="99"
                motion:percentX="1"
                motion:percentY="1" />
+
+           <KeyAttribute
+               motion:motionTarget="@+id/five_title_text_view"
+               motion:framePosition="66"
+               android:alpha="0.2" />
            <KeyAttribute
                motion:motionTarget="@+id/five_title_text_view"
                motion:framePosition="99"
-               android:alpha="1" />
-
-           <KeyAttribute
-               motion:motionTarget="@+id/title_text_view"
-               motion:framePosition="0"
-               android:alpha="0.2" />
-           <KeyAttribute
-               motion:motionTarget="@+id/title_text_view"
-               motion:framePosition="15"
-               android:alpha="1" />
-
-           <KeyAttribute
-               motion:motionTarget="@+id/one_image_view"
-               motion:framePosition="0"
-               android:alpha="0.2" />
-           <KeyAttribute
-               motion:motionTarget="@+id/one_image_view"
-               motion:framePosition="15"
-               android:alpha="1" />
-           <KeyAttribute
-               motion:motionTarget="@+id/two_image_view"
-               motion:framePosition="0"
-               android:alpha="0.2" />
-           <KeyAttribute
-               motion:motionTarget="@+id/two_image_view"
-               motion:framePosition="15"
                android:alpha="1" />
        </KeyFrameSet>
     </Transition>

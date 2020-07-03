@@ -665,21 +665,21 @@
         <KeyFrameSet>
             <KeyCycle
                 motion:motionTarget="@+id/view"
-                motion:framePosition="0"
+                motion:framePosition="1"
                 motion:waveShape="sawtooth"
                 motion:wavePeriod="5"
                 android:rotation="180"/>
 
             <KeyCycle
                 motion:motionTarget="@+id/view"
-                motion:framePosition="0"
+                motion:framePosition="1"
                 motion:waveShape="sin"
                 motion:wavePeriod="5"
                 android:translationY="64dp"/>
 
             <KeyCycle
                 motion:motionTarget="@+id/view"
-                motion:framePosition="0"
+                motion:framePosition="1"
                 motion:waveShape="cos"
                 motion:wavePeriod="5"
                 android:scaleX="2"
