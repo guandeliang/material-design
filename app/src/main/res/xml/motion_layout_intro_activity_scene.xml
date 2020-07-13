@@ -22,7 +22,7 @@
 
             <KeyAttribute
                 motion:motionTarget="@id/image_view"
-                motion:framePosition="1"
+                motion:framePosition="0"
                 android:rotation="-90"/>
 
             <KeyAttribute
@@ -32,7 +32,7 @@
 
             <KeyAttribute
                 motion:motionTarget="@id/image_view"
-                motion:framePosition="99"
+                motion:framePosition="100"
                 android:rotation="90"/>
         </KeyFrameSet>
 

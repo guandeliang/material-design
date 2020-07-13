@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="10000"
+        motion:autoTransition="animateToEnd">
+        <KeyFrameSet>
+            <KeyAttribute
+                motion:motionTarget="@id/rotation_image_view"
+                motion:framePosition="0"
+                android:rotation="0"/>
+            <KeyAttribute
+                motion:motionTarget="@id/rotation_image_view"
+                motion:framePosition="100"
+                android:rotation="720"/>
+
+            <KeyAttribute
+                motion:motionTarget="@id/rotation_x_image_view"
+                motion:framePosition="0"
+                android:rotationX="0"/>
+            <KeyAttribute
+                motion:motionTarget="@id/rotation_x_image_view"
+                motion:framePosition="100"
+                android:rotationX="720"/>
+
+            <KeyAttribute
+                motion:motionTarget="@id/rotation_y_image_view"
+                motion:framePosition="0"
+                android:rotationY="0"/>
+            <KeyAttribute
+                motion:motionTarget="@id/rotation_y_image_view"
+                motion:framePosition="100"
+                android:rotationY="720"/>
+
+            <KeyPosition
+                motion:motionTarget="@id/rotation_path_image_view"
+                motion:framePosition="25"
+                motion:percentX="0.25"
+                motion:percentY="-0.2"
+                motion:keyPositionType="pathRelative"/>
+            <KeyPosition
+                motion:motionTarget="@id/rotation_path_image_view"
+                motion:framePosition="50"
+                motion:percentX="0.5"
+                motion:percentY="0"
+                motion:keyPositionType="pathRelative"/>
+
+            <KeyPosition
+                motion:motionTarget="@id/rotation_path_image_view"
+                motion:framePosition="75"
+                motion:percentX="0.75"
+                motion:percentY="0.2"
+                motion:keyPositionType="pathRelative"/>
+
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/rotation_image_view"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/top_line"
+            motion:layout_constraintBottom_toTopOf="@id/rotation_x_image_view"/>
+        <Constraint
+            android:id="@+id/rotation_x_image_view"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/rotation_image_view"
+            motion:layout_constraintBottom_toTopOf="@id/rotation_y_image_view"/>
+        <Constraint
+            android:id="@+id/rotation_y_image_view"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/rotation_x_image_view"
+            motion:layout_constraintBottom_toTopOf="@id/rotation_path_image_view"/>
+        <Constraint
+            android:id="@+id/rotation_path_image_view"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/rotation_y_image_view"
+            motion:layout_constraintBottom_toTopOf="@id/bottom_line"
+            motion:transitionPathRotate="1"/>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/rotation_image_view"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            motion:layout_constraintRight_toRightOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/top_line"
+            motion:layout_constraintBottom_toTopOf="@id/rotation_x_image_view"/>
+        <Constraint
+            android:id="@+id/rotation_x_image_view"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            motion:layout_constraintRight_toRightOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/rotation_image_view"
+            motion:layout_constraintBottom_toTopOf="@id/rotation_y_image_view"/>
+        <Constraint
+            android:id="@+id/rotation_y_image_view"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            motion:layout_constraintRight_toRightOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/rotation_x_image_view"
+            motion:layout_constraintBottom_toTopOf="@id/rotation_path_image_view"/>
+        <Constraint
+            android:id="@+id/rotation_path_image_view"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            motion:layout_constraintRight_toRightOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/rotation_y_image_view"
+            motion:layout_constraintBottom_toTopOf="@id/bottom_line"/>
+    </ConstraintSet>
+</MotionScene>

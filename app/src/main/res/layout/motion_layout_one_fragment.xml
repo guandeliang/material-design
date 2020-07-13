@@ -43,22 +43,14 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/motion_one_one"
-            app:layout_constraintDimensionRatio="H,10:16"
-            app:layout_constraintBottom_toTopOf="@id/h_center_guide_line"
-            app:layout_constraintLeft_toLeftOf="@id/left_guide_line"
-            app:layout_constraintRight_toRightOf="@id/v_center_guide_line" />
+            android:src="@drawable/motion_one_one"/>
 
         <ImageView
             android:id="@+id/two_image_view"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/motion_one_two"
-            app:layout_constraintDimensionRatio="H,10:16"
-            app:layout_constraintTop_toBottomOf="@id/h_center_guide_line"
-            app:layout_constraintLeft_toLeftOf="@id/v_center_guide_line"
-            app:layout_constraintRight_toRightOf="@id/right_guide_line" />
+            android:src="@drawable/motion_one_two"/>
 
         <TextView
             android:id="@+id/one_title_text_view"
@@ -67,11 +59,7 @@
             android:layout_marginLeft="16dp"
             android:fontFamily="@font/crimson_text_bold"
             android:text="Android App"
-            android:textAppearance="?attr/textAppearanceHeadline6"
-            app:layout_constraintVertical_chainStyle="packed"
-            app:layout_constraintTop_toTopOf="@id/one_image_view"
-            app:layout_constraintBottom_toTopOf="@id/one_sub_title_text_view"
-            app:layout_constraintLeft_toRightOf="@id/one_image_view" />
+            android:textAppearance="?attr/textAppearanceHeadline6"/>
 
         <TextView
             android:id="@+id/one_sub_title_text_view"
@@ -80,10 +68,7 @@
             android:layout_marginLeft="16dp"
             android:fontFamily="@font/crimson_text_regular"
             android:text="Material Design Book"
-            android:textAppearance="?attr/textAppearanceCaption"
-            app:layout_constraintTop_toBottomOf="@id/one_title_text_view"
-            app:layout_constraintBottom_toBottomOf="@id/one_image_view"
-            app:layout_constraintLeft_toRightOf="@id/one_image_view" />
+            android:textAppearance="?attr/textAppearanceCaption"/>
 
 
         <TextView
@@ -93,11 +78,7 @@
             android:layout_marginRight="16dp"
             android:fontFamily="@font/crimson_text_regular"
             android:text="Android App"
-            android:textAppearance="?attr/textAppearanceCaption"
-            app:layout_constraintVertical_chainStyle="packed"
-            app:layout_constraintTop_toTopOf="@id/two_image_view"
-            app:layout_constraintBottom_toTopOf="@id/two_title_text_view"
-            app:layout_constraintRight_toLeftOf="@id/two_image_view"/>
+            android:textAppearance="?attr/textAppearanceCaption"/>
 
         <TextView
             android:id="@+id/two_title_text_view"
@@ -106,10 +87,7 @@
             android:layout_marginRight="16dp"
             android:fontFamily="@font/crimson_text_bold"
             android:text="Material Design"
-            android:textAppearance="?attr/textAppearanceHeadline6"
-            app:layout_constraintTop_toBottomOf="@id/two_sub_title_text_view"
-            app:layout_constraintBottom_toBottomOf="@id/two_image_view"
-            app:layout_constraintRight_toLeftOf="@id/two_image_view"/>
+            android:textAppearance="?attr/textAppearanceHeadline6"/>
 
         <ImageView
             android:id="@+id/color_one_image_view"

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data/>
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/motion_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/motion_layout_transition_easing_fragment_scene"
+        app:motionDebug="SHOW_PATH">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/top_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="96dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bottom_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="96dp"/>
+
+
+        <TextView
+            android:id="@+id/linear_view"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:text="line"
+            android:textSize="16dp"
+            android:background="#000000"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/standard_view"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:text="standard"
+            android:textSize="16dp"
+            android:background="#FF0000"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/accelerate_view"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:text="accelerate"
+            android:textSize="16dp"
+            android:background="#00FF00"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/decelerate_view"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:text="decelerate"
+            android:textSize="16dp"
+            android:background="#0000FF"
+            android:textColor="#FFFFFF"/>
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+</layout>

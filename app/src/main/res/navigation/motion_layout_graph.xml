@@ -22,6 +22,7 @@
         <action android:id="@+id/show_three" app:destination="@id/three"/>
         <action android:id="@+id/show_four" app:destination="@id/four"/>
         <action android:id="@+id/show_five" app:destination="@id/five"/>
+        <action android:id="@+id/show_detail" app:destination="@id/detail"/>
     </fragment>
 
     <fragment
@@ -57,6 +58,45 @@
         android:name="com.jacob.material.example.motionlayout.MotionLayoutFiveFragment"
         android:label="four"
         tools:layout="@layout/motion_layout_five_fragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/detail"
+        android:name="com.jacob.material.example.motionlayout.MotionLayoutDetailFragment"
+        android:label="detail"
+        tools:layout="@layout/motion_layout_detail_fragment">
+        <action android:id="@+id/show_key_position_type" app:destination="@id/key_position_type"/>
+        <action android:id="@+id/show_transition_easing" app:destination="@id/transition_easing"/>
+        <action android:id="@+id/show_attribute_pieces" app:destination="@id/attribute_pieces"/>
+        <action android:id="@+id/show_attribute_rotation" app:destination="@id/attribute_rotation"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/key_position_type"
+        android:name="com.jacob.material.example.motionlayout.MotionLayoutKeyPositionTypeFragment"
+        android:label="key_position_type"
+        tools:layout="@layout/motion_layout_key_position_type_fragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/transition_easing"
+        android:name="com.jacob.material.example.motionlayout.MotionLayoutTransitionEasingFragment"
+        android:label="transition_easing"
+        tools:layout="@layout/motion_layout_transition_easing_fragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/attribute_pieces"
+        android:name="com.jacob.material.example.motionlayout.MotionLayoutAttributePiecesFragment"
+        android:label="attribute_pieces"
+        tools:layout="@layout/motion_layout_attribute_pieces_fragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/attribute_rotation"
+        android:name="com.jacob.material.example.motionlayout.MotionLayoutAttributeRotationFragment"
+        android:label="attribute_rotation"
+        tools:layout="@layout/motion_layout_attribute_rotation_fragment">
     </fragment>
 
 </navigation>

@@ -46,7 +46,7 @@ class MotionLayoutIndexFragment : Fragment(), LifecycleObserver {
                 Navigation.findNavController(requireActivity(), R.id.fragment_container_view).navigate(R.id.show_four)
             }
             R.id.five_title_text_view -> {
-                Navigation.findNavController(requireActivity(), R.id.fragment_container_view).navigate(R.id.show_five)
+                Navigation.findNavController(requireActivity(), R.id.fragment_container_view).navigate(R.id.show_detail)
             }
         }
     }

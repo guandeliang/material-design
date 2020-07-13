@@ -4,178 +4,185 @@
     xmlns:motion="http://schemas.android.com/apk/res-auto">
 
     <Transition
-        motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@id/start"
+        motion:constraintSetEnd="@id/end"
         motion:duration="2000"
         motion:autoTransition="animateToEnd">
        <KeyFrameSet>
            <KeyAttribute
-               motion:motionTarget="@+id/title_text_view"
-               motion:framePosition="1"
-               android:alpha="0.2" />
+               motion:motionTarget="@id/title_text_view"
+               motion:framePosition="0"
+               android:alpha="0"/>
            <KeyAttribute
-               motion:motionTarget="@+id/title_text_view"
-               motion:framePosition="15"
-               android:alpha="1" />
-
-           <KeyAttribute
-               motion:motionTarget="@+id/one_image_view"
-               motion:framePosition="1"
-               android:alpha="0.2" />
-           <KeyAttribute
-               motion:motionTarget="@+id/one_image_view"
-               motion:framePosition="15"
-               android:alpha="1" />
-
-           <KeyAttribute
-               motion:motionTarget="@+id/two_image_view"
-               motion:framePosition="1"
-               android:alpha="0.2" />
-           <KeyAttribute
-               motion:motionTarget="@+id/two_image_view"
-               motion:framePosition="15"
-               android:alpha="1" />
-
-
-           <KeyPosition
-               motion:motionTarget="@+id/one_title_text_view"
-               motion:framePosition="1"
-               motion:percentX="0"
-               motion:percentY="0" />
-           <KeyPosition
-               motion:motionTarget="@+id/one_title_text_view"
-               motion:framePosition="33"
-               motion:percentX="1"
-               motion:percentY="1" />
-
-           <KeyAttribute
-               motion:motionTarget="@+id/one_title_text_view"
-               motion:framePosition="1"
-               android:alpha="0.2" />
-           <KeyAttribute
-               motion:motionTarget="@+id/one_title_text_view"
-               motion:framePosition="33"
-               android:alpha="1" />
-
-
-           <KeyPosition
-               motion:motionTarget="@+id/two_title_text_view"
-               motion:framePosition="16"
-               motion:percentX="0"
-               motion:percentY="0" />
-           <KeyPosition
-               motion:motionTarget="@+id/two_title_text_view"
-               motion:framePosition="50"
-               motion:percentX="1"
-               motion:percentY="1" />
-
-           <KeyAttribute
-               motion:motionTarget="@+id/two_title_text_view"
-               motion:framePosition="16"
-               android:alpha="0.2" />
-           <KeyAttribute
-               motion:motionTarget="@+id/two_title_text_view"
+               motion:motionTarget="@id/title_text_view"
                motion:framePosition="50"
                android:alpha="1" />
 
+           <KeyAttribute
+               motion:motionTarget="@id/one_image_view"
+               motion:framePosition="0"
+               android:alpha="0"/>
+           <KeyAttribute
+               motion:motionTarget="@id/one_image_view"
+               motion:framePosition="50"
+               android:alpha="1" />
+
+           <KeyAttribute
+               motion:motionTarget="@id/two_image_view"
+               motion:framePosition="0"
+               android:alpha="0" />
+           <KeyAttribute
+               motion:motionTarget="@id/two_image_view"
+               motion:framePosition="50"
+               android:alpha="1"/>
+
 
            <KeyPosition
-               motion:motionTarget="@+id/three_title_text_view"
+               motion:motionTarget="@id/one_title_text_view"
+               motion:framePosition="1"
+               motion:percentX="0"
+               motion:percentY="0"
+               motion:keyPositionType="deltaRelative"
+               motion:transitionEasing="linear"/>
+           <KeyPosition
+               motion:motionTarget="@id/one_title_text_view"
+               motion:framePosition="33"
+               motion:percentX="1"
+               motion:percentY="1" />
+           <KeyAttribute
+               motion:motionTarget="@id/one_title_text_view"
+               motion:framePosition="1"
+               android:alpha="0.2"/>
+           <KeyAttribute
+               motion:motionTarget="@id/one_title_text_view"
+               motion:framePosition="33"
+               android:alpha="1" />
+
+           <KeyPosition
+               motion:motionTarget="@id/two_title_text_view"
+               motion:framePosition="16"
+               motion:percentX="0"
+               motion:percentY="0"
+               motion:keyPositionType="deltaRelative"
+               motion:transitionEasing="linear"/>
+           <KeyPosition
+               motion:motionTarget="@id/two_title_text_view"
+               motion:framePosition="50"
+               motion:percentX="1"
+               motion:percentY="1" />
+           <KeyAttribute
+               motion:motionTarget="@id/two_title_text_view"
+               motion:framePosition="16"
+               android:alpha="0.2"/>
+           <KeyAttribute
+               motion:motionTarget="@id/two_title_text_view"
+               motion:framePosition="50"
+               android:alpha="1" />
+
+           <KeyPosition
+               motion:motionTarget="@id/three_title_text_view"
                motion:framePosition="33"
                motion:percentX="0"
-               motion:percentY="0" />
+               motion:percentY="0"
+               motion:keyPositionType="deltaRelative"
+               motion:transitionEasing="linear"/>
            <KeyPosition
-               motion:motionTarget="@+id/three_title_text_view"
+               motion:motionTarget="@id/three_title_text_view"
                motion:framePosition="66"
                motion:percentX="1"
                motion:percentY="1" />
-
            <KeyAttribute
-               motion:motionTarget="@+id/three_title_text_view"
+               motion:motionTarget="@id/three_title_text_view"
                motion:framePosition="33"
-               android:alpha="0.2" />
+               android:alpha="0.2"/>
            <KeyAttribute
-               motion:motionTarget="@+id/three_title_text_view"
+               motion:motionTarget="@id/three_title_text_view"
                motion:framePosition="66"
                android:alpha="1" />
 
-
            <KeyPosition
-               motion:motionTarget="@+id/four_title_text_view"
+               motion:motionTarget="@id/four_title_text_view"
                motion:framePosition="50"
                motion:percentX="0"
-               motion:percentY="0" />
+               motion:percentY="0"
+               motion:keyPositionType="deltaRelative"
+               motion:transitionEasing="linear"/>
            <KeyPosition
-               motion:motionTarget="@+id/four_title_text_view"
+               motion:motionTarget="@id/four_title_text_view"
                motion:framePosition="83"
                motion:percentX="1"
                motion:percentY="1" />
-
            <KeyAttribute
-               motion:motionTarget="@+id/four_title_text_view"
+               motion:motionTarget="@id/four_title_text_view"
                motion:framePosition="50"
-               android:alpha="0.2" />
+               android:alpha="0.2"/>
            <KeyAttribute
-               motion:motionTarget="@+id/four_title_text_view"
+               motion:motionTarget="@id/four_title_text_view"
                motion:framePosition="83"
                android:alpha="1" />
 
-
            <KeyPosition
-               motion:motionTarget="@+id/five_title_text_view"
+               motion:motionTarget="@id/five_title_text_view"
                motion:framePosition="66"
                motion:percentX="0"
-               motion:percentY="0" />
+               motion:percentY="0"
+               motion:keyPositionType="deltaRelative"
+               motion:transitionEasing="linear"/>
            <KeyPosition
                motion:motionTarget="@+id/five_title_text_view"
                motion:framePosition="99"
                motion:percentX="1"
                motion:percentY="1" />
-
            <KeyAttribute
-               motion:motionTarget="@+id/five_title_text_view"
+               motion:motionTarget="@id/five_title_text_view"
                motion:framePosition="66"
-               android:alpha="0.2" />
+               android:alpha="0.2"/>
            <KeyAttribute
-               motion:motionTarget="@+id/five_title_text_view"
-               motion:framePosition="99"
+               motion:motionTarget="@id/five_title_text_view"
+               motion:framePosition="100"
                android:alpha="1" />
+
        </KeyFrameSet>
     </Transition>
 
     <ConstraintSet android:id="@+id/start">
         <Constraint
-            android:id="@+id/one_title_text_view"
+            android:id="@id/one_title_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:alpha="0"
             motion:layout_constraintLeft_toRightOf="parent"
             motion:layout_constraintTop_toBottomOf="@id/title_text_view"
             android:layout_marginTop="48dp" />
         <Constraint
-            android:id="@+id/two_title_text_view"
+            android:id="@id/two_title_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:alpha="0"
             motion:layout_constraintTop_toBottomOf="@id/one_title_text_view"
             motion:layout_constraintLeft_toRightOf="parent"
             android:layout_marginTop="16dp" />
         <Constraint
-            android:id="@+id/three_title_text_view"
+            android:id="@id/three_title_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:alpha="0"
             motion:layout_constraintTop_toBottomOf="@id/two_title_text_view"
             motion:layout_constraintLeft_toRightOf="parent"
             android:layout_marginTop="16dp" />
         <Constraint
-            android:id="@+id/four_title_text_view"
+            android:id="@id/four_title_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:alpha="0"
             motion:layout_constraintTop_toBottomOf="@id/three_title_text_view"
             motion:layout_constraintLeft_toRightOf="parent"
             android:layout_marginTop="16dp" />
         <Constraint
-            android:id="@+id/five_title_text_view"
+            android:id="@id/five_title_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:alpha="0"
             motion:layout_constraintTop_toBottomOf="@id/four_title_text_view"
             motion:layout_constraintLeft_toRightOf="parent"
             android:layout_marginTop="16dp" />
@@ -183,35 +190,35 @@
 
     <ConstraintSet android:id="@+id/end">
         <Constraint
-            android:id="@+id/one_title_text_view"
+            android:id="@id/one_title_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             motion:layout_constraintLeft_toLeftOf="parent"
             motion:layout_constraintTop_toBottomOf="@id/title_text_view"
             android:layout_marginTop="48dp" />
         <Constraint
-            android:id="@+id/two_title_text_view"
+            android:id="@id/two_title_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             motion:layout_constraintTop_toBottomOf="@id/one_title_text_view"
             motion:layout_constraintLeft_toLeftOf="parent"
             android:layout_marginTop="16dp" />
         <Constraint
-            android:id="@+id/three_title_text_view"
+            android:id="@id/three_title_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             motion:layout_constraintTop_toBottomOf="@id/two_title_text_view"
             motion:layout_constraintLeft_toLeftOf="parent"
             android:layout_marginTop="16dp" />
         <Constraint
-            android:id="@+id/four_title_text_view"
+            android:id="@id/four_title_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             motion:layout_constraintTop_toBottomOf="@id/three_title_text_view"
             motion:layout_constraintLeft_toLeftOf="parent"
             android:layout_marginTop="16dp" />
         <Constraint
-            android:id="@+id/five_title_text_view"
+            android:id="@id/five_title_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             motion:layout_constraintTop_toBottomOf="@id/four_title_text_view"

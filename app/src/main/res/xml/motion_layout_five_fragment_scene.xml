@@ -60,15 +60,9 @@
             motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"/>
     </ConstraintSet>
 
-    <ConstraintSet android:id="@+id/bottom_left">
-        <Constraint
-            android:id="@+id/view_x"
-            android:layout_width="16dp"
-            android:layout_height="0dp"
-            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
-            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
-            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
-            motion:transitionEasing="linear"/>
+    <ConstraintSet
+        android:id="@+id/bottom_left"
+        deriveConstraintsFrom="@id/center_left">
 
         <Constraint
             android:id="@+id/view_y"
@@ -79,32 +73,11 @@
             motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
             motion:transitionEasing="linear"/>
 
-        <Constraint
-            android:id="@+id/view"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
-            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
-            motion:transitionEasing="linear"/>
     </ConstraintSet>
 
-    <ConstraintSet android:id="@+id/top_right">
-        <Constraint
-            android:id="@+id/view_x"
-            android:layout_width="16dp"
-            android:layout_height="0dp"
-            motion:layout_constraintRight_toRightOf="@id/grid_image_view"
-            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
-            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"/>
-
-        <Constraint
-            android:id="@+id/view_y"
-            android:layout_width="0dp"
-            android:layout_height="16dp"
-            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
-            motion:layout_constraintRight_toRightOf="@id/grid_image_view"
-            motion:layout_constraintTop_toTopOf="@id/grid_image_view"/>
-
+    <ConstraintSet
+        android:id="@+id/top_right"
+        deriveConstraintsFrom="@id/center_right">
         <Constraint
             android:id="@+id/view"
             android:layout_width="16dp"
@@ -122,25 +95,9 @@
         motion:duration="10000">
     </Transition>
 
-    <ConstraintSet android:id="@+id/start_standard">
-        <Constraint
-            android:id="@+id/view_x"
-            android:layout_width="16dp"
-            android:layout_height="0dp"
-            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
-            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
-            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
-            motion:transitionEasing="linear"/>
-
-        <Constraint
-            android:id="@+id/view_y"
-            android:layout_width="0dp"
-            android:layout_height="16dp"
-            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
-            motion:layout_constraintRight_toRightOf="@id/grid_image_view"
-            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
-            motion:transitionEasing="linear"/>
-
+    <ConstraintSet
+        android:id="@+id/start_standard"
+        deriveConstraintsFrom="@id/center_left">
         <Constraint
             android:id="@+id/view"
             android:layout_width="16dp"
@@ -157,25 +114,9 @@
         motion:duration="10000">
     </Transition>
 
-    <ConstraintSet android:id="@+id/start_accelerate">
-        <Constraint
-            android:id="@+id/view_x"
-            android:layout_width="16dp"
-            android:layout_height="0dp"
-            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
-            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
-            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
-            motion:transitionEasing="linear"/>
-
-        <Constraint
-            android:id="@+id/view_y"
-            android:layout_width="0dp"
-            android:layout_height="16dp"
-            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
-            motion:layout_constraintRight_toRightOf="@id/grid_image_view"
-            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
-            motion:transitionEasing="linear"/>
-
+    <ConstraintSet
+        android:id="@+id/start_accelerate"
+        deriveConstraintsFrom="@id/center_left">
         <Constraint
             android:id="@+id/view"
             android:layout_width="16dp"
@@ -192,24 +133,9 @@
         motion:duration="10000">
     </Transition>
 
-    <ConstraintSet android:id="@+id/start_decelerate">
-        <Constraint
-            android:id="@+id/view_x"
-            android:layout_width="16dp"
-            android:layout_height="0dp"
-            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
-            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
-            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
-            motion:transitionEasing="linear"/>
-
-        <Constraint
-            android:id="@+id/view_y"
-            android:layout_width="0dp"
-            android:layout_height="16dp"
-            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
-            motion:layout_constraintRight_toRightOf="@id/grid_image_view"
-            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
-            motion:transitionEasing="linear"/>
+    <ConstraintSet
+        android:id="@+id/start_decelerate"
+        deriveConstraintsFrom="@id/center_left">
 
         <Constraint
             android:id="@+id/view"
@@ -227,25 +153,9 @@
         motion:duration="10000">
     </Transition>
 
-    <ConstraintSet android:id="@+id/start_flip">
-        <Constraint
-            android:id="@+id/view_x"
-            android:layout_width="16dp"
-            android:layout_height="0dp"
-            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
-            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
-            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
-            motion:transitionEasing="linear"/>
-
-        <Constraint
-            android:id="@+id/view_y"
-            android:layout_width="0dp"
-            android:layout_height="16dp"
-            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
-            motion:layout_constraintRight_toRightOf="@id/grid_image_view"
-            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
-            motion:transitionEasing="linear"/>
-
+    <ConstraintSet
+        android:id="@+id/start_flip"
+        deriveConstraintsFrom="@id/center_left">
         <Constraint
             android:id="@+id/view"
             android:layout_width="16dp"
@@ -264,25 +174,9 @@
         motion:duration="10000">
     </Transition>
 
-    <ConstraintSet android:id="@+id/start_start_horizontal">
-        <Constraint
-            android:id="@+id/view_x"
-            android:layout_width="16dp"
-            android:layout_height="0dp"
-            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
-            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
-            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
-            motion:transitionEasing="linear"/>
-
-        <Constraint
-            android:id="@+id/view_y"
-            android:layout_width="0dp"
-            android:layout_height="16dp"
-            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
-            motion:layout_constraintRight_toRightOf="@id/grid_image_view"
-            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
-            motion:transitionEasing="linear"/>
-
+    <ConstraintSet
+        android:id="@+id/start_start_horizontal"
+        deriveConstraintsFrom="@id/center_left">
         <Constraint
             android:id="@+id/view"
             android:layout_width="16dp"
@@ -300,24 +194,9 @@
         motion:duration="10000">
     </Transition>
 
-    <ConstraintSet android:id="@+id/start_start_vertical">
-        <Constraint
-            android:id="@+id/view_x"
-            android:layout_width="16dp"
-            android:layout_height="0dp"
-            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
-            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
-            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
-            motion:transitionEasing="linear"/>
-
-        <Constraint
-            android:id="@+id/view_y"
-            android:layout_width="0dp"
-            android:layout_height="16dp"
-            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
-            motion:layout_constraintRight_toRightOf="@id/grid_image_view"
-            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
-            motion:transitionEasing="linear"/>
+    <ConstraintSet
+        android:id="@+id/start_start_vertical"
+        deriveConstraintsFrom="@id/center_left">
 
         <Constraint
             android:id="@+id/view"
@@ -526,26 +405,9 @@
     </Transition>
 
 
-    <ConstraintSet android:id="@+id/attribute_center_left">
-        <Constraint
-            android:id="@+id/view_x"
-            android:layout_width="16dp"
-            android:layout_height="0dp"
-            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
-            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
-            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
-            motion:transitionEasing="linear"/>
-
-        <Constraint
-            android:id="@+id/view_y"
-            android:layout_width="0dp"
-            android:layout_height="16dp"
-            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
-            motion:layout_constraintRight_toRightOf="@id/grid_image_view"
-            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
-            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"
-            motion:transitionEasing="linear"/>
-
+    <ConstraintSet
+        android:id="@+id/attribute_center_left"
+        deriveConstraintsFrom="@id/center_left">
         <Constraint
             android:id="@+id/view"
             android:layout_width="16dp"
@@ -563,23 +425,9 @@
         </Constraint>
     </ConstraintSet>
 
-    <ConstraintSet android:id="@+id/attribute_center_right">
-        <Constraint
-            android:id="@+id/view_x"
-            android:layout_width="16dp"
-            android:layout_height="0dp"
-            motion:layout_constraintRight_toRightOf="@id/grid_image_view"
-            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
-            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"/>
-
-        <Constraint
-            android:id="@+id/view_y"
-            android:layout_width="0dp"
-            android:layout_height="16dp"
-            motion:layout_constraintLeft_toLeftOf="@id/grid_image_view"
-            motion:layout_constraintRight_toRightOf="@id/grid_image_view"
-            motion:layout_constraintTop_toTopOf="@id/grid_image_view"
-            motion:layout_constraintBottom_toBottomOf="@id/grid_image_view"/>
+    <ConstraintSet
+        android:id="@+id/attribute_center_right"
+        deriveConstraintsFrom="@id/center_left">
 
         <Constraint
             android:id="@+id/view"

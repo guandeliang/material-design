@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data/>
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/motion_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/motion_layout_attribute_rotation_fragment_scene"
+        app:motionDebug="SHOW_PATH">
+
+
+        <View
+            android:id="@+id/top_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#0000FF"
+            android:layout_marginTop="96dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <View
+            android:id="@+id/bottom_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#0000FF"
+            android:layout_marginBottom="96dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+        <ImageView
+            android:id="@+id/rotation_image_view"
+            android:src="@drawable/header_006"
+            android:scaleType="centerCrop"
+            android:layout_width="48dp"
+            android:layout_height="48dp"/>
+
+        <ImageView
+            android:id="@+id/rotation_x_image_view"
+            android:src="@drawable/header_006"
+            android:scaleType="centerCrop"
+            android:layout_width="48dp"
+            android:layout_height="48dp"/>
+
+        <ImageView
+            android:id="@+id/rotation_y_image_view"
+            android:src="@drawable/header_006"
+            android:scaleType="centerCrop"
+            android:layout_width="48dp"
+            android:layout_height="48dp"/>
+
+        <ImageView
+            android:id="@+id/rotation_path_image_view"
+            android:src="@drawable/header_006"
+            android:scaleType="centerCrop"
+            android:layout_width="48dp"
+            android:layout_height="48dp"/>
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+</layout>

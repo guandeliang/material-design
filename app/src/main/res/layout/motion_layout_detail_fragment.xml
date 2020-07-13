@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data/>
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="72dp"
+            android:paddingBottom="72dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:fontFamily="@font/crimson_text_bold"
+                android:text="Key Pisition Type"
+                android:background="@color/gray_300"
+                android:textAppearance="?attr/textAppearanceHeadline6"/>
+
+            <Button
+                android:id="@+id/key_position_type_delta_relative_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="48dp"
+                android:layout_marginRight="48dp"
+                android:text="deltaRelative"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/key_position_type_parent_relative_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="48dp"
+                android:layout_marginRight="48dp"
+                android:text="parentRelative"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/key_position_type_path_relative_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="48dp"
+                android:layout_marginRight="48dp"
+                android:text="pathRelative"
+                android:textAllCaps="false"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:fontFamily="@font/crimson_text_bold"
+                android:text="Transition Easing"
+                android:background="@color/gray_300"
+                android:textAppearance="?attr/textAppearanceHeadline6"/>
+
+            <Button
+                android:id="@+id/transition_easing_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="48dp"
+                android:layout_marginRight="48dp"
+                android:text="Transition Easing"
+                android:textAllCaps="false"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:fontFamily="@font/crimson_text_bold"
+                android:text="Key Attribute"
+                android:background="@color/gray_300"
+                android:textAppearance="?attr/textAppearanceHeadline6"/>
+
+            <Button
+                android:id="@+id/attribute_pieces_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="48dp"
+                android:layout_marginRight="48dp"
+                android:text="visibility alpha elevation scale"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/attribute_rotation_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="48dp"
+                android:layout_marginRight="48dp"
+                android:text="Rotation"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+</layout>
