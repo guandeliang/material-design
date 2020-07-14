@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Android-11</string>
+
+    <string name="message_01">The global community of Android developers has always been a powerful force in shaping the direction of the Android platform</string>
+    <string name="message_02">each and every voice matters to us</string>
+    <string name="message_03">We have cancelled the virtual launch</string>
+    <string name="message_04">we are releasing the Android 11 Beta today in a much different form, via short-form videos and web pages</string>
+    <string name="message_05">that you can consume at your own pace</string>
+    <string name="message_06">when the time is right for you. Millions of developers around the world build their business</string>
+</resources>

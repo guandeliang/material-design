@@ -1,0 +1,182 @@
+<resources>
+
+    <style name="TextAppearance.MaterialBook.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="android:textSize">96dp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+    <style name="TextAppearance.MaterialBook.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="android:textSize">60dp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+    <style name="TextAppearance.MaterialBook.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="android:textSize">48dp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+    <style name="TextAppearance.MaterialBook.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:textSize">34dp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+    <style name="TextAppearance.MaterialBook.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textSize">24dp</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+    <style name="TextAppearance.MaterialBook.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+    <style name="TextAppearance.MaterialBook.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+    <style name="TextAppearance.MaterialBook.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+    <style name="TextAppearance.MaterialBook.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+    <style name="TextAppearance.MaterialBook.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+    <style name="TextAppearance.MaterialBook.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+    <style name="TextAppearance.MaterialBook.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+    <style name="TextAppearance.MaterialBook.Overline" parent="TextAppearance.MaterialComponents.Overline">
+        <item name="android:textSize">10dp</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MaterialBook.Round" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MaterialBook.Round.4" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">4dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MaterialBook.ChatBubble.Self" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+        <item name="cornerSizeTopRight">2dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MaterialBook.ChatBubble.Other" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+        <item name="cornerSizeTopLeft">2dp</item>
+    </style>
+
+
+
+    <!--AppBarLayout Primary Begin-->
+    <style name="Widget.MaterialBook.AppBarLayout.Primary" parent="Widget.MaterialComponents.AppBarLayout.Primary">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.MaterialBook.AppBarLayout.Primary</item>
+    </style>
+    <style name="ThemeOverlay.MaterialBook.AppBarLayout.Primary" parent="">
+        <item name="android:textColorPrimary">?attr/colorOnPrimary</item>
+        <item name="android:textColorSecondary">?attr/colorOnPrimary</item>
+        <item name="colorControlNormal">?attr/colorOnPrimary</item>
+        <item name="toolbarStyle">@style/Widget.MaterialBook.Toolbar.Primary</item>
+    </style>
+    <style name="Widget.MaterialBook.Toolbar.Primary" parent="Widget.MaterialComponents.Toolbar">
+        <item name="titleTextColor">?android:attr/textColorPrimary</item>
+        <item name="subtitleTextColor">?android:attr/textColorPrimary</item>
+        <item name="popupTheme">@style/ThemeOverlay.MaterialBook.Toolbar.Primary.PopupMenu</item>
+    </style>
+    <style name="ThemeOverlay.MaterialBook.Toolbar.Primary.PopupMenu" parent="">
+        <item name="android:textColorPrimary">?attr/colorOnSurface</item>
+        <item name="android:tint">?attr/colorOnSurface</item>
+    </style>
+    <!--AppBarLayout Primary Begin-->
+
+
+    <!--AppBarLayout Surface Begin-->
+    <style name="Widget.MaterialBook.AppBarLayout.Surface" parent="Widget.MaterialComponents.AppBarLayout.Surface">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.MaterialBook.AppBarLayout.Surface</item>
+    </style>
+    <style name="ThemeOverlay.MaterialBook.AppBarLayout.Surface" parent="">
+        <item name="android:textColorPrimary">?attr/colorOnSurface</item>
+        <item name="colorControlNormal">?attr/colorOnSurface</item>
+        <item name="toolbarStyle">@style/Widget.MaterialBook.Toolbar.Surface</item>
+    </style>
+    <style name="Widget.MaterialBook.Toolbar.Surface" parent="Widget.MaterialComponents.Toolbar">
+        <item name="titleTextColor">?android:attr/textColorPrimary</item>
+        <item name="subtitleTextColor">?android:attr/textColorPrimary</item>
+        <item name="popupTheme">@style/ThemeOverlay.MaterialBook.Toolbar.Surface.PopupMenu</item>
+    </style>
+    <style name="ThemeOverlay.MaterialBook.Toolbar.Surface.PopupMenu" parent="">
+        <item name="android:textColorPrimary">?attr/colorOnSurface</item>
+        <item name="android:tint">?attr/colorOnSurface</item>
+    </style>
+    <!--AppBarLayout Surface Begin-->
+
+    <style name="Theme.MaterialBook.SingleColor.Base" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item  name="android:windowActivityTransitions">true</item>
+        <item name="textAppearanceHeadline1">@style/TextAppearance.MaterialBook.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.MaterialBook.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.MaterialBook.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.MaterialBook.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.MaterialBook.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.MaterialBook.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.MaterialBook.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.MaterialBook.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.MaterialBook.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.MaterialBook.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.MaterialBook.Button</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.MaterialBook.Caption</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.MaterialBook.Overline</item>
+        <item name="appBarLayoutPrimaryStyle">@style/Widget.MaterialBook.AppBarLayout.Primary</item>
+        <item name="appBarLayoutSurfaceStyle">@style/Widget.MaterialBook.AppBarLayout.Surface</item>
+
+    </style>
+
+    <style name="Theme.MaterialBook.SingleColor.Colored" parent="Theme.MaterialBook.SingleColor.Base">
+        <item name="android:navigationBarColor">@color/colored_color_primary_variant</item>
+        <item name="colorPrimary">@color/colored_color_primary</item>
+        <item name="colorPrimaryVariant">@color/colored_color_primary_variant</item>
+        <item name="colorPrimaryDark">@color/colored_color_primary_dark</item>
+        <item name="colorSecondary">@color/colored_color_secondary</item>
+        <item name="colorSecondaryVariant">@color/colored_color_secondary_variant</item>
+        <item name="android:colorBackground">@color/colored_color_background</item>
+        <item name="colorSurface">@color/colored_color_surface</item>
+        <item name="colorError">@color/colored_color_error</item>
+        <item name="colorOnPrimary">@color/colored_color_on_primary</item>
+        <item name="colorOnSecondary">@color/colored_color_on_secondary</item>
+        <item name="colorOnBackground">@color/colored_color_on_background</item>
+        <item name="colorOnSurface">@color/colored_color_on_surface</item>
+        <item name="colorOnError">@color/colored_color_on_error</item>
+        <item name="colorControlNormal">@color/colored_color_control_normal</item>
+        <item name="scrimBackground">@color/colored_color_scrim_nackground</item>
+        <!--元件风格-->
+        <item name="bottomNavigationStyle">@style/Widget.MaterialBook.SingleColor.Colored.BottomNavigationView</item>
+        <item name="tabStyle">@style/Widget.MaterialBook.SingleColor.Colored.TabLayout</item>
+        <item name="floatingActionButtonStyle">@style/Widget.MaterialBook.SingleColor.Colored.FloatingActionButton</item>
+    </style>
+
+    <style name="Widget.MaterialBook.SingleColor.Colored.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+    </style>
+    <style name="Widget.MaterialBook.SingleColor.Colored.TabLayout" parent="Widget.MaterialComponents.TabLayout.Colored">
+        <item name="tabIndicatorColor">?attr/colorSecondary</item>
+    </style>
+    <style name="Widget.MaterialBook.SingleColor.Colored.FloatingActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="backgroundTint">@color/fab_bg_color_selector</item>
+        <item name="tint">@color/fab_icon_text_color_selector</item>
+    </style>
+
+    <!--沉浸式状态栏单色主题风格，解决占用状态栏问题-->
+    <style name="Theme.MaterialBook.SingleColor.Colored.TranslucentStatus" parent="Theme.MaterialBook.SingleColor.Colored">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+
+
+</resources>

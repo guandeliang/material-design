@@ -1,3 +1,4 @@
+include ':android-11'
 include ':app'
 include ':AppStart'
 include ':TerribleAppLaunch'
