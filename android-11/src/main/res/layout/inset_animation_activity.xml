@@ -110,7 +110,6 @@
             android:gravity="center_vertical"
             android:hint="Type SomeThing"
             android:singleLine="true"
-            android:imeOptions="actionSearch"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@id/mic_button"

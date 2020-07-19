@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialBook.SingleColor.Colored">
-        <activity android:name=".inset.InsetAnimationActivity">
+        <activity android:name=".inset.InsetAniAccountActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -241,7 +241,21 @@ KeyAttribute 可以直接支持 alpha、rotation、scale、translation 等十几
 
 ### index
 
-本视频是MotionLayout系列视频中的第二个
+
+Android MotionLayout Case 002
+
+This is the second in a series of MotionLayout videos. 
+In this series of videos, you'll learn more about how to use MotionLayout ：
+1、Transition
+2、ConstraintSet
+3、KeyFrameSet
+4、KeyAttribute
+5、KeyPosition
+
+
+
+
+本视频是MotionLayout系列视频中的第二个视频
 
 内容可以分为两大部分
 
@@ -249,13 +263,10 @@ KeyAttribute 可以直接支持 alpha、rotation、scale、translation 等十几
 
 第二部分是相关知识的详细说明
 
-涉及到知识点有
-
-Transition
+涉及到知识点有 Transition
 ConstraintSet
 KeyFrameSet
-KeyAttribute
-KeyPosition
+KeyAttribute & KeyPosition
 
 Index案例是其他几个案例的首页，也是一个Motion动画
 
@@ -307,13 +318,13 @@ title_text_view 是一级标题，该 TextView 被约束在屏幕顶部靠左的
 
 
 
-在了解 Scene 动画控制文件文件之前，先看一下动画效果
+在了解 Scene 动画控制文件之前，先看一下动画效果
 
 可以看出在动画过程中
 
 两个ImageView和title_text_view的不透明度在逐渐增减，直到完全不透明为止
 
-作为二级标题的五个 TextView 则按照先后顺序，从屏幕的右侧进入屏幕，最后停靠在靠近屏幕右侧的位置
+作为二级标题的五个 TextView 则按照先后顺序，从屏幕的右侧进入屏幕，最后停靠在靠近屏幕左侧的位置
 
 
 下面就让我们通过 Scene 动画控制文件解释整个动画过程。
@@ -351,7 +362,7 @@ ConstraintSet 用来定义在动画某一点上，一组View的位置和属性
 
 从one到five五个TextView全部都被约束在靠近布局左侧的位置
 
-通过在 Start 和 End ConstraintSet 为 TextView 设置不同的位置
+通过在两个 ConstraintSet 中为 这些TextView 设置不同的位置
 
 形成了 TextView 从右侧滑入屏幕，并逐渐靠近左侧的动画效果
 
@@ -413,7 +424,7 @@ KeyPosition 的作用是定义 View 在指关键帧中所产生的路径偏差�
 
 偏差值是以百分比的形式定义的，percentX 和 percentY 属性就是在 X 和 Y 方向偏差所占的百分比值
 
-百分比的计算基数取决于所采纳参考系有
+百分比的计算基数取决于所采纳参考系
 
 Motion 提供了三种参考系
 
@@ -452,4 +463,10 @@ accelerate是逐渐加速模式
 decelerate是逐渐减速模式
 
 关于速度模式，我们放在视频的后半段进行讲解
+
+到这里，我们已经全部介绍完index案例
+
+在详细讲解之前，让我们在看一下index案例的实际运行效果
+
+
 
