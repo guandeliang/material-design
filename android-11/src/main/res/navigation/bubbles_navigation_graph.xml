@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bubbles_navigation_graph"
+    app:startDestination="@id/bubbles_friend">
+
+
+    <fragment
+        android:id="@+id/bubbles_friend"
+        android:name="com.jacob.material.android.r.notification.BubblesFriendFragment"
+        android:label="bubbles_friend"
+        tools:layout="@layout/bubbles_friend_fragment">
+        <action android:id="@+id/show_bubbles_chat" app:destination="@id/bubbles_chat"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/bubbles_chat"
+        android:name="com.jacob.material.android.r.notification.BubblesChatFragment"
+        android:label="bubbles_chat"
+        tools:layout="@layout/bubbles_chat_fragment">
+    </fragment>
+
+</navigation>

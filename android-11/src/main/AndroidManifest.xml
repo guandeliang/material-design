@@ -9,13 +9,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialBook.SingleColor.Colored">
-        <activity android:name=".inset.InsetAniAccountActivity">
+
+        <activity
+            android:name=".main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".inset.InsetAniAccountActivity"
+            android:theme="@style/Theme.MaterialBook.SingleColor.Colored.AdjustNothing"/>
+
+        <activity
+            android:name=".notification.NotificationActivity">
+        </activity>
+
+        <receiver
+            android:name="com.jacob.material.android.r.notification.NotificationReplyReceiver" />
+
     </application>
 
 </manifest>

@@ -1,6 +1,17 @@
 <resources>
     <string name="app_name">Android-11</string>
 
+    <string name="title_01">Tyrion Lannister</string>
+    <string name="title_02">Jaime Lannister</string>
+    <string name="title_03">Cersei Lannister</string>
+    <string name="title_04">Daenerys Largaryen</string>
+    <string name="title_05">Jon Snow</string>
+    <string name="title_06">Sansa Stark</string>
+    <string name="title_07">Arya Stark</string>
+    <string name="title_08">Bran Stark</string>
+    <string name="title_09">Little Finger</string>
+
+
     <string name="message_01">The global community of Android developers has always been a powerful force in shaping the direction of the Android platform</string>
     <string name="message_02">each and every voice matters to us</string>
     <string name="message_03">We have cancelled the virtual launch</string>

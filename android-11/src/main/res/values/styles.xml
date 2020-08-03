@@ -140,7 +140,6 @@
     </style>
 
     <style name="Theme.MaterialBook.SingleColor.Colored" parent="Theme.MaterialBook.SingleColor.Base">
-        <item name="android:windowSoftInputMode">adjustNothing</item>
         <item name="android:navigationBarColor">@color/colored_color_primary_variant</item>
         <item name="colorPrimary">@color/colored_color_primary</item>
         <item name="colorPrimaryVariant">@color/colored_color_primary_variant</item>
@@ -174,9 +173,8 @@
     </style>
 
     <!--沉浸式状态栏单色主题风格，解决占用状态栏问题-->
-    <style name="Theme.MaterialBook.SingleColor.Colored.TranslucentStatus" parent="Theme.MaterialBook.SingleColor.Colored">
-        <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    <style name="Theme.MaterialBook.SingleColor.Colored.AdjustNothing" parent="Theme.MaterialBook.SingleColor.Colored">
+        <item name="android:windowSoftInputMode">adjustNothing</item>
     </style>
 
 

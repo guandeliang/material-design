@@ -7,9 +7,9 @@ Android 11有很多值得开发人员关注的功能
 
 在这个视频中，介绍的是Window Insets Animation
 
-因为软键盘是系统的一部分，从应用中控制软键盘一直都是非常困难的事情
+因为软键盘是系统的一部分，从应用中控制软键盘一直都是一个非常困难的事情
 
-Android 11中提供的Window Insets Animation功能
+在Android 11中提供的Window Insets Animation功能
 
 可以说是彻底解决了这个问题
 
@@ -22,23 +22,21 @@ Android 11中提供的Window Insets Animation功能
 这是一个非常典型的用户账户注册界面
 
 
-这类界面回存在多个文本输入框
+在这个界面中有多个文本输入框
 
 当文本输入框获得输入焦点的时候，会自动弹出软键盘。
 
-从操作上大家可以看出
-
-软键盘会进场遮挡住输入框和确认按钮
+从操作上大家可以看出，软键盘会经常遮挡住输入框和确认按钮
 
 导致需要反复打开和关闭软键盘才能够完成整个输入过程
 
 
 
-接下啦，让我们把Window Insets Animation功能相关代码打开
+接下来，让我们把Window Insets Animation功能相关代码打开
 
 在看一下界面的变化
 
-大家可以里看到，使用Window Insets Animation功能之后
+大家可以看到，在使用Window Insets Animation功能之后
 
 软键盘会以动画形式逐渐从底部划出
 
@@ -55,11 +53,11 @@ Android 11中提供的Window Insets Animation功能
 
 向大家解释一下，到底什么是Window Insets
 
-Layout Inspector是Android Studio提供的布局分析功能
+Layout Inspector是Android Studio提供的布局分析工具
 
-通过该工具，可以查看真该运行的App布局结构
+通过该工具，可以查看正在运行的App布局结构
 
-在Layout Inspector看到的root_constraint_layout是这个界面的根布局
+在Layout Inspector中看到的root_constraint_layout是这个界面的根布局
 
 也就是我们自己编写的Layout文件的最顶级元素
 
@@ -76,9 +74,9 @@ Insets指的是可以与应用界面共享屏幕空间的系统界面元件
 比如Status Bar、Navigation Bar、 软键盘、 侧边工具栏等
 
 
-在这里需要特别说明的一点是，现在看到的界面中
+在这里需要特别说明的一点是，
 
-root_constraint_layout完全充满了整个窗口
+现在看到的界面中root_constraint_layout完全充满了整个窗口
 
 其顶部和底部已经侵入到Status Bar和Navigation Bar里面
 
@@ -88,12 +86,12 @@ root_constraint_layout完全充满了整个窗口
 
 让我们回头看一下没有使用Window Insets Animation功能的界面布局
 
-会对这个现象有一个更深的感受
+这样会对这个现象有一个更深的感受
 
 
 大家可以看到，在没有使用Window Insets Animation功能的情况下
 
-root_constraint_layout不过侵入到Status Bar和Navigation Bar里面
+root_constraint_layout不会侵入到Status Bar和Navigation Bar里面
 
 
 接下里，让我们结合代码，详细了解产生这个区别的原因
@@ -104,30 +102,29 @@ root_constraint_layout不过侵入到Status Bar和Navigation Bar里面
 
 
 
-setDecorFitsSystemWindows是Android新增加的方法
+setDecorFitsSystemWindows是Android 11新增加的方法
 
 如果设置为true，就是由系统处理 Window Insets 出现的位置以及方式
 
-如果设置为false，就用由应用来处理Window Insets 出现的位置以及方式
+如果设置为false，就是由应用来处理 Window Insets 出现的位置以及方式
 
-在这里我们设置为false，也及时由应用来处理Window Insets 出现的位置以及方式。
+在这里我们设置为false，也就是由应用来处理Window Insets 出现的位置以及方式。
 
+默认情况下，会设置为true
 
-从Layout Inspector中可以看不到
-
-如果setDecorFitsSystemWindows设置为false
+从Layout Inspector中可以看不到，如果setDecorFitsSystemWindows设置为false
 
 root_constraint_layout就会完全充满了整个窗口
 
 这时，如果点击文本输入框，也不会显示软键盘
 
-因为Window Insets显示方式的控制权已经移交给应用，
+因为Window Insets显示方式的控制权已经移交给了应用，
 
-但是应用里还没有处理软键盘显示的问题
+但是在应用里还没有处理如何显示软键盘的问题
 
 
 
-接下来要解决的是如何保证内容不被Status Bar和Navigation Bar遮挡的问题
+接下来要解决的是如何确保内容不被Status Bar和Navigation Bar遮挡的问题
 
 
 OnApplyWindowInsetsListener的用途是用来监听Window Insets的变化
@@ -138,20 +135,18 @@ OnApplyWindowInsetsListener的用途是用来监听Window Insets的变化
 
 WindowInsets.Type.systemBars()既包含Status Bar，也包含了Navigation Bar
 
-在获取systemBars信息之后，
+在获取systemBars信息之后，将其设置为root_constraint_layout内边白
 
-将其设置为root_constraint_layout内边白
+也就是说把Status Bar的高度设置为root_constraint_layout顶部内边白
 
-也就是说把Status Bar的高度设置为root_constraint_layout的顶部内边白
-
-把Navigation Bar的高度设置为root_constraint_layout的底部内边白
+把Navigation Bar的高度设置为root_constraint_layout底部内边白
 
 重新启动应用之后会发现，原来被Navigation Bar遮挡的内容，已经可以显示出来
 
-接下来要处理的事情是如何显示软键盘的问题
+接下来要处理的事情是如何显示软键盘
 
 
-GlobalLayoutListener整段代码唯一的用途就是计算内容区到达屏幕底部的距离
+GlobalLayoutListener整段代码唯一的用途就是计算内容区和屏幕底部的距离
 
 在这里我们就不详细解释，在网上关于GlobalLayoutListener内容非常多
 
@@ -160,20 +155,18 @@ GlobalLayoutListener整段代码唯一的用途就是计算内容区到达屏幕
 内容区到屏幕底部的距离被保存在contentBottom变量中
 
 
-WindowInsetsAnimation是在Android 11中新增加的，专门用来处理Window Insets的类
+WindowInsetsAnimation是Android 11中新增加的，专门用来处理Window Insets动画的类
 
 
 
 
-当应用接管Window Insets之后，系统会自动创建一个WindowInsetsAnimation的对象，
+当应用接管Window Insets之后，系统会自动创建一个WindowInsetsAnimation对象，
 
 并以默认的动画方式显示Window Insets
 
 Callback则是用来通知应用动画进程
 
-在Android 11中，每一个View或者ViewGroup都可以通过接收Callback
-
-并作出相应的反应
+在Android 11中，每一个View或者ViewGroup都可以通过接收Callback来跟踪动画进程，并作出相应的反应
 
 在本案例中，会根据软键盘的显示情况，决定内容区位置
 
@@ -186,23 +179,13 @@ Callback则是用来通知应用动画进程
 
 然后再获取Insets的最大值，并且增加24dp距离
 
-在得到Insets最大值之后
+在得到Insets最大值之后，判断Insets是否已经到达内容区底部
 
-判断Insets是否已经达到内容区底部
-
-如果离内容区底部，内容区随着Insets一起向上移动
-
-否则内容区不动
+如果已经到达内容区底部，内容区随着Insets一起向上移动，否则内容区不动
 
 
-在开始运行应用之前，我们先看下没有使用Callback的效果
 
-大家会发现，在没有使用Callback的时候
-
-虽然现实软键盘的时候，内容区也会向上移动，但是部分区域还是会被软键盘遮挡
-
-
-现在我们重新启动应用，再看一下
+现在我们重新启动应用，看一下使用Callback的效果
 
 
 虽然这时候内容区已经可以随着软键盘一起向上移动
@@ -213,119 +196,90 @@ Callback则是用来通知应用动画进程
 
 其中既包含应用控制的距离，也包含系统控制的距离
 
-如果想完全由应用控制
-
-就必须禁止系统调整界面布局
+如果想完全由应用控制，就必须禁止系统调整界面布局
 
 方法就是在Style中禁止系统调整布局
 
 
 android:windowSoftInputMode的用途是指定系统如何根据软键盘来调整布局
 
-adjustNothing意思是不对布局在任何调整
+adjustNothing意思是不对布局做任何调整
 
 修改完Style之后，我们再重新启动应用，看一下效果
 
-现在，真个布局的变化已经完全在应用控制之下了
+现在，整个布局的变化已经完全在应用控制之下了
 
 
-虽然目的一定达到了，但是软键盘显示的效果还不是非常如意
+虽然目的已经达到了，但是软键盘显示的效果还不是非常如意
 
-如果想进一步控制软键盘的现实效果
+如果想进一步控制软键盘的显示效果，可以使用Android 11提供的WindowInsetsAnimationController
 
-可以使用Android 11提供的WindowInsetsAnimationController
-
-顾名思义，真个类的用于即使控制如何显示Window Insets动画
+顾名思义，这个类的通途是控制如何显示Window Insets动画
 
 说真的，因为Android 11还没有发布最终版本，文档也不是很完善
 
-我用了很多才弄清楚如何使用WindowInsetsAnimationController
+我用了很长时间才弄清楚如何使用WindowInsetsAnimationController
 
 
-在应用中是无法直接创建WindowInsetsAnimationController对象的
+Android 11并没有提供直接创建WindowInsetsAnimationController对象的途径
 
 只能WindowInsetsAnimationControlListener获取
 
 而WindowInsetsAnimationControlListener也不是直接创建完就能使用的
 
-必须通过调用View 的 windowInsetsController属性的controlWindowInsetsAnimation方法记性注入才能生效
+必须通过调用View 的 windowInsetsController属性的controlWindowInsetsAnimation方法进行注入才能生效
 
-总是过程很奇葩
+总之这个过程很奇葩，不多说了，大家知道怎么使用就可以了
 
-不多说了，大家知道怎么使用就可以了
-
-在这里我不做过多解释，因为逻辑太奇葩，我找不出合理的解释方式
+在这里我不做过多解释，因为逻辑太奇葩，我实在是找不出合理的解释方式
 
 
-为了获取WindowInsetsAnimationController对象
-
-我们需要回到OnApplyWindowInsetsListener中
+为了获取WindowInsetsAnimationController对象，我们需要回到OnApplyWindowInsetsListener中
 
 通过判断软键盘是否显示来决定是否开启对软键盘显示动画的控制
 
-controlWindowInsetsAnimation的几个参数在本案例中并没有实际用途
+controlWindowInsetsAnimation方法的几个参数在本案例中任何实际用途
 
-纯粹是为了获取WindowInsetsAnimationController随便填写的几个参数
+纯粹是为了获取WindowInsetsAnimationController而随便填写的几个参数
 
 最终目的是为了让animationControlListener能够生效
 
 
-animationControlListener是一个懒加载的对象
-
-不到实际使用的时候不会创建
+animationControlListener是一个懒加载的对象，不到实际使用的时候不会创建
 
 
-在animationControlListener的onReady方法中获取到WindowInsetsAnimationController之后，开始执行自定义动画效果
+在animationControlListener对象的onReady方法中获取到WindowInsetsAnimationController之后，开始执行自定义动画效果
 
 
-showImeInsets方法中正关于软键盘显示动画的代码
+showImeInsets方法中是关于软键盘显示动画的代码
 
 
+在showImeInsets方法中，通过ValueAnimator控制软键盘的显示高度和不透明度
+
+shownStateInsets方法的的作用是获取软键盘的完整高度
+
+在得到软键盘的完整高度之后
+
+在1000毫秒内逐渐显示软键盘，并且增加其不透明度
 
 
+关于Window Insets Animation就介绍到这里
 
+本案例的完整代码可以到我的Github中下载
 
-
-
-
-
-
-
-Sets whether the decor view should fit root-level content views for WindowInsets.
-
-If set to true, the framework will inspect the now deprecated 
-View#SYSTEM_UI_LAYOUT_FLAGS as well the 
-WindowManager.LayoutParams#SOFT_INPUT_ADJUST_RESIZE flag and fits content according to these flags.
-
-If set to false, the framework will not fit the content view to the insets and will just pass through the WindowInsets to the content view.
-
-将控制权移交给应用
-
-
-https://developer.android.com/reference/android/view/WindowInsetsAnimation
-
-
-1、什么是WindowInsets
-
-WindowInsets are immutable and may be expanded to include more inset types in the future. To adjust insets, use one of the supplied clone methods to obtain a new WindowInsets instance with the adjusted properties.
+最近还会发布几个关于Android 11的视频，敬请关注
 
 
 
-WindowInsets.Type
+Android 11：001、WindowInsetsAnimation动画
 
-android.view.WindowInsets.Type.STATUS_BARS, 
-android.view.WindowInsets.Type.NAVIGATION_BARS, 
-android.view.WindowInsets.Type.IME, 
-android.view.WindowInsets.Type.CAPTION_BAR, 
-android.view.WindowInsets.Type.WINDOW_DECOR, 
-android.view.WindowInsets.Type.SYSTEM_GESTURES, 
-android.view.WindowInsets.Type.MANDATORY_SYSTEM_GESTURES, 
-android.view.WindowInsets.Type.TAPPABLE_ELEMENT, 
-android.view.WindowInsets.Type.DISPLAY_CUTOUT
+软键盘是系统的一部分，从应用中控制软键盘一直都是一个非常困难的事情。
 
+在Android 11中提供的Window Insets Animation功能，
 
-什么是decor view
+可以说是彻底解决了这个问题。
 
-整个布局的根视图，通过实例来讲解
+本视频详细讲解了如何通过动画方式控制软键盘的位置和显示方式。
+
 
 

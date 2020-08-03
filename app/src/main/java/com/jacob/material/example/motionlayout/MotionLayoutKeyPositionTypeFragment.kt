@@ -18,10 +18,10 @@ import com.jacob.material.databinding.MotionLayoutKeyPositionTypeFragmentBinding
 
 class MotionLayoutKeyPositionTypeFragment : Fragment(), LifecycleObserver {
     companion object {
-        var KEY_POSITION_TYPE:String = "KEY_POSITION_TYPE"
-        var KEY_POSITION_TYPE_DELTA: Int = 0
-        var KEY_POSITION_TYPE_PARENT: Int = 1
-        var KEY_POSITION_TYPE_PATH: Int = 2
+        const val KEY_POSITION_TYPE:String = "KEY_POSITION_TYPE"
+        const val KEY_POSITION_TYPE_DELTA: Int = 0
+        const val KEY_POSITION_TYPE_PARENT: Int = 1
+        const val KEY_POSITION_TYPE_PATH: Int = 2
     }
     private lateinit var binding: MotionLayoutKeyPositionTypeFragmentBinding
 
