@@ -34,7 +34,7 @@ class NotificationChat internal constructor(
     }
 
     private val _messages = mutableListOf(
-            NotificationMessage(1L, "Hi, I am ${CONTACTS[1].descripation}", System.currentTimeMillis(), CONTACTS[1]),
+            NotificationMessage(1L, "Hi, I am ${CONTACTS[1].description}", System.currentTimeMillis(), CONTACTS[1]),
             NotificationMessage(2L, "Please talk same thing", System.currentTimeMillis(), CONTACTS[1])
     )
 

@@ -22,9 +22,7 @@
             android:name=".inset.InsetAniAccountActivity"
             android:theme="@style/Theme.MaterialBook.SingleColor.Colored.AdjustNothing"/>
 
-        <activity
-            android:name=".notification.NotificationActivity">
-        </activity>
+        <activity android:name=".notification.NotificationActivity"/>
 
         <receiver
             android:name="com.jacob.material.android.r.notification.NotificationReplyReceiver" />

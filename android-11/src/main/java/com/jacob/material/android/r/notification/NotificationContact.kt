@@ -3,7 +3,7 @@ package com.jacob.material.android.r.notification
 data class NotificationContact (
         val id: Long,
         val name: String,
-        val descripation: String,
+        val description: String,
         val icon: Int
 ) {
 
@@ -28,7 +28,7 @@ data class NotificationContact (
         if (id != other.id) return false
         if (name != other.name) return false
         if (icon != other.icon) return false
-        if (descripation != other.descripation) return false
+        if (description != other.description) return false
 
         return true
     }
@@ -36,7 +36,7 @@ data class NotificationContact (
     override fun hashCode(): Int {
         var result = id.hashCode()
         result = 31 * result + name.hashCode()
-        result = 31 * result + descripation.hashCode()
+        result = 31 * result + description.hashCode()
         result = 31 * result + icon
         return result
     }

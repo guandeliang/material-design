@@ -15,12 +15,10 @@ import com.jacob.material.android.r.R
 class NotificationHelper(private val context: Context) {
 
     companion object {
-        const val NOTIFICATION_CHANNEL_ID = "notification_channel_id_01"
-
+        const val NOTIFICATION_CHANNEL_ID = "notification_channel_id"
+        const val NOTIFICATION_CHANNEL_NAME = "notification_channel_name"
         const val notificationId:Int = 99
-
     }
-
 
     private val shortcutManager = context.getSystemService<ShortcutManager>(ShortcutManager::class.java)
     private val notificationManager = context.getSystemService<NotificationManager> (NotificationManager::class.java)
@@ -29,11 +27,9 @@ class NotificationHelper(private val context: Context) {
         setUpNotificationChannels()
     }
 
-
     fun createShortcut(){
         var shortcuts = NotificationChat.CONTACTS.map { contact ->
             val icon = Icon.createWithResource(context, contact.icon)
-
 
             var person = Person.Builder()
                     .setName(contact.name)
@@ -47,7 +43,7 @@ class NotificationHelper(private val context: Context) {
             ShortcutInfo.Builder(context, contact.shortcutId)
                     .setLongLived(true)
                     .setShortLabel(contact.name)
-                    .setLongLabel(contact.descripation)
+                    .setLongLabel(contact.description)
                     .setIcon(icon)
                     .setPerson(person)
                     .setCategories(setOf("com.jacob.material.bubbles.category.TEXT_SHARE_TARGET"))
@@ -68,7 +64,7 @@ class NotificationHelper(private val context: Context) {
         if (notificationManager.getNotificationChannel(NOTIFICATION_CHANNEL_ID) == null) {
             val notificationChannel = NotificationChannel(
                     NOTIFICATION_CHANNEL_ID,
-                    "channel_name",
+                    NOTIFICATION_CHANNEL_NAME,
                     // The importance must be IMPORTANCE_HIGH to show Bubbles.
                     NotificationManager.IMPORTANCE_HIGH
             )
@@ -80,27 +76,22 @@ class NotificationHelper(private val context: Context) {
         var notificationChat = NotificationChat.getInstance(context)
         var receiverContact =NotificationChat.CONTACTS[0]
         val receiverHeader = Icon.createWithResource(context, receiverContact.icon)
-        val receiver = Person.Builder().setName(receiverContact.name).setIcon(receiverHeader).build()
-
-        val pendingIntent = PendingIntent.getActivity(
-                context,
-                0,
-                Intent(context, NotificationActivity::class.java)
-                        .setAction(Intent.ACTION_VIEW)
-                        .setData(Uri.parse(receiverContact.notificationPendingUri)),
-                PendingIntent.FLAG_UPDATE_CURRENT
-        )
+        val receiver = Person.Builder()
+                .setName(receiverContact.name)
+                .setIcon(receiverHeader).build()
 
         var style = Notification.MessagingStyle(receiver)
                 .setGroupConversation(true)
                 .apply {
-                    for (message in notificationChat.messages) {
-                        val senderHeader = Icon.createWithResource(context, message.sender.icon)
-                        val sender = Person.Builder().setName(message.sender.name).setIcon(senderHeader).build()
+                    for (m in notificationChat.messages) {
+                        val senderHeader = Icon.createWithResource(context, m.sender.icon)
+                        val sender = Person.Builder()
+                                .setName(m.sender.name)
+                                .setIcon(senderHeader).build()
 
                         val message = Notification.MessagingStyle.Message(
-                                message.content,
-                                message.timestamp,
+                                m.content,
+                                m.timestamp,
                                 sender
                         )
                         addMessage(message)
@@ -115,7 +106,8 @@ class NotificationHelper(private val context: Context) {
                         PendingIntent.getBroadcast(
                                 context,
                                 2,
-                                Intent(context, NotificationReplyReceiver::class.java).setData(receiverContact.notificationReplyUri.toUri()),
+                                Intent(context, NotificationReplyReceiver::class.java)
+                                        .setData(receiverContact.notificationReplyUri.toUri()),
                                 PendingIntent.FLAG_UPDATE_CURRENT
                         )
                 )
@@ -127,6 +119,15 @@ class NotificationHelper(private val context: Context) {
                 .setAllowGeneratedReplies(false)
                 .build()
 
+
+        val pendingIntent = PendingIntent.getActivity(
+                context,
+                0,
+                Intent(context, NotificationActivity::class.java)
+                        .setAction(Intent.ACTION_VIEW)
+                        .setData(Uri.parse(receiverContact.notificationPendingUri)),
+                PendingIntent.FLAG_UPDATE_CURRENT
+        )
 
         val notification = Notification.Builder(context, NOTIFICATION_CHANNEL_ID)
                 .setSmallIcon(R.drawable.icon_baseline_message)
@@ -198,7 +199,7 @@ class NotificationHelper(private val context: Context) {
                 .build()
 
         val bubbleMetadata = Notification.BubbleMetadata.Builder(pendingIntent, senderHeader)
-                .setDesiredHeight(500)
+                .setDesiredHeight(450)
                 .setAutoExpandBubble(true)
                 .setSuppressNotification(true)
                 .build()
