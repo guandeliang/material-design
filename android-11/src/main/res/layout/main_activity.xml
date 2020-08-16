@@ -46,15 +46,4 @@
         android:text="Notification"
         android:textAllCaps="false"/>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/test_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginRight="24dp"
-        android:text="Test"
-        android:textAllCaps="false"/>
-
-
 </LinearLayout>

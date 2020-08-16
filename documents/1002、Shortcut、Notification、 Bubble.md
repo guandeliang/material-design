@@ -2,6 +2,15 @@
 
 
 
+Android 11：002_1、shortcut、Notification和Bubble（01）
+
+Android 11的主要关注点是People、Controls、和Privacy。
+shortcut、Notification和Bubble则是该理念的具体提现方式。
+我讲提供三个视频分别详细介绍在实际开发中如何使用这三项功能
+
+
+
+
 使用Shortcut可以帮助用户快速开启App的某一项功能
 
 比如快速回复邮件
@@ -98,6 +107,98 @@ setIntent方法则是用来指定如何处理Shortcut发出的请求
 
 
 
+
+
+基于People、Controls、和Privacy理念
+
+
+Android 11 对 Notification 的功能和外观都进行了非常大的调整
+
+
+全新的Notification服务除了具备通知功能以外
+
+还可以直接与APP之间进行对话
+
+闲话少说
+
+我们直接结合代码和案例演示
+
+来讲解如何使用全新的Notification
+
+首先，让我们执行案例APP，并创建一个Notification
+
+
+
+NotificationManager是负责Notification通道管理以及Notification发送的系统服务
+
+在使用Notification之前，首先要获取NotificationManager服务
+
+在得到NotificationManager服务之后，
+
+发送Notification之前
+
+需要先创建Notification通道
+
+从Android 8开始，所有的消息都必须分配到对应的通道
+
+同一个通道的消息，又可以进一步进行分组管理
+
+在本案例中，首先会判断通道知否已经创建
+
+如果没有创建，则会创建一个新的通道给消息使用
+
+MessagingStyle负责控制Notification的外观
+
+每个Notification可以添加多条消息
+
+在本案例中，系统自动添加了两条消息
+
+setGroupConversation方法用来确定是否按照消息的发送人对消息进行分组
+
+sender是消息发送者
+
+Message是消息的内容
+
+Android 11与以前的版本相比
+
+更加突出了消息发送者图标和名称
+
+当存在多条消息的时候，每条消息占据一个段落
+
+如果消息条数过多，会自动隐藏早期发送的消息
+
+
+Action用来接收用户对消息的反馈
+
+在本案例中，用户的反馈的消息会被发送到NotificationReplyReceiver对象
+
+当用户点击Reply按钮之后，会显示一个输入框
+
+用来接收用户的输入
+
+用户的输入信息以及一个用来标记用户的URI地址会同时传递到NotificationReplyReceiver中
+
+在NotificationReplyReceiver中对URI地址和输入信息进行分析之后
+
+自动给出一个回复信息
+
+
+
+在Notification中，除了接收用户的回复以外
+
+还可以处理用户的点击事件
+
+在这里，我们对点击事件采用了和Shortcut相同的处理方式
+
+也是传递给了Activity
+
+由Activity的handleIntent进行处理
+
+当消息创建完之后，就可以通过NotificationManager发送出去
+
+关于Notification就介绍到这里
+
+接下来要介绍的是如何将Shortcut、Notification、Bubble组合在一起使用
 
 
 

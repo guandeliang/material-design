@@ -98,7 +98,6 @@ class NotificationHelper(private val context: Context) {
                     }
                 }
 
-
         var action = Notification.Action
                 .Builder(
                         Icon.createWithResource(context, R.drawable.icon_baseline_send),
@@ -118,7 +117,6 @@ class NotificationHelper(private val context: Context) {
                 )
                 .setAllowGeneratedReplies(false)
                 .build()
-
 
         val pendingIntent = PendingIntent.getActivity(
                 context,
@@ -142,42 +140,30 @@ class NotificationHelper(private val context: Context) {
 
 
     fun addShortcutToNotification(){
-        createShortcut()
-
         var notificationChat = NotificationChat.getInstance(context)
         var receiverContact =NotificationChat.CONTACTS[0]
         val receiverHeader = Icon.createWithResource(context, receiverContact.icon)
-        val receiver = Person.Builder().setName(receiverContact.name).setIcon(receiverHeader).build()
-
-        var senderContact =NotificationChat.CONTACTS[1]
-        val senderHeader = Icon.createWithResource(context, senderContact.icon)
-
-        val pendingIntent = PendingIntent.getActivity(
-                context,
-                0,
-                Intent(context, NotificationActivity::class.java)
-                        .setAction(Intent.ACTION_VIEW)
-                        .setData(Uri.parse(receiverContact.notificationPendingUri)),
-                PendingIntent.FLAG_UPDATE_CURRENT
-        )
-
+        val receiver = Person.Builder()
+                .setName(receiverContact.name)
+                .setIcon(receiverHeader).build()
 
         var style = Notification.MessagingStyle(receiver)
                 .setGroupConversation(true)
                 .apply {
-                    for (message in notificationChat.messages) {
-                        val senderHeader = Icon.createWithResource(context, message.sender.icon)
-                        val sender = Person.Builder().setName(message.sender.name).setIcon(senderHeader).build()
+                    for (m in notificationChat.messages) {
+                        val senderHeader = Icon.createWithResource(context, m.sender.icon)
+                        val sender = Person.Builder()
+                                .setName(m.sender.name)
+                                .setIcon(senderHeader).build()
 
                         val message = Notification.MessagingStyle.Message(
-                                message.content,
-                                message.timestamp,
+                                m.content,
+                                m.timestamp,
                                 sender
                         )
                         addMessage(message)
                     }
                 }
-
 
         var action = Notification.Action
                 .Builder(
@@ -186,7 +172,8 @@ class NotificationHelper(private val context: Context) {
                         PendingIntent.getBroadcast(
                                 context,
                                 2,
-                                Intent(context, NotificationReplyReceiver::class.java).setData(receiverContact.notificationReplyUri.toUri()),
+                                Intent(context, NotificationReplyReceiver::class.java)
+                                        .setData(receiverContact.notificationReplyUri.toUri()),
                                 PendingIntent.FLAG_UPDATE_CURRENT
                         )
                 )
@@ -198,6 +185,19 @@ class NotificationHelper(private val context: Context) {
                 .setAllowGeneratedReplies(false)
                 .build()
 
+        val pendingIntent = PendingIntent.getActivity(
+                context,
+                0,
+                Intent(context, NotificationActivity::class.java)
+                        .setAction(Intent.ACTION_VIEW)
+                        .setData(Uri.parse(receiverContact.notificationPendingUri)),
+                PendingIntent.FLAG_UPDATE_CURRENT
+        )
+
+        createShortcut()
+        var senderContact =NotificationChat.CONTACTS[1]
+        val senderHeader = Icon.createWithResource(context, senderContact.icon)
+
         val bubbleMetadata = Notification.BubbleMetadata.Builder(pendingIntent, senderHeader)
                 .setDesiredHeight(450)
                 .setAutoExpandBubble(true)
@@ -205,13 +205,13 @@ class NotificationHelper(private val context: Context) {
                 .build()
 
         val notification = Notification.Builder(context, NOTIFICATION_CHANNEL_ID)
-                .setBubbleMetadata(bubbleMetadata)
                 .setSmallIcon(R.drawable.icon_baseline_message)
                 .setContentIntent(pendingIntent)
                 .setStyle(style)
                 .addAction(action)
-                .setShortcutId(senderContact.shortcutId)
                 .setAutoCancel(true)
+                .setShortcutId(senderContact.shortcutId)
+                .setBubbleMetadata(bubbleMetadata)
                 .build()
 
         notificationManager.notify(notificationId, notification)
