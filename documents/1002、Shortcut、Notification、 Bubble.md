@@ -2,7 +2,7 @@
 
 
 
-Android 11：002_1、shortcut、Notification和Bubble（01）
+Android 11：002_2、shortcut、Notification和Bubble（02）
 
 Android 11的主要关注点是People、Controls、和Privacy。
 shortcut、Notification和Bubble则是该理念的具体提现方式。
@@ -170,7 +170,7 @@ Android 11与以前的版本相比
 
 Action用来接收用户对消息的反馈
 
-在本案例中，用户的反馈的消息会被发送到NotificationReplyReceiver对象
+在本案例中，用户反馈的消息会被发送到NotificationReplyReceiver对象
 
 当用户点击Reply按钮之后，会显示一个输入框
 
@@ -200,6 +200,50 @@ Action用来接收用户对消息的反馈
 
 接下来要介绍的是如何将Shortcut、Notification、Bubble组合在一起使用
 
+
+
+
+
+在前两个视频中，我们分别介绍了Shortcut和Notification
+
+接下来要介绍的是如何将Notification融入到Shortcut中
+
+在详细介绍之前，让我们先看一下演示案例
+
+在这个演示案例中
+
+前面两个按钮是关于Shortcut的演示
+
+第三个按钮是关于Notification的演示
+
+在这里就不在重复介绍
+
+大家会注意到，与前一个演示相比
+
+Notification内容框的右下角多了一个图标
+
+这是因为在这个Notification绑定了Bubble
+
+点击图标最后，会显示一个半屏的窗口
+
+这个半屏窗口就是与BubbleMetadata绑定在一起的Activity
+
+需要注意的是
+
+Bubble并不能代替应用启动器
+
+Bubble只是一种能够引起用户注意的，
+
+帮助用户快速返回到应用某项功能的途径
+
+
+因为在本案例中，Notification上不仅绑定了
+
+Bubbule，还绑定了Shortcut
+
+所以，在发送消息的时候，
+
+在应用启动器的Shortcut上，也会看到Notificaiton
 
 
 
